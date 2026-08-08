@@ -8,7 +8,10 @@ Pages redeploys.
 | --- | --- |
 | Starter Kit PDP (main deliverable) | `index.html` |
 | Premium editorial PDP | `premium.html` |
-| Subscription offer and unit economics | `offer.html` |
+
+**Not in this repo:** the subscription offer and unit-economics doc is kept out
+deliberately, because it contains COGS, margins, CAC and price floors. It stays
+as a private artifact.
 
 ## Notes
 
