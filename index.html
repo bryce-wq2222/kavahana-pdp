@@ -198,6 +198,9 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .gf{font-size:12px;font-weight:900;color:var(--green);text-align:right;white-space:nowrap;line-height:1.2}
 .gf s{display:block;font-size:11px;color:var(--grey);font-weight:400;margin-top:2px}
 .gt .slot{aspect-ratio:1;border-radius:9px}
+.shot{aspect-ratio:1;border-radius:9px;overflow:hidden;position:relative;background:#EDE4D1}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
+.shot::after{content:"";position:absolute;inset:0;border-radius:9px;box-shadow:inset 0 0 0 1px rgba(22,33,26,.09)}
 @media(max-width:760px){.gifts{grid-template-columns:1fr 1fr}}
 .moregifts{text-align:center;margin-top:16px;font-size:13px;font-weight:700;color:var(--green)}
 
@@ -539,7 +542,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     <div class="gifts">
       <div class="gt">
         <div class="gh"><span class="gn">2 coconut shell cups</span><span class="gf">Free<s>$23.98</s></span></div>
-        <div class="slot"><span class="lbl">shell cups</span></div>
+        <div class="shot"><img src="img/coconut-cups.jpg" width="945" height="945" alt="Two Kavahana coconut shell cups on the beach"></div>
       </div>
       <div class="gt">
         <div class="gh"><span class="gn">Bamboo whisk</span><span class="gf">Free<s>$14.99</s></span></div>

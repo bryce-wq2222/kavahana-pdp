@@ -18,7 +18,9 @@ as a private artifact.
 - Fonts and press logos are real files in `fonts/` and `press/`, referenced
   relatively, so the pages stay small and hand-editable.
 
-- Every image is a labelled placeholder. The label describes the shot.
+- Images are labelled placeholders describing the shot, except `img/coconut-cups.jpg`,
+  which is the real product photo. Real photos go in `img/` and use the `.shot`
+  wrapper, which crops to 1:1 with object-fit rather than re-encoding the file.
 - Source files with build placeholders live in the working scratchpad; these
   are the built outputs.
 - Copy rules: no em dashes, never name or knock competitors, never claim kava
