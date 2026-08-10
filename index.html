@@ -101,6 +101,8 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 /* buy box */
 .buy{background:var(--card);border-radius:16px;padding:28px;box-shadow:0 1px 2px rgba(22,33,26,.05),0 18px 40px -24px rgba(22,33,26,.35)}
 .eyebrow{font-size:10.5px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:7px}
+.eyebrow-sub{margin:2px 0 12px}
+.stars-row .ph{margin-left:8px}
 .buy h1{font-size:clamp(32px,3.9vw,44px);margin-bottom:10px;letter-spacing:-.01em}
 .stars-row{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--grey);margin-bottom:13px;flex-wrap:wrap}
 .stars-row .s{color:var(--green);letter-spacing:1.5px;font-size:14px}
@@ -227,11 +229,10 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 
 /* ---- 3b. as seen on ---- */
 .seenon{padding:30px 0 6px}
-.pmq{overflow:hidden;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-top:10px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.pmq{overflow:hidden;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-top:10px}
 .ptrack{display:inline-flex;align-items:center;animation:psc 46s linear infinite;will-change:transform}
-.pmq:hover .ptrack{animation-play-state:paused}
 .plogo{flex:0 0 auto;width:132px;height:132px;display:flex;align-items:center;justify-content:center;margin:0 6px}
-.plogo img{max-width:100%;max-height:100%;display:block}
+.plogo img{width:100%;height:100%;object-fit:contain;display:block}
 @keyframes psc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.ptrack{animation:none}}
 @media(max-width:620px){.plogo{width:104px;height:104px;margin:0 2px}}
@@ -239,7 +240,6 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 /* ---- 9. marquee ---- */
 .mq{background:var(--grad);color:#fff;padding:13px 0;overflow:hidden;white-space:nowrap}
 .mq .track{display:inline-flex;gap:0;animation:sc 32s linear infinite;will-change:transform}
-.mq:hover .track{animation-play-state:paused}
 .mq span{font-size:11.5px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;padding:0 26px;position:relative}
 .mq span::after{content:"\2726";position:absolute;right:-5px;top:50%;transform:translateY(-50%);opacity:.5;font-size:9px;pointer-events:none}
 @keyframes sc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -426,7 +426,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     <div class="galwrap">
       <div class="slides" id="slides">
         <div class="slide"><div class="slot sq"><span class="lbl">Hero: the full kit laid out</span></div></div>
-        <div class="slide"><div class="slot sq"><span class="lbl">The pour into the shell, spilling</span></div></div>
+        <div class="slide"><div class="slot sq"><span class="lbl">Kava Nectar going into the shell cup</span></div></div>
         <div class="slide"><div class="slot sq"><span class="lbl">Whole kava root held to camera</span></div></div>
         <div class="slide"><div class="slot sq"><span class="lbl">Bamboo whisk mid-mix</span></div></div>
         <div class="slide"><div class="slot sq"><span class="lbl">Supplement facts panel</span></div></div>
@@ -438,9 +438,9 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 
   <div>
     <div class="buy">
-      <div class="eyebrow">The daily kava ritual</div>
+      <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>624 Reviews</span><span class="ph">count to confirm</span></div>
       <h1>Nectar Starter Kit</h1>
-      <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>624 Reviews</span></div>
+      <div class="eyebrow eyebrow-sub">The daily kava ritual</div>
       <div class="getline" id="bbGet">Get 45 servings of <span class="mauna">Kava Nectar</span>, two FREE coconut shell cups, a FREE bamboo whisk and 5 FREE stick packs</div>
 
       <div class="optlabel">Size</div>
@@ -498,7 +498,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   <div class="eyebrow" style="text-align:center">As seen on</div>
 </div>
 <div class="pmq"><div class="ptrack" id="ptrack" aria-hidden="true">
-<div class="plogo"><img alt="Uncover LA" loading="lazy" src="press/uncoverla.png"></div><div class="plogo"><img alt="Santa Monica" loading="lazy" src="press/santamonica.png"></div><div class="plogo"><img alt="NBC News" loading="lazy" src="press/nbcnews.png"></div><div class="plogo"><img alt="Los Angeles Times" loading="lazy" src="press/latimes.png"></div><div class="plogo"><img alt="LAist" loading="lazy" src="press/laist.png"></div><div class="plogo"><img alt="Eater" loading="lazy" src="press/eater.png"></div><div class="plogo"><img alt="PureWow" loading="lazy" src="press/purewow_1.png"></div><div class="plogo"><img alt="CBS" loading="lazy" src="press/cbs.png"></div><div class="plogo"><img alt="Dry Run" loading="lazy" src="press/dryrun.png"></div><div class="plogo"><img alt="Dry Atlas" loading="lazy" src="press/dry-atlas.png"></div><div class="plogo"><img alt="Rare Beauty Impact Fund" loading="lazy" src="press/rarebeauty.png"></div>
+<div class="plogo"><img alt="Uncover LA" width="132" height="132" src="press/uncoverla.png"></div><div class="plogo"><img alt="Santa Monica" width="132" height="132" src="press/santamonica.png"></div><div class="plogo"><img alt="NBC News" width="132" height="132" src="press/nbcnews.png"></div><div class="plogo"><img alt="Los Angeles Times" width="132" height="132" src="press/latimes.png"></div><div class="plogo"><img alt="LAist" width="132" height="132" src="press/laist.png"></div><div class="plogo"><img alt="Eater" width="132" height="132" src="press/eater.png"></div><div class="plogo"><img alt="PureWow" width="132" height="132" src="press/purewow_1.png"></div><div class="plogo"><img alt="CBS" width="132" height="132" src="press/cbs.png"></div><div class="plogo"><img alt="Dry Run" width="132" height="132" src="press/dryrun.png"></div><div class="plogo"><img alt="Dry Atlas" width="132" height="132" src="press/dry-atlas.png"></div><div class="plogo"><img alt="Rare Beauty Impact Fund" width="132" height="132" src="press/rarebeauty.png"></div>
 </div></div>
 </section>
 
@@ -604,7 +604,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
         <h2 class="ctrh">Good today.<br>Better every week.</h2>
         <p class="lead ctr" style="margin-top:12px">Kava is known for a reverse tolerance. The first cup is good. The one you make a month from now is better. Most people do not stay because of a discount, they stay because it keeps improving.</p>
       <div class="st4">
-        <div><div class="n">624</div><div class="l">Reviews at 4.8</div></div>
+        <div><div class="n">4.8</div><div class="l">Average rating</div></div>
         <div><div class="n">96%</div><div class="l">Would recommend</div></div>
         <div><div class="n">3,000</div><div class="l">Years of daily use</div></div>
         <div><div class="n">100k+</div><div class="l">Cups served</div></div>
@@ -612,7 +612,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <button class="pill-cta">Try it today &#8594;</button>
       <div class="guar">&#10003; <b>30 day guarantee</b></div>
     </div>
-    <div class="slot sq"><span class="lbl">Pour shot, drink spilling over the side</span></div>
+    <div class="slot sq"><span class="lbl">The finished cup, filled to the brim</span></div>
   </div>
 </div></section>
 
@@ -643,7 +643,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 <section class="lav"><div class="wrap">
   <div class="ctr">
     <h2>From the people who drink it</h2>
-    <div class="stars-row" style="justify-content:center;margin-top:10px"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>624 reviews</b></div>
+    <div class="stars-row" style="justify-content:center;margin-top:10px"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>Rated 4.8 out of 5</b></div>
       <p class="srcnote">Site reviews and TikTok Shop reviews, in one feed. <span class="ph">Combined count to confirm</span></p>
   </div>
   <div class="carou rc-carou" data-carou="revs">
@@ -698,9 +698,9 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     </div>
     <div>
       <div class="buy">
-        <div class="eyebrow">The daily kava ritual</div>
+        <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>624 Reviews</span><span class="ph">count to confirm</span></div>
         <h1>Nectar Starter Kit</h1>
-        <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>624 Reviews</span></div>
+        <div class="eyebrow eyebrow-sub">The daily kava ritual</div>
         <div class="optlabel">Size</div>
         <div class="opt sel" data-o2="4oz">
           <span class="tag">Most popular</span>
@@ -734,8 +734,8 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <div class="cslide"><div class="vid"><div class="slot v"><span class="lbl">297k, choose your feeling</span></div><div class="play">&#9654;</div></div></div>
       <div class="cslide"><div class="vid"><div class="slot v"><span class="lbl">200k, under 21</span></div><div class="play">&#9654;</div></div></div>
       <div class="cslide"><div class="vid"><div class="slot v"><span class="lbl">160k, Hana and the root</span></div><div class="play">&#9654;</div></div></div>
-      <div class="cslide"><div class="vid"><div class="slot v"><span class="lbl">47k, the coconut pour</span></div><div class="play">&#9654;</div></div></div>
-      <div class="cslide"><div class="vid"><div class="slot v"><span class="lbl">the bar, pour</span></div><div class="play">&#9654;</div></div></div>
+      <div class="cslide"><div class="vid"><div class="slot v"><span class="lbl">47k, the coconut shell serve</span></div><div class="play">&#9654;</div></div></div>
+      <div class="cslide"><div class="vid"><div class="slot v"><span class="lbl">the bar, making one</span></div><div class="play">&#9654;</div></div></div>
     </div>
     <button class="cnav next" aria-label="Next">&#8250;</button>
   </div>
