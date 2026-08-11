@@ -39,3 +39,9 @@ shop.kavahana.com.
 - Newsreader is not in the brand book; it is the display face their live site
   already uses, and it is what makes the page read premium rather than
   generic DTC. Swap it out if the brand book wins.
+
+## Video
+
+UGC clips live in `video/` and are wired into the "Real people. Real cups."
+carousel as 9:16 `<video>` elements with `preload="none"`, so none of the
+~48MB downloads until a viewer taps play. One clip plays at a time.
