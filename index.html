@@ -664,7 +664,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <button class="pill-cta">Try it today &#8594;</button>
       <div class="guar">&#10003; <b>30 day guarantee</b></div>
     </div>
-    <div class="slot sq"><span class="lbl">The finished cup, filled to the brim</span></div>
+    <div class="shot"><img loading="lazy" decoding="async" src="img/kava-friends.jpg" width="1000" height="1000" alt="Two friends sharing Kava Nectar from coconut bowls"></div>
   </div>
 </div></section>
 
@@ -745,7 +745,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   <div class="hero" style="padding-top:0">
     <div>
       <div class="galwrap">
-        <div class="slot sq"><span class="lbl">Hero repeat: the full kit</span></div>
+        <img class="heroimg" src="img/hero-ritual-kit.jpg" width="1080" height="1080" alt="The 45 serving Starter Kit: two bags, two coconut bowls, whisk, 5 stick packs and recipe guide">
       </div>
     </div>
     <div>
@@ -881,23 +881,26 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     '2oz':{hero:'img/hero-ritual-kit-22.jpg', halt:'The 22 serving Starter Kit: one bag, two coconut bowls, whisk and recipe guide', s:'22 servings \u00b7 delivered monthly', r:'$59.99',
            get:'Get 22 servings of <span class="mauna">Kava Nectar</span>, two FREE coconut shell cups and a FREE bamboo whisk'}
   };
-  document.querySelectorAll('.opt').forEach(function(o){
-    o.addEventListener('click',function(){
-      if(o.dataset.o2){
-        o.parentNode.querySelectorAll('[data-o2]').forEach(function(x){x.classList.remove('sel')});
-        o.classList.add('sel'); return;
-      }
-      document.querySelectorAll('.buy [data-o]').forEach(function(x){x.classList.remove('sel')});
-      o.classList.add('sel');
-      var s=SIZES[o.dataset.o];if(!s)return;
-      var $=function(i){return document.getElementById(i)};
-      $('bbSub').textContent=s.s;
-      $('bbRen').textContent=s.r;
-      $('bbGet').innerHTML=s.get;
-      var hi=document.querySelector('.heroimg');
-      if(hi&&s.hero&&hi.getAttribute('src')!==s.hero){hi.src=s.hero;hi.alt=s.halt;}
+  function setSize(key, fromTop){
+    var s=SIZES[key]; if(!s) return;
+    document.querySelectorAll('.buy [data-o]').forEach(function(x){x.classList.toggle('sel', x.dataset.o===key)});
+    document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
+    var $=function(i){return document.getElementById(i)};
+    $('bbSub').textContent=s.s;
+    $('bbRen').textContent=s.r;
+    $('bbGet').innerHTML=s.get;
+    document.querySelectorAll('.heroimg').forEach(function(hi){
+      if(hi.getAttribute('src')!==s.hero){hi.src=s.hero;hi.alt=s.halt;}
+    });
+    if(fromTop){
       var sl=document.getElementById('slides');
       if(sl)sl.scrollTo({left:0,behavior:'smooth'});
+    }
+  }
+  document.querySelectorAll('.opt').forEach(function(o){
+    o.addEventListener('click',function(){
+      if(o.dataset.o2){ setSize(o.dataset.o2, false); return; }
+      if(o.dataset.o) setSize(o.dataset.o, true);
     });
   });
   ['img/hero-ritual-kit.jpg','img/hero-ritual-kit-22.jpg'].forEach(function(u){var p=new Image();p.src=u;});
