@@ -433,6 +433,26 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .wbtn{border:1.5px solid var(--green);color:var(--green);background:transparent;font:inherit;font-weight:500;font-size:12.5px;padding:11px 22px;border-radius:999px;cursor:pointer}
 .appslot{border:2px dashed var(--line);border-radius:16px;background:var(--card);min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px 26px;gap:10px}
  .applbl{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
+/* reverse tolerance */
+.rt2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:34px auto 0;max-width:960px}
+.rt-card{border-radius:18px;padding:26px 24px 22px}
+.rt-kava{background:#EDF3E6}
+.rt-alc{background:#F1EDE3}
+.rt-pill{display:inline-block;border-radius:999px;padding:9px 22px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:12.5px;color:#fff}
+.rt-kava .rt-pill{background:var(--green)}
+.rt-alc .rt-pill{background:#8F8A80}
+.rt-copy{margin:15px 0 8px;font-size:14.5px;line-height:1.55}
+.rt-card svg{width:100%;height:auto;display:block}
+.rt-axis{font-size:10.5px;color:var(--grey);text-align:center;letter-spacing:.05em;margin-top:4px}
+.rt-take{display:flex;align-items:center;gap:12px;margin-top:18px;font-size:13.5px;font-weight:500;border-top:1px solid rgba(31,29,23,.09);padding-top:17px}
+.rt-arrow{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex:none}
+.rt-alc .rt-arrow{color:#EBAF66}
+/* founders */
+.fnd{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;max-width:1020px;margin:0 auto}
+.fnd-b p{margin:12px 0;font-size:15px;line-height:1.62}
+.fnd-sig{font-size:34px;color:var(--green);margin-top:16px}
+.fnd-meta{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:10px;font-weight:500}
+@media(max-width:759px){.rt2{grid-template-columns:1fr}.fnd{grid-template-columns:1fr;gap:26px}}
  .appsub{font-size:13.5px;color:var(--grey);max-width:46ch;line-height:1.55}
  .media{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:22px}
 .media .slot{aspect-ratio:1;border-radius:10px}
@@ -838,6 +858,50 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </div></section>
 
 
+<!-- 14c. REVERSE TOLERANCE -->
+<section><div class="wrap">
+  <div class="ctr">
+    <div class="eyebrow" style="text-align:center">Reverse tolerance</div>
+    <h2 class="btbh2">Kava vs alcohol, over time</h2>
+    <p class="lead ctr" style="margin-top:10px">Two different paths. Two different outcomes. Most drinks ask for more over time. Kava is known for the opposite: as your body gets to know the kavalactones, a smaller pour goes further.</p>
+  </div>
+  <div class="rt2">
+    <div class="rt-card rt-kava">
+      <div class="rt-pill">Kava</div>
+      <p class="rt-copy">Effects <b>strengthen</b> with continued use. Many longtime drinkers find they need less to feel the same calm.</p>
+      <svg viewBox="0 0 320 174" role="img" aria-label="Chart: kava effect strength rising with continued use">
+        <line x1="40" y1="12" x2="40" y2="148" stroke="#C9C4B4" stroke-width="1"/>
+        <line x1="40" y1="148" x2="306" y2="148" stroke="#C9C4B4" stroke-width="1"/>
+        <text x="34" y="26" text-anchor="end" font-size="10" fill="#6E6A5C">Strong</text>
+        <text x="34" y="88" text-anchor="end" font-size="10" fill="#6E6A5C">Moderate</text>
+        <text x="34" y="146" text-anchor="end" font-size="10" fill="#6E6A5C">Weak</text>
+        <path d="M46,140 L90,124 L134,94 L178,62 L222,42 L262,30 L300,25 L300,148 L46,148 Z" fill="#367542" opacity=".09"/>
+        <path d="M46,140 L90,124 L134,94 L178,62 L222,42 L262,30 L300,25" fill="none" stroke="#367542" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <g fill="#367542"><circle cx="46" cy="140" r="4"/><circle cx="90" cy="124" r="4"/><circle cx="134" cy="94" r="4"/><circle cx="178" cy="62" r="4"/><circle cx="222" cy="42" r="4"/><circle cx="262" cy="30" r="4"/><circle cx="300" cy="25" r="4"/></g>
+      </svg>
+      <div class="rt-axis">Continued use over time &#8594;</div>
+      <div class="rt-take"><span class="rt-arrow">&#8595;</span>You need less to feel the same effects</div>
+    </div>
+    <div class="rt-card rt-alc">
+      <div class="rt-pill">Alcohol</div>
+      <p class="rt-copy">Effects <b>weaken</b> with continued use. Many people find they need more to feel the same ease.</p>
+      <svg viewBox="0 0 320 174" role="img" aria-label="Chart: alcohol effect strength falling with continued use">
+        <line x1="40" y1="12" x2="40" y2="148" stroke="#C9C4B4" stroke-width="1"/>
+        <line x1="40" y1="148" x2="306" y2="148" stroke="#C9C4B4" stroke-width="1"/>
+        <text x="34" y="26" text-anchor="end" font-size="10" fill="#6E6A5C">Strong</text>
+        <text x="34" y="88" text-anchor="end" font-size="10" fill="#6E6A5C">Moderate</text>
+        <text x="34" y="146" text-anchor="end" font-size="10" fill="#6E6A5C">Weak</text>
+        <path d="M46,26 L90,38 L134,62 L178,96 L222,122 L262,136 L300,142 L300,148 L46,148 Z" fill="#B4713A" opacity=".1"/>
+        <path d="M46,26 L90,38 L134,62 L178,96 L222,122 L262,136 L300,142" fill="none" stroke="#B4713A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <g fill="#B4713A"><circle cx="46" cy="26" r="4"/><circle cx="90" cy="38" r="4"/><circle cx="134" cy="62" r="4"/><circle cx="178" cy="96" r="4"/><circle cx="222" cy="122" r="4"/><circle cx="262" cy="136" r="4"/><circle cx="300" cy="142" r="4"/></g>
+      </svg>
+      <div class="rt-axis">Continued use over time &#8594;</div>
+      <div class="rt-take"><span class="rt-arrow">&#8593;</span>You need more to feel the same effects</div>
+    </div>
+  </div>
+  <p class="srcnote" style="max-width:640px;margin:18px auto 0">It is why we suggest 2 to 3 servings while you are new. The first pours can be subtle, then the calm starts arriving sooner. Regulars in the islands have said this for generations, and research is still catching up.</p>
+</div></section>
+
 <!-- 15. FAQ -->
 <section><div class="wrap">
   <div class="ctr"><div class="eyebrow" style="text-align:center">Frequently asked</div><h2>Questions</h2></div>
@@ -887,6 +951,24 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   <div class="appslot">
     <span class="applbl">Shopify reviews app embeds here</span>
     <span class="appsub">Star summary, rating breakdown, filters, customer photos and the write a review flow all come from the app. Site reviews and TikTok Shop reviews in one feed.</span>
+  </div>
+</div></section>
+
+<!-- 17. FOUNDERS -->
+<section><div class="wrap">
+  <div class="fnd">
+    <div class="slot sq"><span class="lbl">Hannah and Neil at the Santa Monica bar</span></div>
+    <div class="fnd-b">
+      <div class="eyebrow">Meet the founders</div>
+      <h2 style="font-size:clamp(30px,4vw,44px)">It started behind a folding table</h2>
+      <p>Hannah had been drinking kava for a decade before she ever poured it for a stranger. It was what she reached for to unwind without a drink, and she was sure she was not the only one.</p>
+      <p>In the summer of 2023, she and co-founder Neil started pouring at pop-ups across Los Angeles. Raves, farmers markets, night markets. Anywhere people were curious, the table went up.</p>
+      <p>By February 2024 the line had become Kavahana in Santa Monica, the first kava nectar bar in the country, named the city's Most Loved New Business in its first year. A second bar followed in Hollywood.</p>
+      <p><span class="mauna">Kava Nectar</span> is the same pour we serve across the bar, dried into a powder so the ritual can travel.</p>
+      <div class="fnd-sig mauna">Hannah &amp; Neil</div>
+      <div class="fnd-meta">2 bars in Los Angeles &#183; 500,000+ cups served &#183; Ships to all 50 states and Canada</div>
+      <button class="pill-cta" style="margin:24px 0 0">Get my Starter Kit &#8594;</button>
+    </div>
   </div>
 </div></section>
 
