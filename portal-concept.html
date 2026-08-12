@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kavahana · Customer portal concept</title>
+<meta name="description" content="Proposed subscriber portal for Kavahana.">
+<style>
+@font-face{font-family:Chivo;font-style:normal;font-weight:100 900;font-display:swap;
+  src:url(fonts/chivo-var.woff2) format('woff2')}
+@font-face{font-family:Newsreader;font-style:normal;font-weight:200 800;font-display:swap;
+  src:url(fonts/newsreader-var.woff2) format('woff2')}
+
+:root{
+  --green:#367542; --green2:#73AE57; --mint:#8AC79A;
+  --cream:#F8F3E8; --panel:#F4F1EA; --white:#fff;
+  --ink:#1F1D17; --grey:#6A6659; --faint:#A8A395; --line:#E6DFCE;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--white);color:var(--ink);
+  font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:15px;line-height:1.5;
+  -webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--green);color:#fff;text-align:center;font-size:12px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;padding:9px 16px}
+.nav{background:var(--cream);border-bottom:1px solid var(--line)}
+.nav .in{max-width:1180px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:22px}
+.wordmark{font-weight:900;font-size:19px;letter-spacing:.02em;color:var(--green)}
+.nav .sp{flex:1}
+.nav a{font-size:13px;font-weight:700;text-decoration:none}
+
+/* ---------- shell ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:30px 22px 80px;display:flex;gap:34px;align-items:flex-start}
+.side{flex:0 0 236px;position:sticky;top:22px}
+.main{flex:1 1 auto;min-width:0}
+
+/* ---------- greeting + left nav ---------- */
+.who{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.who .av{width:44px;height:44px;border-radius:50%;background:var(--cream);color:var(--green);
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px}
+.who b{display:block;font-size:15px;line-height:1.25}
+.who span{font-size:12px;color:var(--grey)}
+
+.menu{list-style:none}
+.menu li{margin-bottom:2px}
+.menu a{display:flex;align-items:center;gap:11px;padding:10px 14px;border-radius:999px;
+  font-size:14px;font-weight:700;text-decoration:none;color:var(--ink)}
+.menu a:hover{background:var(--panel)}
+.menu a.on{background:var(--green2);color:#14261A}
+.menu svg{width:17px;height:17px;flex:0 0 auto;stroke:currentColor;fill:none;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round}
+.menu .out{margin-top:18px;border-top:1px dashed var(--line);padding-top:14px}
+.menu .out a{color:var(--grey)}
+
+/* ---------- headings ---------- */
+h1.page{font-size:13px;font-weight:900;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--faint);margin-bottom:16px}
+h2.sec{font-size:clamp(16px,2vw,19px);font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.sechead{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  margin:34px 0 12px}
+.sechead:first-of-type{margin-top:0}
+.viewall{font-size:12.5px;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+
+/* ---------- the fam ladder ---------- */
+.fam{background:var(--cream);border-radius:18px;padding:26px 28px 22px}
+.fam-top{display:flex;justify-content:space-between;align-items:baseline;gap:18px;
+  flex-wrap:wrap;margin-bottom:24px}
+.fam-h{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;
+  font-size:clamp(23px,3vw,31px);letter-spacing:-.01em;line-height:1.1}
+.fam-note{font-size:13.5px;color:var(--grey)}
+.fam-note b{color:var(--green)}
+.ladder{display:grid;grid-template-columns:repeat(5,1fr)}
+.rung{text-align:center;padding:0 6px}
+.rdot{position:relative;height:26px;display:flex;align-items:center;justify-content:center;margin-bottom:11px}
+.rdot::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:#E1D9C7}
+.rung:first-child .rdot::before{left:50%}
+.rung:last-child .rdot::before{right:50%}
+.rdot i{position:relative;width:12px;height:12px;border-radius:50%;background:#DED6C4;
+  border:3px solid var(--cream);font-style:normal}
+.rung.now .rdot i{width:22px;height:22px;background:var(--green);box-shadow:0 0 0 5px rgba(54,117,66,.15)}
+.rung.plus .rdot i{width:22px;height:22px;background:var(--green);color:#fff;display:flex;
+  align-items:center;justify-content:center;font-size:14px;font-weight:900;line-height:1}
+.rt{font-size:13.5px;font-weight:700;line-height:1.3}
+.rung.pending .rt{color:var(--grey)}
+.rm{font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--faint);margin-top:4px}
+.rung.now .rm{color:var(--green)}
+
+/* ---------- panels ---------- */
+.bar{background:var(--panel);border-radius:13px 13px 0 0;padding:14px 20px;display:flex;
+  justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.bar b{font-size:14.5px}
+.bar .meta{font-size:12.5px;color:var(--grey)}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:13px;padding:20px}
+.panel.att{border-radius:0 0 13px 13px;border-top:0}
+.split{display:flex;gap:24px;flex-wrap:wrap}
+.split .l{flex:1 1 58%;min-width:230px}
+.thumb{width:128px;height:128px;border-radius:12px;background:var(--panel);flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;color:#C0B9A8;font-size:11px}
+.kv{margin-bottom:6px;font-size:14px}
+.kv b{display:inline-block;min-width:120px;color:var(--grey);font-weight:700;font-size:12.5px;
+  letter-spacing:.04em;text-transform:uppercase}
+.pillstat{display:inline-flex;align-items:center;gap:7px;background:var(--panel);border-radius:999px;
+  padding:5px 13px;font-size:12.5px;font-weight:700;margin-top:10px}
+.pillstat::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green2)}
+
+/* ---------- friend module ---------- */
+.mod{background:var(--panel);border-radius:16px;padding:22px;display:flex;gap:22px;
+  align-items:center;flex-wrap:wrap;margin-top:16px}
+.mod .pic{width:196px;height:152px;border-radius:12px;background:#E7E2D6;flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;color:#B6AF9E;font-size:11px}
+.mod .body{flex:1 1 290px}
+.mod h3{font-size:17px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}
+.mod p{color:var(--grey);font-size:14px;margin-bottom:16px;max-width:52ch}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-block;background:var(--green);color:#fff;border:1.6px solid var(--green);
+  border-radius:999px;padding:11px 24px;font:inherit;font-weight:900;font-size:13.5px;
+  cursor:pointer;text-decoration:none}
+.btn:hover{background:#2B6136;border-color:#2B6136}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn.ghost:hover{background:var(--green);color:#fff}
+.link{color:var(--green);font-weight:700;font-size:13px;text-decoration:none}
+.link:hover{text-decoration:underline}
+
+/* ---------- schedule ---------- */
+.line{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;
+  border-bottom:1px dashed var(--line)}
+.line:last-of-type{border-bottom:0}
+.line .n{color:var(--faint);font-size:12px;font-weight:900;margin-right:10px}
+.more{text-align:center;font-size:12.5px;color:var(--grey);padding-top:13px;border-top:1px dashed var(--line)}
+
+/* ---------- actions ---------- */
+.acts{margin-top:18px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.cancel{font-size:12px;color:var(--faint);text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- faq ---------- */
+details{background:var(--panel);border-radius:12px;margin-bottom:10px}
+summary{cursor:pointer;list-style:none;padding:16px 20px;font-weight:900;font-size:14.5px;
+  display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--green);font-weight:400;font-size:20px}
+details[open] summary::after{content:"\2013"}
+details p{padding:0 20px 17px;font-size:14px;color:var(--grey)}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .shell{flex-direction:column;gap:22px}
+  .side{position:static;flex:1 1 auto;width:100%}
+  .menu{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .menu li{margin:0;flex:0 0 auto}
+  .menu a{white-space:nowrap;padding:9px 15px}
+  .menu .out{margin:0;border:0;padding:0}
+}
+@media(max-width:760px){
+  .ladder{grid-template-columns:1fr}
+  .rung{display:grid;grid-template-columns:30px 1fr;text-align:left;gap:12px;align-items:center;
+    padding:11px 0;border-bottom:1px dashed #E1D9C7}
+  .rung:last-child{border-bottom:0}
+  .rdot{height:auto;margin:0;grid-row:1/3;justify-content:flex-start}
+  .rdot::before{display:none}
+  .rt{grid-column:2;grid-row:1}
+  .rm{grid-column:2;grid-row:2;margin:0}
+  .fam{padding:22px 18px 16px}
+  .mod .pic{width:100%;height:150px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">Free domestic shipping on orders over $159</div>
+<div class="nav"><div class="in">
+  <span class="wordmark">KAVAHANA</span>
+  <span class="sp"></span>
+  <a href="#">Shop Kava Nectar</a>
+  <a href="#">Wholesale</a>
+</div></div>
+
+<div class="shell">
+
+  <!-- ============ LEFT NAV ============ -->
+  <aside class="side">
+    <div class="who">
+      <div class="av">B</div>
+      <div><b>Bryce Calcagno</b><span>Kavahana Fam since 2026</span></div>
+    </div>
+    <ul class="menu">
+      <li><a class="on" href="#"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 10v10h14V10"/></svg>Home</a></li>
+      <li><a href="#"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M4 9h16"/></svg>Subscription</a></li>
+      <li><a href="#"><svg viewBox="0 0 24 24"><path d="M4 6h16v13H4z"/><path d="M9 3v4M15 3v4"/></svg>Orders</a></li>
+      <li><a href="#"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Addresses</a></li>
+      <li><a href="#"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4 4 0 0 1 12 8a4 4 0 0 1 7 2.5c0 5-7 9.5-7 9.5Z"/></svg>The Fam</a></li>
+      <li><a href="#"><svg viewBox="0 0 24 24"><path d="M4 5h16v12H8l-4 3z"/></svg>Contact us</a></li>
+      <li><a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>Profile</a></li>
+      <li class="out"><a href="#"><svg viewBox="0 0 24 24"><path d="M14 4h5v16h-5"/><path d="M10 8l-4 4 4 4M6 12h9"/></svg>Log out</a></li>
+    </ul>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+    <h1 class="page">Home</h1>
+
+    <!-- the differentiator: the rewards ladder -->
+    <div class="fam">
+      <div class="fam-top">
+        <div class="fam-h">The Kavahana Fam</div>
+        <div class="fam-note">You are on <b>month 1</b>. Five stick packs land with your next box.</div>
+      </div>
+      <div class="ladder">
+        <div class="rung now"><div class="rdot"><i></i></div><div class="rt">Your ritual kit</div><div class="rm">Month 1</div></div>
+        <div class="rung pending"><div class="rdot"><i></i></div><div class="rt">5 stick packs</div><div class="rm">Month 2</div></div>
+        <div class="rung pending"><div class="rdot"><i></i></div><div class="rt">Send a friend a box</div><div class="rm">Month 3</div></div>
+        <div class="rung pending"><div class="rdot"><i></i></div><div class="rt">25% off anything</div><div class="rm">Month 4</div></div>
+        <div class="rung pending plus"><div class="rdot"><i>+</i></div><div class="rt">Monthly giveaways</div><div class="rm">Every month after</div></div>
+      </div>
+    </div>
+
+    <div class="sechead"><h2 class="sec">Your subscription</h2><a class="viewall" href="#">Edit subscription</a></div>
+    <div class="bar">
+      <b>Kava Nectar Balance Edition &#183; makes 22 cups</b>
+      <span class="meta">Ships every 1 month</span>
+    </div>
+    <div class="panel att">
+      <div class="split">
+        <div class="l">
+          <div class="kv"><b>Price</b> $53.99, $2.72 per cup</div>
+          <div class="kv"><b>Quantity</b> 1</div>
+          <div class="kv"><b>Next shipment</b> 09/11/2026</div>
+          <div class="kv"><b>Delivery</b> $5.99</div>
+          <div class="kv"><b>Shipping to</b> 600 Front Street APT 238, San Diego CA 92101</div>
+          <div class="pillstat">Active</div>
+        </div>
+        <div class="thumb">product shot</div>
+      </div>
+    </div>
+
+    <div class="mod">
+      <div class="pic">lifestyle image</div>
+      <div class="body">
+        <h3>Send a friend a box</h3>
+        <p>At month 3 we send someone you love a bamboo whisk, a coconut bowl, 5 stick packs and the recipe guide. On us. You keep your subscription exactly as it is.</p>
+        <a class="btn" href="#">See how it works</a>
+      </div>
+    </div>
+
+    <div class="sechead"><h2 class="sec">Schedule</h2><a class="viewall" href="#">Place an order now</a></div>
+    <div class="panel">
+      <div class="line"><span><span class="n">#1</span>09/11/2026</span><span><a class="link" href="#">Reschedule</a> &nbsp;&nbsp; <a class="link" href="#">Skip</a></span></div>
+      <div class="line"><span><span class="n">#2</span>10/11/2026</span><span><a class="link" href="#">Reschedule</a> &nbsp;&nbsp; <a class="link" href="#">Skip</a></span></div>
+      <div class="line"><span><span class="n">#3</span>11/11/2026</span><span><a class="link" href="#">Reschedule</a> &nbsp;&nbsp; <a class="link" href="#">Skip</a></span></div>
+      <div class="more">3 of 12 shown &#183; <a class="link" href="#">show all</a></div>
+    </div>
+
+    <div class="sechead"><h2 class="sec">Questions</h2></div>
+    <details open><summary>How do I change what is in my box?<span></span></summary>
+      <p>Open Subscription in the menu, then Edit. You can swap size, add a bag or change the flavour any time before your next charge.</p></details>
+    <details><summary>Can I skip a month?<span></span></summary>
+      <p>Yes. Hit Skip on any scheduled date above. Skipping keeps your place in the Fam, so your rewards carry on.</p></details>
+    <details><summary>What happens to my rewards if I pause?<span></span></summary>
+      <p>Nothing. A pause holds your place. Cancelling resets you to month 1 if you come back.</p></details>
+
+    <div class="acts">
+      <a class="btn ghost" href="#">Pause my subscription</a>
+      <a class="cancel" href="#">cancel my subscription</a>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
