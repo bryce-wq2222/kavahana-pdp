@@ -876,9 +876,9 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 <script>
 (function(){
   var SIZES={
-    '4oz':{s:'45 servings \u00b7 delivered monthly', r:'$109.99',
+    '4oz':{hero:'img/hero-ritual-kit.jpg', halt:'The 45 serving Starter Kit: two bags, two coconut bowls, whisk, 5 stick packs and recipe guide', s:'45 servings \u00b7 delivered monthly', r:'$109.99',
            get:'Get 45 servings of <span class="mauna">Kava Nectar</span>, two FREE coconut shell cups, a FREE bamboo whisk and 5 FREE stick packs'},
-    '2oz':{s:'22 servings \u00b7 delivered monthly', r:'$59.99',
+    '2oz':{hero:'img/hero-ritual-kit-22.jpg', halt:'The 22 serving Starter Kit: one bag, two coconut bowls, whisk and recipe guide', s:'22 servings \u00b7 delivered monthly', r:'$59.99',
            get:'Get 22 servings of <span class="mauna">Kava Nectar</span>, two FREE coconut shell cups and a FREE bamboo whisk'}
   };
   document.querySelectorAll('.opt').forEach(function(o){
@@ -894,8 +894,13 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       $('bbSub').textContent=s.s;
       $('bbRen').textContent=s.r;
       $('bbGet').innerHTML=s.get;
+      var hi=document.querySelector('.heroimg');
+      if(hi&&s.hero&&hi.getAttribute('src')!==s.hero){hi.src=s.hero;hi.alt=s.halt;}
+      var sl=document.getElementById('slides');
+      if(sl)sl.scrollTo({left:0,behavior:'smooth'});
     });
   });
+  ['img/hero-ritual-kit.jpg','img/hero-ritual-kit-22.jpg'].forEach(function(u){var p=new Image();p.src=u;});
   var slides=document.getElementById('slides'), dots=document.getElementById('dots2');
   if(slides&&dots){
     var n=slides.children.length;
