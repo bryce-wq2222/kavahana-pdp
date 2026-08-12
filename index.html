@@ -347,6 +347,8 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   .rc-carou .cslide{flex-basis:33.3333%}
   .rec-carou .cslide{flex-basis:33.3333%}
   .vid-carou .cslide{flex-basis:20%}
+  .vid-carou .cnav{display:none}
+  [data-dots="btb"]{display:none}
 }
 
 /* ---- 11. reviews ---- */
@@ -468,7 +470,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   <div class="gal">
     <div class="galwrap">
       <div class="slides" id="slides">
-        <div class="slide"><div class="slot sq"><span class="lbl">Hero: the full kit laid out</span></div></div>
+        <div class="slide"><img class="heroimg" src="img/hero-ritual-kit.jpg" width="1080" height="1080" alt="The 45 serving Starter Kit: two bags, two coconut bowls, whisk, 5 stick packs and recipe guide"></div>
         <div class="slide"><div class="slot sq"><span class="lbl">Kava Nectar going into the shell cup</span></div></div>
         <div class="slide"><div class="slot sq"><span class="lbl">Whole kava root held to camera</span></div></div>
         <div class="slide"><div class="slot sq"><span class="lbl">Bamboo whisk mid-mix</span></div></div>
@@ -745,7 +747,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   <div class="hero" style="padding-top:0">
     <div>
       <div class="galwrap">
-        <div class="slot sq"><span class="lbl">Hero repeat: the full kit</span></div>
+        <img class="heroimg" src="img/hero-ritual-kit.jpg" width="1080" height="1080" alt="The 45 serving Starter Kit: two bags, two coconut bowls, whisk, 5 stick packs and recipe guide">
       </div>
     </div>
     <div>
@@ -786,12 +788,13 @@ h2{font-size:clamp(30px,4.3vw,50px)}
         <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="video/ugc-shots-party-poster.jpg" playsinline muted loop title="We lost track of how many shots we took"><source src="video/ugc-shots-party.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: We lost track of how many shots we took">&#9654;</button><span class="vcap">We lost track of how many shots we took</span></div></div>
         <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="video/ugc-alcohol-free-poster.jpg" playsinline muted loop title="Seven months alcohol free"><source src="video/ugc-alcohol-free.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Seven months alcohol free">&#9654;</button><span class="vcap">Seven months alcohol free</span></div></div>
         <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="video/ugc-take-home-poster.jpg" playsinline muted loop title="Take it home, or order online"><source src="video/ugc-take-home.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Take it home, or order online">&#9654;</button><span class="vcap">Take it home, or order online</span></div></div>
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="video/ugc-beach-day-poster.jpg" playsinline muted loop title="A beach day with kava"><source src="video/ugc-beach-day.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: A beach day with kava">&#9654;</button><span class="vcap">A beach day with kava</span></div></div>
       
       
       
       
-      <div class="cslide"><div class="vid"><div class="slot v"><span class="lbl">47k, the coconut shell serve</span></div><div class="play">&#9654;</div></div></div>
-      <div class="cslide"><div class="vid"><div class="slot v"><span class="lbl">the bar, making one</span></div><div class="play">&#9654;</div></div></div>
+      
+      
     </div>
     <button class="cnav next" aria-label="Next">&#8250;</button>
   </div>
@@ -881,6 +884,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     '2oz':{hero:'img/hero-ritual-kit-22.jpg', halt:'The 22 serving Starter Kit: one bag, two coconut bowls, whisk and recipe guide', s:'22 servings \u00b7 delivered monthly', r:'$59.99',
            get:'Get 22 servings of <span class="mauna">Kava Nectar</span>, two FREE coconut shell cups and a FREE bamboo whisk'}
   };
+  ['img/hero-ritual-kit.jpg','img/hero-ritual-kit-22.jpg'].forEach(function(u){var p=new Image();p.src=u;});
   function setSize(key, fromTop){
     var s=SIZES[key]; if(!s) return;
     document.querySelectorAll('.buy [data-o]').forEach(function(x){x.classList.toggle('sel', x.dataset.o===key)});
@@ -931,7 +935,8 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     var slides=track.children;
     function step(){ return slides[0] ? slides[0].getBoundingClientRect().width : track.clientWidth; }
     function per(){ return Math.max(1, Math.round(track.clientWidth/step())); }
-    function pages(){ return Math.max(1, slides.length - per() + 1); }
+    var perSlide=c.classList.contains('vid-carou');
+    function pages(){ return perSlide ? slides.length : Math.max(1, slides.length - per() + 1); }
     if(dots){
       for(var i=0;i<pages();i++){
         (function(i){
