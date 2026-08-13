@@ -205,8 +205,9 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .giftpanel{background:var(--card);border-radius:18px;padding:34px 30px;box-shadow:0 1px 2px rgba(22,33,26,.05),0 18px 44px -26px rgba(22,33,26,.3)}
 .gifth2{font-size:clamp(32px,4.4vw,48px);letter-spacing:-.012em;line-height:1.05}
 .valchip{display:inline-block;background:var(--green);color:#fff;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:5px;margin-bottom:14px}
-.gifts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px;text-align:left}
-.gt{background:var(--cream);border-radius:13px;padding:13px}
+.gifts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:22px;text-align:left}
+.gt{background:var(--cream);border-radius:13px;padding:13px;display:flex;flex-direction:column}
+.gt .shot{margin-top:auto}
 .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:10px;min-height:32px}
 .gn{font-size:12px;font-weight:500;line-height:1.25;letter-spacing:.01em;text-transform:uppercase}
 .gf{font-size:12px;font-weight:600;color:var(--green);text-align:right;white-space:nowrap;line-height:1.2}
@@ -219,8 +220,8 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .shot-hands img{object-position:50% 28%}
 .split > .shot{max-width:520px;width:100%;margin-left:auto;margin-right:auto}
 .shot::after{content:"";position:absolute;inset:0;border-radius:9px;box-shadow:inset 0 0 0 1px rgba(22,33,26,.09)}
-@media(max-width:760px){.gifts{grid-template-columns:1fr 1fr}}
-.moregifts{text-align:center;margin-top:16px;font-size:13px;font-weight:500;color:var(--green)}
+@media(max-width:760px){.gifts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.moregifts{text-align:center;margin-top:20px;font-size:14px;font-weight:500;letter-spacing:.02em;color:var(--green)}
 
 /* ---- 6. press ---- */
 .press{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;align-items:start}
@@ -236,6 +237,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .bn{background:var(--card);border-radius:13px;padding:20px}
 .bn .ic{width:38px;height:38px;color:var(--green);margin-bottom:10px}
 .bn .ic svg{width:100%;height:100%}
+.bn .ic img{width:100%;height:100%;object-fit:contain;display:block}
 .bn h3{font-size:15px;margin-bottom:5px}
 .bn p{font-size:13.5px;color:var(--grey);line-height:1.5}
 
@@ -454,6 +456,16 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .fnd-b p{margin:12px 0;font-size:15px;line-height:1.62}
 .fnd-sig{font-size:34px;color:var(--green);margin-top:16px}
 .fnd-vid .slot,.fnd-vid video.slot{aspect-ratio:1/1;border-radius:16px}
+.btbsec .galwrap{border:1px solid var(--ink)}
+.lbx{position:fixed;inset:0;background:rgba(22,33,26,.72);display:none;align-items:center;justify-content:center;z-index:70;padding:20px}
+.lbx.on{display:flex}
+.lbx img{max-width:min(92vw,560px);max-height:86vh;border-radius:14px;display:block}
+.lbx .x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:15px;cursor:pointer;color:var(--ink)}
+@media(max-width:760px){
+  .ctrh{font-size:31px;white-space:nowrap}
+  .seerec{display:block;margin-top:6px;white-space:nowrap}
+  .btbsec{padding-top:0}
+}
 .fnd-meta{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:10px;font-weight:500}
 @media(max-width:759px){.rt2{grid-template-columns:1fr}.fnd{grid-template-columns:1fr;gap:26px}}
  .appsub{font-size:13.5px;color:var(--grey);max-width:46ch;line-height:1.55}
@@ -520,7 +532,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 
   <div>
     <div class="buy">
-      <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>624 Reviews</span><span class="ph">count to confirm</span></div>
+      <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>624 Reviews</span></div>
       <h1>Nectar Starter Kit</h1>
       <div class="eyebrow eyebrow-sub">The daily kava ritual</div>
       <div class="getline" id="bbGet">Get 45 servings of <span class="mauna">Kava Nectar</span>, two FREE coconut shell cups, a FREE bamboo whisk and 5 FREE stick packs</div>
@@ -564,7 +576,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     </div>
 
     <div class="acc">
-      <details open><summary>Why Kavahana?</summary><p>Kava Nectar is the cold pressed juice of noble kava root, dried into a powder and nothing else. The plants grow 5 to 7 years before harvest. It is prepared the way it is prepared in the islands, and it tastes like it.</p></details>
+      <details><summary>Why Kavahana?</summary><p>Kava Nectar is the cold pressed juice of noble kava root, dried into a powder and nothing else. The plants grow 5 to 7 years before harvest. It is prepared the way it is prepared in the islands, and it tastes like it.</p></details>
       <details><summary>Ingredients and what they do</summary><ul><li><b>Pure dried kava juice.</b> One ingredient, nothing added or removed.</li><li><b>Kavalactones.</b> The compounds behind the tingle and the uplift. The kava plant is a member of the peppercorn family.</li><li><b>Nothing else.</b> No sweetener, no filler powders, nothing added.</li></ul></details>
       <details><summary>Science and quality</summary><p>Noble cultivars, grown 5 to 7 years in volcanic soil. Whole root, no stems or leaves. Every batch is tested for purity and potency.</p></details>
       <details><summary>Ready in 10 seconds</summary><p>A teaspoon or two into 12 to 16oz of any non-alcoholic liquid, whisked, stirred, shaken or blended. It dissolves in seconds. A convenient way to enjoy a drink that has been prepared by hand in the islands for over 3,000 years.</p></details>
@@ -636,7 +648,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
         <div class="shot"><img decoding="async" src="img/kava-strawberry.jpg" width="1200" height="1200" alt="Two Kavahana strawberry drinks with fresh strawberries"></div>
       </div>
     </div>
-    <div class="moregifts">5 more stick packs, free, on your first renewal. More to look forward to every month after that.</div>
+    <div class="moregifts">Subscriber rewards, every month</div>
   </div>
 </div></section>
 
@@ -675,13 +687,13 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   <div class="split">
     <div class="shot shot-drinks"><img loading="lazy" decoding="async" src="img/kava-drinks.jpg" width="945" height="945" alt="Two Kavahana drinks held up in the Santa Monica kava bar"></div>
     <div class="splitctr">
-      <h2 class="ctrh">Morning<br>and evening</h2>
+      <h2 class="ctrh">Morning and evening</h2>
       <p class="lead ctr" style="margin-top:10px">Enjoyed in the South Pacific and Hawaii for over 3,000 years.</p>
       <div class="ben2">
-        <div class="bn"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 18.5c1.8-.6 3.2-.4 4.6.3 1.6.8 3 1.1 4.7.4 1.5-.6 2.6-1.7 3.4-3.1"/><path d="M16 6.6c.6 1.5.3 2.7-.5 3.8-.8 1.1-1 2.2-.3 3.4"/><path d="M22.8 9.4c.5 1.2.2 2.2-.5 3"/></svg></div><h3>The tingle</h3><p>Lips and tongue go tingly seconds after the first sip. Kava is in the peppercorn family, which is where that comes from.</p></div>
-        <div class="bn"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6.2c3.1 2.6 5.2 5.4 5.2 8.6 0 3.2-2.4 5.6-5.2 5.6s-5.2-2.4-5.2-5.6c0-3.2 2.1-6 5.2-8.6Z"/><path d="M12 24.4c2.6.9 5.4.9 8 0"/></svg></div><h3>The uplift</h3><p>10 to 20 minutes in, many people feel relaxed, smiley and sociable, lasting 1 to 2 hours.</p></div>
-        <div class="bn"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 16.4c2.8-3.6 6-5.4 9.5-5.4s6.7 1.8 9.5 5.4c-2.8 3.7-6 5.5-9.5 5.5s-6.7-1.8-9.5-5.5Z"/><circle cx="16" cy="16.4" r="2.6"/></svg></div><h3>Present, not out of it</h3><p>Customers describe being more receptive and more in the conversation rather than watching themselves have it.</p></div>
-        <div class="bn"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6.4v2.4M16 23.6V26M8.6 16H6.2M25.8 16h-2.4M10.8 10.7 9.1 9M22.9 22.9l-1.7-1.7M21.2 10.7 22.9 9M9.1 22.9l1.7-1.7"/><circle cx="16" cy="16" r="4.4"/></svg></div><h3>Clear the next day</h3><p>Many people notice a clear head the next morning, which is why a lot of subscribers moved their evening over.</p></div>
+        <div class="bn"><div class="ic"><img src="img/icons/happy.svg" alt="" loading="lazy" width="32" height="22"></div><h3>The tingle</h3><p>Lips and tongue go tingly seconds after the first sip. Kava is in the peppercorn family, which is where that comes from.</p></div>
+        <div class="bn"><div class="ic"><img src="img/icons/mood.svg" alt="" loading="lazy" width="22" height="22"></div><h3>The uplift</h3><p>10 to 20 minutes in, many people feel relaxed, smiley and sociable, lasting 1 to 2 hours.</p></div>
+        <div class="bn"><div class="ic"><img src="img/icons/calm.svg" alt="" loading="lazy" width="26" height="27"></div><h3>Present, not out of it</h3><p>Customers describe being more receptive and more in the conversation rather than watching themselves have it.</p></div>
+        <div class="bn"><div class="ic"><img src="img/icons/sleep.svg" alt="" loading="lazy" width="34" height="24"></div><h3>Clear the next day</h3><p>Many people notice a clear head the next morning, which is why a lot of subscribers moved their evening over.</p></div>
       </div>
     </div>
   </div>
@@ -721,10 +733,10 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <h2 class="ctrh">The daily ritual</h2>
       <p class="lead ctr" style="margin-top:10px">One drink, made by hand, that you can actually feel.</p>
       <div class="bothcols">
-        <div><div class="bcap">In the cup</div><p>Earthy and peppery, the way a root tastes, because nothing is added to it. Most people take it with cold coconut water, or pineapple and coconut milk. <a href="#recipes" class="inlink">See the recipes</a>.</p></div>
+        <div><div class="bcap">In the cup</div><p>Earthy and peppery, the way a root tastes, because nothing is added to it. Most people take it with cold coconut water, or pineapple and coconut milk. <a href="#recipes" class="inlink seerec">See the recipes</a></p></div>
         <div><div class="bcap">The feeling</div><p>A gentle tingle arrives within seconds. 10 to 20 minutes in, many people feel relaxed, smiley and sociable for 1 to 2 hours, and clear headed the next morning.</p></div>
       </div>
-      <button class="pill-cta" style="max-width:260px;margin:22px auto 0">Read the label &#8594;</button>
+      <button class="pill-cta" id="readlabel" style="max-width:260px;margin:22px auto 0">Read the label &#8594;</button>
       <p class="finep"><b>Full ingredient list:</b> noble kava root. Nothing else. Natural kava root is non-addictive and non-intoxicating. It is not unusual for people to enjoy 2 to 3 servings, especially in the beginning.</p>
     </div>
   </div>
@@ -735,7 +747,6 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   <div class="ctr">
     <h2>From the people who drink it</h2>
     <div class="stars-row" style="justify-content:center;margin-top:10px"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>Rated 4.8 out of 5</b></div>
-      <p class="srcnote">Site reviews and TikTok Shop reviews, in one feed. <span class="ph">Combined count to confirm</span></p>
   </div>
   <div class="carou rc-carou" data-carou="revs">
     <button class="cnav prev" aria-label="Previous">&#8249;</button>
@@ -780,7 +791,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </div></section>
 
 <!-- 13. BUY BOX REPEAT -->
-<section class="lav"><div class="wrap">
+<section class="lav btbsec"><div class="wrap">
   <div class="hero" style="padding-top:0">
     <div>
       <div class="galwrap">
@@ -789,7 +800,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     </div>
     <div>
       <div class="buy">
-        <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>624 Reviews</span><span class="ph">count to confirm</span></div>
+        <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>624 Reviews</span></div>
         <h1>Nectar Starter Kit</h1>
         <div class="eyebrow eyebrow-sub">The daily kava ritual</div>
         <div class="optlabel">Size</div>
@@ -954,7 +965,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   </div>
   <div class="appslot">
     <span class="applbl">Shopify reviews app embeds here</span>
-    <span class="appsub">Star summary, rating breakdown, filters, customer photos and the write a review flow all come from the app. Site reviews and TikTok Shop reviews in one feed.</span>
+    <span class="appsub">Star summary, rating breakdown, filters, customer photos and the write a review flow all come from the app.</span>
   </div>
 </div></section>
 
@@ -975,6 +986,27 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   </div>
 </div></section>
 
+<div class="lbx" id="lbl-lbx" role="dialog" aria-modal="true" aria-label="Supplement facts">
+  <button class="x" type="button" aria-label="Close">&#10005;</button>
+  <img src="img/gal-6.jpg" alt="Kava Nectar supplement facts label" loading="lazy">
+</div>
+
+<script>
+(function(){
+  var hero=document.querySelector('.hero');
+  [].forEach.call(document.querySelectorAll('.pill-cta'),function(b){
+    if(b.id==='readlabel'||b.closest('.hero'))return;
+    b.addEventListener('click',function(){ hero.scrollIntoView({behavior:'smooth'}); });
+  });
+  var lbx=document.getElementById('lbl-lbx'), rl=document.getElementById('readlabel');
+  if(rl&&lbx){
+    rl.addEventListener('click',function(){ lbx.classList.add('on'); document.body.style.overflow='hidden'; });
+    function close(){ lbx.classList.remove('on'); document.body.style.overflow=''; }
+    lbx.addEventListener('click',function(e){ if(e.target===lbx||e.target.classList.contains('x')) close(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  }
+})();
+</script>
 <script>
 (function(){
   var SIZES={
