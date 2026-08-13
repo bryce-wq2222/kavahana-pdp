@@ -251,7 +251,9 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .split > .slot{max-width:520px;width:100%;margin-left:auto;margin-right:auto}
 
 /* ---- 4b. subscriber perks ---- */
-.perkgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:34px}
+.perkgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px;margin:34px auto 0;max-width:560px}
+.perk:nth-child(5){grid-column:1/-1;justify-self:center}
+.perk .pdot{display:none}
 .perk{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;padding:0 10px}
 .pic{width:46px;height:46px;color:var(--green);margin-bottom:12px}
 .pic svg{width:100%;height:100%}
@@ -271,13 +273,12 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .pbline::after{right:0;transform:rotate(45deg)}
 .pbtext{font-size:12.5px;color:var(--grey);margin-top:9px}
 @media(max-width:960px){
-  .perkgrid{grid-template-columns:repeat(3,1fr);gap:30px 0}
-  .perk .pdot{display:none}
+
   .pm{margin-top:10px}
   .pbline{width:70%}
 }
 @media(max-width:560px){
-  .perkgrid{grid-template-columns:1fr;gap:26px 0}
+  .perkgrid{gap:26px 14px}
 }
 
 /* ---- 3b. as seen on ---- */
@@ -456,13 +457,13 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .fnd-b p{margin:12px 0;font-size:15px;line-height:1.62}
 .fnd-sig{font-size:34px;color:var(--green);margin-top:16px}
 .fnd-vid .slot,.fnd-vid video.slot{aspect-ratio:1/1;border-radius:16px}
-.btbsec .galwrap{border:1px solid var(--ink)}
+.btbsec .galwrap{border:2.5px solid var(--ink)}
 .lbx{position:fixed;inset:0;background:rgba(22,33,26,.72);display:none;align-items:center;justify-content:center;z-index:70;padding:20px}
 .lbx.on{display:flex}
 .lbx img{max-width:min(92vw,560px);max-height:86vh;border-radius:14px;display:block}
 .lbx .x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:15px;cursor:pointer;color:var(--ink)}
 @media(max-width:760px){
-  .ctrh{font-size:31px;white-space:nowrap}
+  .ctrh{font-size:34px;white-space:nowrap}
   .seerec{display:block;margin-top:6px;white-space:nowrap}
   .btbsec{padding-top:0}
 }
@@ -690,10 +691,10 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <h2 class="ctrh">Morning and evening</h2>
       <p class="lead ctr" style="margin-top:10px">Enjoyed in the South Pacific and Hawaii for over 3,000 years.</p>
       <div class="ben2">
-        <div class="bn"><div class="ic"><img src="img/icons/happy.svg" alt="" loading="lazy" width="32" height="22"></div><h3>The tingle</h3><p>Lips and tongue go tingly seconds after the first sip. Kava is in the peppercorn family, which is where that comes from.</p></div>
+        <div class="bn"><div class="ic"><img src="img/icons/cup.svg" alt="" loading="lazy" width="34" height="24"></div><h3>The tingle</h3><p>Lips and tongue go tingly seconds after the first sip. Kava is in the peppercorn family, which is where that comes from.</p></div>
         <div class="bn"><div class="ic"><img src="img/icons/mood.svg" alt="" loading="lazy" width="22" height="22"></div><h3>The uplift</h3><p>10 to 20 minutes in, many people feel relaxed, smiley and sociable, lasting 1 to 2 hours.</p></div>
         <div class="bn"><div class="ic"><img src="img/icons/calm.svg" alt="" loading="lazy" width="26" height="27"></div><h3>Present, not out of it</h3><p>Customers describe being more receptive and more in the conversation rather than watching themselves have it.</p></div>
-        <div class="bn"><div class="ic"><img src="img/icons/sleep.svg" alt="" loading="lazy" width="34" height="24"></div><h3>Clear the next day</h3><p>Many people notice a clear head the next morning, which is why a lot of subscribers moved their evening over.</p></div>
+        <div class="bn"><div class="ic"><img src="img/icons/happy.svg" alt="" loading="lazy" width="32" height="22"></div><h3>Clear the next day</h3><p>Many people notice a clear head the next morning, which is why a lot of subscribers moved their evening over.</p></div>
       </div>
     </div>
   </div>
@@ -703,9 +704,9 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 <section class="lav"><div class="wrap">
   <div class="split">
     <div class="splitctr">
-      <div class="eyebrow ctrh">Why people stay</div>
+      <div class="eyebrow" style="text-align:center">Why people stay</div>
         <h2 class="ctrh">Good today.<br>Better every week.</h2>
-        <p class="lead ctr" style="margin-top:12px">Kava is known for a reverse tolerance. The first cup is good. The one you make a month from now is better. Most people do not stay because of a discount, they stay because it keeps improving.</p>
+        <p class="lead ctr" style="margin-top:12px">Kava is known for a reverse tolerance. The first cup is good. The one you make a month from now is better.</p>
       <div class="st4">
         <div><div class="n">4.8</div><div class="l">Average rating</div></div>
         <div><div class="n">96%</div><div class="l">Would recommend</div></div>
@@ -877,7 +878,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   <div class="ctr">
     <div class="eyebrow" style="text-align:center">Reverse tolerance</div>
     <h2 class="btbh2">Kava vs the alternatives, over time</h2>
-    <p class="lead ctr" style="margin-top:10px">Two different paths. Two different outcomes. Alcohol asks for more over time, and gardening works the same way, if gardening is your kind of evening. Kava is known for the opposite: as your body gets to know the kavalactones, a smaller pour goes further.</p>
+    <p class="lead ctr" style="margin-top:10px">Alcohol and gardening ask for more over time. Kava works in reverse: the longer you drink it, the less you need.</p>
   </div>
   <div class="rt2">
     <div class="rt-card rt-kava">
@@ -897,7 +898,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <div class="rt-take"><span class="rt-arrow">&#8595;</span>You need less to feel the same effects</div>
     </div>
     <div class="rt-card rt-alc">
-      <div class="rt-pill">Alcohol &amp; gardening</div>
+      <div class="rt-pill">Alcohol &amp; gardening &#127807;</div>
       <p class="rt-copy">Effects <b>weaken</b> with continued use. Many people find they need more to feel the same ease, whichever way they unwind.</p>
       <svg viewBox="0 0 320 174" role="img" aria-label="Chart: alcohol effect strength falling with continued use">
         <line x1="40" y1="12" x2="40" y2="148" stroke="#C9C4B4" stroke-width="1"/>
@@ -921,35 +922,14 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 <section><div class="wrap">
   <div class="ctr"><div class="eyebrow" style="text-align:center">Frequently asked</div><h2>Questions</h2></div>
   <div class="faq2">
-    <h3 class="faqgrp">The product</h3>
     <details><summary>What is in it?</summary><p>100% cold-pressed noble kava root. Nothing added, nothing stripped away. Vegan, zero sugar, no caffeine.</p></details>
     <details><summary>What is kava?</summary><p>Kava is a plant native to the South Pacific Islands and Hawaii, and its root is enjoyed in a tea-like form. It has been enjoyed for centuries in social, traditional and ceremonial settings, and it is the national drink of Fiji.</p></details>
-    <details><summary>How is Kava Nectar different from other kava?</summary><p>Kava Nectar is the cold-pressed juice of noble kava root, gently dried into a smooth, mixable powder. It contains no root fiber and needs no straining or steeping. Just mix it into a cold beverage and it is ready. It is not an extract or an isolate, so the natural balance of the whole root stays intact.</p></details>
-    <details><summary>Is it made from 100% noble kava?</summary><p>Yes. We only use noble kava cultivars sourced from trusted farms in the South Pacific. These are the same varieties island communities have used for generations.</p></details>
-    <details><summary>Is it the same as micronized kava?</summary><p>No. Micronized kava is the whole ground root, which can leave a gritty texture and usually needs straining. Kava Nectar is made only from the cold-pressed juice of the root, pre-strained and gently dried into a smooth powder. It mixes cleanly into cold drinks with no fiber and no sediment.</p></details>
-    <details><summary>Do I need to knead and strain it?</summary><p>No. Kava Nectar is an instant kava, not a micronized one, so there is no kneading and no straining. Stir it into a cold beverage and enjoy.</p></details>
-    <details><summary>Is there kratom in it?</summary><p>No. Kava Nectar is made from kava root and nothing else. Kava and kratom are two different plants. If you have only tried the small bottles sold in gas stations, those are often kava mixed with something else.</p></details>
-    <h3 class="faqgrp">The experience</h3>
-    <details><summary>How does it taste?</summary><p>Earthy and peppery, like a stronger matcha. It mixes into water, milk or juice in about 10 seconds.</p></details>
     <details><summary>How does it feel?</summary><p>Most people describe a warm, relaxed calm within 15 to 30 minutes, clear and social, never sedated. Kava is also known for a reverse tolerance, so many find it grows on them the more they drink it. Good in the moment, and better over time.</p></details>
+    <details><summary>How does it taste?</summary><p>Earthy and peppery, like a stronger matcha. It mixes into water, milk or juice in about 10 seconds.</p></details>
     <details><summary>I tried kava before and felt nothing. Why?</summary><p>Kava is thought to have a kind of reverse tolerance, where the benefits feel subtle at first and become more noticeable with continued use. It is not unusual for people to enjoy 2 to 3 servings, especially in the beginning. Start with a teaspoon in 8 to 12oz of cold or lukewarm liquid and build from there.</p></details>
-    <details><summary>How much do I need to drink to experience anything?</summary><p>Start with 1 teaspoon mixed into 8 to 12 ounces of cold or lukewarm liquid. Avoid hot liquids, as they can bring out kava nectar's natural bitterness. Many people notice something within 10 to 20 minutes, though experiences vary. It is not unusual for people to enjoy additional servings, especially in the beginning.</p></details>
-    <details><summary>Why does kava tingle my tongue?</summary><p>That gentle tingling comes from kavalactones, the naturally occurring compounds in kava root. It is a normal part of the experience and usually fades within a few minutes. The kava plant belongs to the peppercorn family, which is where that naturally peppery bite comes from.</p></details>
     <details><summary>Does it make you feel intoxicated?</summary><p>No. Kava has traditionally been enjoyed as a communal drink and is the national beverage of Fiji. It is valued for a calm, relaxed state without impairing mental clarity or causing intoxication.</p></details>
-    <details><summary>Can I enjoy it during the day and at night?</summary><p>Yes. Some people enjoy Kava Nectar in the evening and many enjoy it during the day. Different kava cultivars are traditionally associated with different experiences: some with social ease, some with focus, some with a calm moment in a busy day.</p></details>
-    <h3 class="faqgrp">Safety</h3>
     <details><summary>Is kava safe and legal?</summary><p>Kava is 100% legal in the United States and has been safely enjoyed for centuries in the South Pacific and Hawai'i. It is made from the root of the kava plant and has a long history of traditional use in community and ceremonial settings. If you are pregnant, nursing or taking medication, consult your physician before enjoying Kava Nectar.</p></details>
-    <details><summary>Does it have side effects?</summary><p>Kava is generally very well tolerated, similar to everyday beverages like matcha or coffee, and has been traditionally enjoyed in the Pacific Islands for generations. If you have a large amount you may feel drowsy, much like after too much strong tea. If that happens, simply stop drinking and you should return to normal shortly. Individual experiences may vary.</p></details>
-    <details><summary>Is it habit forming?</summary><p>Natural kava root is not considered habit forming. It has been traditionally enjoyed for centuries in communal and ceremonial settings without patterns of dependency, and it works on reverse tolerance, which is the opposite of how tolerance normally builds.</p></details>
-    <details><summary>What about the liver?</summary><p>That is actually a misconception. Natural kava root has been enjoyed in the South Pacific and Hawaii for centuries as a family drink, and it is Fiji's national drink too. The concern traces back to the early 2000s when a pharmaceutical company processed kava into an extract, which led to bans in Europe. Those bans have since been lifted, including in Germany where a court overturned it.</p></details>
-    <details><summary>Can I drive after drinking it?</summary><p>Kava does not intoxicate you the way alcohol does, but just like with a strong tea you could feel sleepy, so enjoy it when you do not have to drive.</p></details>
-    <details><summary>Is there an age restriction?</summary><p>There is no legal age restriction in the US, and kava has been enjoyed as a family drink for over 3,000 years. We still recommend 18 and over for a first time, because it has an effect you can feel.</p></details>
-    <details><summary>Can I drink it while pregnant?</summary><p>Not recommended, due to lack of studies.</p></details>
-    <h3 class="faqgrp">Practical</h3>
-    <details><summary>How many calories and how much sugar?</summary><p>Kava Nectar contains 0 calories and 0 grams of sugar per serving, based on analytical testing by Eurofins.</p></details>
     <details><summary>Can I enjoy it every day?</summary><p>Kava has been enjoyed daily for centuries in the Pacific Islands and is the national drink of Fiji. Kava Nectar contains no stimulants, sugars or additives, which makes it a good option for regular use. As with any botanical product it is best to listen to your body and enjoy in moderation. Unlike some botanicals, natural kava root is not considered habit forming.</p></details>
-    <details><summary>Can I bring it when I travel?</summary><p>Kava Nectar is a dry powder and may be carried much like other herbal supplements or teas. Kava is 100% legal in the United States and is often treated similarly to traditional tea or plant-based wellness products. If you are traveling internationally, check the local regulations of your destination, as rules around plant products vary.</p></details>
-    <details><summary>How should I store it?</summary><p>Store it in a cool, dry place away from direct sunlight. Reseal the pouch tightly after each use to keep it fresh.</p></details>
   </div>
   <div style="margin-top:30px">
     <button class="pill-cta">Get my Starter Kit &#8594;</button>
@@ -996,7 +976,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   var hero=document.querySelector('.hero');
   [].forEach.call(document.querySelectorAll('.pill-cta'),function(b){
     if(b.id==='readlabel'||b.closest('.hero'))return;
-    b.addEventListener('click',function(){ hero.scrollIntoView({behavior:'smooth'}); });
+    b.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
   });
   var lbx=document.getElementById('lbl-lbx'), rl=document.getElementById('readlabel');
   if(rl&&lbx){
