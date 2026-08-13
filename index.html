@@ -188,6 +188,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .stp p{font-size:14px;color:var(--grey);line-height:1.5}
 .howto-gif{position:relative}
 .howto-gif .slot{aspect-ratio:1;border-radius:16px}
+.howto-gif video.slot{width:100%;height:auto;object-fit:cover;display:block;background:#EDE4D1}
 .howto-gif .play{position:absolute;inset:0;margin:auto;width:52px;height:52px;border-radius:50%;background:rgba(255,253,248,.92);display:flex;align-items:center;justify-content:center;font-size:17px;padding-left:4px;color:var(--ink);box-shadow:0 6px 20px -8px rgba(22,33,26,.4)}
 @media(max-width:900px){
   .howto{grid-template-columns:1fr;gap:22px}
@@ -605,7 +606,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       </div>
     </div>
     <div class="howto-gif">
-      <div class="slot"><span class="lbl">GIF: scoop, mix, enjoy. The full 10 second prep on loop</span><div class="play">&#9654;</div></div>
+      <video class="slot" muted loop playsinline preload="metadata" aria-label="Scoop, mix, enjoy: the full prep on loop"><source src="video/how-to-prepare.mp4" type="video/mp4"></video>
     </div>
   </div>
 </div></section>
@@ -1101,6 +1102,14 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     es.forEach(function(e){ if(e.isIntersecting){ load(e.target); io.unobserve(e.target); } });
   },{rootMargin:'600px 0px'});
   vids.forEach(function(v){ io.observe(v); });
+})();
+</script>
+<script>
+(function(){
+  var g=document.querySelector('.howto-gif video');
+  if(g&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(es,io){es.forEach(function(e){if(e.isIntersecting){g.play().catch(function(){});}else{g.pause();}});},{rootMargin:'200px 0px'}).observe(g);
+  }else if(g){g.setAttribute('autoplay','');g.play().catch(function(){});}
 })();
 </script>
 <script>
