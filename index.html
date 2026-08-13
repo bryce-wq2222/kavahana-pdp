@@ -102,7 +102,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   .slides{cursor:grab}
   .slides.dragging{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
 }
-.slides{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;touch-action:pan-x pan-y pinch-zoom}
+.slides{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;touch-action:pan-x pan-y pinch-zoom}
 .slides::-webkit-scrollbar{display:none}
 .slide{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always}
 .slide .slot{border-radius:0}
@@ -341,7 +341,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 
 /* shared carousel */
 .carou{position:relative;display:flex;align-items:center;gap:10px;margin-top:20px;min-height:150px}
-.ctrack{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scroll-behavior:smooth;scrollbar-width:none;flex:1;gap:0;overscroll-behavior-x:contain;touch-action:pan-x pan-y pinch-zoom;-webkit-overflow-scrolling:touch}
+.ctrack{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;flex:1;gap:0;overscroll-behavior-x:contain;touch-action:pan-x pan-y pinch-zoom;-webkit-overflow-scrolling:touch}
 .ctrack::-webkit-scrollbar{display:none}
 .cslide{flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;padding:0 6px;display:flex;flex-direction:column;justify-content:center;align-items:stretch}
 .cslide > *{width:100%}
