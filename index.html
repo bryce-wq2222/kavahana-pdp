@@ -1110,7 +1110,11 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     var v = w.querySelector('video'), b = w.querySelector('.play');
     function start(){
       wraps.forEach(function(o){ if(o!==w){ var ov=o.querySelector('video'); ov.pause(); o.classList.remove('playing'); } });
-      v.play().then(function(){ w.classList.add('playing'); }).catch(function(){});
+      v.muted=false; v.volume=1;
+      v.play().then(function(){ w.classList.add('playing'); }).catch(function(){
+        v.muted=true;
+        v.play().then(function(){ w.classList.add('playing'); }).catch(function(){});
+      });
     }
     b.addEventListener('click', start);
     v.addEventListener('click', function(){
