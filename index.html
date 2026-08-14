@@ -284,7 +284,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 /* ---- 3b. as seen on ---- */
 .seenon{padding:30px 0 6px}
 .pmq{overflow:hidden;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-top:10px}
-.ptrack{display:inline-flex;align-items:center;animation:psc 31s linear infinite;will-change:transform}
+.ptrack{display:inline-flex;align-items:center;animation:psc 31s linear infinite;will-change:transform;transform:translateZ(0);backface-visibility:hidden}
 .plogo{flex:0 0 auto;width:132px;height:132px;display:flex;align-items:center;justify-content:center;margin:0 6px}
 .plogo img{width:100%;height:100%;object-fit:contain;display:block}
 @keyframes psc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -482,7 +482,20 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   .btbsec{padding-bottom:9px}
   .ugcsec{padding-top:8px}
   .rtsec{padding-top:12px;padding-bottom:12px}
-  .faqsec{padding-top:12px}
+  .faqsec{padding-top:12px;padding-bottom:8px}
+  .quotecard{margin-top:5px}
+  .acc{margin-top:8px}
+  .giftband{padding-bottom:12px}
+  .perksec{padding-top:10px;padding-bottom:10px}
+  section.green{padding-bottom:12px}
+  .staysec{padding-top:12px;padding-bottom:9px}
+  .ritualsec{padding-top:9px;padding-bottom:10px}
+  .realtalksec{padding-top:12px;padding-bottom:12px}
+  .uxsec{padding-top:12px}
+  .ugcsec{padding-top:8px;padding-bottom:8px}
+  #recipes{padding-top:10px;padding-bottom:10px}
+  .fndsec{padding-bottom:58px}
+  .revsec{padding-top:10px}
 }
 @media(max-width:760px){
   .ctrh{font-size:34px;white-space:nowrap}
@@ -615,6 +628,8 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </div>
 <div class="pmq"><div class="ptrack" id="ptrack" aria-hidden="true">
 <div class="plogo"><img alt="Uncover LA" width="132" height="132" src="press/uncoverla.png"></div><div class="plogo"><img alt="Santa Monica" width="132" height="132" src="press/santamonica.png"></div><div class="plogo"><img alt="NBC News" width="132" height="132" src="press/nbcnews.png"></div><div class="plogo"><img alt="Los Angeles Times" width="132" height="132" src="press/latimes.png"></div><div class="plogo"><img alt="LAist" width="132" height="132" src="press/laist.png"></div><div class="plogo"><img alt="Eater" width="132" height="132" src="press/eater.png"></div><div class="plogo"><img alt="PureWow" width="132" height="132" src="press/purewow_1.png"></div><div class="plogo"><img alt="CBS" width="132" height="132" src="press/cbs.png"></div><div class="plogo"><img alt="Dry Run" width="132" height="132" src="press/dryrun.png"></div><div class="plogo"><img alt="Dry Atlas" width="132" height="132" src="press/dry-atlas.png"></div><div class="plogo"><img alt="Rare Beauty Impact Fund" width="132" height="132" src="press/rarebeauty.png"></div>
+<span data-dup style="display:none"></span>
+<div class="plogo"><img alt="Uncover LA" width="132" height="132" src="press/uncoverla.png"></div><div class="plogo"><img alt="Santa Monica" width="132" height="132" src="press/santamonica.png"></div><div class="plogo"><img alt="NBC News" width="132" height="132" src="press/nbcnews.png"></div><div class="plogo"><img alt="Los Angeles Times" width="132" height="132" src="press/latimes.png"></div><div class="plogo"><img alt="LAist" width="132" height="132" src="press/laist.png"></div><div class="plogo"><img alt="Eater" width="132" height="132" src="press/eater.png"></div><div class="plogo"><img alt="PureWow" width="132" height="132" src="press/purewow_1.png"></div><div class="plogo"><img alt="CBS" width="132" height="132" src="press/cbs.png"></div><div class="plogo"><img alt="Dry Run" width="132" height="132" src="press/dryrun.png"></div><div class="plogo"><img alt="Dry Atlas" width="132" height="132" src="press/dry-atlas.png"></div><div class="plogo"><img alt="Rare Beauty Impact Fund" width="132" height="132" src="press/rarebeauty.png"></div>
 </div></div>
 </section>
 
@@ -635,7 +650,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
         </div>
         <div class="stp">
           <span class="htn">03</span>
-          <div><h3>Enjoy</h3><p>Best over ice. The tingle on your lips is the kavalactones working. Stir while you drink, kava is a suspension. It is not unusual to enjoy 2 to 3 servings, especially in the beginning.</p></div>
+          <div><h3>Enjoy</h3><p>Best over ice. The tingle on your lips is the kavalactones working. Stir while you drink, kava is a suspension. It is recommended to enjoy 2 to 3 servings, especially in the beginning.</p></div>
         </div>
       </div>
     </div>
@@ -648,7 +663,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 <!-- 4. GIFT BAND -->
 <section class="giftband lav"><div class="wrap">
   <div class="giftpanel ctr">
-    <span class="valchip">$56.47 value</span>
+    <span class="valchip">+$50 value</span>
     <div class="eyebrow" style="text-align:center">Included with your first box</div>
     <h2 class="gifth2">The whole ritual.<br>Yours to keep.</h2>
     <p class="lead" style="margin-top:10px">The cups, the whisk, the guide. They arrive with the kava and they stay with you.</p>
@@ -679,13 +694,13 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   <div class="ctr">
     <h2 class="btbh2">There is more to look<br>forward to every month</h2>
   </div>
-  <div class="perkgrid"><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 17.5c0 5 4 9 9 9s9-4 9-9Z"/><path d="M9.5 17.5h21"/><path d="M20 26.5v4"/><path d="M15 30.5h10"/><path d="M24.5 9.5c.6 1.4.2 2.5-.6 3.5"/><path d="M19.5 8.5c.7 1.6.2 2.8-.7 3.9"/></svg></div><div class="pt">Your ritual kit</div><div class="ps">2 coconut bowls, whisk, digital recipe guide</div><div class="pdot"><span></span></div><div class="pm">Month 1</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 10.5h3.4v19H9z"/><path d="M14.2 10.5h3.4v19h-3.4z"/><path d="M19.4 10.5h3.4v19h-3.4z"/><path d="M24.6 10.5h3.4v19h-3.4z"/><path d="M29.8 10.5h3.4v19h-3.4z"/></svg></div><div class="pt">5 stick packs</div><div class="ps">free, on your first renewal</div><div class="pdot"><span></span></div><div class="pm">Month 2</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 15.5h21v14h-21z"/><path d="M9.5 15.5 20 22l10.5-6.5"/><path d="M20 15.5V9"/><path d="M16.5 11.5 20 8l3.5 3.5"/></svg></div><div class="pt">Send a friend a box</div><div class="ps">whisk, bowl, 5 sticks, digital recipe guide</div><div class="pdot"><span></span></div><div class="pm">Month 3</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M27.5 12.5 12.5 27.5"/><circle cx="15.5" cy="15.5" r="3"/><circle cx="24.5" cy="24.5" r="3"/></svg></div><div class="pt">25% off anything</div><div class="ps">one time, on any item in the store</div><div class="pdot"><span></span></div><div class="pm">Month 4</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18.5h20v12H10z"/><path d="M8.5 13.5h23v5h-23z"/><path d="M20 13.5v17"/><path d="M20 13.5c-1-2.5-3-4.5-5-4.5a2.6 2.6 0 0 0 0 5.2"/><path d="M20 13.5c1-2.5 3-4.5 5-4.5a2.6 2.6 0 0 1 0 5.2"/></svg></div><div class="pt">Plus monthly giveaways</div><div class="ps">a new one every month you stay</div><div class="pdot pplus"><span>+</span></div><div class="pm">Every month after</div></div></div><div class="perkbar"><span class="pbline"></span><span class="pbtext">Skip, swap or cancel any time</span></div>
+  <div class="perkgrid"><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 17.5c0 5 4 9 9 9s9-4 9-9Z"/><path d="M9.5 17.5h21"/><path d="M20 26.5v4"/><path d="M15 30.5h10"/><path d="M24.5 9.5c.6 1.4.2 2.5-.6 3.5"/><path d="M19.5 8.5c.7 1.6.2 2.8-.7 3.9"/></svg></div><div class="pt">Your ritual kit</div><div class="ps">2 coconut bowls, whisk, digital recipe guide</div><div class="pdot"><span></span></div><div class="pm">Month 1</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 10.5h3.4v19H9z"/><path d="M14.2 10.5h3.4v19h-3.4z"/><path d="M19.4 10.5h3.4v19h-3.4z"/><path d="M24.6 10.5h3.4v19h-3.4z"/><path d="M29.8 10.5h3.4v19h-3.4z"/></svg></div><div class="pt">5 stick packs</div><div class="ps">free, on your first renewal</div><div class="pdot"><span></span></div><div class="pm">Month 2</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 15.5h21v14h-21z"/><path d="M9.5 15.5 20 22l10.5-6.5"/><path d="M20 15.5V9"/><path d="M16.5 11.5 20 8l3.5 3.5"/></svg></div><div class="pt">Send a friend a box</div><div class="ps">whisk, bowl, 5 sticks, digital recipe guide</div><div class="pdot"><span></span></div><div class="pm">Month 3</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="13" width="23" height="14" rx="2"/><circle cx="20" cy="20" r="3.4"/><path d="M12.5 17v6M27.5 17v6"/></svg></div><div class="pt">25% off anything</div><div class="ps">one time, on any item in the store</div><div class="pdot"><span></span></div><div class="pm">Month 4</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18.5h20v12H10z"/><path d="M8.5 13.5h23v5h-23z"/><path d="M20 13.5v17"/><path d="M20 13.5c-1-2.5-3-4.5-5-4.5a2.6 2.6 0 0 0 0 5.2"/><path d="M20 13.5c1-2.5 3-4.5 5-4.5a2.6 2.6 0 0 1 0 5.2"/></svg></div><div class="pt">Plus monthly giveaways</div><div class="ps">a new one every month you stay</div><div class="pdot pplus"><span>+</span></div></div></div><div class="perkbar"><span class="pbline"></span><span class="pbtext">Skip, swap or cancel any time</span></div>
 </div></section>
 
 <!-- 5. CTA -->
 <section style="padding:8px 0 34px"><div class="wrap">
   <button class="pill-cta">Start my ritual &#8594;</button>
-  <div class="guar">&#10003; <b>30 day guarantee.</b> Keep the shell cups and the whisk either way.</div>
+  <div class="guar">&#10003; <b>30 day guarantee</b></div>
 </div></section>
 
 <!-- 7. TRANSFORM -->
@@ -696,10 +711,10 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <h2 class="ctrh">Morning and evening</h2>
       <p class="lead ctr" style="margin-top:10px">Enjoyed in the South Pacific and Hawaii for over 3,000 years.</p>
       <div class="ben2">
-        <div class="bn"><div class="ic"><img src="img/icons/cup.svg" alt="" loading="lazy" width="34" height="24"></div><h3>The tingle</h3><p>Lips and tongue go tingly seconds after the first sip. Kava is in the peppercorn family, which is where that comes from.</p></div>
+        <div class="bn"><div class="ic"><img src="img/icons/cup.svg" alt="" loading="lazy" width="34" height="24"></div><h3>The tingle</h3><p>Lips and tongue go tingly seconds after the first sip. It is the first sign the kavalactones are working, and it fades within minutes.</p></div>
         <div class="bn"><div class="ic"><img src="img/icons/mood.svg" alt="" loading="lazy" width="22" height="22"></div><h3>The uplift</h3><p>10 to 20 minutes in, many people feel relaxed, smiley and sociable, lasting 1 to 2 hours.</p></div>
-        <div class="bn"><div class="ic"><img src="img/icons/calm.svg" alt="" loading="lazy" width="26" height="27"></div><h3>Present, not out of it</h3><p>Customers describe being more receptive and more in the conversation rather than watching themselves have it.</p></div>
-        <div class="bn"><div class="ic"><img src="img/icons/happy.svg" alt="" loading="lazy" width="32" height="22"></div><h3>Clear the next day</h3><p>Many people notice a clear head the next morning, which is why a lot of subscribers moved their evening over.</p></div>
+        <div class="bn"><div class="ic"><img src="img/icons/calm.svg" alt="" loading="lazy" width="26" height="27"></div><h3>Present, not out of it</h3><p>Relaxed, clear and fully present with the people around you. In the conversation, not floating above it.</p></div>
+        <div class="bn"><div class="ic"><img src="img/icons/happy.svg" alt="" loading="lazy" width="32" height="22"></div><h3>Clear the next day</h3><p>Wake up clear. None of the morning after effects of alcohol or gardening, just a normal start to the day.</p></div>
       </div>
     </div>
   </div>
@@ -743,13 +758,13 @@ h2{font-size:clamp(30px,4.3vw,50px)}
         <div><div class="bcap">The feeling</div><p>A gentle tingle arrives within seconds. 10 to 20 minutes in, many people feel relaxed, smiley and sociable for 1 to 2 hours, and clear headed the next morning.</p></div>
       </div>
       <button class="pill-cta" id="readlabel" style="max-width:260px;margin:22px auto 0">Read the label &#8594;</button>
-      <p class="finep"><b>Full ingredient list:</b> noble kava root. Nothing else. Natural kava root is non-addictive and non-intoxicating. It is not unusual for people to enjoy 2 to 3 servings, especially in the beginning.</p>
+      <p class="finep"><b>Full ingredient list:</b> noble kava root. Nothing else. Natural kava root is non-addictive and non-intoxicating. It is recommended to enjoy 2 to 3 servings, especially in the beginning.</p>
     </div>
   </div>
 </div></section>
 
 <!-- 11. REAL TALK -->
-<section class="lav"><div class="wrap">
+<section class="lav realtalksec"><div class="wrap">
   <div class="ctr">
     <h2>From the people who drink it</h2>
     <div class="stars-row" style="justify-content:center;margin-top:10px"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>Rated 4.8 out of 5</b></div>
@@ -768,7 +783,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </div></section>
 
 <!-- 12. US X THEM -->
-<section><div class="wrap">
+<section class="uxsec"><div class="wrap">
   <div class="ctr" style="margin-bottom:34px">
     <h2 class="uxth2">What it replaces</h2>
     <p class="lead ctr" style="margin-top:10px">Most people are choosing between two things at the end of the day. Kava is a third, and it behaves differently from both.</p>
@@ -918,7 +933,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <div class="rt-take"><span class="rt-arrow">&#8593;</span>You need more to feel the same effects</div>
     </div>
   </div>
-  <p class="srcnote" style="max-width:640px;margin:14px auto 0">It is why we suggest 2 to 3 servings while you are new. The first pours can be subtle, then the calm starts arriving sooner.</p>
+  <p class="srcnote" style="max-width:640px;margin:14px auto 0">We always suggest 2 to 3 servings when starting.<br>The first cups are gentle, and the calm builds from there.</p>
 </div></section>
 
 <!-- 15. FAQ -->
@@ -929,7 +944,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     <details><summary>What is kava?</summary><p>Kava is a plant native to the South Pacific Islands and Hawaii, and its root is enjoyed in a tea-like form. It has been enjoyed for centuries in social, traditional and ceremonial settings, and it is the national drink of Fiji.</p></details>
     <details><summary>How does it feel?</summary><p>Most people describe a warm, relaxed calm within 15 to 30 minutes, clear and social, never sedated. Kava is also known for a reverse tolerance, so many find it grows on them the more they drink it. Good in the moment, and better over time.</p></details>
     <details><summary>How does it taste?</summary><p>Earthy and peppery, like a stronger matcha. It mixes into water, milk or juice in about 10 seconds.</p></details>
-    <details><summary>I tried kava before and felt nothing. Why?</summary><p>Kava is thought to have a kind of reverse tolerance, where the benefits feel subtle at first and become more noticeable with continued use. It is not unusual for people to enjoy 2 to 3 servings, especially in the beginning. Start with a teaspoon in 8 to 12oz of cold or lukewarm liquid and build from there.</p></details>
+    <details><summary>I tried kava before and felt nothing. Why?</summary><p>Kava is thought to have a kind of reverse tolerance, where the benefits feel subtle at first and become more noticeable with continued use. It is recommended to enjoy 2 to 3 servings, especially in the beginning. Start with a teaspoon in 8 to 12oz of cold or lukewarm liquid and build from there.</p></details>
     <details><summary>Does it make you feel intoxicated?</summary><p>No. Kava has traditionally been enjoyed as a communal drink and is the national beverage of Fiji. It is valued for a calm, relaxed state without impairing mental clarity or causing intoxication.</p></details>
     <details><summary>Is kava safe and legal?</summary><p>Kava is 100% legal in the United States and has been safely enjoyed for centuries in the South Pacific and Hawai'i. It is made from the root of the kava plant and has a long history of traditional use in community and ceremonial settings. If you are pregnant, nursing or taking medication, consult your physician before enjoying Kava Nectar.</p></details>
     <details><summary>Can I enjoy it every day?</summary><p>Kava has been enjoyed daily for centuries in the Pacific Islands and is the national drink of Fiji. Kava Nectar contains no stimulants, sugars or additives, which makes it a good option for regular use. As with any botanical product it is best to listen to your body and enjoy in moderation. Unlike some botanicals, natural kava root is not considered habit forming.</p></details>
@@ -941,14 +956,14 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </div></section>
 
 <!-- 17. FOUNDERS -->
-<section><div class="wrap">
+<section class="fndsec"><div class="wrap">
   <div class="fnd">
     <div class="vid vid-live fnd-vid"><video class="slot v" preload="none" data-poster="video/hana-cbs-poster.jpg" playsinline muted loop title="Hana takes Kava Nectar to CBS News"><source src="video/hana-cbs.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Hana takes Kava Nectar to CBS News">&#9654;</button></div>
     <div class="fnd-b">
       <h2 style="font-size:clamp(30px,4vw,44px)">A note from Hana</h2>
       <p>I found kava 10 years ago, looking for a way to quiet my anxiety without a drink.</p>
-      <p>It worked so well it became my nightly ritual, and then the bar Neil and I opened in Santa Monica.</p>
-      <p>This kit is everything I wish someone had handed me back then. If it finds you the way it found me, come by the bar and say hi.</p>
+      <p>It worked so well it became my daily ritual. Neil and I wanted more people to feel it, so we opened our bar in Santa Monica.</p>
+      <p>This kit is everything I wish someone had handed me back then. If it finds you the way it found me, tag me on social or come say hi at the bar.</p>
       <div class="fnd-sig mauna">Hana</div>
       <div class="fnd-meta">2 bars in Los Angeles &#183; 500,000+ cups served<br><span style="white-space:nowrap">Ships to all 50 states and Canada</span></div>
       <button class="pill-cta" style="margin:24px 0 0">Get my Starter Kit &#8594;</button>
@@ -957,7 +972,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </div></section>
 
 <!-- 16. REVIEWS, SHOPIFY APP -->
-<section class="lav"><div class="wrap">
+<section class="lav revsec"><div class="wrap">
   <div class="ctr" style="margin-bottom:22px">
     <div class="eyebrow" style="text-align:center">What people are saying</div>
     <h2 class="btbh2">Reviews</h2>
@@ -1033,6 +1048,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   ['img/hero-ritual-kit.jpg','img/hero-ritual-kit-22.jpg'].forEach(function(u){var p=new Image();p.src=u;});
   function setSize(key, fromTop){
     var s=SIZES[key]; if(!s) return;
+    var _h=document.documentElement.scrollHeight;
     document.querySelectorAll('.buy [data-o]').forEach(function(x){x.classList.toggle('sel', x.dataset.o===key)});
     document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
     var $=function(i){return document.getElementById(i)};
@@ -1045,6 +1061,9 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     if(fromTop){
       var sl=document.getElementById('slides');
       if(sl)sl.scrollTo({left:0,behavior:'smooth'});
+    } else {
+      var _d=document.documentElement.scrollHeight-_h;
+      if(_d) window.scrollBy(0,_d);
     }
   }
   document.querySelectorAll('.opt').forEach(function(o){
@@ -1105,7 +1124,6 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   });
 })();
 </script>
-<script>(function(){var t=document.getElementById("ptrack");if(t)t.innerHTML+=t.innerHTML;})();</script>
 <script>
 (function(){
   var sl=document.getElementById('slides');
@@ -1137,6 +1155,14 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   sl.addEventListener('pointercancel', up);
   sl.addEventListener('click', function(e){ if(moved>8){ e.preventDefault(); e.stopPropagation(); moved=0; } }, true);
   sl.addEventListener('dragstart', function(e){ e.preventDefault(); });
+  var tsx=null;
+  sl.addEventListener('touchstart',function(e){ tsx=e.touches[0].clientX; },{passive:true});
+  sl.addEventListener('touchend',function(e){
+    if(tsx===null)return;
+    var dx=e.changedTouches[0].clientX-tsx; tsx=null;
+    var last=(sl.children.length-1)*sl.clientWidth;
+    if(dx<-30 && sl.scrollLeft>=last-8){ setTimeout(function(){ sl.scrollTo({left:0,behavior:'smooth'}); },80); }
+  },{passive:true});
 })();
 </script>
 <script>
