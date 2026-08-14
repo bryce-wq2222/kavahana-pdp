@@ -1,6 +1,6 @@
 <style>#kv-page,#kv-page *,#kv-page *::before,#kv-page *::after{all:revert}
 #kv-page .note,#kv-page .tpl{display:none!important}
-#kv-page{display:block;width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow-x:clip;text-align:left}
+#kv-page{display:block;width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;text-align:left}
 @font-face{font-family:Chivo;font-style:normal;font-weight:100 900;font-display:swap;
   src:url(https://bryce-wq2222.github.io/kavahana-pdp/fonts/chivo-var.woff2) format('woff2-variations'),url(https://bryce-wq2222.github.io/kavahana-pdp/fonts/chivo-var.woff2) format('woff2')}@font-face{font-family:Newsreader;font-style:normal;font-weight:200 800;font-display:swap;
   src:url(https://bryce-wq2222.github.io/kavahana-pdp/fonts/newsreader-var.woff2) format('woff2-variations'),url(https://bryce-wq2222.github.io/kavahana-pdp/fonts/newsreader-var.woff2) format('woff2')}@font-face{font-family:'Mauna Loa';font-style:normal;font-weight:400;font-display:swap;
@@ -717,6 +717,8 @@
     p.style.marginTop='0'; p.style.marginBottom='0';
     p.style.maxWidth='none'; p.style.background='transparent';
     p.style.display='block'; p.style.columns='auto';
+    var ov=getComputedStyle(p);
+    if(ov.overflow!=='visible'||ov.overflowX!=='visible'||ov.overflowY!=='visible'){ p.style.overflow='visible'; }
     p=p.parentElement;
   }
 })();
