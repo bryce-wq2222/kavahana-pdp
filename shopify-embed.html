@@ -552,10 +552,10 @@
       document.querySelector('.buy').style.setProperty('--selmin', Math.max(hA,hB)+'px');
     }
   }
-  var VARIANTS={'4oz':'47915489886526','2oz':'47915489853758'};
+  var VARIANTS={'4oz':'54111153946942','2oz':'54111153979710'};
   function currentKey(){var s=document.querySelector('.buy .opt.sel[data-o]');return s?s.dataset.o:'4oz';}
   document.querySelectorAll('.hero .pill-cta').forEach(function(b){
-    b.addEventListener('click',function(){ location.href='https://shop.kavahana.com/cart/add?id='+VARIANTS[currentKey()]+'&quantity=1&return_to=%2Fcart'; });
+    b.addEventListener('click',function(){ location.href='https://shop.kavahana.com/cart/'+VARIANTS[currentKey()]+':1'; });
   });
   stabilize();
   window.addEventListener('load',stabilize);
