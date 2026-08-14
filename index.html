@@ -263,7 +263,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .perk:last-child .pdot::before{right:50%}
 .pdot span{position:relative;width:13px;height:13px;border-radius:50%;background:var(--green2);border:2px solid var(--cream)}
 .pdot.pplus span{width:20px;height:20px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:400;line-height:1;border-color:var(--cream)}
-.pm{font-size:11px;font-weight:500;letter-spacing:.11em;text-transform:uppercase;color:var(--grey)}
+.pm{font-size:11px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ink)}
 .perkbar{position:relative;display:flex;flex-direction:column;align-items:center;margin-top:14px}
 .pbline{display:block;width:calc(100% - 25%);height:1.5px;background:var(--line);position:relative}
 .pbline::before,.pbline::after{content:"";position:absolute;top:-4px;width:9px;height:9px;border-top:1.5px solid var(--line);border-right:1.5px solid var(--line)}
@@ -284,7 +284,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 /* ---- 3b. as seen on ---- */
 .seenon{padding:30px 0 6px}
 .pmq{overflow:hidden;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-top:10px}
-.ptrack{display:inline-flex;align-items:center;animation:psc 46s linear infinite;will-change:transform}
+.ptrack{display:inline-flex;align-items:center;animation:psc 31s linear infinite;will-change:transform}
 .plogo{flex:0 0 auto;width:132px;height:132px;display:flex;align-items:center;justify-content:center;margin:0 6px}
 .plogo img{width:100%;height:100%;object-fit:contain;display:block}
 @keyframes psc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -354,7 +354,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .cslide .logo{margin-top:14px;font-size:12px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);text-align:center}
 .cnav{flex:0 0 38px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--bone);cursor:pointer;font-size:19px;line-height:1;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:border-color .15s}
 .cnav:hover{border-color:var(--green);color:var(--green)}
-.cdots{display:flex;gap:8px;justify-content:center;margin-top:14px}
+.cdots{display:flex;gap:8px;justify-content:center;margin-top:20px}
 .cdots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:#C9C2B0;cursor:pointer;transition:background .15s,transform .15s}
 .cdots button.on{background:var(--green);transform:scale(1.2)}
 .btbh2{font-size:clamp(32px,4.8vw,52px);letter-spacing:-.012em}
@@ -462,6 +462,28 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .lbx.on{display:flex}
 .lbx img{max-width:min(92vw,560px);max-height:86vh;border-radius:14px;display:block}
 .lbx .x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:15px;cursor:pointer;color:var(--ink)}
+.foot{background:#16211A;color:#F8F3E8;padding:44px 0 26px}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:760px}
+.fh{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#9DBB8E;margin-bottom:10px}
+.fcol a{display:block;color:#F8F3E8;text-decoration:none;font-size:13.5px;line-height:2.1}
+.fcol a:hover{text-decoration:underline}
+.fsoc{display:flex;flex-wrap:wrap;gap:16px;margin-top:30px;padding-top:18px;border-top:1px solid rgba(248,243,232,.18)}
+.fsoc a{color:rgba(248,243,232,.75);font-size:11px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none}
+.fcopy{margin-top:18px;font-size:11.5px;color:rgba(248,243,232,.5)}
+@media(max-width:760px){
+  .fgrid{grid-template-columns:1fr 1fr}
+  .opt .tag{top:-15px}
+  .seenon{padding:22px 0 0}
+  .howto-sec{padding-top:6px;padding-bottom:9px}
+  .giftband{padding-top:20px}
+  .perksec{padding-bottom:10px}
+  .staysec{padding-bottom:9px}
+  .ritualsec{padding-top:9px}
+  .btbsec{padding-bottom:9px}
+  .ugcsec{padding-top:8px}
+  .rtsec{padding-top:12px;padding-bottom:12px}
+  .faqsec{padding-top:12px}
+}
 @media(max-width:760px){
   .ctrh{font-size:34px;white-space:nowrap}
   .seerec{display:block;margin-top:6px;white-space:nowrap}
@@ -502,7 +524,6 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 <body>
 
 <!-- 1. TOP BAR -->
-<div class="topbar">Start your ritual today<span>|</span>Cups, whisk and digital recipe guide free with your first box</div>
 <div class="gradline"></div>
 
 <!-- 2. NAV -->
@@ -654,33 +675,17 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </div></section>
 
 <!-- 4b. SUBSCRIBER PERKS -->
-<section><div class="wrap">
+<section class="perksec"><div class="wrap">
   <div class="ctr">
-    <div class="eyebrow" style="text-align:center">Subscriber rewards</div>
     <h2 class="btbh2">There is more to look<br>forward to every month</h2>
   </div>
-  <div class="perkgrid"><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 17.5c0 5 4 9 9 9s9-4 9-9Z"/><path d="M9.5 17.5h21"/><path d="M20 26.5v4"/><path d="M15 30.5h10"/><path d="M24.5 9.5c.6 1.4.2 2.5-.6 3.5"/><path d="M19.5 8.5c.7 1.6.2 2.8-.7 3.9"/></svg></div><div class="pt">Your ritual kit</div><div class="ps">2 coconut bowls, whisk, digital recipe guide</div><div class="pdot"><span></span></div><div class="pm">Month 1</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 10.5h4.5v19H13z"/><path d="M22.5 10.5H27v19h-4.5z"/><path d="M13 15h4.5"/><path d="M22.5 15H27"/><path d="M17.5 30.5h5"/></svg></div><div class="pt">5 stick packs</div><div class="ps">free, on your first renewal</div><div class="pdot"><span></span></div><div class="pm">Month 2</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 15.5h21v14h-21z"/><path d="M9.5 15.5 20 22l10.5-6.5"/><path d="M20 15.5V9"/><path d="M16.5 11.5 20 8l3.5 3.5"/></svg></div><div class="pt">Send a friend a box</div><div class="ps">whisk, bowl, 5 sticks, digital recipe guide</div><div class="pdot"><span></span></div><div class="pm">Month 3</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M27.5 12.5 12.5 27.5"/><circle cx="15.5" cy="15.5" r="3"/><circle cx="24.5" cy="24.5" r="3"/></svg></div><div class="pt">25% off anything</div><div class="ps">one time, on any item in the store</div><div class="pdot"><span></span></div><div class="pm">Month 4</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18.5h20v12H10z"/><path d="M8.5 13.5h23v5h-23z"/><path d="M20 13.5v17"/><path d="M20 13.5c-1-2.5-3-4.5-5-4.5a2.6 2.6 0 0 0 0 5.2"/><path d="M20 13.5c1-2.5 3-4.5 5-4.5a2.6 2.6 0 0 1 0 5.2"/></svg></div><div class="pt">Plus monthly giveaways</div><div class="ps">a new one every month you stay</div><div class="pdot pplus"><span>+</span></div><div class="pm">Every month after</div></div></div><div class="perkbar"><span class="pbline"></span><span class="pbtext">Skip, swap or cancel any time</span></div>
+  <div class="perkgrid"><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 17.5c0 5 4 9 9 9s9-4 9-9Z"/><path d="M9.5 17.5h21"/><path d="M20 26.5v4"/><path d="M15 30.5h10"/><path d="M24.5 9.5c.6 1.4.2 2.5-.6 3.5"/><path d="M19.5 8.5c.7 1.6.2 2.8-.7 3.9"/></svg></div><div class="pt">Your ritual kit</div><div class="ps">2 coconut bowls, whisk, digital recipe guide</div><div class="pdot"><span></span></div><div class="pm">Month 1</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 10.5h3.4v19H9z"/><path d="M14.2 10.5h3.4v19h-3.4z"/><path d="M19.4 10.5h3.4v19h-3.4z"/><path d="M24.6 10.5h3.4v19h-3.4z"/><path d="M29.8 10.5h3.4v19h-3.4z"/></svg></div><div class="pt">5 stick packs</div><div class="ps">free, on your first renewal</div><div class="pdot"><span></span></div><div class="pm">Month 2</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 15.5h21v14h-21z"/><path d="M9.5 15.5 20 22l10.5-6.5"/><path d="M20 15.5V9"/><path d="M16.5 11.5 20 8l3.5 3.5"/></svg></div><div class="pt">Send a friend a box</div><div class="ps">whisk, bowl, 5 sticks, digital recipe guide</div><div class="pdot"><span></span></div><div class="pm">Month 3</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M27.5 12.5 12.5 27.5"/><circle cx="15.5" cy="15.5" r="3"/><circle cx="24.5" cy="24.5" r="3"/></svg></div><div class="pt">25% off anything</div><div class="ps">one time, on any item in the store</div><div class="pdot"><span></span></div><div class="pm">Month 4</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18.5h20v12H10z"/><path d="M8.5 13.5h23v5h-23z"/><path d="M20 13.5v17"/><path d="M20 13.5c-1-2.5-3-4.5-5-4.5a2.6 2.6 0 0 0 0 5.2"/><path d="M20 13.5c1-2.5 3-4.5 5-4.5a2.6 2.6 0 0 1 0 5.2"/></svg></div><div class="pt">Plus monthly giveaways</div><div class="ps">a new one every month you stay</div><div class="pdot pplus"><span>+</span></div><div class="pm">Every month after</div></div></div><div class="perkbar"><span class="pbline"></span><span class="pbtext">Skip, swap or cancel any time</span></div>
 </div></section>
 
 <!-- 5. CTA -->
 <section style="padding:8px 0 34px"><div class="wrap">
   <button class="pill-cta">Start my ritual &#8594;</button>
   <div class="guar">&#10003; <b>30 day guarantee.</b> Keep the shell cups and the whisk either way.</div>
-</div></section>
-
-<!-- 6. PRESS -->
-<section class="lav"><div class="wrap">
-  <div class="carou" data-carou="press">
-    <button class="cnav prev" aria-label="Previous">&#8249;</button>
-    <div class="ctrack">
-      <div class="cslide"><div class="cst">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Some of my regulars call it smile juice."</p><div class="logo">The Bar</div></div>
-      <div class="cslide"><div class="cst">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I feel light and airy and happy and like I just want to go hang out and talk to someone, and I don't feel sick."</p><div class="logo">Verified Review</div></div>
-      <div class="cslide"><div class="cst">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I have tried other kava products with no effect but this product I can feel the effects almost instantly."</p><div class="logo">Verified Review</div></div>
-      <div class="cslide"><div class="cst">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Most potent kava I've tried."</p><div class="logo">Verified Review</div></div>
-    </div>
-    <button class="cnav next" aria-label="Next">&#8250;</button>
-  </div>
-  <div class="cdots" data-dots="press"></div>
 </div></section>
 
 <!-- 7. TRANSFORM -->
@@ -701,7 +706,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </div></section>
 
 <!-- 8. SHOULD DO MORE -->
-<section class="lav"><div class="wrap">
+<section class="lav staysec"><div class="wrap">
   <div class="split">
     <div class="splitctr">
       <div class="eyebrow" style="text-align:center">Why people stay</div>
@@ -727,12 +732,12 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </div></div>
 
 <!-- 10. TABS -->
-<section><div class="wrap">
+<section class="ritualsec"><div class="wrap">
   <div class="split">
     <div class="shot shot-hands"><img loading="lazy" decoding="async" src="img/kava-cup-hands.jpg" width="945" height="945" alt="A coconut shell cup of Kava Nectar held in both hands"></div>
     <div class="splitctr">
       <h2 class="ctrh">The daily ritual</h2>
-      <p class="lead ctr" style="margin-top:10px">One drink, made by hand, that you can actually feel.</p>
+      <p class="lead ctr" style="margin-top:10px">One drink, made by hand,<br>that you can actually feel.</p>
       <div class="bothcols">
         <div><div class="bcap">In the cup</div><p>Earthy and peppery, the way a root tastes, because nothing is added to it. Most people take it with cold coconut water, or pineapple and coconut milk. <a href="#recipes" class="inlink seerec">See the recipes</a></p></div>
         <div><div class="bcap">The feeling</div><p>A gentle tingle arrives within seconds. 10 to 20 minutes in, many people feel relaxed, smiley and sociable for 1 to 2 hours, and clear headed the next morning.</p></div>
@@ -824,11 +829,11 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </div></section>
 
 <!-- 14. UGC CAROUSEL -->
-<section><div class="wrap">
+<section class="ugcsec"><div class="wrap">
   <div class="ctr">
     <div class="eyebrow" style="text-align:center">From the community</div>
     <h2 class="btbh2">Real people.<br>Real cups.</h2>
-    <p class="lead ctr" style="margin-top:10px">Over 500,000 cups served, and most of them filmed by somebody who was not sure it would work.</p>
+    <p class="lead ctr" style="margin-top:10px">Over 500,000 cups served<br>to people who were not sure it would work.</p>
   </div>
   <div class="carou vid-carou" data-carou="btb">
     <button class="cnav prev" aria-label="Previous">&#8249;</button>
@@ -854,8 +859,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 <section id="recipes" class="lav"><div class="wrap">
   <div class="ctr">
     <div class="eyebrow" style="text-align:center">From the bar</div>
-    <h2 class="btbh2">What people like to make it with</h2>
-    <p class="lead ctr" style="margin-top:10px">Earthy and peppery, so it takes to coconut, pineapple and citrus the way matcha does.</p>
+    <h2 class="btbh2">What people like to<br>make it with</h2>
   </div>
   <div class="carou rec-carou" data-carou="recs">
     <button class="cnav prev" aria-label="Previous">&#8249;</button>
@@ -874,7 +878,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 
 
 <!-- 14c. REVERSE TOLERANCE -->
-<section><div class="wrap">
+<section class="rtsec"><div class="wrap">
   <div class="ctr">
     <div class="eyebrow" style="text-align:center">Reverse tolerance</div>
     <h2 class="btbh2">Kava vs the alternatives, over time</h2>
@@ -884,7 +888,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     <div class="rt-card rt-kava">
       <div class="rt-pill">Kava</div>
       <p class="rt-copy">Effects <b>strengthen</b> with continued use. Many longtime drinkers find they need less to feel the same calm.</p>
-      <svg viewBox="0 0 320 174" role="img" aria-label="Chart: kava effect strength rising with continued use">
+      <svg viewBox="-30 0 350 174" role="img" aria-label="Chart: kava effect strength rising with continued use">
         <line x1="40" y1="12" x2="40" y2="148" stroke="#C9C4B4" stroke-width="1"/>
         <line x1="40" y1="148" x2="306" y2="148" stroke="#C9C4B4" stroke-width="1"/>
         <text x="34" y="26" text-anchor="end" font-size="10" fill="#6E6A5C">Strong</text>
@@ -900,7 +904,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     <div class="rt-card rt-alc">
       <div class="rt-pill">Alcohol &amp; gardening &#127807;</div>
       <p class="rt-copy">Effects <b>weaken</b> with continued use. Many people find they need more to feel the same ease, whichever way they unwind.</p>
-      <svg viewBox="0 0 320 174" role="img" aria-label="Chart: alcohol effect strength falling with continued use">
+      <svg viewBox="-30 0 350 174" role="img" aria-label="Chart: alcohol effect strength falling with continued use">
         <line x1="40" y1="12" x2="40" y2="148" stroke="#C9C4B4" stroke-width="1"/>
         <line x1="40" y1="148" x2="306" y2="148" stroke="#C9C4B4" stroke-width="1"/>
         <text x="34" y="26" text-anchor="end" font-size="10" fill="#6E6A5C">Strong</text>
@@ -914,12 +918,11 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <div class="rt-take"><span class="rt-arrow">&#8593;</span>You need more to feel the same effects</div>
     </div>
   </div>
-  <p class="rt-also">Caffeine follows the same rising curve. Kava is the odd one out.</p>
-  <p class="srcnote" style="max-width:640px;margin:14px auto 0">It is why we suggest 2 to 3 servings while you are new. The first pours can be subtle, then the calm starts arriving sooner. Regulars in the islands have said this for generations, and research is still catching up.</p>
+  <p class="srcnote" style="max-width:640px;margin:14px auto 0">It is why we suggest 2 to 3 servings while you are new. The first pours can be subtle, then the calm starts arriving sooner.</p>
 </div></section>
 
 <!-- 15. FAQ -->
-<section><div class="wrap">
+<section class="faqsec"><div class="wrap">
   <div class="ctr"><div class="eyebrow" style="text-align:center">Frequently asked</div><h2>Questions</h2></div>
   <div class="faq2">
     <details><summary>What is in it?</summary><p>100% cold-pressed noble kava root. Nothing added, nothing stripped away. Vegan, zero sugar, no caffeine.</p></details>
@@ -937,6 +940,22 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   </div>
 </div></section>
 
+<!-- 17. FOUNDERS -->
+<section><div class="wrap">
+  <div class="fnd">
+    <div class="vid vid-live fnd-vid"><video class="slot v" preload="none" data-poster="video/hana-cbs-poster.jpg" playsinline muted loop title="Hana takes Kava Nectar to CBS News"><source src="video/hana-cbs.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Hana takes Kava Nectar to CBS News">&#9654;</button></div>
+    <div class="fnd-b">
+      <h2 style="font-size:clamp(30px,4vw,44px)">A note from Hana</h2>
+      <p>I found kava 10 years ago, looking for a way to quiet my anxiety without a drink.</p>
+      <p>It worked so well it became my nightly ritual, and then the bar Neil and I opened in Santa Monica.</p>
+      <p>This kit is everything I wish someone had handed me back then. If it finds you the way it found me, come by the bar and say hi.</p>
+      <div class="fnd-sig mauna">Hana</div>
+      <div class="fnd-meta">2 bars in Los Angeles &#183; 500,000+ cups served<br><span style="white-space:nowrap">Ships to all 50 states and Canada</span></div>
+      <button class="pill-cta" style="margin:24px 0 0">Get my Starter Kit &#8594;</button>
+    </div>
+  </div>
+</div></section>
+
 <!-- 16. REVIEWS, SHOPIFY APP -->
 <section class="lav"><div class="wrap">
   <div class="ctr" style="margin-bottom:22px">
@@ -949,22 +968,6 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   </div>
 </div></section>
 
-<!-- 17. FOUNDERS -->
-<section><div class="wrap">
-  <div class="fnd">
-    <div class="vid vid-live fnd-vid"><video class="slot v" preload="none" data-poster="video/hana-cbs-poster.jpg" playsinline muted loop title="Hana takes Kava Nectar to CBS News"><source src="video/hana-cbs.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Hana takes Kava Nectar to CBS News">&#9654;</button></div>
-    <div class="fnd-b">
-      <h2 style="font-size:clamp(30px,4vw,44px)">A note from Hana</h2>
-      <p>I drank kava for 10 years before I ever poured it for a stranger. It was how I ended my days without a drink, and for a long time I figured that was just my thing.</p>
-      <p>Turns out it was not. In 2023, Neil and I started bringing it to pop-ups around LA. Raves at midnight, farmers markets the next morning. Watching someone feel that first tingle never got old, so we kept going until it became our own bar in Santa Monica, and then a second one in Hollywood.</p>
-      <p>This kit is what I wish someone had handed me 10 years ago. The same <span class="mauna">Kava Nectar</span> we pour across the bar, and everything you need to make it your own at home.</p>
-      <p>If it finds you the way it found me, come by the bar and say hi.</p>
-      <div class="fnd-sig mauna">Hana</div>
-      <div class="fnd-meta">2 bars in Los Angeles &#183; 500,000+ cups served &#183; Ships to all 50 states and Canada</div>
-      <button class="pill-cta" style="margin:24px 0 0">Get my Starter Kit &#8594;</button>
-    </div>
-  </div>
-</div></section>
 
 <div class="lbx" id="lbl-lbx" role="dialog" aria-modal="true" aria-label="Supplement facts">
   <button class="x" type="button" aria-label="Close">&#10005;</button>
@@ -987,6 +990,38 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   }
 })();
 </script>
+<!-- 18. FOOTER -->
+<footer class="foot"><div class="wrap">
+  <div class="fgrid">
+    <div class="fcol">
+      <div class="fh">Shop</div>
+      <a href="https://shop.kavahana.com/collections/kava-nectars">Kava Nectar</a>
+      <a href="https://shop.kavahana.com/collections/combos">Bundles</a>
+      <a href="https://shop.kavahana.com/collections/accessories">Accessories</a>
+      <a href="https://shop.kavahana.com/collections/all">Shop All</a>
+    </div>
+    <div class="fcol">
+      <div class="fh">Learn</div>
+      <a href="https://kavahana.com/">Our Cafe</a>
+      <a href="https://kavahana.com/what-is-kava-nectar">What is Kava Nectar?</a>
+      <a href="https://kavahana.com/articles">Articles</a>
+      <a href="https://kavahana.com/about">About Us</a>
+    </div>
+    <div class="fcol">
+      <div class="fh">Support</div>
+      <a href="https://account.kavahana.com/orders">Your Orders</a>
+      <a href="https://shop.kavahana.com/a/subscriptions/login">Manage Subscription</a>
+      <a href="https://kavahana.com/contact-us">Contact Us</a>
+      <a href="https://shop.kavahana.com/policies/refund-policy">Return Policy</a>
+      <a href="https://tally.so/r/waY1RW">Wholesale Application</a>
+    </div>
+  </div>
+  <div class="fsoc">
+    <a href="https://www.instagram.com/kavahana/">Instagram</a><a href="https://www.tiktok.com/@kavahana">TikTok</a><a href="https://www.youtube.com/@kavahana">YouTube</a><a href="https://www.facebook.com/kavahanabar">Facebook</a><a href="https://twitter.com/kavahana">Twitter</a><a href="https://www.pinterest.com/kavahana/">Pinterest</a><a href="mailto:hello@kavahana.com">Email</a>
+  </div>
+  <div class="fcopy">&copy; 2026, Kavahana</div>
+</div></footer>
+
 <script>
 (function(){
   var SIZES={
@@ -1106,13 +1141,18 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 </script>
 <script>
 (function(){
+  function load(v){ if(v.dataset.poster){ v.poster=v.dataset.poster; delete v.dataset.poster; } }
   var vids=[].slice.call(document.querySelectorAll('.vid-live video[data-poster]'));
   if(!vids.length) return;
-  function load(v){ if(v.dataset.poster){ v.poster=v.dataset.poster; delete v.dataset.poster; } }
   if(!('IntersectionObserver' in window)){ vids.forEach(load); return; }
   var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ load(e.target); io.unobserve(e.target); } });
-  },{rootMargin:'600px 0px'});
+    es.forEach(function(e){ if(e.isIntersecting){
+      if(e.target.tagName==='VIDEO'){ load(e.target); }
+      else { [].forEach.call(e.target.querySelectorAll('video[data-poster]'), load); }
+      io.unobserve(e.target);
+    }});
+  },{rootMargin:'900px 0px'});
+  [].forEach.call(document.querySelectorAll('.vid-carou, .fnd-vid'), function(g){ io.observe(g); });
   vids.forEach(function(v){ io.observe(v); });
 })();
 </script>
