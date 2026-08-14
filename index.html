@@ -409,9 +409,12 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 
 
 .recs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
-.rec{background:var(--bone);border-radius:13px;overflow:hidden;display:flex;flex-direction:column}
+.rec{background:var(--card);border-radius:13px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit}
 .rec .slot{border-radius:0;aspect-ratio:1}
 .rec .b{padding:16px}
+.rec .shot{aspect-ratio:1;border-radius:0;background:#EDE4D1}
+.rec .shot img{width:100%;height:100%;object-fit:cover;display:block}
+.rec:hover h3{text-decoration:underline;text-underline-offset:3px}
 .rec .tag{font-family:ui-monospace,monospace;font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--green);font-weight:500}
 .rec h3{font-size:16px;margin:6px 0 7px}
 .rec p{font-size:13px;color:var(--grey);line-height:1.5}
@@ -881,12 +884,12 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   <div class="carou rec-carou" data-carou="recs">
     <button class="cnav prev" aria-label="Previous">&#8249;</button>
     <div class="ctrack">
-      <div class="cslide"><div class="rec"><div class="slot wide"><span class="lbl">cold coconut water</span></div><div class="b"><span class="tag">Most named in reviews</span><h3>Cold coconut water</h3><p>A teaspoon or two whisked into cold coconut water. The one customers recommend to each other more than any other.</p></div></div></div>
-      <div class="cslide"><div class="rec"><div class="slot wide"><span class="lbl">pineapple and coconut milk</span></div><div class="b"><span class="tag">Start here</span><h3>Pineapple and coconut milk</h3><p>The closest thing we have to a house cocktail, and the one to make on your first night.</p></div></div></div>
-      <div class="cslide"><div class="rec"><div class="slot wide"><span class="lbl">sparkling water and lemon</span></div><div class="b"><span class="tag">Afternoon</span><h3>Sparkling water and lemon</h3><p>Over ice with fresh lemon. Bright, and the easiest of the four to drink.</p></div></div></div>
-      <div class="cslide"><div class="rec"><div class="slot wide"><span class="lbl">honey and coconut milk</span></div><div class="b"><span class="tag">Evening</span><h3>Honey and coconut milk</h3><p>The richest of the four, and the one people tend to land on at night.</p></div></div></div>
-      <div class="cslide"><div class="rec"><div class="slot wide"><span class="lbl">into your coffee</span></div><div class="b"><span class="tag">Morning</span><h3>Into your coffee</h3><p>It contains no caffeine and it is not a stimulant, so it sits alongside coffee rather than replacing it.</p></div></div></div>
-      <div class="cslide"><div class="rec"><div class="slot wide"><span class="lbl">the coconut water shot</span></div><div class="b"><span class="tag">Fastest</span><h3>The coconut water shot</h3><p>A small serving, taken in one. Whisked and done in about 10 seconds.</p></div></div></div>
+      <div class="cslide"><a class="rec" href="https://shop.kavahana.com/blogs/recipes/orange-spritz-kava-nectar" target="_blank" rel="noopener"><div class="shot wide"><img decoding="async" src="img/rec/orange-spritz.jpg" width="760" height="760" alt="Orange Spritz made with Kava Nectar"></div><div class="b"><span class="tag">Bright</span><h3>Orange Spritz</h3><p>Orange juice, club soda, a squeeze of lime.</p></div></a></div>
+      <div class="cslide"><a class="rec" href="https://shop.kavahana.com/blogs/recipes/blue-spirulina-coconut-nectar" target="_blank" rel="noopener"><div class="shot wide"><img decoding="async" src="img/rec/blue-spirulina.jpg" width="760" height="760" alt="Blue Spirulina Coconut made with Kava Nectar"></div><div class="b"><span class="tag">Creamy</span><h3>Blue Spirulina Coconut</h3><p>Coconut milk, blue spirulina, vanilla.</p></div></a></div>
+      <div class="cslide"><a class="rec" href="https://shop.kavahana.com/blogs/recipes/white-grape-kava-nectar-spritz" target="_blank" rel="noopener"><div class="shot wide"><img loading="lazy" decoding="async" src="img/rec/white-grape.jpg" width="760" height="760" alt="White Grape Spritz made with Kava Nectar"></div><div class="b"><span class="tag">Crisp</span><h3>White Grape Spritz</h3><p>White grape juice, ginger beer, fresh lemon.</p></div></a></div>
+      <div class="cslide"><a class="rec" href="https://shop.kavahana.com/blogs/recipes/moscow-mule-kava-nectar" target="_blank" rel="noopener"><div class="shot wide"><img loading="lazy" decoding="async" src="img/rec/moscow-mule.jpg" width="760" height="760" alt="Moscow Mule made with Kava Nectar"></div><div class="b"><span class="tag">No proof</span><h3>Moscow Mule</h3><p>Ginger beer and lime, in a copper mug.</p></div></a></div>
+      <div class="cslide"><a class="rec" href="https://shop.kavahana.com/blogs/recipes/cinnamon-vanilla-cacao-kava-nectar" target="_blank" rel="noopener"><div class="shot wide"><img loading="lazy" decoding="async" src="img/rec/cinnamon-cacao.jpg" width="760" height="760" alt="Cinnamon Vanilla Cacao made with Kava Nectar"></div><div class="b"><span class="tag">Evening</span><h3>Cinnamon Vanilla Cacao</h3><p>Oat milk, cacao, cinnamon and vanilla.</p></div></a></div>
+      <div class="cslide"><a class="rec" href="https://shop.kavahana.com/blogs/recipes/orange-cream-kava-nectar" target="_blank" rel="noopener"><div class="shot wide"><img loading="lazy" decoding="async" src="img/rec/orange-cream.jpg" width="760" height="760" alt="Orange Cream made with Kava Nectar"></div><div class="b"><span class="tag">Dessert</span><h3>Orange Cream</h3><p>Orange juice and coconut milk, like a creamsicle.</p></div></a></div>
     </div>
     <button class="cnav next" aria-label="Next">&#8250;</button>
   </div>
