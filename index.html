@@ -131,6 +131,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .optlabel{font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin:16px 0 8px}
 .opt{border:1.5px solid var(--line);background:var(--cream);border-radius:11px;padding:17px 18px;cursor:pointer;display:grid;grid-template-columns:20px 1fr auto;gap:12px;align-items:center;margin-bottom:8px;position:relative;transition:border-color .14s}
 .opt:hover{border-color:var(--green2)}
+.buy .opt.sel{min-height:var(--selmin,auto)}
 .opt.sel{border-color:var(--green);background:var(--green);box-shadow:none}
 .opt.sel .nm,.opt.sel .pr{color:#fff}
 .opt.sel .nm small{color:#EAF3E5}
@@ -481,19 +482,19 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   .ritualsec{padding-top:9px}
   .btbsec{padding-bottom:9px}
   .ugcsec{padding-top:8px}
-  .rtsec{padding-top:12px;padding-bottom:12px}
+  .rtsec{padding-top:20px;padding-bottom:12px}
   .faqsec{padding-top:12px;padding-bottom:8px}
   .quotecard{margin-top:5px}
   .acc{margin-top:8px}
   .giftband{padding-bottom:12px}
-  .perksec{padding-top:10px;padding-bottom:10px}
+  .perksec{padding-top:20px;padding-bottom:10px}
   section.green{padding-bottom:12px}
   .staysec{padding-top:12px;padding-bottom:9px}
   .ritualsec{padding-top:9px;padding-bottom:10px}
-  .realtalksec{padding-top:12px;padding-bottom:12px}
-  .uxsec{padding-top:12px}
-  .ugcsec{padding-top:8px;padding-bottom:8px}
-  #recipes{padding-top:10px;padding-bottom:10px}
+  .realtalksec{padding-top:20px;padding-bottom:12px}
+  .uxsec{padding-top:20px}
+  .ugcsec{padding-top:16px;padding-bottom:8px}
+  #recipes{padding-top:16px;padding-bottom:10px}
   .fndsec{padding-bottom:58px}
   .revsec{padding-top:10px}
 }
@@ -711,7 +712,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <h2 class="ctrh">Morning and evening</h2>
       <p class="lead ctr" style="margin-top:10px">Enjoyed in the South Pacific and Hawaii for over 3,000 years.</p>
       <div class="ben2">
-        <div class="bn"><div class="ic"><img src="img/icons/cup.svg" alt="" loading="lazy" width="34" height="24"></div><h3>The tingle</h3><p>Lips and tongue go tingly seconds after the first sip. It is the first sign the kavalactones are working, and it fades within minutes.</p></div>
+        <div class="bn"><div class="ic"><img src="img/icons/cup.svg" alt="" loading="lazy" width="34" height="24"></div><h3>The tingle</h3><p>Lips and tongue go tingly seconds after the first sip. It is the first sign the kavalactones are working.</p></div>
         <div class="bn"><div class="ic"><img src="img/icons/mood.svg" alt="" loading="lazy" width="22" height="22"></div><h3>The uplift</h3><p>10 to 20 minutes in, many people feel relaxed, smiley and sociable, lasting 1 to 2 hours.</p></div>
         <div class="bn"><div class="ic"><img src="img/icons/calm.svg" alt="" loading="lazy" width="26" height="27"></div><h3>Present, not out of it</h3><p>Relaxed, clear and fully present with the people around you. In the conversation, not floating above it.</p></div>
         <div class="bn"><div class="ic"><img src="img/icons/happy.svg" alt="" loading="lazy" width="32" height="22"></div><h3>Clear the next day</h3><p>Wake up clear. None of the morning after effects of alcohol or gardening, just a normal start to the day.</p></div>
@@ -1048,7 +1049,6 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   ['img/hero-ritual-kit.jpg','img/hero-ritual-kit-22.jpg'].forEach(function(u){var p=new Image();p.src=u;});
   function setSize(key, fromTop){
     var s=SIZES[key]; if(!s) return;
-    var _h=document.documentElement.scrollHeight;
     document.querySelectorAll('.buy [data-o]').forEach(function(x){x.classList.toggle('sel', x.dataset.o===key)});
     document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
     var $=function(i){return document.getElementById(i)};
@@ -1061,11 +1061,30 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     if(fromTop){
       var sl=document.getElementById('slides');
       if(sl)sl.scrollTo({left:0,behavior:'smooth'});
-    } else {
-      var _d=document.documentElement.scrollHeight-_h;
-      if(_d) window.scrollBy(0,_d);
     }
   }
+  function stabilize(){
+    var gl=document.querySelector('.getline');
+    if(gl){
+      var orig=gl.innerHTML, h=0;
+      gl.style.minHeight='';
+      ['4oz','2oz'].forEach(function(k){ gl.innerHTML=SIZES[k].get; h=Math.max(h, gl.offsetHeight); });
+      gl.innerHTML=orig;
+      if(h>0&&h<160){ gl.style.minHeight=h+'px'; }
+    }
+    var oA=document.querySelector('.buy .opt[data-o="4oz"]'), oB=document.querySelector('.buy .opt[data-o="2oz"]');
+    if(oA&&oB){
+      var selA=oA.classList.contains('sel');
+      oA.classList.add('sel'); oB.classList.remove('sel'); var hA=oA.offsetHeight;
+      oB.classList.add('sel'); oA.classList.remove('sel'); var hB=oB.offsetHeight;
+      if(selA){ oA.classList.add('sel'); oB.classList.remove('sel'); } else { oB.classList.add('sel'); oA.classList.remove('sel'); }
+      document.querySelector('.buy').style.setProperty('--selmin', Math.max(hA,hB)+'px');
+    }
+  }
+  stabilize();
+  window.addEventListener('load',stabilize);
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(stabilize);}
+  var _rst; window.addEventListener('resize',function(){ clearTimeout(_rst); _rst=setTimeout(stabilize,180); });
   document.querySelectorAll('.opt').forEach(function(o){
     o.addEventListener('click',function(){
       if(o.dataset.o2){ setSize(o.dataset.o2, false); return; }
