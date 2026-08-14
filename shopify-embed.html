@@ -717,5 +717,12 @@
     if(ov.overflow!=='visible'||ov.overflowX!=='visible'||ov.overflowY!=='visible'){ p.style.overflow='visible'; }
     p=p.parentElement;
   }
+  /* body overflow:hidden kills position:sticky; the root scroller is exempt,
+     so move the horizontal guard up to <html> and free the body */
+  var bs=getComputedStyle(document.body);
+  if(bs.overflow!=='visible'||bs.overflowX!=='visible'||bs.overflowY!=='visible'){
+    document.body.style.overflow='visible';
+    document.documentElement.style.overflowX='hidden';
+  }
 })();
 </script>
