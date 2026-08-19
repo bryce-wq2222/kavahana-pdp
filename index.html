@@ -131,7 +131,6 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .optlabel{font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin:16px 0 8px}
 .opt{border:1.5px solid var(--line);background:var(--cream);border-radius:11px;padding:17px 18px;cursor:pointer;display:grid;grid-template-columns:20px 1fr auto;gap:12px;align-items:center;margin-bottom:8px;position:relative;transition:border-color .14s}
 .opt:hover{border-color:var(--green2)}
-.buy .opt.sel{min-height:var(--selmin,auto)}
 .opt.sel{border-color:var(--green);background:var(--green);box-shadow:none}
 .opt.sel .nm,.opt.sel .pr{color:#fff}
 .opt.sel .nm small{color:#EAF3E5}
@@ -139,8 +138,10 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .opt.sel .rad{border-color:#fff}
 .opt.sel .rad::after{background:#fff}
 .opt.sel .tag{background:#fff;color:var(--green);box-shadow:0 3px 10px rgba(0,0,0,.22);border:1.5px solid var(--green)}
-.optbens{display:none;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.28);grid-column:1/-1}
-.opt.sel .optbens{display:grid;gap:6px}
+.optbens{display:grid;gap:6px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.28);grid-column:1/-1}
+.opt:not(.sel) .optbens{border-top-color:var(--line)}
+.opt:not(.sel) .optbens span{color:var(--grey)}
+.opt:not(.sel) .optbens span::before{color:var(--green)}
 .optbens span{font-size:12.5px;color:#EDF5E9}
 .optbens span::before{content:"\2713";color:#fff;font-weight:400;margin-right:8px}
 .opt .rad{width:17px;height:17px;border-radius:50%;border:1.5px solid #C6BFAD;position:relative}
@@ -503,7 +504,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   .revsec{padding-top:10px}
 }
 @media(max-width:760px){
-  .ctrh{font-size:34px;white-space:nowrap}
+  .ctrh{font-size:34px}
   .seerec{display:block;margin-top:6px;white-space:nowrap}
   .btbsec{padding-top:0}
 }
@@ -519,7 +520,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 
 @media(max-width:1000px){
   .hero{grid-template-columns:minmax(0,1fr);gap:26px}.gal{position:static}
-  .split,.uxt{grid-template-columns:1fr;gap:30px}
+  .split,.uxt{grid-template-columns:minmax(0,1fr);gap:30px}
   .press{grid-template-columns:1fr;gap:26px}.pq p{min-height:0}
   .rcards{grid-template-columns:1fr}
   .vids{grid-template-columns:repeat(3,1fr)}
@@ -691,7 +692,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     <span class="valchip">+$50 value</span>
     <div class="eyebrow" style="text-align:center">Included with your first box</div>
     <h2 class="gifth2">The whole ritual.<br>Yours to keep.</h2>
-    <p class="lead" style="margin-top:10px">The cups, the whisk, the guide. They arrive with the kava and they stay with you.</p>
+    <p class="lead" style="margin-top:10px">The cups, the whisk, the guide.<br>They arrive with the kava, and they stay.</p>
     <div class="gifts">
       <div class="gt">
         <div class="gh"><span class="gn">2 coconut shell cups</span><span class="gf">Free<s>$23.98</s></span></div>
@@ -803,8 +804,8 @@ h2{font-size:clamp(30px,4.3vw,50px)}
         <thead><tr>
           <th></th>
           <th class="uc"><svg fill="currentColor" role="img" aria-label="Kavahana" class="uxlogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1853.3 1857.2"><path  d="M1200.3,968.1v393.6l-122.9-399.5c-2.6-8.4-10.3-14.1-19-14.1h-81.1c-11,0-19.9,8.9-19.9,19.9v763.4c0,11,8.9,19.9,19.9,19.9h80.9c11,0,19.9-8.9,19.9-19.9v-386.1l119.1,391.9c2.5,8.4,10.3,14.1,19,14.1h84.9c11,0,19.9-8.9,19.9-19.9v-763.3c0-11-8.9-19.9-19.9-19.9h-80.9c-10.9,0-19.9,8.9-19.9,19.9Z"/><path  d="M1324.3,109.9h-89.3c-9.6,0-17.8,6.8-19.6,16.3l-76.4,409.3h0l-76.5-409.4c-1.8-9.4-10-16.3-19.6-16.3h-89.3c-12.5,0-21.9,11.3-19.6,23.6l140,749.3,2.6,14.2c1.8,9.4,10,16.3,19.6,16.3h85.3c9.6,0,17.8-6.8,19.6-16.2l2.7-14.2h0l140-749.3c2.4-12.3-7-23.6-19.5-23.6Z"/><path  d="M351.4,969.4v316c0,5.4-4.4,9.8-9.8,9.8h-101.3c-5.4,0-9.8-4.4-9.8-9.8v-316c0-11-8.9-19.9-19.9-19.9h-80.9c-11,0-19.9,8.9-19.9,19.9v763.4c0,11,8.9,19.9,19.9,19.9h80.9c11,0,19.9-8.9,19.9-19.9v-317.5c0-5.4,4.4-9.8,9.8-9.8h101.2c5.4,0,9.8,4.4,9.8,9.8v317.5c0,11,8.9,19.9,19.9,19.9h80.9c11,0,19.9-8.9,19.9-19.9v-763.4c0-11-8.9-19.9-19.9-19.9h-80.9c-10.9,0-19.8,8.9-19.8,19.9Z"/><path  d="M371.3,109.9c-11,0-19.9,8.9-19.9,19.9v185.4h-.2c1.5,42.5-18.4,66.6-25.9,74.1l-7.8,7.1h0l-25.1,22.8.1.1-14,12.8-48,44.1V129.8c0-11-8.9-19.9-19.9-19.9h-80.9c-11,0-19.9,8.9-19.9,19.9v763.4c0,11,8.9,19.9,19.9,19.9h80.9c11,0,19.9-8.9,19.9-19.9v-260l45.1-41.6h0l59.8,59.8c7.8,9.5,17.4,26,15.9,47.9v22.6l.2-.1v171.5c0,11,8.9,19.9,19.9,19.9h80.9c11,0,19.9-8.9,19.9-19.9v-267.3l-112.4-112.3,112.3-103.8V129.8c0-11-8.9-19.9-19.9-19.9h-80.9Z"/><path  d="M874.3,180.1c-44.2-71.7-138.2-70.6-148.7-70.3-3.5-.2-7.1-.3-10.7-.3-21.8,0-41.8,1.8-59.7,5.5-73.8,15.2-114.8,62.9-120.8,154.3-.5,7.7-.8,15.8-.8,24.1,0,5.7.8,599.8.8,599.8,0,11,8.9,19.9,19.9,19.9h80.9c11,0,19.9-8.9,19.9-19.9v-313.2c0-4,3.3-7.3,7.3-7.3h104.5c4,0,7.3,3.3,7.3,7.3v313.2c0,11,8.9,19.9,19.9,19.9h80.9c11,0,20.2-8.9,20.2-19.9l.1-604.7c1.6-67.3-21-108.4-21-108.4ZM774.1,266.8v188.4c0,4-3.3,7.3-7.3,7.3h-104.4c-4,0-7.3-3.3-7.3-7.3v-203.8c2.1-31.5,28.2-56.4,60-56.4,29.4,0,53.9,21.3,59.1,49.4v22.4h-.1Z"/><path  d="M1853.3,1857.2H0V0h1853.3v1857.2ZM55,1802.2h1743.3V55H55v1747.2Z"/><path  d="M1721.8,180.1c-44.2-71.7-138.2-70.6-148.7-70.3-3.5-.2-7.1-.3-10.7-.3-21.8,0-41.8,1.8-59.7,5.5-73.8,15.2-114.8,62.9-120.8,154.3-.5,7.7-.8,15.8-.8,24.1,0,5.7.8,599.8.8,599.8,0,11,8.9,19.9,19.9,19.9h80.9c11,0,19.9-8.9,19.9-19.9v-313.2c0-4,3.3-7.3,7.3-7.3h104.5c4,0,7.3,3.3,7.3,7.3v313.2c0,11,8.9,19.9,19.9,19.9h80.9c11,0,20.2-8.9,20.2-19.9l.1-604.7c1.7-67.3-21-108.4-21-108.4ZM1621.7,266.8v188.4c0,4-3.3,7.3-7.3,7.3h-104.5c-4,0-7.3-3.3-7.3-7.3v-203.8c2.1-31.5,28.2-56.4,60-56.4,29.4,0,53.9,21.3,59.1,49.4v22.4h0Z"/><path  d="M874.3,1020.1c-44.2-71.7-138.2-70.6-148.7-70.3-3.5-.2-7.1-.3-10.7-.3-21.8,0-41.8,1.8-59.7,5.5-73.8,15.2-114.8,62.9-120.8,154.3-.5,7.7-.8,15.8-.8,24.2,0,5.7.8,599.8.8,599.8,0,11,8.9,19.9,19.9,19.9h80.9c11,0,19.9-8.9,19.9-19.9v-313.3c0-4,3.3-7.3,7.3-7.3h104.5c4,0,7.3,3.3,7.3,7.3v313.2c0,11,8.9,19.9,19.9,19.9h80.9c11,0,20.2-8.9,20.2-19.9l.1-604.7c1.6-67.3-21-108.4-21-108.4ZM774.1,1106.8v188.4c0,4-3.3,7.3-7.3,7.3h-104.4c-4,0-7.3-3.3-7.3-7.3v-203.8c2.1-31.5,28.2-56.4,60-56.4,29.4,0,53.9,21.3,59.1,49.4v22.4h-.1Z"/><path  d="M1721.8,1020.1c-44.2-71.7-138.2-70.6-148.7-70.3-3.5-.2-7.1-.3-10.7-.3-21.8,0-41.8,1.8-59.7,5.5-73.8,15.2-114.8,62.9-120.8,154.3-.5,7.7-.8,15.8-.8,24.2,0,5.7.8,599.8.8,599.8,0,11,8.9,19.9,19.9,19.9h80.9c11,0,19.9-8.9,19.9-19.9v-313.3c0-4,3.3-7.3,7.3-7.3h104.5c4,0,7.3,3.3,7.3,7.3v313.2c0,11,8.9,19.9,19.9,19.9h80.9c11,0,20.2-8.9,20.2-19.9l.1-604.7c1.7-67.3-21-108.4-21-108.4ZM1621.7,1106.8v188.4c0,4-3.3,7.3-7.3,7.3h-104.5c-4,0-7.3-3.3-7.3-7.3v-203.8c2.1-31.5,28.2-56.4,60-56.4,29.4,0,53.9,21.3,59.1,49.4v22.4h0Z"/></svg></th>
-          <th>Alcohol</th>
-          <th>Gardening</th>
+          <th>Alcohol &#127863;</th>
+          <th>Gardening &#127807;</th>
         </tr></thead>
         <tbody>
           <tr><td>Still feel like yourself</td><td class="uc"><span class="yes">&#10003;</span></td><td><span class="no">&#10005;</span></td><td><span class="mid">~</span></td></tr>
@@ -926,7 +927,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
       <div class="rt-take"><span class="rt-arrow">&#8595;</span>You need less to feel the same effects</div>
     </div>
     <div class="rt-card rt-alc">
-      <div class="rt-pill">Alcohol &amp; gardening &#127807;</div>
+      <div class="rt-pill">Alcohol &#127863; &amp; gardening &#127807;</div>
       <p class="rt-copy">Effects <b>weaken</b> with continued use. Many people find they need more to feel the same ease.</p>
       <svg viewBox="-30 0 350 174" role="img" aria-label="Chart: alcohol effect strength falling with continued use">
         <line x1="40" y1="12" x2="40" y2="148" stroke="#C9C4B4" stroke-width="1"/>
@@ -1187,7 +1188,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   var sl=document.getElementById('slides');
   if(!sl) return;
   var prev=document.querySelector('.gprev'), next=document.querySelector('.gnext');
-  function page(d){ sl.scrollTo({left:Math.round(sl.scrollLeft/sl.clientWidth+d)*sl.clientWidth, behavior:'smooth'}); }
+  function page(d){ var n=sl.children.length; var i=Math.round(sl.scrollLeft/sl.clientWidth)+d; if(i<0)i=n-1; if(i>n-1)i=0; sl.scrollTo({left:i*sl.clientWidth, behavior:'smooth'}); }
   if(prev) prev.addEventListener('click', function(){ page(-1); });
   if(next) next.addEventListener('click', function(){ page(1); });
   var down=false, sx=0, sf=0, moved=0;
