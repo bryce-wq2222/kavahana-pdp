@@ -138,10 +138,8 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .opt.sel .rad{border-color:#fff}
 .opt.sel .rad::after{background:#fff}
 .opt.sel .tag{background:#fff;color:var(--green);box-shadow:0 3px 10px rgba(0,0,0,.22);border:1.5px solid var(--green)}
-.optbens{display:grid;gap:6px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.28);grid-column:1/-1}
-.opt:not(.sel) .optbens{border-top-color:var(--line)}
-.opt:not(.sel) .optbens span{color:var(--grey)}
-.opt:not(.sel) .optbens span::before{color:var(--green)}
+.optbens{display:none;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.28);grid-column:1/-1}
+.opt.sel .optbens{display:grid;gap:6px}
 .optbens span{font-size:12.5px;color:#EDF5E9}
 .optbens span::before{content:"\2713";color:#fff;font-weight:400;margin-right:8px}
 .opt .rad{width:17px;height:17px;border-radius:50%;border:1.5px solid #C6BFAD;position:relative}
@@ -692,7 +690,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     <span class="valchip">+$50 value</span>
     <div class="eyebrow" style="text-align:center">Included with your first box</div>
     <h2 class="gifth2">The whole ritual.<br>Yours to keep.</h2>
-    <p class="lead" style="margin-top:10px">The cups, the whisk, the guide.<br>They arrive with the kava and stay.</p>
+    <p class="lead" style="margin-top:10px">The cups, the whisk, the guide.<br>All in the Starter Kit.</p>
     <div class="gifts">
       <div class="gt">
         <div class="gh"><span class="gn">2 coconut shell cups</span><span class="gf">Free<s>$23.98</s></span></div>
@@ -1052,20 +1050,28 @@ h2{font-size:clamp(30px,4.3vw,50px)}
            get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social, from one ingredient, cold-pressed noble kava root. Scoop, mix into any cold drink and enjoy.'}
   };
   ['img/s1-45.jpg','img/s1-22.jpg'].forEach(function(u){var p=new Image();p.src=u;});
+  var topKey='4oz', btbKey='4oz';
+  function swapImgs(scope, s){
+    scope.forEach(function(hi){ if(hi.getAttribute('src')!==s.hero){hi.src=s.hero;hi.alt=s.halt;} });
+  }
   function setSize(key, fromTop){
     var s=SIZES[key]; if(!s) return;
-    document.querySelectorAll('.buy [data-o]').forEach(function(x){x.classList.toggle('sel', x.dataset.o===key)});
-    document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
-    var $=function(i){return document.getElementById(i)};
-    $('bbSub').textContent=s.s;
-    $('bbRen').textContent=s.r;
-    $('bbGet').innerHTML=s.get;
-    document.querySelectorAll('.heroimg').forEach(function(hi){
-      if(hi.getAttribute('src')!==s.hero){hi.src=s.hero;hi.alt=s.halt;}
-    });
     if(fromTop){
+      topKey=key; btbKey=key;
+      document.querySelectorAll('.buy [data-o]').forEach(function(x){x.classList.toggle('sel', x.dataset.o===key)});
+      var $=function(i){return document.getElementById(i)};
+      $('bbSub').textContent=s.s;
+      $('bbRen').textContent=s.r;
+      $('bbGet').innerHTML=s.get;
+      swapImgs(document.querySelectorAll('#slides .heroimg'), s);
+      document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
+      swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);
       var sl=document.getElementById('slides');
       if(sl)sl.scrollTo({left:0,behavior:'smooth'});
+    } else {
+      btbKey=key;
+      document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
+      swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);
     }
   }
   function stabilize(){
@@ -1087,9 +1093,8 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     }
   }
   var VARIANTS={'4oz':'54111153946942','2oz':'54111153979710'};
-  function currentKey(){var s=document.querySelector('.buy .opt.sel[data-o]');return s?s.dataset.o:'4oz';}
   document.querySelectorAll('.hero .pill-cta').forEach(function(b){
-    b.addEventListener('click',function(){ location.href='https://shop.kavahana.com/cart/'+VARIANTS[currentKey()]+':1'; });
+    b.addEventListener('click',function(){ var k=b.closest('.btbsec')?btbKey:topKey; location.href='https://shop.kavahana.com/cart/'+VARIANTS[k]+':1'; });
   });
   stabilize();
   window.addEventListener('load',stabilize);
@@ -1117,7 +1122,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
     slides.addEventListener('scroll',function(){
       clearTimeout(tick);
       tick=setTimeout(function(){
-        var idx=Math.round(slides.scrollLeft/slides.clientWidth);
+        var idx=Math.round(slides.scrollLeft/slides.clientWidth); if(idx>=n) idx=0;
         [].forEach.call(dots.children,function(d,j){ d.className = j===idx ? 'on' : ''; });
       },60);
     });
@@ -1188,7 +1193,17 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   var sl=document.getElementById('slides');
   if(!sl) return;
   var prev=document.querySelector('.gprev'), next=document.querySelector('.gnext');
-  function page(d){ var n=sl.children.length; var i=Math.round(sl.scrollLeft/sl.clientWidth)+d; if(i<0)i=n-1; if(i>n-1)i=0; sl.scrollTo({left:i*sl.clientWidth, behavior:'smooth'}); }
+  var clone=sl.children[0].cloneNode(true); clone.setAttribute('aria-hidden','true'); sl.appendChild(clone);
+  var realN=sl.children.length-1;
+  function silentJump(px){ var b=sl.style.scrollBehavior; sl.style.scrollBehavior='auto'; sl.scrollLeft=px; void sl.offsetWidth; sl.style.scrollBehavior=b; }
+  function snapClone(){ if(Math.round(sl.scrollLeft/sl.clientWidth)>=realN){ silentJump(0); } }
+  var _ct; sl.addEventListener('scroll',function(){ clearTimeout(_ct); _ct=setTimeout(snapClone,90); });
+  function page(d){
+    var w=sl.clientWidth, i=Math.round(sl.scrollLeft/w)+d;
+    if(i<0){ silentJump(realN*w); i=realN-1; }
+    if(i>realN) i=1;
+    sl.scrollTo({left:i*w, behavior:'smooth'});
+  }
   if(prev) prev.addEventListener('click', function(){ page(-1); });
   if(next) next.addEventListener('click', function(){ page(1); });
   var down=false, sx=0, sf=0, moved=0;
@@ -1214,14 +1229,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
   sl.addEventListener('pointercancel', up);
   sl.addEventListener('click', function(e){ if(moved>8){ e.preventDefault(); e.stopPropagation(); moved=0; } }, true);
   sl.addEventListener('dragstart', function(e){ e.preventDefault(); });
-  var tsx=null;
-  sl.addEventListener('touchstart',function(e){ tsx=e.touches[0].clientX; },{passive:true});
-  sl.addEventListener('touchend',function(e){
-    if(tsx===null)return;
-    var dx=e.changedTouches[0].clientX-tsx; tsx=null;
-    var last=(sl.children.length-1)*sl.clientWidth;
-    if(dx<-30 && sl.scrollLeft>=last-8){ setTimeout(function(){ sl.scrollTo({left:0,behavior:'smooth'}); },80); }
-  },{passive:true});
+
 })();
 </script>
 <script>
