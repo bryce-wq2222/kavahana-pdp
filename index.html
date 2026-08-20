@@ -221,6 +221,14 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 .split > .shot{max-width:520px;width:100%;margin-left:auto;margin-right:auto}
 .shot::after{content:"";position:absolute;inset:0;border-radius:9px;box-shadow:inset 0 0 0 1px rgba(22,33,26,.09)}
 @media(max-width:760px){.gifts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1001px){
+  .ctable th:first-child,.ctable td:first-child{font-size:15.5px}
+  .ctable thead th{font-size:13.5px;padding:12px 4px}
+  .ctable th,.ctable td{padding:11px 6px}
+  .ctable .yes,.ctable .no,.ctable .mid{font-size:17px}
+  .ctable .wm{font-size:16px}
+  .ctable td{font-size:15px}
+}
 .moregifts{text-align:center;margin-top:20px;font-size:14px;font-weight:500;letter-spacing:.02em;color:var(--green)}
 
 /* ---- 6. press ---- */
@@ -294,7 +302,7 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 
 /* ---- 9. marquee ---- */
 .mq{background:var(--grad);color:#fff;padding:13px 0;overflow:hidden;white-space:nowrap}
-.mq .track{display:inline-flex;gap:0;animation:sc 32s linear infinite;will-change:transform}
+.mq .track{display:inline-flex;gap:0;animation:sc 96s linear infinite;will-change:transform}
 .mq span{font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:0 26px;position:relative}
 .mq span::after{content:"\2726";position:absolute;right:-5px;top:50%;transform:translateY(-50%);opacity:.5;font-size:9px;pointer-events:none}
 @keyframes sc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -766,6 +774,10 @@ h2{font-size:clamp(30px,4.3vw,50px)}
 
 <!-- 9. MARQUEE -->
 <div class="mq"><div class="track" aria-hidden="true">
+  <span>Noble kava root</span><span>Cold-pressed, not a kava extract</span><span>Ready in 15 seconds</span><span>Vanuatu-sourced</span><span>Lab-tested every batch</span><span>3,000 years of daily use</span>
+  <span>Noble kava root</span><span>Cold-pressed, not a kava extract</span><span>Ready in 15 seconds</span><span>Vanuatu-sourced</span><span>Lab-tested every batch</span><span>3,000 years of daily use</span>
+  <span>Noble kava root</span><span>Cold-pressed, not a kava extract</span><span>Ready in 15 seconds</span><span>Vanuatu-sourced</span><span>Lab-tested every batch</span><span>3,000 years of daily use</span>
+  <span>Noble kava root</span><span>Cold-pressed, not a kava extract</span><span>Ready in 15 seconds</span><span>Vanuatu-sourced</span><span>Lab-tested every batch</span><span>3,000 years of daily use</span>
   <span>Noble kava root</span><span>Cold-pressed, not a kava extract</span><span>Ready in 15 seconds</span><span>Vanuatu-sourced</span><span>Lab-tested every batch</span><span>3,000 years of daily use</span>
   <span>Noble kava root</span><span>Cold-pressed, not a kava extract</span><span>Ready in 15 seconds</span><span>Vanuatu-sourced</span><span>Lab-tested every batch</span><span>3,000 years of daily use</span>
 </div></div>
