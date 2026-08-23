@@ -87,7 +87,7 @@
 
       <div class="optlabel">Size</div>
       <div class="opt sel" data-o="4oz">
-        <span class="tag">Most popular &middot; +5 stick packs free</span>
+        <span class="tag">Best deal &ndash; 34% savings</span>
         <span class="rad"></span>
         <span class="nm">45 servings
           <small>Only $2.44 per serving</small>
@@ -347,7 +347,7 @@
         <div class="eyebrow eyebrow-sub">Your daily kava ritual</div>
         <div class="optlabel">Size</div>
         <div class="opt sel" data-o2="4oz">
-          <span class="tag">Most popular</span>
+          <span class="tag">Best deal &ndash; 34% savings</span>
           <span class="rad"></span>
           <span class="nm">45 servings<small>Starter kit + 5 stick packs free</small></span>
           <span class="pr">$109.99<s>$166.46</s></span>
