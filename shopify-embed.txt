@@ -1,3 +1,4 @@
+<style>[id^="alia-root"],.intercom-lightweight-app,.intercom-lightweight-app-launcher,#intercom-frame,#intercom-container,iframe[name^="intercom"]{display:none!important;visibility:hidden!important}</style><script>(function(){function z(){try{window.Intercom&&window.Intercom('update',{hide_default_launcher:true})}catch(e){}document.querySelectorAll('[id^="alia-root"]').forEach(function(n){n.remove()})}z();new MutationObserver(z).observe(document.documentElement,{childList:true,subtree:true});})();</script>
 <style>#kv-page,#kv-page :where(*:not(svg):not(svg *)),#kv-page :where(*:not(svg):not(svg *))::before,#kv-page :where(*:not(svg):not(svg *))::after{all:revert}
 #kv-page .note,#kv-page .tpl{display:none!important}
 #kv-page{display:block;width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;text-align:left}
