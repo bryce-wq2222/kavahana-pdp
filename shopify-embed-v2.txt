@@ -94,7 +94,7 @@
           <small>Only $2.44 per serving</small>
         </span>
         <span class="pr">$109.99<s>$166.46</s></span>
-        <span class="optbens"><span>Starter kit free: 2 coconut shell cups, whisk, digital recipe guide</span><span>5 stick packs free, and again on your first renewal</span><span>2 fresh bags, 45 servings, monthly. Skip or cancel anytime</span></span>
+        <span class="optbens"><span>Starter kit free: 2 coconut shell cups, whisk, digital recipe guide</span><span>5 stick packs free, and again on your first renewal</span><span>45 fresh servings monthly. Skip or cancel anytime</span></span>
       </div>
       <div class="opt" data-o="2oz">
         <span class="rad"></span>
