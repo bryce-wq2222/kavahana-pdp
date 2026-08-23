@@ -569,9 +569,9 @@
       document.querySelector('.buy').style.setProperty('--selmin', Math.max(hA,hB)+'px');
     }
   }
-  var VARIANTS={'4oz':'54111153946942','2oz':'54111153979710'};
+  var VARIANTS={'4oz':'54144064749886','2oz':'54144064651582'};
   document.querySelectorAll('.hero .pill-cta').forEach(function(b){
-    b.addEventListener('click',function(){ var k=b.closest('.btbsec')?btbKey:topKey; location.href='https://shop.kavahana.com/cart/'+VARIANTS[k]+':1'; });
+    b.addEventListener('click',function(){ var k=b.closest('.btbsec')?btbKey:topKey; location.href='https://shop.kavahana.com/cart/'+VARIANTS[k]+':1?selling_plan=19079102782'; });
   });
   stabilize();
   window.addEventListener('load',stabilize);
