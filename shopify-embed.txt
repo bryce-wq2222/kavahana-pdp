@@ -569,9 +569,9 @@
       document.querySelector('.buy').style.setProperty('--selmin', Math.max(hA,hB)+'px');
     }
   }
-  var VARIANTS={'4oz':'54144064749886','2oz':'54144064651582'};var KITPROPS={'4oz':'1x%20Kava%20Nectar%20Classic%20Edition%20(45%20servings)%2C%202x%20Coconut%20Shell%20Cups%2C%201x%20Bamboo%20Whisk%2C%205x%20FREE%20Balance%20Stick%20Packs','2oz':'1x%20Kava%20Nectar%20Classic%20Edition%20(22%20servings)%2C%202x%20Coconut%20Shell%20Cups%2C%201x%20Bamboo%20Whisk'};
+  var VARIANTS={'4oz':'54144064749886','2oz':'54144064651582'};
   document.querySelectorAll('.hero .pill-cta').forEach(function(b){
-    b.addEventListener('click',function(){ var k=b.closest('.btbsec')?btbKey:topKey; location.href='https://shop.kavahana.com/cart/add?id='+VARIANTS[k]+'&quantity=1&selling_plan=19079102782&properties%5BIncludes%5D='+KITPROPS[k]+'&return_to=%2Fcheckout'; });
+    b.addEventListener('click',function(){ var k=b.closest('.btbsec')?btbKey:topKey; var GIFTS={cup:'54220256477502',whisk:'54220256510270',stix:'54143764922686'}; var f=document.createElement('form');f.method='post';f.action='https://shop.kavahana.com/cart/add'; var items=[[VARIANTS[k],1,'19079102782'],[GIFTS.cup,2,''],[GIFTS.whisk,1,'']]; if(k==='4oz')items.push([GIFTS.stix,1,'']); items.forEach(function(it,i){ [['id',it[0]],['quantity',it[1]],['selling_plan',it[2]]].forEach(function(p){ if(p[1]==='')return; var inp=document.createElement('input');inp.type='hidden';inp.name='items['+i+']['+p[0]+']';inp.value=p[1];f.appendChild(inp); }); }); var rt=document.createElement('input');rt.type='hidden';rt.name='return_to';rt.value='/checkout';f.appendChild(rt); document.body.appendChild(f);f.submit(); });
   });
   stabilize();
   window.addEventListener('load',stabilize);
