@@ -247,26 +247,6 @@
   </div>
 </div></section>
 
-<!-- 8. SHOULD DO MORE -->
-<section class="lav staysec"><div class="wrap">
-  <div class="split">
-    <div class="splitctr">
-      <div class="eyebrow" style="text-align:center">Why people stay</div>
-        <h2 class="ctrh">Good today.<br>Better every week.</h2>
-        <p class="lead ctr" style="margin-top:12px">Kava is known for a reverse tolerance. The first cup is good. The one you make a month from now is better.</p>
-      <div class="st4">
-        <div><div class="n">4.8</div><div class="l">Average rating</div></div>
-        <div><div class="n">97%</div><div class="l">Would recommend</div></div>
-        <div><div class="n">3,000</div><div class="l">Years of daily use</div></div>
-        <div><div class="n">500k+</div><div class="l">Cups served</div></div>
-      </div>
-      <button class="pill-cta">Try it today &#8594;</button>
-      <div class="guar">&#10003; <b>30 day guarantee</b></div>
-    </div>
-    <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-friends.jpg" width="1000" height="1000" alt="Two friends sharing Kava Nectar from coconut bowls"></div>
-  </div>
-</div></section>
-
 <!-- 9. MARQUEE -->
 <div class="mq"><div class="track" aria-hidden="true">
   <span>Noble kava root</span><span>Cold-pressed, not a kava extract</span><span>Ready in 15 seconds</span><span>Vanuatu-sourced</span><span>Lab-tested every batch</span><span>3,000 years of daily use</span>
