@@ -575,9 +575,9 @@
       document.querySelector('.buy').style.setProperty('--selmin', Math.max(hA,hB)+'px');
     }
   }
-  var VARIANTS={'4oz':'54144064749886','2oz':'54144064651582'};
+  var VARIANTS={'4oz':'54144064749886','2oz':'54144064651582'};var KITPROPS={'4oz':'1x%20Kava%20Nectar%20Classic%20Edition%20(45%20servings)%2C%202x%20Coconut%20Shell%20Cups%2C%201x%20Bamboo%20Whisk%2C%205x%20FREE%20Balance%20Stick%20Packs','2oz':'1x%20Kava%20Nectar%20Classic%20Edition%20(22%20servings)%2C%202x%20Coconut%20Shell%20Cups%2C%201x%20Bamboo%20Whisk'};
   document.querySelectorAll('.hero .pill-cta').forEach(function(b){
-    b.addEventListener('click',function(){ var k=b.closest('.btbsec')?btbKey:topKey; location.href='https://shop.kavahana.com/cart/add?id='+VARIANTS[k]+'&quantity=1&selling_plan=19079102782&return_to=%2Fcheckout'; });
+    b.addEventListener('click',function(){ var k=b.closest('.btbsec')?btbKey:topKey; location.href='https://shop.kavahana.com/cart/add?id='+VARIANTS[k]+'&quantity=1&selling_plan=19079102782&properties%5BIncludes%5D='+KITPROPS[k]+'&return_to=%2Fcheckout'; });
   });
   stabilize();
   window.addEventListener('load',stabilize);
