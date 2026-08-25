@@ -3,6 +3,8 @@
    - After stripping gifts, refreshes the cart UI so shoppers never see phantom lines.
    - Hides the cart's selling-plan opt-out dropdown. */
 (function () {
+  if (window.__kvGiftGuard) return;
+  window.__kvGiftGuard = 1;
   try {
     var st = document.createElement('style');
     st.textContent = 'select.cart-item-selling-plan-selector{display:none!important}';
