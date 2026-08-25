@@ -149,6 +149,55 @@
 </div></div>
 </section>
 
+<!-- 14. UGC CAROUSEL -->
+<section class="ugcsec"><div class="wrap">
+  <div class="ctr">
+    <div class="eyebrow" style="text-align:center">From the community</div>
+    <h2 class="btbh2">500,000+ cups later</h2>
+    <p class="lead ctr" style="margin-top:10px">Filmed by people who were not sure it would work.</p>
+  </div>
+  <div class="carou vid-carou" data-carou="btb">
+    <button class="cnav prev" aria-label="Previous">&#8249;</button>
+    <div class="ctrack">
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-what-is-kava-poster.jpg" playsinline muted loop title="What Kava Nectar is, and the tingle"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-what-is-kava.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: What Kava Nectar is, and the tingle">&#9654;</button><span class="vcap">What Kava Nectar is, and the tingle</span></div></div>
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-shots-party-poster.jpg" playsinline muted loop title="We lost track of how many shots we took"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-shots-party.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: We lost track of how many shots we took">&#9654;</button><span class="vcap">We lost track of how many shots we took</span></div></div>
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-alcohol-free-poster.jpg" playsinline muted loop title="Seven months alcohol free"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-alcohol-free.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Seven months alcohol free">&#9654;</button><span class="vcap">Seven months alcohol free</span></div></div>
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-take-home-poster.jpg" playsinline muted loop title="Take it home, or order online"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-take-home.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Take it home, or order online">&#9654;</button><span class="vcap">Take it home, or order online</span></div></div>
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-beach-day-poster.jpg" playsinline muted loop title="A beach day with kava"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-beach-day.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: A beach day with kava">&#9654;</button><span class="vcap">A beach day with kava</span></div></div>
+      
+      
+      
+      
+      
+      
+    </div>
+    <button class="cnav next" aria-label="Next">&#8250;</button>
+  </div>
+  <div class="cdots" data-dots="btb"></div>
+</div></section>
+
+<!-- RECIPES -->
+<section id="recipes" class="lav"><div class="wrap">
+  <div class="ctr">
+    <div class="eyebrow" style="text-align:center">From the bar</div>
+    <h2 class="btbh2">What people like to<br>make it with</h2>
+  </div>
+  <div class="carou rec-carou" data-carou="recs">
+    <button class="cnav prev" aria-label="Previous">&#8249;</button>
+    <div class="ctrack">
+      <div class="cslide"><div class="rec"><div class="shot wide"><img decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/orange-spritz.jpg" width="760" height="760" alt="Orange Spritz made with Kava Nectar"></div><div class="b"><span class="tag">Bright</span><h3>Orange Spritz</h3><p>Orange juice, club soda, a touch of vanilla.</p></div></div></div>
+      <div class="cslide"><div class="rec"><div class="shot wide"><img decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/blue-spirulina.jpg" width="760" height="760" alt="Blue Spirulina Coconut made with Kava Nectar"></div><div class="b"><span class="tag">Creamy</span><h3>Blue Spirulina Coconut</h3><p>Coconut milk, blue spirulina, vanilla.</p></div></div></div>
+      <div class="cslide"><div class="rec"><div class="shot wide"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/white-grape.jpg" width="760" height="760" alt="White Grape Spritz made with Kava Nectar"></div><div class="b"><span class="tag">Crisp</span><h3>White Grape Spritz</h3><p>White grape juice, ginger beer, fresh lemon.</p></div></div></div>
+      <div class="cslide"><div class="rec"><div class="shot wide"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/moscow-mule.jpg" width="760" height="760" alt="Moscow Mule made with Kava Nectar"></div><div class="b"><span class="tag">No proof</span><h3>Moscow Mule</h3><p>Fever Tree ginger beer and fresh lime.</p></div></div></div>
+      <div class="cslide"><div class="rec"><div class="shot wide"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/cinnamon-cacao.jpg" width="760" height="760" alt="Cinnamon Vanilla Cacao made with Kava Nectar"></div><div class="b"><span class="tag">Evening</span><h3>Cinnamon Vanilla Cacao</h3><p>Oat milk, cacao and cinnamon. Hot or cold.</p></div></div></div>
+      <div class="cslide"><div class="rec"><div class="shot wide"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/orange-cream.jpg" width="760" height="760" alt="Orange Cream made with Kava Nectar"></div><div class="b"><span class="tag">Dessert</span><h3>Orange Cream</h3><p>Orange juice and coconut milk, like a creamsicle.</p></div></div></div>
+    </div>
+    <button class="cnav next" aria-label="Next">&#8250;</button>
+  </div>
+  <div class="cdots" data-dots="recs"></div>
+</div></section>
+
+
 <!-- 10. TABS -->
 <section class="ritualsec"><div class="wrap">
   <div class="split">
@@ -230,55 +279,6 @@
   </div>
   <div class="perkgrid"><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 17.5c0 5 4 9 9 9s9-4 9-9Z"/><path d="M9.5 17.5h21"/><path d="M20 26.5v4"/><path d="M15 30.5h10"/><path d="M24.5 9.5c.6 1.4.2 2.5-.6 3.5"/><path d="M19.5 8.5c.7 1.6.2 2.8-.7 3.9"/></svg></div><div class="pt">Your starter kit</div><div class="ps">2 coconut shell cups, whisk, digital recipe guide</div><div class="pdot"><span></span></div><div class="pm">Month 1</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 10.5h3.4v19H9z"/><path d="M14.2 10.5h3.4v19h-3.4z"/><path d="M19.4 10.5h3.4v19h-3.4z"/><path d="M24.6 10.5h3.4v19h-3.4z"/><path d="M29.8 10.5h3.4v19h-3.4z"/></svg></div><div class="pt">5 stick packs</div><div class="ps">free, on your first renewal</div><div class="pdot"><span></span></div><div class="pm">Month 2</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 15.5h21v14h-21z"/><path d="M9.5 15.5 20 22l10.5-6.5"/><path d="M20 15.5V9"/><path d="M16.5 11.5 20 8l3.5 3.5"/></svg></div><div class="pt">Send a friend a FREE box</div><div class="ps">whisk, coconut shell cup, 5 sticks, digital recipe guide</div><div class="pdot"><span></span></div><div class="pm">Month 3</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="13" width="23" height="14" rx="2"/><circle cx="20" cy="20" r="3.4"/><path d="M12.5 17v6M27.5 17v6"/></svg></div><div class="pt">25% off anything</div><div class="ps">one time, on any item in the store</div><div class="pdot"><span></span></div><div class="pm">Month 4</div></div><div class="perk"><div class="pic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18.5h20v12H10z"/><path d="M8.5 13.5h23v5h-23z"/><path d="M20 13.5v17"/><path d="M20 13.5c-1-2.5-3-4.5-5-4.5a2.6 2.6 0 0 0 0 5.2"/><path d="M20 13.5c1-2.5 3-4.5 5-4.5a2.6 2.6 0 0 1 0 5.2"/></svg></div><div class="pt">Plus monthly giveaways</div><div class="ps">a new one every month you stay</div><div class="pdot pplus"><span>+</span></div></div></div><div class="perkbar"><span class="pbline"></span><span class="pbtext">Skip, swap or cancel any time</span></div>
 </div></section>
-
-<!-- 14. UGC CAROUSEL -->
-<section class="ugcsec"><div class="wrap">
-  <div class="ctr">
-    <div class="eyebrow" style="text-align:center">From the community</div>
-    <h2 class="btbh2">500,000+ cups later</h2>
-    <p class="lead ctr" style="margin-top:10px">Filmed by people who were not sure it would work.</p>
-  </div>
-  <div class="carou vid-carou" data-carou="btb">
-    <button class="cnav prev" aria-label="Previous">&#8249;</button>
-    <div class="ctrack">
-        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-what-is-kava-poster.jpg" playsinline muted loop title="What Kava Nectar is, and the tingle"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-what-is-kava.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: What Kava Nectar is, and the tingle">&#9654;</button><span class="vcap">What Kava Nectar is, and the tingle</span></div></div>
-        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-shots-party-poster.jpg" playsinline muted loop title="We lost track of how many shots we took"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-shots-party.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: We lost track of how many shots we took">&#9654;</button><span class="vcap">We lost track of how many shots we took</span></div></div>
-        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-alcohol-free-poster.jpg" playsinline muted loop title="Seven months alcohol free"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-alcohol-free.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Seven months alcohol free">&#9654;</button><span class="vcap">Seven months alcohol free</span></div></div>
-        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-take-home-poster.jpg" playsinline muted loop title="Take it home, or order online"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-take-home.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Take it home, or order online">&#9654;</button><span class="vcap">Take it home, or order online</span></div></div>
-        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-beach-day-poster.jpg" playsinline muted loop title="A beach day with kava"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-beach-day.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: A beach day with kava">&#9654;</button><span class="vcap">A beach day with kava</span></div></div>
-      
-      
-      
-      
-      
-      
-    </div>
-    <button class="cnav next" aria-label="Next">&#8250;</button>
-  </div>
-  <div class="cdots" data-dots="btb"></div>
-</div></section>
-
-<!-- RECIPES -->
-<section id="recipes" class="lav"><div class="wrap">
-  <div class="ctr">
-    <div class="eyebrow" style="text-align:center">From the bar</div>
-    <h2 class="btbh2">What people like to<br>make it with</h2>
-  </div>
-  <div class="carou rec-carou" data-carou="recs">
-    <button class="cnav prev" aria-label="Previous">&#8249;</button>
-    <div class="ctrack">
-      <div class="cslide"><div class="rec"><div class="shot wide"><img decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/orange-spritz.jpg" width="760" height="760" alt="Orange Spritz made with Kava Nectar"></div><div class="b"><span class="tag">Bright</span><h3>Orange Spritz</h3><p>Orange juice, club soda, a touch of vanilla.</p></div></div></div>
-      <div class="cslide"><div class="rec"><div class="shot wide"><img decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/blue-spirulina.jpg" width="760" height="760" alt="Blue Spirulina Coconut made with Kava Nectar"></div><div class="b"><span class="tag">Creamy</span><h3>Blue Spirulina Coconut</h3><p>Coconut milk, blue spirulina, vanilla.</p></div></div></div>
-      <div class="cslide"><div class="rec"><div class="shot wide"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/white-grape.jpg" width="760" height="760" alt="White Grape Spritz made with Kava Nectar"></div><div class="b"><span class="tag">Crisp</span><h3>White Grape Spritz</h3><p>White grape juice, ginger beer, fresh lemon.</p></div></div></div>
-      <div class="cslide"><div class="rec"><div class="shot wide"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/moscow-mule.jpg" width="760" height="760" alt="Moscow Mule made with Kava Nectar"></div><div class="b"><span class="tag">No proof</span><h3>Moscow Mule</h3><p>Fever Tree ginger beer and fresh lime.</p></div></div></div>
-      <div class="cslide"><div class="rec"><div class="shot wide"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/cinnamon-cacao.jpg" width="760" height="760" alt="Cinnamon Vanilla Cacao made with Kava Nectar"></div><div class="b"><span class="tag">Evening</span><h3>Cinnamon Vanilla Cacao</h3><p>Oat milk, cacao and cinnamon. Hot or cold.</p></div></div></div>
-      <div class="cslide"><div class="rec"><div class="shot wide"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/rec/orange-cream.jpg" width="760" height="760" alt="Orange Cream made with Kava Nectar"></div><div class="b"><span class="tag">Dessert</span><h3>Orange Cream</h3><p>Orange juice and coconut milk, like a creamsicle.</p></div></div></div>
-    </div>
-    <button class="cnav next" aria-label="Next">&#8250;</button>
-  </div>
-  <div class="cdots" data-dots="recs"></div>
-</div></section>
-
 
 <!-- 5. CTA -->
 <section style="padding:8px 0 34px"><div class="wrap">
