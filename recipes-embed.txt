@@ -3,6 +3,9 @@
 #kvr-blog{display:block;width:100vw;position:relative;left:50%;margin-left:-50vw}
 #MainContent #kvr-blog h1{display:block!important}
 #MainContent .shopify-section:has([data-oke-widget]){display:none!important}
+#kvr-blog .section-content,#kvr-rt .section-content{width:100%!important}
+#kvr-blog ul,#kvr-rt ul{padding:0!important;margin:0!important;list-style:none!important}
+#kvr-blog a,#kvr-rt a{text-decoration:none!important;color:inherit!important}
 </style>
 <div id="kvr-blog">
 <div id="shopify-section-template--25068962873662__main" class="shopify-section">

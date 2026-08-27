@@ -2,6 +2,9 @@
 <style>
 #kvr-rt{display:block;width:100vw;position:relative;left:50%;margin-left:-50vw}
 #MainContent #kvr-rt h1,#MainContent #kvr-rt h2{display:block!important}
+#kvr-blog .section-content,#kvr-rt .section-content{width:100%!important}
+#kvr-blog ul,#kvr-rt ul{padding:0!important;margin:0!important;list-style:none!important}
+#kvr-blog a,#kvr-rt a{text-decoration:none!important;color:inherit!important}
 </style>
 <div id="kvr-rt">
 <div id="shopify-section-template--25957773017406__rich_text_QwiPg4" class="shopify-section"><section
