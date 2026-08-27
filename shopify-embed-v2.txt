@@ -811,7 +811,7 @@
       '<span class="kvo-cta">Get my starter kit &rarr;</span>';
     var anchors=document.createElement('ul');
     anchors.id='kv-drawer-links';
-    [['Recipes','/pages/recipes-preview'],['Reviews','/pages/reviews-preview'],['About us','/pages/about-us']].forEach(function(p){
+    [['Recipes','/pages/recipes-preview'],['Reviews','/pages/reviews-preview'],['About us','/pages/about-us-preview']].forEach(function(p){
       var li=document.createElement('li'); li.className=liCls;
       var a=document.createElement('a'); a.className=linkCls; a.textContent=p[0];
       if(typeof p[1]==='string'&&p[1].charAt(0)==='/'){ a.href=p[1]; }
