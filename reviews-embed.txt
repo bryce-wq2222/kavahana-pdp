@@ -1,230 +1,28 @@
 <style>@media(min-width:881px){#kv-page .hero>.gal{position:sticky;top:24px;align-self:start}}#kv-page .acc summary{position:relative;padding-right:26px}#kv-page .acc summary::after{content:"";position:absolute;right:3px;top:50%;width:13px;height:2px;background:var(--green);margin-top:-1px;font-size:0;transform:none;transition:transform .28s ease}#kv-page .acc summary::before{content:"";position:absolute;right:3px;top:50%;width:13px;height:2px;background:var(--green);margin-top:-1px;transform:rotate(90deg);transition:transform .28s ease}#kv-page .acc details.is-open>summary::before{transform:rotate(0deg)!important}#kv-page .acc details[open] summary::after{content:""}#kv-page .acc .acc-body{overflow:hidden;transition:height .3s ease}.rebuy-cart__flyout-item-subscription,select.cart-item-selling-plan-selector{display:none!important}#kv-sticky{position:fixed;left:0;right:0;bottom:0;z-index:2147482000;background:#16211A;display:none;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom))}#kv-sticky .ks-t{color:#F8F3E8;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:12px;font-weight:600;line-height:1.3}#kv-sticky button{background:#367542;color:#fff;border:0;border-radius:999px;padding:12px 18px;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:14px;font-weight:800;white-space:nowrap;cursor:pointer}@media(min-width:761px){#kv-sticky{display:none!important}}@media(max-width:760px){#kv-topmq{padding:6px 0}#kv-topmq .t{font-size:11px;letter-spacing:.08em}#headerContainer .px-section{padding-top:4px!important;padding-bottom:4px!important}#headerContainer .flex.items-center.justify-items-center{position:relative;min-height:46px}#headerContainer .flex.items-center.justify-items-center>div:first-child{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:auto;z-index:1}#headerContainer .site-header__logo-link{width:auto!important}#headerContainer .site-header__logo-link img,#headerContainer .site-header__logo-link svg{max-height:24px!important;width:auto!important}#headerContainer .flex.items-center.justify-items-center>div:last-child{width:100%}#headerContainer a[href="/search"]{display:none!important}#headerContainer .flex.items-center.justify-items-center>div:last-child>div[class*="lg:hidden"]{order:-1;margin-right:auto}}#kv-topmq{overflow:hidden;background:#367542;padding:10px 12px;white-space:nowrap;position:relative;z-index:50}#kv-topmq .s{display:block;text-align:center;color:#fff;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:13.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}#kv-topmq .t{display:none;white-space:nowrap;color:#fff;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:13.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}@media(max-width:760px){#kv-topmq{padding:5px 0}#kv-topmq .s{display:none}#kv-topmq .t{display:inline-block;font-size:11px;letter-spacing:.08em;animation:kvmq 70s linear infinite}}@keyframes kvmq{from{transform:translateX(0)}to{transform:translateX(-50%)}}[id$="__announcement-bar"]{display:none!important}[id^="alia-root"],.intercom-lightweight-app,.intercom-lightweight-app-launcher,#intercom-frame,#intercom-container,iframe[name^="intercom"]{display:none!important;visibility:hidden!important}</style><script>(function(){var mq=document.createElement('div');mq.id='kv-topmq';var seg='END OF SUMMER SALE! &#129381; UP TO 34% OFF + FREE STARTER KIT&nbsp;&nbsp;&bull;&nbsp;&nbsp;';var half=seg.repeat(8);mq.innerHTML='<span class="s">'+seg.replace(/&nbsp;&nbsp;&bull;&nbsp;&nbsp;/,'')+'</span><span class="t">'+half+half+'</span>';document.body.insertBefore(mq,document.body.firstChild);function z(){try{window.Intercom&&window.Intercom('update',{hide_default_launcher:true})}catch(e){}document.querySelectorAll('[id^="alia-root"]').forEach(function(n){n.remove()});if(!document.querySelector('.lbx.on')){var b=document.body,d=document.documentElement;if(b){if(getComputedStyle(b).overflowY==='hidden'){b.style.overflow='visible'}if(b.style.position==='fixed'){b.style.position='';b.style.top=''}if(b.style.touchAction){b.style.touchAction=''}}if(d&&getComputedStyle(d).overflowY==='hidden'){d.style.overflowY=''}}}z();new MutationObserver(z).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['style','class']});setInterval(z,1500);})();</script><script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "y7hv9wbezl");</script>
 <style>
-#kvr-blog{display:block;width:100vw;position:relative;left:50%;margin-left:-50vw}
-#MainContent #kvr-blog h1{display:block!important}
-#MainContent .shopify-section:has([data-oke-widget]){display:none!important}
+#kvr-rt{display:block;width:100vw;position:relative;left:50%;margin-left:-50vw}
+#MainContent #kvr-rt h1,#MainContent #kvr-rt h2{display:block!important}
 </style>
-<div id="kvr-blog">
-<div id="shopify-section-template--25068962873662__main" class="shopify-section">
-
-<section
-    class="relative overflow-hidden bg-scheme-background text-scheme-text  "
-    data-color-scheme="scheme1"
-  >
-    <div class="section-content px-section py-section-vertical-spacing"><h1 class="font-heading heading-feature  heading-style text-center none">
-          Recipes
-        </h1><div class="section-content-top-margin">
+<div id="kvr-rt">
+<div id="shopify-section-template--25957773017406__rich_text_QwiPg4" class="shopify-section"><section
+  class="relative overflow-hidden bg-scheme-background text-scheme-text  "
+  data-color-scheme="scheme1"
+>
+  <div class="section-content px-section py-section-vertical-spacing">
+    <div class="mx-auto max-w-site lg:w-2/3 ">
+      <div class=" relative z-shape-divider mx-auto text-center">
+        
+          <h2 class="inline-heading-rte font-heading  heading-feature heading-style break-words none">
+            See why people love us!
+          </h2>
         
 
-        <ul class="grid grid-cols-1 gap-10 lg:grid-cols-12">
-          
-<li
-              class="lg:col-span-3 "
-            >
-              <div class="relative  text-center"><div class="mb-5 pb-media-shadow card-media-wrapper"><div class="media media--css-only media-template--25068962873662__main-294375194942  default object-wrapper aspect-w-3 aspect-h-4"><img src="//shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=3000" alt="Cinnamon Vanilla Cacao Kava Nectar" srcset="//shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=200 200w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=350 350w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=450 450w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=750 750w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=850 850w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=960 960w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=1280 1280w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=1440 1440w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=1536 1536w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=1706 1706w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=1782 1782w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=1920 1920w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=2560 2560w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=2880 2880w, //shop.kavahana.com/cdn/shop/articles/cinnamon.png?v=1785620473&amp;width=3000 3000w" width="3000" height="3749" loading="eager" class="media__styled-element " sizes="(min-width: 990px) calc(100vw / 4), 100vw" onerror="this.style.color=&quot;currentColor&quot;" onload="this.style.color=&quot;currentColor&quot;">
+        <div class="font-main mt-5 rte mx-auto leading-snug">
+          <p>Our goal was simple. Share something that helps people unwind, feel good, and connect. Based on what we hear every day at our Kava Nectar cafe and online, it’s working. See what our community has to say.</p>
+        </div></div>
+    </div>
+  </div></section>
 </div>
-</div><div class="recipe-text">
-                <!-- Badge -->
-                
-                    <span class="card-badge">Cinnamon Nectar Drink</span>
-                
-
-                <h2 class="font-heading heading-secondary card-title-overlay">
-                  <a href="/blogs/recipes/cinnamon-vanilla-cacao-kava-nectar">
-                    Cinnamon Vanilla Cacao Kava Nectar
-                    <span
-                      class="absolute left-0 top-0 z-10 block h-full w-full"
-                    ></span>
-                  </a>
-                </h2>
-              
-                <span class="card-arrow" aria-hidden="true">
-                  <a href="/blogs/recipes/cinnamon-vanilla-cacao-kava-nectar">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
-                </span>
-              </div>
-
-                
-</div>
-            </li>
-          
-<li
-              class="lg:col-span-3 "
-            >
-              <div class="relative  text-center"><div class="mb-5 pb-media-shadow card-media-wrapper"><div class="media media--css-only media-template--25068962873662__main-294375063870  default object-wrapper aspect-w-3 aspect-h-4"><img src="//shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=3000" alt="Moscow Mule Kava Nectar" srcset="//shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=200 200w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=350 350w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=450 450w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=750 750w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=850 850w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=960 960w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=1280 1280w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=1440 1440w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=1536 1536w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=1706 1706w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=1782 1782w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=1920 1920w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=2560 2560w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=2880 2880w, //shop.kavahana.com/cdn/shop/articles/Moscow_mule.png?v=1785619779&amp;width=3000 3000w" width="3000" height="3749" loading="eager" class="media__styled-element " sizes="(min-width: 990px) calc(100vw / 4), 100vw" onerror="this.style.color=&quot;currentColor&quot;" onload="this.style.color=&quot;currentColor&quot;">
-</div>
-</div><div class="recipe-text">
-                <!-- Badge -->
-                
-                    <span class="card-badge">Kava Moscow Mule</span>
-                
-
-                <h2 class="font-heading heading-secondary card-title-overlay">
-                  <a href="/blogs/recipes/moscow-mule-kava-nectar">
-                    Moscow Mule Kava Nectar
-                    <span
-                      class="absolute left-0 top-0 z-10 block h-full w-full"
-                    ></span>
-                  </a>
-                </h2>
-              
-                <span class="card-arrow" aria-hidden="true">
-                  <a href="/blogs/recipes/moscow-mule-kava-nectar">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
-                </span>
-              </div>
-
-                
-</div>
-            </li>
-          
-<li
-              class="lg:col-span-3 "
-            >
-              <div class="relative  text-center"><div class="mb-5 pb-media-shadow card-media-wrapper"><div class="media media--css-only media-template--25068962873662__main-294374834494  default object-wrapper aspect-w-3 aspect-h-4"><img src="//shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=3000" alt="White Grape Kava Nectar Spritz" srcset="//shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=200 200w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=350 350w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=450 450w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=750 750w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=850 850w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=960 960w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=1280 1280w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=1440 1440w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=1536 1536w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=1706 1706w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=1782 1782w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=1920 1920w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=2560 2560w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=2880 2880w, //shop.kavahana.com/cdn/shop/articles/White_Grape_Juice.png?v=1785617046&amp;width=3000 3000w" width="3000" height="3749" loading="eager" class="media__styled-element " sizes="(min-width: 990px) calc(100vw / 4), 100vw" onerror="this.style.color=&quot;currentColor&quot;" onload="this.style.color=&quot;currentColor&quot;">
-</div>
-</div><div class="recipe-text">
-                <!-- Badge -->
-                
-                    <span class="card-badge">White Grape Juice</span>
-                
-
-                <h2 class="font-heading heading-secondary card-title-overlay">
-                  <a href="/blogs/recipes/white-grape-kava-nectar-spritz">
-                    White Grape Kava Nectar Spritz
-                    <span
-                      class="absolute left-0 top-0 z-10 block h-full w-full"
-                    ></span>
-                  </a>
-                </h2>
-              
-                <span class="card-arrow" aria-hidden="true">
-                  <a href="/blogs/recipes/white-grape-kava-nectar-spritz">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
-                </span>
-              </div>
-
-                
-</div>
-            </li>
-          
-<li
-              class="lg:col-span-3 "
-            >
-              <div class="relative  text-center"><div class="mb-5 pb-media-shadow card-media-wrapper"><div class="media media--css-only media-template--25068962873662__main-294374801726  default object-wrapper aspect-w-3 aspect-h-4"><img src="//shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=3000" alt="Orange Cream Kava Nectar" srcset="//shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=200 200w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=350 350w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=450 450w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=750 750w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=850 850w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=960 960w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=1280 1280w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=1440 1440w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=1536 1536w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=1706 1706w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=1782 1782w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=1920 1920w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=2560 2560w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=2880 2880w, //shop.kavahana.com/cdn/shop/articles/Orange_Cream_Kava_Nectar.png?v=1785616802&amp;width=3000 3000w" width="3000" height="3749" loading="lazy" class="media__styled-element " sizes="(min-width: 990px) calc(100vw / 4), 100vw" onerror="this.style.color=&quot;currentColor&quot;" onload="this.style.color=&quot;currentColor&quot;">
-</div>
-</div><div class="recipe-text">
-                <!-- Badge -->
-                
-                    <span class="card-badge">Orange Cream Kava</span>
-                
-
-                <h2 class="font-heading heading-secondary card-title-overlay">
-                  <a href="/blogs/recipes/orange-cream-kava-nectar">
-                    Orange Cream Kava Nectar
-                    <span
-                      class="absolute left-0 top-0 z-10 block h-full w-full"
-                    ></span>
-                  </a>
-                </h2>
-              
-                <span class="card-arrow" aria-hidden="true">
-                  <a href="/blogs/recipes/orange-cream-kava-nectar">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
-                </span>
-              </div>
-
-                
-</div>
-            </li>
-          
-<li
-              class="lg:col-span-3 "
-            >
-              <div class="relative  text-center"><div class="mb-5 pb-media-shadow card-media-wrapper"><div class="media media--css-only media-template--25068962873662__main-294374539582  default object-wrapper aspect-w-3 aspect-h-4"><img src="//shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=3000" alt="Orange Spritz Kava Nectar" srcset="//shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=200 200w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=350 350w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=450 450w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=750 750w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=850 850w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=960 960w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=1280 1280w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=1440 1440w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=1536 1536w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=1706 1706w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=1782 1782w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=1920 1920w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=2560 2560w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=2880 2880w, //shop.kavahana.com/cdn/shop/articles/Orange_Fizz.png?v=1785614962&amp;width=3000 3000w" width="3000" height="3749" loading="lazy" class="media__styled-element " sizes="(min-width: 990px) calc(100vw / 4), 100vw" onerror="this.style.color=&quot;currentColor&quot;" onload="this.style.color=&quot;currentColor&quot;">
-</div>
-</div><div class="recipe-text">
-                <!-- Badge -->
-                
-                    <span class="card-badge">Orange Fizz</span>
-                
-
-                <h2 class="font-heading heading-secondary card-title-overlay">
-                  <a href="/blogs/recipes/orange-spritz-kava-nectar">
-                    Orange Spritz Kava Nectar
-                    <span
-                      class="absolute left-0 top-0 z-10 block h-full w-full"
-                    ></span>
-                  </a>
-                </h2>
-              
-                <span class="card-arrow" aria-hidden="true">
-                  <a href="/blogs/recipes/orange-spritz-kava-nectar">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
-                </span>
-              </div>
-
-                
-</div>
-            </li>
-          
-<li
-              class="lg:col-span-3 "
-            >
-              <div class="relative  text-center"><div class="mb-5 pb-media-shadow card-media-wrapper"><div class="media media--css-only media-template--25068962873662__main-294374474046  default object-wrapper aspect-w-3 aspect-h-4"><img src="//shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=3000" alt="Blue Spirulina Coconut Nectar" srcset="//shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=200 200w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=350 350w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=450 450w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=750 750w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=850 850w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=960 960w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=1280 1280w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=1440 1440w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=1536 1536w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=1706 1706w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=1782 1782w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=1920 1920w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=2560 2560w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=2880 2880w, //shop.kavahana.com/cdn/shop/articles/blue-nectar_cf3bc78e-c660-4caf-ba28-33ef370f0185.png?v=1785613206&amp;width=3000 3000w" width="3000" height="2000" loading="lazy" class="media__styled-element " sizes="(min-width: 990px) calc(100vw / 4), 100vw" onerror="this.style.color=&quot;currentColor&quot;" onload="this.style.color=&quot;currentColor&quot;">
-</div>
-</div><div class="recipe-text">
-                <!-- Badge -->
-                
-                    <span class="card-badge">Coconut Milk Recipe</span>
-                
-
-                <h2 class="font-heading heading-secondary card-title-overlay">
-                  <a href="/blogs/recipes/blue-spirulina-coconut-nectar">
-                    Blue Spirulina Coconut Nectar
-                    <span
-                      class="absolute left-0 top-0 z-10 block h-full w-full"
-                    ></span>
-                  </a>
-                </h2>
-              
-                <span class="card-arrow" aria-hidden="true">
-                  <a href="/blogs/recipes/blue-spirulina-coconut-nectar">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
-                </span>
-              </div>
-
-                
-</div>
-            </li>
-          
-        </ul>
-      </div></div></section>
-<style> #shopify-section-template--25068962873662__main .relative {border: none !important; border-radius: 0px !important;} #shopify-section-template--25068962873662__main .relative .media img {border: none !important; border-radius: 0px !important;} #shopify-section-template--25068962873662__main h1 {font-family: Mauna Loa Font; font-size: 45px !important; color: #487135 !important; font-weight: 600; line-height: 48px; text-transform: uppercase !important;} </style></div>
 </div>
 <style>#kv-page,#kv-page :where(*:not(svg):not(svg *)),#kv-page :where(*:not(svg):not(svg *))::before,#kv-page :where(*:not(svg):not(svg *))::after{all:revert}
 #kv-page .note,#kv-page .tpl{display:none!important}
@@ -349,5 +147,16 @@
   document.querySelectorAll('#kv-page .pill-cta').forEach(function(b){
     b.addEventListener('click',function(){ var k=topKey; var GIFTS={cup:'54220256477502',whisk:'54220256510270',stix:'54143764922686'}; var f=document.createElement('form');f.method='post';f.action='https://shop.kavahana.com/cart/add'; var items=[[GIFTS.cup,1,'','1'],[GIFTS.cup,1,'','2'],[GIFTS.whisk,1,'']]; if(k==='4oz')items.push([GIFTS.stix,1,'']); items.push([VARIANTS[k],1,'19079102782']); items.forEach(function(it,i){ [['id',it[0]],['quantity',it[1]],['selling_plan',it[2]]].forEach(function(p){ if(p[1]==='')return; var inp=document.createElement('input');inp.type='hidden';inp.name='items['+i+']['+p[0]+']';inp.value=p[1];f.appendChild(inp); }); if(it[3]){ var pu=document.createElement('input');pu.type='hidden';pu.name='items['+i+'][properties][_u]';pu.value=it[3];f.appendChild(pu); } }); var rt=document.createElement('input');rt.type='hidden';rt.name='return_to';rt.value='/checkout';f.appendChild(rt); document.body.appendChild(f);f.submit(); });
   });
+})();
+</script>
+<script>
+(function(){
+  function place(){
+    var oke=document.querySelector('#MainContent .shopify-section:has([data-oke-widget])');
+    var kv=document.getElementById('kv-page');
+    if(oke&&kv&&kv.previousElementSibling!==oke){oke.parentNode.insertBefore(kv,oke.nextSibling);}
+  }
+  place();
+  new MutationObserver(place).observe(document.getElementById('MainContent')||document.body,{childList:true,subtree:true});
 })();
 </script>
