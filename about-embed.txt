@@ -490,11 +490,15 @@
   document.addEventListener('click',function(e){
     var b=e.target&&e.target.closest&&e.target.closest('[data-kv-cta]');
     if(!b) return;
-    var slot=document.getElementById('left-drawer-slot');
-    if(slot){var x=slot.querySelector('.justify-between button')||slot.querySelector('button');if(x)x.click();}
+    e.preventDefault();
+    window.__kvCtaHits=(window.__kvCtaHits||0)+1;
+    var closed=false;
+    try{if(window.Alpine&&Alpine.store('modals')&&Alpine.store('modals').closeAll){Alpine.store('modals').closeAll();closed=true;}}catch(err){}
+    if(!closed){try{if(window.Alpine&&Alpine.store('modals')&&Alpine.store('modals').close){Alpine.store('modals').close('nav');closed=true;}}catch(err){}}
+    if(!closed){var slot=document.getElementById('left-drawer-slot');if(slot){var x=slot.querySelector('.justify-between button')||slot.querySelector('button');if(x)x.click();}}
     var t=document.querySelector('#kv-page .buy');
-    if(t) setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'})},280);
-  });
+    if(t) setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'})},300);
+  },true);
   function sweep(){
     document.querySelectorAll('template').forEach(function(t){
       if(t.content&&t.content.querySelector&&t.content.querySelector('.sidebar-nav')&&!t.content.querySelector('#kv-drawer-offer')) transform(t.content);

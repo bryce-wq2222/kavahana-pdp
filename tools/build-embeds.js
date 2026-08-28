@@ -11,7 +11,7 @@ async function fetchMain(url) {
 }
 
 (async () => {
-  const raw = fs.readFileSync(path + 'shopify-embed-v2.txt', 'utf8');
+  const raw = fs.readFileSync(path + 'shopify-embed-v2.txt', 'utf8').replace(/\r\n/g, '\n');
   const lines = raw.split('\n');
   const chrome = lines[0];
   if (!/kv-topmq/.test(chrome)) throw new Error('line 1 is not the chrome block');

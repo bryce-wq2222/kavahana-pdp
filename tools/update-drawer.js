@@ -65,7 +65,7 @@ const NEW_SCRIPT = `<script>
 const WILL_CHANGE = '#modals-leftDrawer .drawer-transition-host{will-change:transform}\n';
 
 for (const f of ['shopify-embed-v2.txt', 'shopify-embed.txt']) {
-  let s = fs.readFileSync(path + f, 'utf8');
+  let s = fs.readFileSync(path + f, 'utf8').replace(/\r\n/g, '\n');
   const cssIdx = s.indexOf('<style id="kv-drawer-css">');
   if (cssIdx < 0) throw new Error(f + ': drawer css not found');
   const scrIdx = s.indexOf('<script>', s.indexOf('__kvDrawer', cssIdx) - 200);
