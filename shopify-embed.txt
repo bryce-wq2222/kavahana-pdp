@@ -764,3 +764,65 @@
 <div id="kv-sticky"><div class="ks-t">Up to 34% off<br>+ free starter kit gifts</div><button id="kv-sticky-btn">Get my Starter Kit &#8594;</button></div><script>(function(){var bar=document.getElementById("kv-sticky");var hero=document.querySelector(".buy");if(!bar||!hero)return;document.getElementById("kv-sticky-btn").addEventListener("click",function(){var b=document.querySelector(".buy .pill-cta");if(b)b.click()});if(!("IntersectionObserver" in window))return;var rev=document.querySelector(".revsec");var kvBarSync=function(){var heroGone=hero.getBoundingClientRect().bottom<0;var atReviews=rev&&rev.getBoundingClientRect().top<innerHeight;bar.style.display=(heroGone&&!atReviews)?"flex":"none"};var io=new IntersectionObserver(kvBarSync,{threshold:0});io.observe(hero);if(rev)io.observe(rev);window.addEventListener("scroll",kvBarSync,{passive:true});window.addEventListener("pageshow",function(e){if(e.persisted)location.reload()});var vio=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){var v=en.target;if(!v.dataset.warm&&v.paused){v.dataset.warm="1";v.preload="auto";try{v.load()}catch(_){}}}})},{threshold:0.35});document.querySelectorAll("video.v").forEach(function(v){vio.observe(v)});})();</script>
 <script src="https://bryce-wq2222.github.io/kavahana-pdp/kv-gift-guard.js" defer></script>
 <!-- kv-acc-single --><script>(function(){document.querySelectorAll(".acc").forEach(function(acc){var dets=[].slice.call(acc.querySelectorAll("details"));dets.forEach(function(d){var sum=d.querySelector("summary");var body=document.createElement("div");body.className="acc-body";var inner=document.createElement("div");inner.className="acc-inner";while(sum.nextSibling){inner.appendChild(sum.nextSibling)}body.appendChild(inner);d.appendChild(body);if(d.open){d.classList.add("is-open");body.style.height="auto"}else{body.style.height="0px"}sum.addEventListener("click",function(e){e.preventDefault();if(d.classList.contains("is-open")){close(d)}else{dets.forEach(function(o){if(o!==d&&o.classList.contains("is-open"))close(o)});openD(d)}})});function openD(d){var b=d.querySelector(".acc-body");d.setAttribute("open","");d.classList.add("is-open");b.style.height="0px";void b.offsetHeight;b.style.height=b.firstChild.scrollHeight+"px";b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"){b.style.height=d.classList.contains("is-open")?"auto":"0px";b.removeEventListener("transitionend",te)}})}function close(d){var b=d.querySelector(".acc-body");b.style.height=b.firstChild.scrollHeight+"px";void b.offsetHeight;b.style.height="0px";d.classList.remove("is-open");b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"&&!d.classList.contains("is-open")){d.removeAttribute("open");b.removeEventListener("transitionend",te)}})}})})();</script>
+<style id="kv-drawer-css">
+#kv-drawer-offer{background:#F8F3E8;border:1px solid #E6DFCE;border-radius:14px;padding:16px 16px 14px;margin:4px 0 16px;text-align:left}
+#kv-drawer-offer .kvo-k{display:block;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:10.5px;font-weight:500;letter-spacing:.2em;color:#367542;text-transform:uppercase;margin-bottom:6px}
+#kv-drawer-offer .kvo-s{display:block;font-family:Newsreader,ui-serif,Georgia,serif;font-weight:600;font-size:27px;line-height:1.08;letter-spacing:-.012em;color:#1F1D17;margin:0 0 7px}
+#kv-drawer-offer .kvo-sub{display:block;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.5;color:#6A6659;margin-bottom:13px}
+#kv-drawer-offer .kvo-cta{display:block;text-align:center;background:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);color:#fff;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:500;font-size:13.5px;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:14px 18px;cursor:pointer;box-shadow:0 6px 18px -8px rgba(54,117,66,.7)}
+#kv-drawer-links{list-style:none;margin:0;padding:0}
+#left-drawer-slot .sidebar-nav ul.mt-5{margin-top:0!important}
+#left-drawer-slot .sidebar-nav div.mt-5.space-y-5{margin-top:30px!important}
+#left-drawer-slot form[action*="/search"],#left-drawer-slot input[type="search"]{display:none!important}
+</style>
+<script>
+(function(){
+  if(window.__kvDrawer) return; window.__kvDrawer=1;
+  var REVIEW_SELS=['.okeReviews','.oke-w','#shopify-product-reviews'];
+  function closeDrawer(slot){
+    var b=slot.querySelector('.justify-between button')||slot.querySelector('button');
+    if(b) b.click();
+  }
+  function go(sel){
+    var el=null;
+    (Array.isArray(sel)?sel:[sel]).some(function(s){el=document.querySelector(s);return !!el});
+    if(el) setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},280);
+  }
+  function build(){
+    var slot=document.querySelector('#left-drawer-slot .sidebar-nav');
+    if(!slot) return;
+    var ul=slot.querySelector('ul');
+    if(!ul||slot.querySelector('#kv-drawer-offer')) return;
+    slot.querySelectorAll('a').forEach(function(a){
+      var h=a.getAttribute('href')||'';
+      if(h.indexOf('/collections')===0||h.indexOf('/search')===0||h.indexOf('wholesale')>-1){var li=a.closest('li');(li||a).remove();}
+    });
+    var linkCls=(ul.querySelector('a')||{}).className||'';
+    var liCls=(ul.querySelector('li')||{}).className||'';
+    var panel=document.createElement('div');
+    panel.id='kv-drawer-offer';
+    panel.innerHTML='<span class="kvo-k">Starter kit</span>'+
+      '<span class="kvo-s">Save up to 39%</span>'+
+      '<span class="kvo-sub">Starter kit free: 2 coconut shell cups, whisk, digital recipe guide, 5 stick packs free, and again on your first renewal</span>'+
+      '<span class="kvo-cta">Get my starter kit &rarr;</span>';
+    var anchors=document.createElement('ul');
+    anchors.id='kv-drawer-links';
+    [['Recipes','/pages/recipes-preview'],['Reviews','/pages/reviews-preview'],['About us','/pages/about-us-preview']].forEach(function(p){
+      var li=document.createElement('li'); li.className=liCls;
+      var a=document.createElement('a'); a.className=linkCls; a.textContent=p[0];
+      if(typeof p[1]==='string'&&p[1].charAt(0)==='/'){ a.href=p[1]; }
+      else { a.href='javascript:void(0)'; a.addEventListener('click',function(e){e.preventDefault();closeDrawer(slot);go(p[1]);}); }
+      li.appendChild(a); anchors.appendChild(li);
+    });
+    panel.querySelector('.kvo-cta').addEventListener('click',function(){closeDrawer(slot);go('#kv-page .buy');});
+    ul.parentNode.insertBefore(panel,ul);
+    ul.parentNode.insertBefore(anchors,ul);
+    ['customer_login_link','customer_register_link'].forEach(function(id){
+      var a=slot.querySelector('#'+id);
+      if(a&&linkCls&&a.className.indexOf('font-heading')===-1){a.className=(a.className+' font-heading heading-secondary block').trim();var li=a.closest('li');if(li&&li.className.indexOf('text-lg')===-1)li.className=(li.className+' text-lg').trim();}
+    });
+  }
+  build();
+  new MutationObserver(build).observe(document.documentElement,{subtree:true,childList:true});
+})();
+</script>

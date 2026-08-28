@@ -14,9 +14,9 @@
 #MainContent .shopify-section:has([data-oke-widget]) .section-content{padding-top:10px!important}
 #kvr-blog .kvr-cdots{display:none}
 @media(max-width:989px){
-#kvr-blog ul.grid{display:flex!important;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;gap:14px!important;padding:0!important;margin:0!important;scrollbar-width:none}
+#kvr-blog ul.grid{display:flex!important;flex-wrap:nowrap;align-items:flex-start!important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;gap:14px!important;padding:0!important;margin:0!important;scrollbar-width:none}
 #kvr-blog ul.grid::-webkit-scrollbar{display:none}
-#kvr-blog ul.grid>li{flex:0 0 80%;max-width:330px;scroll-snap-align:center}
+#kvr-blog ul.grid>li{flex:0 0 80%;max-width:330px;scroll-snap-align:center;margin:0!important}
 #kvr-blog .kvr-cdots{display:flex;gap:8px;justify-content:center;margin:18px 0 2px}
 #kvr-blog .kvr-cdots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:#C9C2B0;cursor:pointer;transition:background .15s,transform .15s}
 #kvr-blog .kvr-cdots button.on{background:#367542;transform:scale(1.2)}
