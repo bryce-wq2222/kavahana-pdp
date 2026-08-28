@@ -25,7 +25,7 @@ const NEW_SCRIPT = `<script>
       '<span class="kvo-cta" data-kv-cta>Get my starter kit &rarr;</span>';
     var anchors=document.createElement('ul');
     anchors.id='kv-drawer-links';
-    [['Recipes','/pages/recipes-preview'],['Reviews','/pages/reviews-preview'],['About us','/pages/about-us-preview']].forEach(function(p){
+    [['Recipes','/pages/recipes'],['Reviews','/pages/customer-reviews'],['About us','/pages/about']].forEach(function(p){
       var li=document.createElement('li'); li.className=liCls;
       var a=document.createElement('a'); a.className=linkCls; a.textContent=p[0]; a.href=p[1];
       li.appendChild(a); anchors.appendChild(li);
