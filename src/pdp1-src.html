@@ -1,0 +1,582 @@
+<title>Kavahana &#183; Nectar Starter Kit</title>
+<style>
+__CHIVO__
+:root{
+  --green:#367542; --green2:#73AE57; --cream:#F8F3E8; --bone:#FFFDF8;
+  --ink:#16211A; --deep:#0E1611; --deep2:#152018;
+  --grey:#6E7568; --line:#E2D9C6; --clay:#8A4B3B; --gold:#C9A96A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--cream);color:var(--ink);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;padding-bottom:78px;
+}
+img{max-width:100%;display:block}
+.mono{font-family:ui-monospace,'Cascadia Mono','Segoe UI Mono',Menlo,monospace}
+.mauna{font-family:'Mauna Loa',ui-serif,'Iowan Old Style',Georgia,serif;letter-spacing:.03em;font-weight:400}
+
+/* review chrome */
+.tpl{position:sticky;top:0;z-index:80;background:var(--deep);color:#fff;padding:8px 18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.tpl .t{font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.tpl .t b{color:var(--green2);opacity:1}
+.tpl button{font:inherit;font-family:ui-monospace,monospace;font-size:10.5px;background:transparent;color:#fff;border:1px solid #3B4A3E;padding:6px 13px;cursor:pointer;border-radius:999px;letter-spacing:.06em}
+.tpl button:hover{border-color:var(--green2)}
+.note{display:block;font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--green);background:#EAF1E3;border-left:2px solid var(--green);padding:6px 11px;margin:0 0 16px}
+body.hide-notes .note{display:none}
+
+/* brand bar */
+.bb{background:var(--cream);border-bottom:1px solid var(--line)}
+.bb .in{max-width:1180px;margin:0 auto;padding:20px 26px;display:flex;justify-content:center}
+.wordmark{width:190px;height:auto;color:var(--green)}
+.ann{background:var(--deep);color:#DCE6D4;text-align:center;padding:11px 18px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+.narrow{max-width:880px;margin:0 auto;padding:0 26px}
+section{padding:96px 0}
+section.bone{background:var(--bone)}
+section.deep{background:var(--deep);color:#E8E4D6}
+section.deep .lead,section.deep p{color:#9DAA97}
+section.green{background:var(--green);color:#fff}
+section.green .lead{color:#D2E3C9}
+section.tight{padding:64px 0}
+
+h1,h2,h3{font-weight:900;letter-spacing:-.035em;line-height:1.0}
+h1{font-size:clamp(38px,5.6vw,64px)}
+h2{font-size:clamp(32px,4.6vw,52px);margin-bottom:18px}
+h2 em{font-style:normal;color:var(--green)}
+section.deep h2 em,section.green h2 em{color:var(--green2)}
+h3{font-size:21px;line-height:1.16;letter-spacing:-.02em}
+.lead{color:var(--grey);max-width:54ch;font-size:18.5px;line-height:1.58;margin-bottom:44px}
+.kick{font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:18px;display:block}
+section.deep .kick,section.green .kick{color:var(--green2)}
+.ctr{text-align:center}.ctr .lead{margin-left:auto;margin-right:auto}
+.rule{height:1px;background:var(--line);margin:0}
+
+/* image slots */
+.slot{position:relative;overflow:hidden;background:
+  radial-gradient(130% 100% at 24% 14%, rgba(115,174,87,.34), transparent 60%),
+  radial-gradient(120% 110% at 84% 92%, rgba(54,117,66,.5), transparent 58%),
+  linear-gradient(155deg,#EDE4D1,#D6CBB2);display:flex;align-items:flex-end}
+.slot::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(22,33,26,.09)}
+.slot span{position:relative;font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#46523F;background:rgba(255,253,248,.8);padding:6px 9px;margin:13px}
+.slot.sq{aspect-ratio:1}.slot.wide{aspect-ratio:4/3}.slot.v{aspect-ratio:9/16}
+.slot.dark{background:radial-gradient(120% 100% at 30% 20%, rgba(115,174,87,.26), transparent 58%),linear-gradient(155deg,#22301F,#131C15)}
+.slot.dark span{color:#C7D6BE;background:rgba(0,0,0,.42)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.06fr 1fr;gap:60px;padding:52px 0 84px;align-items:start}
+.gal{position:sticky;top:70px}
+.th{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.th .slot span{font-size:8px;margin:6px;padding:4px 6px}
+.rate{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--grey);flex-wrap:wrap;margin-bottom:20px}
+.rate .st{color:var(--green2);letter-spacing:1.5px;font-size:15px}
+.rate b{color:var(--ink)}
+.sub{color:var(--grey);font-size:18.5px;margin-top:18px;max-width:44ch;line-height:1.55}
+
+.buy{background:var(--bone);border:1px solid var(--line);padding:28px;margin-top:32px}
+.prow{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap}
+.price{font-size:46px;font-weight:900;letter-spacing:-.04em;line-height:1}
+.was{font-size:17px;color:var(--clay);text-decoration:line-through;font-weight:700}
+.pct{background:var(--green);color:#fff;font-size:10.5px;font-weight:900;padding:5px 11px;letter-spacing:.09em;text-transform:uppercase}
+.pcup{font-family:ui-monospace,monospace;font-size:12.5px;color:var(--grey);margin-top:9px;letter-spacing:.03em}
+
+.sizes{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:22px}
+.sz{position:relative;text-align:left;font:inherit;background:var(--cream);border:1.5px solid var(--line);padding:16px 18px;cursor:pointer;transition:border-color .14s;display:grid;grid-template-columns:20px 1fr auto;gap:14px;align-items:center}
+.sz:hover{border-color:var(--green2)}
+.sz.sel{border-color:var(--green);box-shadow:inset 0 0 0 1px var(--green);background:#F2F7EE}
+.szr{width:17px;height:17px;border-radius:50%;border:1.5px solid #C6BFAD;position:relative}
+.sz.sel .szr{border-color:var(--green)}
+.sz.sel .szr::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--green)}
+.sz b{display:block;font-size:15.5px;letter-spacing:-.01em}
+.szc{display:block;font-family:ui-monospace,monospace;font-size:11.5px;color:var(--grey);margin-top:4px}
+.szp{display:block;font-size:21px;font-weight:900;letter-spacing:-.025em;text-align:right;line-height:1.1}
+.szp s{display:block;font-size:12px;color:var(--clay);font-weight:400;margin-top:3px}
+.szt{position:absolute;top:-9px;left:16px;background:var(--green);color:#fff;font-family:ui-monospace,monospace;font-size:9px;font-weight:700;padding:3px 9px;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:520px){.sz{padding:14px 15px;gap:11px}.szp{font-size:19px}}
+
+.inc{margin-top:24px;border-top:1px solid var(--line);padding-top:20px}
+.inc .h{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);font-weight:700;margin-bottom:15px}
+.inc ul{list-style:none;display:grid;gap:11px}
+.inc li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:15px}
+.inc li .n{display:flex;align-items:baseline;gap:9px}
+.inc .free{color:var(--green);font-size:9.5px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+.inc li .v{font-family:ui-monospace,monospace;color:var(--grey);font-size:13px;white-space:nowrap}
+.inc .tot{display:flex;justify-content:space-between;border-top:1px solid var(--line);margin-top:17px;padding-top:15px;font-weight:900;font-size:16px}
+.inc .tot s{color:var(--clay);font-weight:400}
+.inc .tot.pay{border-top:0;margin-top:6px;padding-top:0;font-size:19px}
+.inc .tot.pay .v{color:var(--green)}
+.saveline{font-family:ui-monospace,monospace;font-size:11.5px;color:var(--green);margin-top:8px;letter-spacing:.04em}
+.saveline b{font-weight:700}
+.inc .tot .v{font-family:ui-monospace,monospace}
+
+.cta{display:block;width:100%;background:var(--green);color:#fff;border:0;font:inherit;font-weight:900;font-size:17px;padding:21px;margin-top:24px;cursor:pointer;letter-spacing:.09em;text-transform:uppercase;transition:background .16s}
+.cta:hover{background:#2B6136}
+.cta.alt{background:var(--ink)}.cta.alt:hover{background:#000}
+.ren{font-size:13px;color:var(--grey);text-align:center;margin-top:13px}
+.ren b{color:var(--ink)}
+.tick{display:flex;gap:9px 20px;flex-wrap:wrap;justify-content:center;font-size:12px;color:var(--grey);margin-top:17px;border-top:1px solid var(--line);padding-top:17px;letter-spacing:.02em}
+.tick span::before{content:"\2713";color:var(--green);font-weight:900;margin-right:6px}
+.pull{border-left:2px solid var(--green);padding:4px 0 4px 20px;margin-top:26px;font-size:16.5px;line-height:1.5;font-style:italic}
+.pull .w{display:block;font-style:normal;font-family:ui-monospace,monospace;font-size:11px;color:var(--grey);margin-top:10px;letter-spacing:.08em;text-transform:uppercase}
+
+/* strip */
+.strip{background:var(--deep2);color:#C8D4C1;padding:19px 0}
+.strip .in{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.17em;text-transform:uppercase}
+
+/* kava 101 */
+.edu{margin-top:52px;border-top:1px solid var(--line)}
+.er{display:grid;grid-template-columns:200px 1fr;gap:44px;padding:36px 0;border-bottom:1px solid var(--line);align-items:start}
+.en{font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:700;padding-top:6px}
+.ec h3{font-size:24px;margin-bottom:12px;letter-spacing:-.025em}
+.ec p{color:var(--grey);font-size:16.5px;line-height:1.6}
+.ec p + p{margin-top:12px}
+.ec b{color:var(--ink)}
+@media(max-width:800px){.er{grid-template-columns:1fr;gap:12px;padding:28px 0}.en{padding-top:0}.ec h3{font-size:21px}}
+
+/* editorial two-col */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.two.rev .tx{order:2}
+.two p + p{margin-top:16px}
+
+/* comparison */
+.cmpw{overflow-x:auto}
+.cmp{width:100%;border-collapse:collapse;min-width:660px;background:var(--bone)}
+.cmp th,.cmp td{padding:19px 20px;text-align:center;font-size:15px;border-bottom:1px solid var(--line)}
+.cmp thead th{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;padding:22px 20px;border-bottom:2px solid var(--ink)}
+.cmp th:first-child,.cmp td:first-child{text-align:left;color:var(--grey);font-size:13.5px;width:22%;letter-spacing:.02em}
+.cmp .us{background:#F1F6ED}
+.cmp thead .us{background:var(--green);color:#fff;border-bottom-color:var(--green)}
+.cmp tbody .us{font-weight:700}
+.cmp tbody tr:last-child td{border-bottom:0}
+.cmp .sm{display:block;font-family:ui-monospace,monospace;font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;margin-top:5px;opacity:.72;font-weight:400}
+
+/* benefit blocks, Transform-your-mornings equivalent */
+.ben{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(255,255,255,.16)}
+.ben > div{padding:34px 26px 34px 0;border-right:1px solid rgba(255,255,255,.16)}
+.ben > div:last-child{border-right:0;padding-right:0}
+.ben > div:not(:first-child){padding-left:26px}
+.ben h3{color:#fff;margin-bottom:11px;font-size:20px}
+.ben p{font-size:15px;line-height:1.55}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stats > div{text-align:center;padding:0 20px;border-right:1px solid var(--line)}
+.stats > div:last-child{border-right:0}
+.stats .n{font-size:clamp(34px,5vw,54px);font-weight:900;letter-spacing:-.04em;color:var(--green);line-height:1}
+.stats .l{font-size:13px;color:var(--grey);margin-top:10px;letter-spacing:.02em}
+
+/* icon bar */
+.icons{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+.icons .in{display:flex;gap:44px;justify-content:center;flex-wrap:wrap;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:700}
+
+/* ugc */
+.ugc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ug{position:relative}
+.ug .slot{aspect-ratio:9/16}
+.ug .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:11px;gap:10px}
+.ug .h{font-size:14px;font-weight:700;line-height:1.3}
+.ug .n{font-family:ui-monospace,monospace;font-size:11.5px;color:var(--green);font-weight:700;white-space:nowrap}
+.ug .play{position:absolute;top:14px;left:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--ink);padding-left:3px}
+
+/* recipes */
+.recs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.rec .slot{aspect-ratio:1}
+.rec h3{margin:14px 0 7px;font-size:18px}
+.rec .tag{font-family:ui-monospace,monospace;font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--green);font-weight:700}
+.rec p{font-size:14px;color:var(--grey);line-height:1.5}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.rv{padding:34px 30px 34px 0;border-right:1px solid var(--line)}
+.rv:last-child{border-right:0;padding-right:0}
+.rv:not(:first-child){padding-left:30px}
+.rv .st{color:var(--green2);letter-spacing:2px;font-size:14px}
+.rv p{margin-top:13px;font-size:16px;line-height:1.5}
+.rv .w{font-family:ui-monospace,monospace;font-size:10.5px;color:var(--grey);margin-top:16px;letter-spacing:.09em;text-transform:uppercase}
+
+/* faq */
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:24px 0;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:18px;align-items:center;letter-spacing:-.01em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--green);font-weight:400;font-size:24px;line-height:1}
+details[open] summary::after{content:"\2013"}
+details p{padding:0 0 26px;color:var(--grey);font-size:16px;max-width:70ch}
+
+/* close */
+.close{text-align:center}
+.close .cta{max-width:400px;margin:30px auto 0}
+
+.flag{background:#FBF5F1;border:1px solid #E0C8BC;color:#7A4030;padding:20px 22px;font-size:14px;margin-top:34px;line-height:1.55}
+.flag b{display:block;margin-bottom:7px}
+.flag ul{margin:9px 0 0 18px}.flag li{margin-bottom:6px}
+
+/* sticky atc */
+.atc{position:fixed;left:0;right:0;bottom:0;z-index:75;background:rgba(255,253,248,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 22px;display:none;gap:22px;align-items:center;justify-content:center;flex-wrap:wrap}
+.atc.on{display:flex}
+.atc .l{font-size:14px}.atc .l b{font-weight:900}
+.atc button{background:var(--green);color:#fff;border:0;font:inherit;font-weight:900;font-size:14px;padding:14px 32px;cursor:pointer;letter-spacing:.09em;text-transform:uppercase}
+
+@media(max-width:1000px){
+  .hero{grid-template-columns:1fr;gap:34px}.gal{position:static}
+  .two{grid-template-columns:1fr;gap:32px}.two.rev .tx{order:0}
+  .ben{grid-template-columns:1fr 1fr}
+  .ben > div{border-bottom:1px solid rgba(255,255,255,.16);padding:26px 20px}
+  .ben > div:nth-child(2n){border-right:0}
+  .ugc,.recs{grid-template-columns:1fr 1fr}
+  .revs{grid-template-columns:1fr}
+  .rv{border-right:0;border-bottom:1px solid var(--line);padding:28px 0}
+  .rv:not(:first-child){padding-left:0}
+  section{padding:64px 0}
+}
+@media(max-width:600px){
+  .ben,.ugc,.recs{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr;gap:30px 0}
+  .stats > div:nth-child(2n){border-right:0}
+  .th{grid-template-columns:repeat(4,1fr)}
+  .buy{padding:22px}
+}
+</style>
+
+<div class="bb"><div class="in">__WORDMARK__</div></div>
+<div class="ann">The Nectar Starter Kit &nbsp;&#183;&nbsp; $114.98 of ritual for $59.99</div>
+
+<div class="wrap">
+<div class="hero">
+  <div class="gal">
+    <div class="slot sq"><span>Hero: the pour into the coconut shell, spilling over the side</span></div>
+    <div class="th">
+      <div class="slot sq"><span>shell cups</span></div>
+      <div class="slot sq"><span>whole root</span></div>
+      <div class="slot sq"><span>whisk</span></div>
+      <div class="slot sq"><span>the bar</span></div>
+    </div>
+    </div>
+
+  <div>
+    <span class="kick">If you have never tried kava</span>
+    <h1>The drink you<br>can actually feel</h1>
+    <p class="sub">Real kava from fresh root, for a feel you can trust and a tingle you can actually feel. Enjoyed in the South Pacific and Hawaii for over 3,000 years. Not alcohol, and not a mocktail.</p>
+    <div class="rate" style="margin-top:24px"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>624 reviews</span><span>&#183;</span><span>96% recommend</span></div>
+
+    <div class="buy">
+      <div class="sizes">
+        <button class="sz sel" data-o="4oz">
+          <span class="szt">Most subscribers &nbsp;&#183;&nbsp; about a month of sittings</span>
+          <span class="szr"></span>
+          <span><b>45 servings</b><span class="szc">Ritual kit + 5 stick packs free &nbsp;&#183;&nbsp; $2.44 a serving</span></span>
+          <span class="szp">$109.99</span>
+        </button>
+        <button class="sz" data-o="2oz">
+          <span class="szr"></span>
+          <span><b>22 servings</b><span class="szc">Ritual kit free &nbsp;&#183;&nbsp; $2.73 a serving</span></span>
+          <span class="szp">$59.99</span>
+        </button>
+      </div>
+      <div class="prow"><span class="price" id="pPrice">$109.99</span><span class="pct">Ritual kit included free</span></div>
+      <div class="pcup" id="pCup">$2.44 per serving &nbsp;&#183;&nbsp; 45 servings</div>
+      <div class="inc">
+        <div class="h">What comes in your Starter Kit</div>
+        <ul>
+          <li><span class="n"><span class="mauna">Kava Nectar</span>, <span id="pBag">45 servings</span></span><span class="v" id="pBagP">$109.99</span></li>
+          <li><span class="n">2 coconut shell cups <span class="free">Free</span></span><span class="v"><s>$23.98</s></span></li>
+          <li id="pSticks"><span class="n">5 stick packs <span class="free">Free</span></span><span class="v"><s>$17.50</s></span></li>
+          <li><span class="n">Bamboo whisk <span class="free">Free</span></span><span class="v"><s>$14.99</s></span></li>
+          <li><span class="n">Hana's recipe guide <span class="free">Free</span></span><span class="v"></span></li>
+          <li><span class="n">Digital recipe library <span class="free">Free</span></span><span class="v"></span></li>
+        </ul>
+        <div class="tot"><span>Total value</span><span class="v"><s id="pTot">$166.46</s></span></div>
+        <div class="tot pay"><span>You pay today</span><span class="v" id="pPay">$109.99</span></div>
+        <div class="saveline">You save <b id="pSave">$56.47</b> on your first box</div>
+      </div>
+      <button class="cta">Get my Starter Kit</button>
+      <div class="ren">Then <b id="pRen">$109.99 a month</b> as Kava Nectar, at full price.</div>
+      <div class="tick"><span>30 day guarantee</span><span>Free shipping</span><span>Refill reminder</span><span>Cancel anytime</span></div>
+    </div>
+
+    <div class="pull">"I tried kava a couple years ago and didn't feel anything, so I didn't bother trying again until I started getting your ads on my fyp."<span class="w">Verified review</span></div>
+  </div>
+</div>
+</div>
+
+<div class="strip"><div class="in"><span>Noble cultivars</span><span>Whole root</span><span>No kratom</span><span>Zero added sugar</span><span>Batch tested</span></div></div>
+
+
+<!-- KAVA 101 -->
+<section><div class="wrap">
+  <div class="ctr">
+    <span class="kick">Kava 101</span>
+    <h2>Most people have never<br>had <em>real kava</em></h2>
+    <p class="lead">If you have only seen it in a little bottle at a gas station, you have not had this. Here is the whole thing in about ninety seconds.</p>
+  </div>
+
+  <div class="edu">
+    <div class="er">
+      <div class="en">What it is</div>
+      <div class="ec">
+        <h3>A root drink, not a supplement</h3>
+        <p>Kava comes from the root of a plant grown in the South Pacific and Hawaii, where it has been enjoyed for over 3,000 years as a family drink. It is the national drink of Fiji. People drink it the way other cultures drink tea, together, in the evening, to talk.</p>
+        <p><b>It is not alcohol and it is not a mocktail.</b> It is its own thing, with its own history, and it does something you can feel.</p>
+      </div>
+    </div>
+
+    <div class="er">
+      <div class="en">The tingle</div>
+      <div class="ec">
+        <h3>Your mouth will tingle. That is the point.</h3>
+        <p>The kava plant is a member of the peppercorn family, so a few seconds after your first sip your lips and tongue go tingly. It surprises everybody the first time.</p>
+        <p>It is the signature of real kava, and the first thing regulars look for.</p>
+      </div>
+    </div>
+
+    <div class="er">
+      <div class="en">The timing</div>
+      <div class="ec">
+        <h3>10 to 20 minutes, then 1 to 2 hours</h3>
+        <p>Many people feel relaxed, smiley and social about 10 to 20 minutes in, and it tends to last 1 to 2 hours. Some of our bar regulars call it smile juice.</p>
+        <p>Then it is over, and you go to bed, and you wake up clear. No crash and no hangover to pay for it.</p>
+      </div>
+    </div>
+
+    <div class="er">
+      <div class="en">How it is made</div>
+      <div class="ec">
+        <h3>Cold pressed from fresh root</h3>
+        <p><span class="mauna">Kava Nectar</span> is made by cold pressing fresh kava root and drying that into a powder, so it is the nectar of the root. 15 seconds with a whisk and it is ready, with no pulp and no fibers.</p>
+        <p>A convenient way to enjoy a drink that has been prepared by hand in the islands for thousands of years.</p>
+      </div>
+    </div>
+
+    <div class="er">
+      <div class="en">The price</div>
+      <div class="ec">
+        <h3>5 to 7 years in the ground</h3>
+        <p>The plants grow 5 to 7 years in volcanic soil before harvest, and the whole plant is lifted for its roots. That patience is the product, and it is the reason kava of this grade costs what it does.</p>
+        <p>Per serving it works out at $2.73, which is less than most bottled alternatives.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- WHY -->
+<section class="bone"><div class="wrap">
+  <div class="two">
+    <div class="tx">
+      <span class="kick">Why Kavahana</span>
+      <h2>Made the way it has<br><em>always been made</em></h2>
+      <p>Kava Nectar is the cold pressed juice of noble kava root, dried into a powder. One ingredient. Nothing added, nothing taken out.</p>
+      <p>The plants grow 5 to 7 years in volcanic soil before harvest, and the whole plant is lifted for its roots. That patience is the product.</p>
+      <p>Kava takes 5 to 7 years in volcanic soil before harvest, and the whole plant is lifted for its roots. That patience is the product, and it is what you are paying for.</p>
+    </div>
+    <div class="slot wide"><span>Hana holding the whole kava root, then the cut to powder</span></div>
+  </div>
+</div></section>
+
+<!-- THE THIRD OPTION -->
+<section><div class="wrap">
+  <div class="ctr">
+    <span class="kick">How it compares</span>
+    <h2>You already know<br>the <em>other two</em></h2>
+    <p class="lead">Most people reaching for something at the end of the day are choosing between two things. This is a third one, and it behaves differently from both.</p>
+  </div>
+  <div class="cmpw">
+    <table class="cmp">
+      <thead><tr>
+        <th></th>
+        <th class="us"><span class="mauna" style="font-size:17px">Kava Nectar</span><span class="sm">The third option</span></th>
+        <th>Alcohol</th><th>Gardening</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>How people describe it</td><td class="us">Relaxed, smiley, still present</td><td>Loosened up, less like yourself</td><td>Relaxed, often in your own head</td></tr>
+        <tr><td>In conversation</td><td class="us">Many people say they are more receptive</td><td>Louder, harder to recall</td><td>Quieter, more internal</td></tr>
+        <tr><td>The next morning</td><td class="us">Many people notice a clear head</td><td>Often rough</td><td>Many people report fog</td></tr>
+        <tr><td>Tolerance over time</td><td class="us">Reverse tolerance, many need less</td><td>Climbs</td><td>Climbs</td></tr>
+        <tr><td>Intoxicating</td><td class="us">Natural kava root is non-intoxicating</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Habit forming</td><td class="us">Natural kava root is non-addictive</td><td>Can be</td><td>Can be</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div></section>
+
+<!-- REVERSE TOLERANCE -->
+<section class="deep"><div class="wrap">
+  <div class="two">
+    <div class="tx">
+      <span class="kick">Before your first serving</span>
+      <h2>The third serving is the<br>one that <em>matters</em></h2>
+      <p>Kava has a property almost nothing else has. It is called reverse tolerance, and it means many people feel very little the first time they drink it. It is not unusual for people to enjoy 2 to 3 servings, especially in the beginning.</p>
+      <p>This is the single most common reason somebody tries kava once, feels nothing, and never comes back. The first serving is not the test. 45 servings is well past the point where most people say it lands.</p>
+      <p style="color:#C7D6BE">Tolerance climbs on almost everything else. This goes the other way.</p>
+    </div>
+    <div class="slot wide dark"><span>Pouring into half a coconut, spilling. The reverse tolerance visual</span></div>
+  </div>
+</div></section>
+
+
+<!-- FIRST TIMER PROOF -->
+<section class="bone"><div class="wrap">
+  <div class="ctr">
+    <span class="kick">Watch the first time</span>
+    <h2>Nobody believes it<br>until they <em>feel it</em></h2>
+    <p class="lead">Every one of these started the same way. Skeptical, then about twenty minutes later, not skeptical.</p>
+  </div>
+  <div class="ugc" style="margin-top:44px">
+    <div class="ug"><div class="slot v"><span>First time reaction, the tingle lands</span></div><div class="meta"><span class="h">"I was NOT expecting that"</span><span class="n">742k</span></div></div>
+    <div class="ug"><div class="slot v"><span>Bar guest tries it on camera</span></div><div class="meta"><span class="h">"Wait, my mouth is tingling"</span><span class="n">297k</span></div></div>
+    <div class="ug"><div class="slot v"><span>Two friends, first serving</span></div><div class="meta"><span class="h">"Okay that is actually real"</span><span class="n">200k</span></div></div>
+    <div class="ug"><div class="slot v"><span>Third serving, the turn</span></div><div class="meta"><span class="h">"Third one is when it hit"</span><span class="n">160k</span></div></div>
+  </div>
+  <div class="revs" style="margin-top:56px;border-top:1px solid var(--line)">
+    <div class="rv"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I was a skeptic in the beginning, especially since the first few tries don't really do a whole lot due to the reverse tolerance phenomenon."</p><div class="w">Verified review</div></div>
+    <div class="rv"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Didn't work at first and felt nothing, but then took more and its pretty good."</p><div class="w">Verified review</div></div>
+    <div class="rv"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I feel light and airy and happy and like I just want to go hang out and talk to someone and dance, and I don't feel sick."</p><div class="w">Verified review</div></div>
+  </div>
+</div></section>
+
+<!-- GIFT STACK -->
+<section class="green"><div class="wrap">
+  <div class="two">
+    <div class="tx">
+      <span class="kick">Everything in your first box</span>
+      <h2 style="color:#fff">The ritual comes<br><em>with the kava</em></h2>
+      <p style="color:#D2E3C9">Kava is made, not opened. The shell cup and the whisk are how it is prepared where it comes from, and they are how you will make it at home. They come free with your first box, along with everything else you need to do it properly the first time. Five more stick packs arrive free on each of your first two renewals.</p>
+      <div style="margin-top:30px;border-top:1px solid rgba(255,255,255,.24)">
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:15.5px"><span>2 handcrafted coconut shell cups</span><span style="font-family:ui-monospace,monospace"><s style="opacity:.7">$23.98</s></span></div>
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:15.5px"><span>5 on the go stick packs</span><span style="font-family:ui-monospace,monospace"><s style="opacity:.7">$17.50</s></span></div>
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:15.5px"><span>Bamboo whisk</span><span style="font-family:ui-monospace,monospace"><s style="opacity:.7">$14.99</s></span></div>
+        <div style="display:flex;justify-content:space-between;padding:13px 0;font-size:15.5px"><span>Hana's recipe guide and digital library</span><span style="font-family:ui-monospace,monospace;opacity:.8">Free</span></div>
+      </div>
+    </div>
+    <div class="slot wide" style="background:linear-gradient(155deg,rgba(255,255,255,.2),rgba(255,255,255,.06))"><span style="background:rgba(0,0,0,.36);color:#DCE6D4">Hero: the two coconut shell cups, styled</span></div>
+  </div>
+</div></section>
+
+<!-- YOUR KAVA SHOULD DO MORE -->
+<section class="deep"><div class="wrap">
+  <div class="ctr" style="margin-bottom:50px">
+    <span class="kick">Enjoyed for over 3,000 years</span>
+    <h2 style="color:#fff">Why people<br><em>stay</em></h2>
+    <p class="lead ctr">Four reasons it stays in the house after the first bag. All of it from the root, none of it added.</p>
+  </div>
+  <div class="ben">
+    <div><h3>The tingle</h3><p>Your lips and tongue go tingly seconds after the first sip. The kava plant is a member of the peppercorn family, which is where that comes from. It is how you know you are drinking the real thing.</p></div>
+    <div><h3>The uplift</h3><p>10 to 20 minutes in, many people feel relaxed, smiley and sociable. It tends to last 1 to 2 hours. It is not unusual to enjoy 2 to 3 servings, especially in the beginning.</p></div>
+    <div><h3>Present, not out of it</h3><p>Customers describe being more receptive and more in the conversation, rather than watching themselves have it.</p></div>
+    <div><h3>Clear the next day</h3><p>Many people notice a clear head the next morning. It is the reason a lot of our subscribers moved their evening over to this.</p></div>
+  </div>
+</div></section>
+
+<!-- STATS -->
+<section class="tight bone"><div class="wrap">
+  <div class="stats">
+    <div><div class="n">624</div><div class="l">Reviews at 4.8 average</div></div>
+    <div><div class="n">96%</div><div class="l">Would recommend</div></div>
+    <div><div class="n">2</div><div class="l">Los Angeles kava bars</div></div>
+    <div><div class="n">$2.73</div><div class="l">Per serving</div></div>
+  </div>
+</div></section>
+
+<div class="icons"><div class="in"><span>Non intoxicating</span><span>Non addictive</span><span>No kratom</span><span>Zero sugar</span><span>No flavoring added</span><span>Batch tested</span></div></div>
+
+<!-- UGC -->
+<section><div class="wrap">
+  <div class="ctr">
+    <span class="kick">Seen on TikTok</span>
+    <h2>What people<br><em>mention first</em></h2>
+    <p class="lead">Millions of views, none of it bought. The four below are the ones that traveled furthest.</p>
+  </div>
+  <div class="ugc">
+    <div class="ug"><div class="slot v"><span>B roll and text cards: skeptical, then it hit</span><span class="play">&#9654;</span></div><div class="meta"><span class="h">"Was skeptical. A few moments later..."</span><span class="n">742k</span></div></div>
+    <div class="ug"><div class="slot v"><span>Bartender reaching for the drink</span><span class="play">&#9654;</span></div><div class="meta"><span class="h">Choose your feeling</span><span class="n">297k</span></div></div>
+    <div class="ug"><div class="slot v"><span>Pouring the cocktail into the glass</span><span class="play">&#9654;</span></div><div class="meta"><span class="h">"Can you drink this under 21?"</span><span class="n">200k</span></div></div>
+    <div class="ug"><div class="slot v"><span>Hana with the whole kava root</span><span class="play">&#9654;</span></div><div class="meta"><span class="h">"It is not alcohol and it is not gardening"</span><span class="n">160k</span></div></div>
+  </div>
+  </div></section>
+
+<!-- RECIPES -->
+<section class="bone"><div class="wrap">
+  <div class="ctr">
+    <span class="kick">From the bar</span>
+    <h2>What people like to<br><em>make it with</em></h2>
+    <p class="lead"><span class="mauna">Kava Nectar</span> is earthy. It is meant to be. These four come up again and again in our reviews, unprompted, from customers who worked them out themselves.</p>
+  </div>
+  <div class="recs">
+    <div class="rec"><div class="slot"><span>cold coconut water</span></div><span class="tag">Most named in reviews</span><h3>Cold coconut water</h3><p>A teaspoon or two whisked into 8 to 12oz of cold coconut water. The one customers recommend to each other more than any other.</p></div>
+    <div class="rec"><div class="slot"><span>pineapple and coconut milk</span></div><span class="tag">Start here</span><h3>Pineapple and coconut milk</h3><p>The closest thing we have to a house cocktail, and the one to make on your first night.</p></div>
+    <div class="rec"><div class="slot"><span>sparkling water and lemon</span></div><span class="tag">Afternoon</span><h3>Sparkling water and lemon</h3><p>Over ice with fresh lemon. Bright, and the easiest of the four to drink.</p></div>
+    <div class="rec"><div class="slot"><span>honey and coconut milk</span></div><span class="tag">Evening</span><h3>Honey and coconut milk</h3><p>The richest of the four, and the one people tend to land on at night.</p></div>
+  </div>
+</div></section>
+
+<!-- REVIEWS -->
+<section class="bone"><div class="wrap">
+  <div class="ctr"><span class="kick">Site and TikTok Shop reviews</span><h2>In their <em>own words</em></h2></div>
+  <div class="revs" style="margin-top:44px">
+    <div class="rv"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I was a skeptic in the beginning, especially since the first few tries don't really do a whole lot due to the reverse tolerance phenomenon."</p><div class="w">Verified review</div></div>
+    <div class="rv"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The little tingly feeling is so fun. It gives me that perfect upbeat, relaxed mood that makes socializing feel easy and fun without feeling out of it."</p><div class="w">Verified review</div></div>
+    <div class="rv"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I have tried other kava products with no effect but this product I can feel the effects almost instantly. Some of my regulars call it smile juice."</p><div class="w">Verified review</div></div>
+  </div>
+</div></section>
+
+
+
+
+
+<!-- FAQ -->
+<section><div class="narrow">
+  <div class="ctr"><span class="kick">Questions</span><h2>Before you <em>start</em></h2></div>
+  <div style="margin-top:46px">
+    <details open><summary>I tried kava before and felt nothing. Why?</summary><p>Almost certainly reverse tolerance. It is not unusual for people to enjoy 2 to 3 servings, especially in the beginning. It is the most common reason somebody writes off kava after a single serving.</p></details>
+    <details><summary>What is it like to drink?</summary><p>Earthy, and it makes your mouth tingle. Nothing is added to it. Most people mix it with cold coconut water, or pineapple and coconut milk, both of which are in the recipe guide that comes in your kit.</p></details>
+    <details><summary>Is there kratom in it?</summary><p>No. <span class="mauna">Kava Nectar</span> is made from kava root and nothing else. Kava and kratom are two different plants. Kava is in the peppercorn family, which is where the tingle comes from. If you have only tried the small bottles sold in gas stations and smoke shops, those are often kava mixed with something else, and that is a different experience from this one.</p></details>
+    <details><summary>What about the liver?</summary><p>That is actually a misconception. Natural kava root has been enjoyed in the South Pacific and Hawaii for centuries as a family drink, and it is Fiji's national drink too. The concern people have read about traces back to the early 2000s, when a pharmaceutical company processed kava into an extract, which led to bans in Europe. Those bans have since been lifted, including in Germany, where a court overturned it.</p></details>
+    <details><summary>Can I drive after drinking it?</summary><p>Kava doesn't intoxicate you like alcohol does, but just like with a strong tea you could feel sleepy, so enjoy it when you don't have to drive.</p></details>
+    <details><summary>Is there an age restriction?</summary><p>There is no legal age restriction in the US, and kava has been enjoyed as a family drink for over 3,000 years. We still recommend 18 and over for a first time, because it has an effect you can feel.</p></details>
+    <details><summary>Can I drink it while pregnant?</summary><p>Not recommended, due to lack of studies.</p></details>
+    <details><summary>Is it habit forming?</summary><p>Natural kava root is non-addictive and non-intoxicating. It also works on reverse tolerance, which is the opposite of how tolerance normally builds.</p></details>
+    <details><summary>Why is it subscription only?</summary><p>Because the ritual is the product, and because one serving is not a fair trial. Everything you need to make it properly comes free with your first box. After that we ship the bag on its own at full price.</p></details>
+  </div>
+</div></section>
+
+<!-- CLOSE -->
+<section class="deep"><div class="narrow close">
+  <span class="kick">Give it three servings</span>
+  <h2 style="color:#fff">Start the <em>ritual</em></h2>
+  <p class="lead ctr">The first serving is not the test, so give it three. If you have given it a fair run and it is still not for you, tell us inside 30 days and we will refund the box. Keep the shell cups and the whisk either way, they were a gift.</p>
+  <button class="cta">Get my Starter Kit</button>
+  <div class="ren" style="color:#9DAA97">$59.99 today, then <b style="color:#fff">$59.99 a month</b> for the bag on its own. Cancel anytime.</div>
+</div></section>
+
+<section class="tight"><div class="narrow">
+  </div></section>
+
+<div class="atc" id="atc">
+  <span class="l">Nectar Starter Kit &nbsp;&#183;&nbsp; <b>$59.99</b> &nbsp;&#183;&nbsp; $114.98 value</span>
+  <button>Get my Starter Kit</button>
+</div>
+
+<script>
+(function(){
+  var buy=document.querySelector('.buy'), bar=document.getElementById('atc');
+  if('IntersectionObserver' in window && buy){
+    new IntersectionObserver(function(e){ bar.classList.toggle('on', !e[0].isIntersecting); },{threshold:0}).observe(buy);
+  }
+  var PS={
+    '4oz':{p:'$109.99',w:'$166.46',c:'$2.44 per serving \u00b7 45 servings',r:'$109.99 a month',t:'$166.46',b:'45 servings',bp:'$109.99',sv:'$56.47'},
+    '2oz':{p:'$59.99', w:'$98.96', c:'$2.73 per serving \u00b7 22 servings',r:'$59.99 a month', t:'$98.96', b:'22 servings',bp:'$59.99', sv:'$38.97'}
+  };
+  document.querySelectorAll('.sz').forEach(function(s){
+    s.addEventListener('click',function(){
+      document.querySelectorAll('.sz').forEach(function(x){x.classList.remove('sel')});
+      s.classList.add('sel');
+      var d=PS[s.dataset.o];if(!d)return;
+      var $=function(i){return document.getElementById(i)};
+      $('pPrice').textContent=d.p;$('pCup').textContent=d.c;
+      $('pRen').textContent=d.r;$('pTot').textContent=d.t;$('pBag').textContent=d.b;$('pBagP').textContent=d.bp;
+      $('pSticks').style.display = (s.dataset.o==='4oz') ? '' : 'none';
+      $('pPay').textContent=d.p; $('pSave').textContent=d.sv;
+    });
+  });
+})();
+</script>
