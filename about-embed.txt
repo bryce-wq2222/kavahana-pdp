@@ -437,18 +437,6 @@
 })();
 </script>
 <script>(function(){document.querySelectorAll(".acc").forEach(function(acc){var dets=[].slice.call(acc.querySelectorAll("details"));dets.forEach(function(d){var sum=d.querySelector("summary");var body=document.createElement("div");body.className="acc-body";var inner=document.createElement("div");inner.className="acc-inner";while(sum.nextSibling){inner.appendChild(sum.nextSibling)}body.appendChild(inner);d.appendChild(body);if(d.open){d.classList.add("is-open");body.style.height="auto"}else{body.style.height="0px"}sum.addEventListener("click",function(e){e.preventDefault();if(d.classList.contains("is-open")){close(d)}else{dets.forEach(function(o){if(o!==d&&o.classList.contains("is-open"))close(o)});openD(d)}})});function openD(d){var b=d.querySelector(".acc-body");d.setAttribute("open","");d.classList.add("is-open");b.style.height="0px";void b.offsetHeight;b.style.height=b.firstChild.scrollHeight+"px";b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"){b.style.height=d.classList.contains("is-open")?"auto":"0px";b.removeEventListener("transitionend",te)}})}function close(d){var b=d.querySelector(".acc-body");b.style.height=b.firstChild.scrollHeight+"px";void b.offsetHeight;b.style.height="0px";d.classList.remove("is-open");b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"&&!d.classList.contains("is-open")){d.removeAttribute("open");b.removeEventListener("transitionend",te)}})}})})();</script>
-<script>
-(function(){
-  function place(){
-    var oke=document.querySelector('#MainContent .shopify-section:has([data-oke-widget])');
-    var wraps=document.querySelectorAll('#MainContent [id="kv-page"]');
-    var heroWrap=wraps[wraps.length-1];
-    if(oke&&heroWrap&&heroWrap.previousElementSibling!==oke){oke.parentNode.insertBefore(heroWrap,oke.nextSibling);}
-  }
-  place();
-  new MutationObserver(place).observe(document.getElementById('MainContent')||document.body,{childList:true,subtree:true});
-})();
-</script>
 <style id="kv-drawer-css">
 #kv-drawer-offer{background:#F8F3E8;border:1px solid #E6DFCE;border-radius:14px;padding:16px 16px 14px;margin:4px 0 16px;text-align:left}
 #kv-drawer-offer .kvo-k{display:block;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:10.5px;font-weight:500;letter-spacing:.2em;color:#367542;text-transform:uppercase;margin-bottom:6px}
