@@ -53,6 +53,7 @@
 #kv-page .fnd-sig.mauna{color:var(--green)}
 #kv-page section.green .mauna,#kv-page .mq .mauna{color:inherit}
 #kv-page .opt.sel .mauna,#kv-page .opt.sel .optbens .mauna{color:inherit}
+@media(max-width:1000px){#kv-page .hero .galwrap{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}}
 </style>
 <div id="kv-page">
 
