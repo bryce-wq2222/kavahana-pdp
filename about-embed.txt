@@ -95,7 +95,7 @@
       <button class="gnav gprev" type="button" aria-label="Previous image">&#8249;</button>
         <button class="gnav gnext" type="button" aria-label="Next image">&#8250;</button>
         <div class="slides" id="slides">
-        <div class="slide"><img class="heroimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45b.jpg" width="1080" height="1080" alt="The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs"></div>
+        <div class="slide"><img class="heroimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45b.jpg" width="1080" height="1080" fetchpriority="high" decoding="async" alt="The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs"></div>
         <div class="slide"><img class="galimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s2b.jpg" width="1080" height="1080" alt="Kava Nectar benefits: the tingle, relaxed and social, one ingredient, zero sugar"></div>
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s3b.jpg" width="1080" height="1080" alt="Nobody drinks it straight and that is fine: earthy like a stronger matcha, best with cold coconut water"></div>
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s4.jpg" width="1080" height="1080" alt="Over 500,000 cups served at the Kavahana bars"></div>
@@ -446,27 +446,19 @@
 #kv-drawer-links{list-style:none;margin:0;padding:0}
 #left-drawer-slot .sidebar-nav ul.mt-5{margin-top:0!important}
 #left-drawer-slot .sidebar-nav div.mt-5.space-y-5{margin-top:30px!important}
+#modals-leftDrawer .drawer-transition-host{will-change:transform}
 #left-drawer-slot form[action*="/search"],#left-drawer-slot input[type="search"]{display:none!important}
 </style>
 <script>
 (function(){
   if(window.__kvDrawer) return; window.__kvDrawer=1;
-  var REVIEW_SELS=['.okeReviews','.oke-w','#shopify-product-reviews'];
-  function closeDrawer(slot){
-    var b=slot.querySelector('.justify-between button')||slot.querySelector('button');
-    if(b) b.click();
-  }
-  function go(sel){
-    var el=null;
-    (Array.isArray(sel)?sel:[sel]).some(function(s){el=document.querySelector(s);return !!el});
-    if(el) setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},280);
-  }
-  function build(){
-    var slot=document.querySelector('#left-drawer-slot .sidebar-nav');
-    if(!slot) return;
-    var ul=slot.querySelector('ul');
-    if(!ul||slot.querySelector('#kv-drawer-offer')) return;
-    slot.querySelectorAll('a').forEach(function(a){
+  function transform(root){
+    var nav=root.querySelector('.sidebar-nav');
+    if(!nav) return false;
+    if(nav.querySelector('#kv-drawer-offer')) return true;
+    var ul=nav.querySelector('ul');
+    if(!ul) return false;
+    nav.querySelectorAll('a').forEach(function(a){
       var h=a.getAttribute('href')||'';
       if(h.indexOf('/collections')===0||h.indexOf('/search')===0||h.indexOf('wholesale')>-1){var li=a.closest('li');(li||a).remove();}
     });
@@ -477,25 +469,38 @@
     panel.innerHTML='<span class="kvo-k">Starter kit</span>'+
       '<span class="kvo-s">Save up to 39%</span>'+
       '<span class="kvo-sub">Starter kit free: 2 coconut shell cups, whisk, digital recipe guide, 5 stick packs free, and again on your first renewal</span>'+
-      '<span class="kvo-cta">Get my starter kit &rarr;</span>';
+      '<span class="kvo-cta" data-kv-cta>Get my starter kit &rarr;</span>';
     var anchors=document.createElement('ul');
     anchors.id='kv-drawer-links';
     [['Recipes','/pages/recipes-preview'],['Reviews','/pages/reviews-preview'],['About us','/pages/about-us-preview']].forEach(function(p){
       var li=document.createElement('li'); li.className=liCls;
-      var a=document.createElement('a'); a.className=linkCls; a.textContent=p[0];
-      if(typeof p[1]==='string'&&p[1].charAt(0)==='/'){ a.href=p[1]; }
-      else { a.href='javascript:void(0)'; a.addEventListener('click',function(e){e.preventDefault();closeDrawer(slot);go(p[1]);}); }
+      var a=document.createElement('a'); a.className=linkCls; a.textContent=p[0]; a.href=p[1];
       li.appendChild(a); anchors.appendChild(li);
     });
-    panel.querySelector('.kvo-cta').addEventListener('click',function(){closeDrawer(slot);go('#kv-page .buy');});
     ul.parentNode.insertBefore(panel,ul);
     ul.parentNode.insertBefore(anchors,ul);
     ['customer_login_link','customer_register_link'].forEach(function(id){
-      var a=slot.querySelector('#'+id);
+      var a=nav.querySelector('#'+id);
       if(a&&linkCls&&a.className.indexOf('font-heading')===-1){a.className=(a.className+' font-heading heading-secondary block').trim();var li=a.closest('li');if(li&&li.className.indexOf('text-lg')===-1)li.className=(li.className+' text-lg').trim();}
     });
+    return true;
   }
-  build();
-  new MutationObserver(build).observe(document.documentElement,{subtree:true,childList:true});
+  document.addEventListener('click',function(e){
+    var b=e.target&&e.target.closest&&e.target.closest('[data-kv-cta]');
+    if(!b) return;
+    var slot=document.getElementById('left-drawer-slot');
+    if(slot){var x=slot.querySelector('.justify-between button')||slot.querySelector('button');if(x)x.click();}
+    var t=document.querySelector('#kv-page .buy');
+    if(t) setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'})},280);
+  });
+  function sweep(){
+    document.querySelectorAll('template').forEach(function(t){
+      if(t.content&&t.content.querySelector&&t.content.querySelector('.sidebar-nav')&&!t.content.querySelector('#kv-drawer-offer')) transform(t.content);
+    });
+    var slot=document.getElementById('left-drawer-slot');
+    if(slot&&slot.querySelector('.sidebar-nav')&&!slot.querySelector('#kv-drawer-offer')) transform(slot);
+  }
+  sweep();
+  new MutationObserver(sweep).observe(document.documentElement,{subtree:true,childList:true});
 })();
 </script>
