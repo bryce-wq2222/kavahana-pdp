@@ -58,7 +58,7 @@ const NEW_SCRIPT = `<script>
     if(slot&&slot.querySelector('.sidebar-nav')&&!slot.querySelector('#kv-drawer-offer')) transform(slot);
   }
   sweep();
-  new MutationObserver(sweep).observe(document.documentElement,{subtree:true,childList:true});
+  var _swt;new MutationObserver(function(){clearTimeout(_swt);_swt=setTimeout(sweep,200)}).observe(document.documentElement,{subtree:true,childList:true});
 })();
 <\/script>`.replace('<\\/script>', '</scr' + 'ipt>');
 
