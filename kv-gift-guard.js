@@ -1,4 +1,5 @@
-/* Kavahana gift guard v3: gifts are rationed to the subscribed kits in the cart.
+/* Kavahana gift guard v4: gifts are rationed to the subscribed kits in the cart.
+   v4: /cart/change.js param must be `id` (line key), not `key` — v3 400'd on every trim.
    Allowances per subscribed Starter Kit unit:
      - KH-GIFT-CUP:      2 x (total kit qty)
      - KH-GIFT-WHISK:    1 x (total kit qty)
@@ -10,7 +11,7 @@
    - Hides the cart's selling-plan opt-out dropdown. */
 (function () {
   if (window.__kvGiftGuard) return;
-  window.__kvGiftGuard = 3;
+  window.__kvGiftGuard = 4;
   try {
     var st = document.createElement('style');
     st.textContent = 'select.cart-item-selling-plan-selector{display:none!important}';
@@ -53,7 +54,7 @@
         var already = used[fam] || 0;
         var permitted = Math.max(0, Math.min(it.quantity, allow - already));
         used[fam] = already + permitted;
-        if (permitted < it.quantity) { fix = { key: it.key, quantity: permitted }; break; }
+        if (permitted < it.quantity) { fix = { id: it.key, quantity: permitted }; break; }
       }
       if (!fix) { busy = false; refreshUI(); return; }
       fetch('/cart/change.js', {
