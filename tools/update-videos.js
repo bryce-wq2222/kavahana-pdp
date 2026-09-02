@@ -15,6 +15,7 @@ const NEW_SEL = ".vid-live video[data-poster], .vid-live video:has(source[data-s
 const OLD_START = "    function start(){\n      wraps.forEach(";
 const NEW_START = "    function start(){\n      var s=v.querySelector('source[data-src]'); if(s){ s.src=s.dataset.src; s.removeAttribute('data-src'); v.load(); }\n      wraps.forEach(";
 
+const NEW_LOADER = "<script>\n(function(){\n  if(window.__kvVidLoader) return; window.__kvVidLoader=1;\n  function load(v){ if(v.dataset.poster){ v.poster=v.dataset.poster; delete v.dataset.poster; } var s=v.querySelector('source[data-src]'); if(s){ s.src=s.dataset.src; s.removeAttribute('data-src'); v.load(); } }\n  function pending(){ return [].slice.call(document.querySelectorAll('.vid-live video[data-poster], .vid-live video:has(source[data-src]), .fnd-vid video[data-poster]')); }\n  var io=('IntersectionObserver' in window) ? new IntersectionObserver(function(es){\n    es.forEach(function(e){ if(e.isIntersecting){\n      if(e.target.tagName==='VIDEO'){ load(e.target); }\n      else { [].forEach.call(e.target.querySelectorAll('video'), load); }\n      io.unobserve(e.target);\n    }});\n  },{rootMargin:'900px 0px'}) : null;\n  function scan(){\n    var vids=pending(); if(!vids.length) return;\n    if(!io){ vids.forEach(load); return; }\n    [].forEach.call(document.querySelectorAll('.vid-carou, .fnd-vid'), function(g){ io.observe(g); });\n    vids.forEach(function(v){ io.observe(v); });\n  }\n  scan();\n  document.addEventListener('DOMContentLoaded', scan);\n  window.addEventListener('load', scan);\n  setTimeout(scan, 1500); setTimeout(scan, 4000);\n  var once=function(){ scan(); window.removeEventListener('scroll', once); window.removeEventListener('touchstart', once); };\n  window.addEventListener('scroll', once, {passive:true}); window.addEventListener('touchstart', once, {passive:true});\n})();\n</script>";
 for (const f of files) {
   let s = fs.readFileSync(path + f, 'utf8'); const before = s.length; let n = 0;
   for (const name of NAMES) {
@@ -25,8 +26,7 @@ for (const f of files) {
   s = s.split('<source data-src="' + CDN + 'how-to-prepare-v2.mp4"').join('<source src="' + CDN + 'how-to-prepare-v2.mp4"');
   // UGC videos: preload none (data-src means nothing loads anyway; belt and braces)
   s = s.replace(/<video class="slot v" preload="metadata"/g, '<video class="slot v" preload="none"');
-  if (!s.includes(OLD_LOADER_START)) throw new Error(f + ': loader not found');
-  s = s.replace(OLD_LOADER_START, NEW_LOADER_START).replace(OLD_SEL, NEW_SEL);
+  { const i = s.indexOf('function load(v){ if(v.dataset.poster)'); if (i < 0) throw new Error(f + ': loader not found'); const a = s.lastIndexOf('<script', i), b = s.indexOf('</script>', i) + 9; s = s.slice(0, a) + NEW_LOADER + s.slice(b); }
   if (!s.includes(OLD_START)) throw new Error(f + ': start() not found');
   s = s.replace(OLD_START, NEW_START);
   // poster loader also has to run for videos that have no data-poster attr but do have data-src: covered by NEW_SEL

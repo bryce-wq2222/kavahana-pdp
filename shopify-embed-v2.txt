@@ -699,19 +699,28 @@
 </script>
 <script>
 (function(){
+  if(window.__kvVidLoader) return; window.__kvVidLoader=1;
   function load(v){ if(v.dataset.poster){ v.poster=v.dataset.poster; delete v.dataset.poster; } var s=v.querySelector('source[data-src]'); if(s){ s.src=s.dataset.src; s.removeAttribute('data-src'); v.load(); } }
-  var vids=[].slice.call(document.querySelectorAll('.vid-live video[data-poster], .vid-live video:has(source[data-src])'));
-  if(!vids.length) return;
-  if(!('IntersectionObserver' in window)){ vids.forEach(load); return; }
-  var io=new IntersectionObserver(function(es){
+  function pending(){ return [].slice.call(document.querySelectorAll('.vid-live video[data-poster], .vid-live video:has(source[data-src]), .fnd-vid video[data-poster]')); }
+  var io=('IntersectionObserver' in window) ? new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){
       if(e.target.tagName==='VIDEO'){ load(e.target); }
-      else { [].forEach.call(e.target.querySelectorAll('video[data-poster]'), load); }
+      else { [].forEach.call(e.target.querySelectorAll('video'), load); }
       io.unobserve(e.target);
     }});
-  },{rootMargin:'900px 0px'});
-  [].forEach.call(document.querySelectorAll('.vid-carou, .fnd-vid'), function(g){ io.observe(g); });
-  vids.forEach(function(v){ io.observe(v); });
+  },{rootMargin:'900px 0px'}) : null;
+  function scan(){
+    var vids=pending(); if(!vids.length) return;
+    if(!io){ vids.forEach(load); return; }
+    [].forEach.call(document.querySelectorAll('.vid-carou, .fnd-vid'), function(g){ io.observe(g); });
+    vids.forEach(function(v){ io.observe(v); });
+  }
+  scan();
+  document.addEventListener('DOMContentLoaded', scan);
+  window.addEventListener('load', scan);
+  setTimeout(scan, 1500); setTimeout(scan, 4000);
+  var once=function(){ scan(); window.removeEventListener('scroll', once); window.removeEventListener('touchstart', once); };
+  window.addEventListener('scroll', once, {passive:true}); window.addEventListener('touchstart', once, {passive:true});
 })();
 </script>
 <script>
