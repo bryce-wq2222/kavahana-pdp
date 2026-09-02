@@ -160,11 +160,11 @@
   <div class="carou vid-carou" data-carou="btb">
     <button class="cnav prev" aria-label="Previous">&#8249;</button>
     <div class="ctrack">
-        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="metadata" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-what-is-kava-poster.jpg" playsinline muted loop title="What Kava Nectar is, and the tingle"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-what-is-kava.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: What Kava Nectar is, and the tingle">&#9654;</button><span class="vcap">What Kava Nectar is, and the tingle</span></div></div>
-        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="metadata" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-shots-party-poster.jpg" playsinline muted loop title="We lost track of how many shots we took"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-shots-party.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: We lost track of how many shots we took">&#9654;</button><span class="vcap">We lost track of how many shots we took</span></div></div>
-        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="metadata" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-alcohol-free-poster.jpg" playsinline muted loop title="Seven months alcohol free"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-alcohol-free.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Seven months alcohol free">&#9654;</button><span class="vcap">Seven months alcohol free</span></div></div>
-        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="metadata" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-take-home-poster.jpg" playsinline muted loop title="Take it home, or order online"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-take-home.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Take it home, or order online">&#9654;</button><span class="vcap">Take it home, or order online</span></div></div>
-        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="metadata" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-beach-day-poster.jpg" playsinline muted loop title="A beach day with kava"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-beach-day.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: A beach day with kava">&#9654;</button><span class="vcap">A beach day with kava</span></div></div>
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-what-is-kava-poster.jpg" playsinline muted loop title="What Kava Nectar is, and the tingle"><source data-src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-what-is-kava-v2.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: What Kava Nectar is, and the tingle">&#9654;</button><span class="vcap">What Kava Nectar is, and the tingle</span></div></div>
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-shots-party-poster.jpg" playsinline muted loop title="We lost track of how many shots we took"><source data-src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-shots-party-v2.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: We lost track of how many shots we took">&#9654;</button><span class="vcap">We lost track of how many shots we took</span></div></div>
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-alcohol-free-poster.jpg" playsinline muted loop title="Seven months alcohol free"><source data-src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-alcohol-free-v2.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Seven months alcohol free">&#9654;</button><span class="vcap">Seven months alcohol free</span></div></div>
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-take-home-poster.jpg" playsinline muted loop title="Take it home, or order online"><source data-src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-take-home-v2.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Take it home, or order online">&#9654;</button><span class="vcap">Take it home, or order online</span></div></div>
+        <div class="cslide"><div class="vid vid-live"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-beach-day-poster.jpg" playsinline muted loop title="A beach day with kava"><source data-src="https://bryce-wq2222.github.io/kavahana-pdp/video/ugc-beach-day-v2.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: A beach day with kava">&#9654;</button><span class="vcap">A beach day with kava</span></div></div>
       
       
       
@@ -239,7 +239,7 @@
       </div>
     </div>
     <div class="howto-gif">
-      <video class="slot" muted loop playsinline preload="metadata" aria-label="Scoop, mix, enjoy: the full prep on loop"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/how-to-prepare.mp4" type="video/mp4"></video>
+      <video class="slot" muted loop playsinline preload="metadata" aria-label="Scoop, mix, enjoy: the full prep on loop"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/how-to-prepare-v2.mp4" type="video/mp4"></video>
     </div>
   </div>
 </div></section>
@@ -442,7 +442,7 @@
 <!-- 17. FOUNDERS -->
 <section class="fndsec"><div class="wrap">
   <div class="fnd">
-    <div class="vid vid-live fnd-vid"><video class="slot v" preload="metadata" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/hana-cbs-poster.jpg" playsinline muted loop title="Hana takes Kava Nectar to CBS News"><source src="https://bryce-wq2222.github.io/kavahana-pdp/video/hana-cbs.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Hana takes Kava Nectar to CBS News">&#9654;</button></div>
+    <div class="vid vid-live fnd-vid"><video class="slot v" preload="none" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/video/hana-cbs-poster.jpg" playsinline muted loop title="Hana takes Kava Nectar to CBS News"><source data-src="https://bryce-wq2222.github.io/kavahana-pdp/video/hana-cbs-v2.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play: Hana takes Kava Nectar to CBS News">&#9654;</button></div>
     <div class="fnd-b">
       <h2 style="font-size:clamp(30px,4vw,44px)">A note from Hana</h2>
       <p>I found kava 10 years ago, looking for a way to quiet my anxiety without a drink.</p>
@@ -699,8 +699,8 @@
 </script>
 <script>
 (function(){
-  function load(v){ if(v.dataset.poster){ v.poster=v.dataset.poster; delete v.dataset.poster; } }
-  var vids=[].slice.call(document.querySelectorAll('.vid-live video[data-poster]'));
+  function load(v){ if(v.dataset.poster){ v.poster=v.dataset.poster; delete v.dataset.poster; } var s=v.querySelector('source[data-src]'); if(s){ s.src=s.dataset.src; s.removeAttribute('data-src'); v.load(); } }
+  var vids=[].slice.call(document.querySelectorAll('.vid-live video[data-poster], .vid-live video:has(source[data-src])'));
   if(!vids.length) return;
   if(!('IntersectionObserver' in window)){ vids.forEach(load); return; }
   var io=new IntersectionObserver(function(es){
@@ -728,6 +728,7 @@
   wraps.forEach(function(w){
     var v = w.querySelector('video'), b = w.querySelector('.play');
     function start(){
+      var s=v.querySelector('source[data-src]'); if(s){ s.src=s.dataset.src; s.removeAttribute('data-src'); v.load(); }
       wraps.forEach(function(o){ if(o!==w){ var ov=o.querySelector('video'); ov.pause(); o.classList.remove('playing'); } });
       v.muted=false; v.volume=1;
       v.play().then(function(){ w.classList.add('playing'); }).catch(function(){
