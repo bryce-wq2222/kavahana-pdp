@@ -701,7 +701,7 @@
 (function(){
   if(window.__kvVidLoader) return; window.__kvVidLoader=1;
   function load(v){ if(v.dataset.poster){ v.poster=v.dataset.poster; delete v.dataset.poster; } var s=v.querySelector('source[data-src]'); if(s){ s.src=s.dataset.src; s.removeAttribute('data-src'); v.load(); } }
-  function pending(){ return [].slice.call(document.querySelectorAll('.vid-live video[data-poster], .vid-live video:has(source[data-src]), .fnd-vid video[data-poster]')); }
+  function pending(){ var all=[].slice.call(document.querySelectorAll('.vid-live video, .fnd-vid video')); return all.filter(function(v){ return v.dataset.poster || v.querySelector('source[data-src]'); }); }
   var io=('IntersectionObserver' in window) ? new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){
       if(e.target.tagName==='VIDEO'){ load(e.target); }
