@@ -1,0 +1,844 @@
+<style>@media(min-width:881px){#kv-page .hero>.gal{position:sticky;top:24px;align-self:start}}#kv-page .acc summary{position:relative;padding-right:26px}#kv-page .acc summary::after{content:"";position:absolute;right:3px;top:50%;width:13px;height:2px;background:var(--green);margin-top:-1px;font-size:0;transform:none;transition:transform .28s ease}#kv-page .acc summary::before{content:"";position:absolute;right:3px;top:50%;width:13px;height:2px;background:var(--green);margin-top:-1px;transform:rotate(90deg);transition:transform .28s ease}#kv-page .acc details.is-open>summary::before{transform:rotate(0deg)!important}#kv-page .acc details[open] summary::after{content:""}#kv-page .acc .acc-body{overflow:hidden;transition:height .3s ease}.rebuy-cart__flyout-item-subscription,select.cart-item-selling-plan-selector{display:none!important}#kv-sticky{position:fixed;left:0;right:0;bottom:0;z-index:2147482000;background:#16211A;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);opacity:0;pointer-events:none;will-change:transform;transition:transform .38s cubic-bezier(.22,.9,.32,1),opacity .32s ease}#kv-sticky.kv-on{transform:translateY(0);opacity:1;pointer-events:auto}#kv-sticky .ks-t{color:#F8F3E8;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:12px;font-weight:600;line-height:1.3}#kv-sticky button{background:#367542;color:#fff;border:0;border-radius:999px;padding:12px 18px;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:14px;font-weight:800;white-space:nowrap;cursor:pointer}@media(min-width:761px){#kv-sticky{display:none!important}}@media(max-width:760px){#kv-topmq{padding:6px 0}#kv-topmq .t{font-size:11px;letter-spacing:.08em}#headerContainer .px-section{padding-top:4px!important;padding-bottom:4px!important}#headerContainer .flex.items-center.justify-items-center{position:relative;min-height:46px}#headerContainer .flex.items-center.justify-items-center>div:first-child{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:auto;z-index:1}#headerContainer .site-header__logo-link{width:auto!important}#headerContainer .site-header__logo-link img,#headerContainer .site-header__logo-link svg{max-height:24px!important;width:auto!important}#headerContainer .flex.items-center.justify-items-center>div:last-child{width:100%}#headerContainer a[href="/search"]{display:none!important}#headerContainer .flex.items-center.justify-items-center>div:last-child>div[class*="lg:hidden"]{order:-1;margin-right:auto}}#kv-topmq{overflow:hidden;background:#367542;padding:10px 12px;white-space:nowrap;position:relative;z-index:50}#kv-topmq .s{display:block;text-align:center;color:#fff;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:13.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}#kv-topmq .t{display:none;white-space:nowrap;color:#fff;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:13.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}@media(max-width:760px){#kv-topmq{padding:5px 0}#kv-topmq .s{display:none}#kv-topmq .t{display:inline-block;font-size:11px;letter-spacing:.08em;animation:kvmq 70s linear infinite}}@keyframes kvmq{from{transform:translateX(0)}to{transform:translateX(-50%)}}[id$="__announcement-bar"]{display:none!important}[id^="alia"],#popups-popup,#restock-rocket,[id^="sea-accessibility"]:not(#sea-accessibility-skip-links),div[aria-label*="POPUP" i],div[aria-label*="FLYOUT" i],button[aria-label="Open Form"],.klaviyo-form-SyZUX8,[data-testid="klaviyo-form-SyZUX8"],.intercom-lightweight-app,.intercom-lightweight-app-launcher,#intercom-frame,#intercom-container,iframe[name^="intercom"],iframe[title*="Intercom" i]{display:none!important;visibility:hidden!important}html,body{overflow-x:clip}</style><script>(function(){function z(){try{window.Intercom&&window.Intercom('update',{hide_default_launcher:true})}catch(e){}document.querySelectorAll('[id^="alia-root"],[id^="alia-modal"],[id^="alia-teaser"],#restock-rocket').forEach(function(n){n.remove()});document.querySelectorAll('div[class*="kl-private-reset-css"]').forEach(function(n){try{if(getComputedStyle(n).position==='fixed'){n.style.setProperty('display','none','important')}}catch(e){}});if(!document.querySelector('.lbx.on')){var b=document.body,d=document.documentElement;if(b){if(getComputedStyle(b).overflowY==='hidden'){b.style.overflow='visible'}if(b.style.position==='fixed'){b.style.position='';b.style.top=''}if(b.style.touchAction){b.style.touchAction=''}}if(d&&getComputedStyle(d).overflowY==='hidden'){d.style.overflowY=''}}}z();var _zt;new MutationObserver(function(){clearTimeout(_zt);_zt=setTimeout(z,200)}).observe(document.documentElement,{childList:true,subtree:true});setInterval(z,1500);})();</script><script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "y7hv9wbezl");</script>
+<style>
+#MainContent .shopify-section:has(#kv-slot) .card__surface,#MainContent .shopify-section:has(#kv-slot) .card{background:transparent!important;box-shadow:none!important;border:0!important;padding:0!important;border-radius:0!important}
+#MainContent .shopify-section:has(#kv-slot) > section > .section-content{padding-top:0!important;padding-bottom:0!important}
+#MainContent .shopify-section:has(#kv-slot) [data-island]{margin:0!important}
+</style>
+<style>#kv-page,#kv-page :where(*:not(svg):not(svg *)),#kv-page :where(*:not(svg):not(svg *))::before,#kv-page :where(*:not(svg):not(svg *))::after{all:revert}
+#kv-page .note,#kv-page .tpl{display:none!important}
+#kv-page{display:block;width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;text-align:left}
+@font-face{font-family:Chivo;font-style:normal;font-weight:100 900;font-display:swap;
+  src:url(https://bryce-wq2222.github.io/kavahana-pdp/fonts/chivo-var.woff2) format('woff2-variations'),url(https://bryce-wq2222.github.io/kavahana-pdp/fonts/chivo-var.woff2) format('woff2')}@font-face{font-family:Newsreader;font-style:normal;font-weight:200 800;font-display:swap;
+  src:url(https://bryce-wq2222.github.io/kavahana-pdp/fonts/newsreader-var.woff2) format('woff2-variations'),url(https://bryce-wq2222.github.io/kavahana-pdp/fonts/newsreader-var.woff2) format('woff2')}@font-face{font-family:'Mauna Loa';font-style:normal;font-weight:400;font-display:swap;
+  src:url(https://bryce-wq2222.github.io/kavahana-pdp/fonts/MaunaLoa.otf) format('opentype')}#kv-page{--green:#367542;--green2:#73AE57;--mint:#8AC79A;--cream:#F8F3E8;--bone:#FFFFFF;--ink:#1F1D17;--deep:#14261A;--lav:#F8F3E8;--line:#E6DFCE;--grey:#6A6659;--clay:#8A4B3B;--card:#FFFFFF;--grad:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);}#kv-page *{margin:0;padding:0;box-sizing:border-box}#kv-page{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:clip}#kv-page{overflow-x:clip}#kv-page{font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:0}#kv-page img{max-width:100%;display:block}#kv-page .mauna{font-family:'Mauna Loa',ui-serif,'Iowan Old Style',Georgia,serif;letter-spacing:.03em;font-weight:400;color:var(--green)}#kv-page section.green .mauna,#kv-page .mq .mauna{color:inherit}#kv-page .opt.sel .mauna,#kv-page .opt.sel .optbens .mauna{color:inherit}#kv-page .tpl{position:sticky;top:0;z-index:90;background:#111;color:#fff;padding:7px 16px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}#kv-page .tpl .t{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.8}#kv-page .tpl .t b{color:var(--green2);opacity:1}#kv-page .tpl button{font:inherit;font-family:ui-monospace,monospace;font-size:10px;background:transparent;color:#fff;border:1px solid #444;padding:5px 12px;cursor:pointer;border-radius:999px}#kv-page .note{display:block;font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);background:#EAF1E3;border-left:2px solid var(--green);padding:6px 10px;margin:0 0 14px}#kv-page body.hide-notes .note{display:none}#kv-page /* ---- 1. top bar + nav (ED chrome) ---- */
+.topbar{background:#111;color:#fff;text-align:center;padding:9px 16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}#kv-page .topbar span{opacity:.55;margin:0 10px}#kv-page .gradline{height:4px;background:var(--grad)}#kv-page .nav{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60}#kv-page .nav .in{max-width:1240px;margin:0 auto;padding:14px 24px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}#kv-page .nav .l,#kv-page .nav .r{display:flex;gap:20px;align-items:center}#kv-page .nav .r{justify-content:flex-end}#kv-page .burger{background:none;border:0;padding:4px;cursor:pointer;display:grid;gap:4px;width:26px}#kv-page .burger span{display:block;height:2px;background:var(--ink);border-radius:2px}#kv-page .nav .ico{width:21px;height:21px;color:var(--ink);cursor:pointer}#kv-page .wordmark{width:150px;height:auto;color:var(--green);margin:0 auto}@media(max-width:620px){#kv-page .wordmark{width:118px}#kv-page .nav .in{padding:12px 18px}}#kv-page .wrap{max-width:1240px;margin:0 auto;padding:0 24px}#kv-page section{padding:52px 0}#kv-page section.lav{background:var(--cream)}#kv-page section.green{background:var(--green);color:#fff}#kv-page section.green h1,#kv-page section.green h2,#kv-page section.green h3{color:#fff}#kv-page section.green p,#kv-page section.green .lead{color:rgba(255,255,255,.82)}#kv-page section.green .eyebrow{color:var(--mint)}#kv-page section.green .bn,#kv-page section.green .gt,#kv-page section.green .st4>div{color:var(--ink)}#kv-page section.green .bn h3,#kv-page section.green .gt h3,#kv-page section.green .st4 h3{color:var(--ink)}#kv-page section.green .bn p,#kv-page section.green .gt p,#kv-page section.green .st4 p{color:var(--grey)}#kv-page section.green .slot .lbl{color:#46523F}#kv-page section.green .bn .ic{color:var(--green)}#kv-page section.tight{padding:30px 0}#kv-page h1,#kv-page h2{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;letter-spacing:-.012em;line-height:1.06}#kv-page h3{font-weight:500;letter-spacing:0;line-height:1.2}#kv-page b,#kv-page strong{font-weight:600}#kv-page .htoh2,#kv-page .gifth2,#kv-page .btbh2,#kv-page .ctrh{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400}#kv-page h2{font-size:clamp(30px,4.3vw,50px)}#kv-page .h2c{text-align:center;margin-bottom:14px}#kv-page .lead{color:var(--grey);font-size:16.5px;max-width:54ch;margin-bottom:0}#kv-page .ctr{text-align:center}#kv-page .ctr .lead{margin:0 auto}#kv-page .ctrh{text-align:center}#kv-page .splitctr{text-align:center}#kv-page .splitctr .lead,#kv-page .splitctr .ben2,#kv-page .splitctr .st4{margin-left:auto;margin-right:auto}#kv-page .splitctr .guar{text-align:center}#kv-page /* ---- shared pill CTA (ED signature) ---- */
+.pill-cta{display:block;width:100%;max-width:420px;margin:0 auto;background:var(--grad);color:#fff;border:0;font:inherit;font-weight:500;font-size:15px;padding:18px 26px;border-radius:999px;cursor:pointer;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 6px 18px -8px rgba(54,117,66,.7);transition:transform .12s,box-shadow .16s}#kv-page .pill-cta:hover{transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(54,117,66,.8)}#kv-page .guar{text-align:center;font-size:12.5px;color:var(--grey);margin-top:12px}#kv-page .guar b{color:var(--ink)}#kv-page /* ---- image slots ---- */
+.slot{position:relative;overflow:hidden;border-radius:14px;background:
+  radial-gradient(130% 100% at 24% 14%, rgba(115,174,87,.34), transparent 60%),
+  radial-gradient(120% 110% at 84% 92%, rgba(54,117,66,.48), transparent 58%),
+  linear-gradient(155deg,#EDE4D1,#D6CBB2);display:flex;align-items:flex-end}#kv-page .slot::after{content:"";position:absolute;inset:0;border-radius:14px;box-shadow:inset 0 0 0 1px rgba(22,33,26,.09)}#kv-page .slot span.lbl{position:relative;font-family:ui-monospace,monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#46523F;background:rgba(255,253,248,.82);padding:5px 8px;margin:11px;border-radius:5px}#kv-page .slot.sq{aspect-ratio:1}#kv-page .slot.wide{aspect-ratio:4/3}#kv-page .slot.v{aspect-ratio:9/16}#kv-page /* ---- 3. HERO ---- */
+.hero{display:grid;grid-template-columns:1.04fr 1fr;gap:44px;padding:34px 0 0;align-items:start}#kv-page .gal{position:sticky;top:78px;max-width:540px;justify-self:center;width:100%}#kv-page .galwrap{position:relative;border-radius:14px;overflow:hidden}#kv-page .gnav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:34px;height:64px;
+  border:0;background:transparent;color:#9a9a9a;font-size:44px;font-weight:200;line-height:1;cursor:pointer;
+  display:none;align-items:center;justify-content:center;padding:0 0 4px;transition:color .15s}#kv-page .gnav:hover{color:#616161}#kv-page .gprev{left:6px}#kv-page .gnext{right:6px}@media(min-width:760px){#kv-page .gnav{display:flex}#kv-page .slides,#kv-page .ctrack{cursor:grab}#kv-page .slides.dragging,#kv-page .ctrack.dragging{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
+}#kv-page .slides{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;touch-action:pan-x pan-y pinch-zoom}#kv-page .slides::-webkit-scrollbar{display:none}#kv-page .slide{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always}#kv-page .slide .slot{border-radius:0}#kv-page .heroimg,#kv-page .galimg{width:100%;height:100%;aspect-ratio:1;object-fit:cover;display:block}#kv-page .dots2{display:flex;gap:7px;justify-content:center;margin-top:14px}#kv-page .dots2 button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:#C9C2B0;cursor:pointer;transition:background .15s,transform .15s}#kv-page .dots2 button.on{background:var(--green);transform:scale(1.25)}#kv-page /* buy box */
+.buy{background:var(--card);border-radius:16px;padding:28px;box-shadow:0 1px 2px rgba(22,33,26,.05),0 18px 40px -24px rgba(22,33,26,.35)}#kv-page .eyebrow{font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:7px}#kv-page .eyebrow-sub{margin:2px 0 12px}#kv-page .stars-row .ph{margin-left:8px}#kv-page .buy h1{font-size:clamp(32px,3.9vw,44px);margin-bottom:10px;letter-spacing:-.01em}#kv-page .stars-row{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--grey);margin-bottom:13px;flex-wrap:wrap}#kv-page .stars-row .s{color:var(--green);letter-spacing:1.5px;font-size:14px}#kv-page .getline{font-weight:500;font-size:16px;margin-bottom:9px;line-height:1.35}#kv-page .desc{font-size:14.5px;color:var(--grey);margin-bottom:17px}#kv-page .pricerow{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;margin-bottom:4px}#kv-page .pricerow .p{font-size:34px;font-weight:600;letter-spacing:-.035em;color:var(--green);line-height:1}#kv-page .pricerow s{font-size:17px;color:var(--grey);font-weight:400}#kv-page .shipfree{background:var(--green);color:#fff;font-size:9.5px;font-weight:600;padding:4px 9px;border-radius:999px;letter-spacing:.08em;text-transform:uppercase}#kv-page .perserv{font-size:12.5px;font-weight:500;color:var(--ink);margin-bottom:16px}#kv-page /* option selectors (ED radio cards) */
+.optlabel{font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin:16px 0 8px}#kv-page .opt{border:1.5px solid var(--line);background:var(--cream);border-radius:11px;padding:17px 18px;cursor:pointer;display:grid;grid-template-columns:20px 1fr auto;gap:12px;align-items:center;margin-bottom:8px;position:relative;transition:border-color .14s}#kv-page .opt:hover{border-color:var(--green2)}#kv-page .opt.sel{border-color:var(--green);background:var(--green);box-shadow:none}#kv-page .opt.sel .nm,#kv-page .opt.sel .pr{color:#fff}#kv-page .opt.sel .nm small{color:#EAF3E5}#kv-page .opt.sel .pr s{color:#D3E4CB}#kv-page .opt.sel .rad{border-color:#fff}#kv-page .opt.sel .rad::after{background:#fff}#kv-page .opt.sel .tag{background:#fff;color:var(--green);box-shadow:0 3px 10px rgba(0,0,0,.22);border:1.5px solid var(--green)}#kv-page .optbens{display:none;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.28);grid-column:1/-1}#kv-page .opt.sel .optbens{display:grid;gap:6px}#kv-page .optbens span{font-size:12.5px;color:#EDF5E9}#kv-page .optbens span::before{content:"\2713";color:#fff;font-weight:400;margin-right:8px}#kv-page .opt .rad{width:17px;height:17px;border-radius:50%;border:1.5px solid #C6BFAD;position:relative}#kv-page .opt.sel .rad{border-color:var(--green)}#kv-page .opt.sel .rad::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--green)}#kv-page .opt .nm{font-size:18px;font-weight:600;line-height:1.2;letter-spacing:-.015em}#kv-page .opt .nm small{display:block;font-size:11.5px;font-weight:400;color:var(--grey);margin-top:2px}#kv-page .opt .pr{text-align:right;font-weight:600;font-size:24px;white-space:nowrap;letter-spacing:-.03em;color:var(--ink);line-height:1.1}#kv-page .opt .pr s{display:block;font-size:14px;color:var(--clay);font-weight:400;margin-top:3px}#kv-page .opt .tag{position:absolute;top:-17px;right:13px;background:var(--green);color:#fff;font-size: 11.5px;font-weight:800;padding:5px 13px;border-radius:999px;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}#kv-page .giftline{background:#E9F1E3;border-radius:9px;padding:11px 13px;font-size:12.5px;margin:10px 0 0;color:var(--green);font-weight:500}#kv-page .opt .nm small{display:block;font-size:12.5px;font-weight:400;color:var(--grey);margin-top:5px;letter-spacing:0}#kv-page .guarline{text-align:center;font-size:13px;font-weight:500;margin-top:13px;color:var(--ink)}#kv-page .guarline::before{content:"\2713";color:var(--green);font-weight:400;margin-right:6px}#kv-page .icons3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}#kv-page .icons3 div{text-align:center;font-size:11px;color:var(--grey);line-height:1.35}#kv-page .icons3 .i{font-size:16px;color:var(--green);margin-bottom:5px}#kv-page .icons3 b{color:var(--ink);font-weight:600}#kv-page .subline{font-size:12.5px;color:var(--grey);text-align:center;margin-top:14px}#kv-page .quotecard{display:flex;gap:12px;align-items:flex-start;background:var(--cream);border-radius:11px;padding:14px;margin-top:18px}#kv-page .quotecard .av{width:38px;height:38px;border-radius:50%;flex:0 0 38px;background:linear-gradient(150deg,#D6CBB2,#B9AE94);object-fit:cover;display:block}#kv-page .quotecard p{font-size:12.5px;line-height:1.45}#kv-page .quotecard .w{font-size:10.5px;color:var(--grey);margin-top:5px;font-weight:500}#kv-page /* accordions under buy box */
+.acc{margin-top:20px}#kv-page .acc details{border-top:1px solid var(--line)}#kv-page .acc details:last-child{border-bottom:1px solid var(--line)}#kv-page .acc summary{cursor:pointer;padding:16px 2px;font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}#kv-page .acc summary::-webkit-details-marker{display:none}#kv-page .acc summary.__dead{content:"+"}#kv-page .acc details p{padding:0 2px 16px;font-size:14px;color:var(--grey)}#kv-page .acc details ul,#kv-page .acc details ol{padding:0 2px 16px 20px;font-size:14px;color:var(--grey);margin:0}#kv-page .acc details li{margin:4px 0}#kv-page /* ---- how to use ---- */
+.howto-sec{padding-top:40px}#kv-page .htoh2{font-size:clamp(28px,4vw,42px);margin-bottom:4px}#kv-page .howto{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center}#kv-page .steps2{margin-top:22px;display:grid;gap:0}#kv-page .stp{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}#kv-page .stp:last-child{border-bottom:0}#kv-page .htn{font-family:ui-monospace,monospace;font-size:13px;font-weight:500;letter-spacing:.1em;color:var(--green);background:#E9F1E3;border-radius:999px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;margin-top:2px}#kv-page .stp h3{font-size:19px;letter-spacing:-.02em;margin-bottom:4px}#kv-page .stp p{font-size:14px;color:var(--grey);line-height:1.5}#kv-page .howto-gif{position:relative}#kv-page .howto-gif .slot{aspect-ratio:1;border-radius:16px}#kv-page .howto-gif video.slot{width:100%;height:auto;object-fit:cover;display:block;background:#EDE4D1}#kv-page .howto-gif .play{position:absolute;inset:0;margin:auto;width:52px;height:52px;border-radius:50%;background:rgba(255,253,248,.92);display:flex;align-items:center;justify-content:center;font-size:17px;padding-left:4px;color:var(--ink);box-shadow:0 6px 20px -8px rgba(22,33,26,.4)}@media(max-width:900px){#kv-page .howto{grid-template-columns:1fr;gap:22px}#kv-page .howto-gif{order:-1}#kv-page .howto-gif .slot{aspect-ratio:1}#kv-page .stp{padding:13px 0}#kv-page .stp h3{font-size:17px}#kv-page .stp p{font-size:13.5px}
+}#kv-page /* ---- 4. gift band ---- */
+.giftband{background:var(--lav);border-radius:0}#kv-page .gifthead{display:inline-block;background:var(--green);color:#fff;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px}#kv-page .giftpanel{background:var(--card);border-radius:18px;padding:34px 30px;box-shadow:0 1px 2px rgba(22,33,26,.05),0 18px 44px -26px rgba(22,33,26,.3)}#kv-page .gifth2{font-size:clamp(32px,4.4vw,48px);letter-spacing:-.012em;line-height:1.05}#kv-page .valchip{display:inline-block;background:var(--green);color:#fff;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:5px;margin-bottom:14px}#kv-page .gifts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:22px;text-align:left}#kv-page .gt{background:var(--cream);border-radius:13px;padding:13px;display:flex;flex-direction:column}#kv-page .gt .shot{margin-top:auto}#kv-page .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:10px;min-height:32px}#kv-page .gn{font-size:12px;font-weight:500;line-height:1.25;letter-spacing:.01em;text-transform:uppercase}#kv-page .gf{font-size:12px;font-weight:600;color:var(--green);text-align:right;white-space:nowrap;line-height:1.2}#kv-page .gf s{display:block;font-size:11px;color:var(--grey);font-weight:400;margin-top:2px}#kv-page .gt .slot{aspect-ratio:1;border-radius:9px}#kv-page .shot{aspect-ratio:1;border-radius:9px;overflow:hidden;position:relative;background:#EDE4D1}#kv-page .shot img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}#kv-page .shot-drinks img{object-position:50% 72%}#kv-page .shot-bar img{object-position:50% 67%}#kv-page .shot-hands img{object-position:50% 28%}#kv-page .split > .shot{max-width:520px;width:100%;margin-left:auto;margin-right:auto}#kv-page .shot::after{content:"";position:absolute;inset:0;border-radius:9px;box-shadow:inset 0 0 0 1px rgba(22,33,26,.09)}@media(max-width:760px){#kv-page .gifts{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(min-width:1001px){#kv-page .ctable th:first-child,#kv-page .ctable td:first-child{font-size:15.5px}#kv-page .ctable thead th{font-size:13.5px;padding:12px 4px}#kv-page .ctable th,#kv-page .ctable td{padding:11px 6px}#kv-page .ctable .yes,#kv-page .ctable .no,#kv-page .ctable .mid{font-size:17px}#kv-page .ctable .wm{font-size:16px}#kv-page .ctable td{font-size:15px}
+}#kv-page .moregifts{text-align:center;margin-top:20px;font-size:14px;font-weight:500;letter-spacing:.02em;color:var(--green)}#kv-page /* ---- 6. press ---- */
+.press{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;align-items:start}#kv-page .pq p{font-size:14.5px;line-height:1.5;font-style:italic;min-height:96px}#kv-page .pq .logo{margin-top:16px;font-size:19px;font-weight:500;letter-spacing:-.02em;opacity:.72;text-align:center}#kv-page .dots{display:flex;gap:7px;justify-content:center;margin-top:26px}#kv-page .dots i{width:8px;height:8px;border-radius:50%;background:#C9C2B0;display:block}#kv-page .dots i.on{background:var(--green)}#kv-page /* ---- 7. transform ---- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}#kv-page .ben2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}#kv-page .bn{background:var(--card);border-radius:13px;padding:20px}#kv-page .bn .ic{width:38px;height:38px;color:var(--green);margin-bottom:10px}#kv-page .bn .ic svg{width:100%;height:100%}#kv-page .bn .ic img{width:100%;height:100%;object-fit:contain;display:block;margin:0 auto}#kv-page .bn .ic{height:30px;width:44px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center}#kv-page .bn h3{font-size:15px;margin-bottom:5px}#kv-page .bn p{font-size:13.5px;color:var(--grey);line-height:1.5}#kv-page /* ---- 8. stats ---- */
+.st4{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0 24px}#kv-page .st4 > div{background:var(--card);border-radius:13px;padding:20px}#kv-page .st4 .n{font-family:Newsreader,ui-serif,Georgia,serif;font-size:clamp(28px,3.6vw,38px);font-weight:400;color:var(--green);letter-spacing:-.02em;line-height:1}#kv-page .st4 .l{font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);margin-top:6px}#kv-page /* section photos stay square without ballooning when the split stacks */
+.split > .slot{max-width:520px;width:100%;margin-left:auto;margin-right:auto}#kv-page /* ---- 4b. subscriber perks ---- */
+.perkgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:34px}#kv-page .perk{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;padding:0 10px}#kv-page .pic{width:46px;height:46px;color:var(--green);margin-bottom:12px}#kv-page .pic svg{width:100%;height:100%}#kv-page .pt{font-size:14.5px;font-weight:600;letter-spacing:-.01em;line-height:1.25}#kv-page .ps{font-size:12.5px;color:var(--grey);margin-top:4px;line-height:1.4;max-width:22ch}#kv-page .pdot{position:relative;width:100%;height:26px;margin-top:auto;display:flex;align-items:center;justify-content:center}#kv-page .pdot::before{content:"";position:absolute;left:0;right:0;top:50%;height:1.5px;background:var(--line)}#kv-page .perk:first-child .pdot::before{left:50%}#kv-page .perk:last-child .pdot::before{right:50%}#kv-page .pdot span{position:relative;width:13px;height:13px;border-radius:50%;background:var(--green2);border:2px solid var(--cream)}#kv-page .pdot.pplus span{width:20px;height:20px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:400;line-height:1;border-color:var(--cream)}#kv-page .pm{font-size:11px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ink);padding-top:2px}#kv-page .perkbar{position:relative;display:flex;flex-direction:column;align-items:center;margin-top:14px}#kv-page .pbline{display:block;width:calc(100% - 25%);height:1.5px;background:var(--line);position:relative}#kv-page .pbline::before,#kv-page .pbline::after{content:"";position:absolute;top:-4px;width:9px;height:9px;border-top:1.5px solid var(--line);border-right:1.5px solid var(--line)}#kv-page .pbline::before{left:0;transform:rotate(-135deg)}#kv-page .pbline::after{right:0;transform:rotate(45deg)}#kv-page .pbtext{font-size:12.5px;color:var(--grey);margin-top:9px}@media(max-width:960px){#kv-page .perkgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px;margin-left:auto;margin-right:auto;max-width:560px}#kv-page .perk:nth-child(5){grid-column:1/-1;justify-self:center}#kv-page .perk .pdot{display:none}#kv-page .pm{margin-top:auto;padding-top:10px}#kv-page .pbline{width:70%}
+}@media(max-width:560px){#kv-page .perkgrid{gap:26px 14px}
+}#kv-page /* ---- 3b. as seen on ---- */
+.seenon{padding:30px 0 6px}#kv-page .pmq{overflow:hidden;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-top:10px}#kv-page .ptrack{display:inline-flex;align-items:center;animation:psc 31s linear infinite;will-change:transform;transform:translateZ(0);backface-visibility:hidden}#kv-page .plogo{flex:0 0 auto;width:132px;height:132px;display:flex;align-items:center;justify-content:center;margin:0 6px}#kv-page .plogo img{width:100%;height:100%;object-fit:contain;display:block}@keyframes psc{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){#kv-page .ptrack{animation:none}}@media(max-width:620px){#kv-page .plogo{width:104px;height:104px;margin:0 2px}}#kv-page /* ---- 9. marquee ---- */
+.mq{background:var(--grad);color:#fff;padding:13px 0;overflow:hidden;white-space:nowrap}#kv-page .mq .track{display:inline-flex;gap:0;animation:sc 96s linear infinite;will-change:transform}#kv-page .mq span{font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:0 26px;position:relative}#kv-page .mq span::after{content:"\2726";position:absolute;right:-5px;top:50%;transform:translateY(-50%);opacity:.5;font-size:9px;pointer-events:none}@keyframes sc{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){#kv-page .mq .track{animation:none}}#kv-page /* ---- 10. tabs ---- */
+.bothcols{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:22px 0 4px}#kv-page .bcap{font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px}#kv-page .bothcols p{font-size:14px;color:var(--grey);line-height:1.55}#kv-page .inlink{color:var(--green);font-weight:500;text-decoration:underline;text-underline-offset:2px}#kv-page .srcnote{text-align:center;font-size:12.5px;color:var(--grey);margin-top:8px;letter-spacing:.01em}#kv-page .ph{display:inline-block;background:#F1E7C9;color:#7A6320;border-radius:4px;padding:1px 7px;font-weight:600;font-size:11.5px}@media(max-width:1000px){#kv-page .galwrap{border-radius:0;width:min(100vw,540px);max-width:none;margin-left:calc(50% - min(50vw,270px));margin-right:calc(50% - min(50vw,270px))}#kv-page .gal{display:flex;flex-direction:column;align-items:center}#kv-page .dots2{width:100%}#kv-page .hero{padding-top:0}#kv-page .gal{margin-bottom:4px}
+}@media(max-width:620px){#kv-page section{padding:34px 0}#kv-page .ben2,#kv-page .st4{grid-template-columns:1fr 1fr;gap:10px}#kv-page .bn,#kv-page .st4 > div{padding:15px}#kv-page .bn h3{font-size:14px}#kv-page .bn p{font-size:12.5px}#kv-page .st4 .n{font-size:24px}#kv-page .st4 .l{font-size:10px}#kv-page .carou{min-height:0}#kv-page .cslide p{font-size:14.5px}#kv-page .wrap{padding:0 18px}#kv-page .buy{padding:6px 18px 24px;border-radius:0;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);box-shadow:none;background:transparent}#kv-page .dots2{margin-top:10px;margin-bottom:2px}#kv-page .gal{margin-bottom:0}#kv-page .hero{gap:8px}#kv-page .giftpanel{padding:22px 18px;border-radius:12px}#kv-page .gh{min-height:0;flex-direction:column;gap:2px}#kv-page .gf{text-align:left}#kv-page .gf s{display:inline;margin-left:6px}#kv-page .getline{font-size:15px}#kv-page .pill-cta{font-size:15px;padding:16px 20px}#kv-page .cnav{flex-basis:32px;width:32px;height:32px;font-size:17px}#kv-page .cslide p{font-size:15px}#kv-page .media{grid-template-columns:repeat(3,1fr)}#kv-page h2{font-size:26px}#kv-page .bothcols{grid-template-columns:1fr;gap:20px}}#kv-page .tabs2{display:flex;gap:9px;margin:20px 0 16px}#kv-page .tabs2 button{font:inherit;font-weight:500;font-size:11px;letter-spacing:.13em;text-transform:uppercase;padding:9px 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--bone);cursor:pointer}#kv-page .tabs2 button.sel{background:var(--green);color:#fff;border-color:var(--green)}#kv-page .tp{display:none}#kv-page .tp.sel{display:block}#kv-page .finep{font-size:11px;color:var(--grey);margin-top:18px;line-height:1.5}#kv-page /* shared carousel */
+.carou{position:relative;display:flex;align-items:center;gap:10px;margin-top:20px;min-height:150px}#kv-page .ctrack{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;flex:1;gap:0;overscroll-behavior-x:contain;touch-action:pan-x pan-y pinch-zoom;-webkit-overflow-scrolling:touch}#kv-page .ctrack::-webkit-scrollbar{display:none}#kv-page .cslide{flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;padding:0 6px;display:flex;flex-direction:column;justify-content:center;align-items:stretch}#kv-page .cslide > *{width:100%}#kv-page .cslide p{font-size:18px;line-height:1.55;font-style:normal;text-align:center;max-width:34ch;margin:0 auto;color:var(--ink)}#kv-page .cslide .cst{color:var(--green);letter-spacing:3px;font-size:16px;text-align:center;margin-bottom:14px}#kv-page .cslide .logo{margin-top:14px;font-size:12px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);text-align:center}#kv-page .cnav{flex:0 0 38px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--bone);cursor:pointer;font-size:19px;line-height:1;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:border-color .15s}#kv-page .cnav:hover{border-color:var(--green);color:var(--green)}#kv-page .cdots{display:flex;gap:8px;justify-content:center;margin-top:20px}#kv-page .cdots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:#C9C2B0;cursor:pointer;transition:background .15s,transform .15s}#kv-page .cdots button.on{background:var(--green);transform:scale(1.2)}#kv-page .btbh2{font-size:clamp(32px,4.8vw,52px);letter-spacing:-.012em}#kv-page .rec-carou .rec,#kv-page .vid-carou .vid{height:100%}@media(min-width:760px){#kv-page .rc-carou .cslide{flex-basis:33.3333%}#kv-page .rec-carou .cslide{flex-basis:33.3333%}#kv-page .vid-carou .cslide{flex-basis:20%}#kv-page .vid-carou .cnav{display:none}#kv-page [data-dots="btb"]{display:none}
+}#kv-page /* ---- 11. reviews ---- */
+.rcards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}#kv-page .rc{background:var(--card);color:var(--ink);border-radius:14px;padding:26px;display:flex;flex-direction:column;height:100%;box-shadow:0 1px 2px rgba(22,33,26,.05),0 12px 30px -22px rgba(22,33,26,.3)}#kv-page .rc .st{color:var(--green);letter-spacing:2px;font-size:14px;margin-bottom:12px}#kv-page .rc h3{font-size:17px;margin-bottom:10px;letter-spacing:-.015em;line-height:1.25}#kv-page .rc p{font-size:14.5px;line-height:1.6;color:var(--grey);flex:1}#kv-page .rc .who{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}#kv-page .rc .wn{display:block;font-size:13.5px;font-weight:600}#kv-page .rc .wv{display:block;font-size:11px;color:var(--green);font-weight:500;letter-spacing:.05em;text-transform:uppercase;margin-top:3px}#kv-page /* ---- 12. us x them ---- */
+.uxt{display:block}#kv-page .uxth2{font-size:clamp(30px,4.6vw,50px);letter-spacing:-.04em}#kv-page .tblfull{width:100%}#kv-page .ctable{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;table-layout:fixed}#kv-page .ctable th,#kv-page .ctable td{padding:13px 6px;text-align:center;border-bottom:1px solid var(--line);overflow-wrap:anywhere}#kv-page .ctable th:first-child,#kv-page .ctable td:first-child{text-align:left;font-weight:600;font-size:13px;width:31%}#kv-page .ctable thead th{font-size:11px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;line-height:1.2;padding:14px 4px;overflow-wrap:normal;hyphens:none}#kv-page .ctable .uc{background:var(--green);color:#fff;border-radius:12px 12px 0 0}#kv-page .ctable tbody .uc{background:#EEF4EA;border-radius:0;font-weight:600;color:var(--ink)}#kv-page .ctable tbody tr:last-child .uc{border-radius:0 0 12px 12px}#kv-page .ctable .yes{color:var(--green);font-weight:600;font-size:15px}#kv-page .ctable .no{color:var(--clay);font-weight:600;font-size:15px}#kv-page .ctable .mid{color:#B08828;font-weight:600;font-size:15px}#kv-page .ctable .wm{font-size:15px;font-weight:600;color:var(--green)}#kv-page .uxlogo{width:44px;height:44px;color:#fff;margin:0 auto 4px}#kv-page .ctable thead .uc{padding-top:16px;padding-bottom:14px}#kv-page /* ---- 14. behind the blend ---- */
+.vids{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}#kv-page .vid{position:relative}#kv-page .vid .slot{aspect-ratio:9/16;border-radius:12px}#kv-page .vid .play{position:absolute;inset:0;margin:auto;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:14px;padding-left:3px;color:var(--ink);border:0;cursor:pointer;padding-top:0;padding-bottom:0;padding-right:0;box-shadow:0 4px 14px -6px rgba(22,33,26,.5)}#kv-page .vid-live video.slot{width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:12px;display:block;background:#EDE4D1}#kv-page .vid-live video.slot[poster]{object-fit:cover}#kv-page .vid-live.playing .play{display:none}#kv-page .vcap{position:absolute;left:9px;right:9px;bottom:9px;font-size:11px;line-height:1.3;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7);pointer-events:none}#kv-page .vid-live.playing .vcap{opacity:0;transition:opacity .2s}#kv-page .recs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}#kv-page .rec{background:var(--card);border-radius:13px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;height:100%}#kv-page .rec .slot{border-radius:0;aspect-ratio:1}#kv-page .rec .b{padding:16px}#kv-page .rec .shot{aspect-ratio:1;border-radius:0;background:#EDE4D1}#kv-page .rec .shot img{width:100%;height:100%;object-fit:cover;display:block}#kv-page .rec .tag{font-family:ui-monospace,monospace;font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--green);font-weight:500}#kv-page .rec h3{font-size:16px;margin:6px 0 7px}#kv-page .rec p{font-size:13px;color:var(--grey);line-height:1.5}@media(max-width:1000px){#kv-page .recs{grid-template-columns:1fr 1fr}}@media(max-width:620px){#kv-page .recs{grid-template-columns:1fr}}#kv-page /* ---- 15. faq grid ---- */
+.faqgrp{grid-column:1/-1;margin:26px 0 2px;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}#kv-page .faqgrp:first-child{margin-top:6px}@media(max-width:820px){#kv-page .faqgrp{margin:20px 0 0}}#kv-page .faq2{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin-top:22px}#kv-page .faq2 details{background:#fff;border-radius:11px;border:1px solid var(--line)}#kv-page .faq2 summary{cursor:pointer;padding:16px 18px;font-weight:500;font-size:14px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}#kv-page .faq2 summary::-webkit-details-marker{display:none}#kv-page .faq2 summary::after{content:"\2304";color:var(--green);font-weight:400}#kv-page .faq2 details[open] summary::after{content:"\2303"}#kv-page .faq2 details p{padding:0 18px 16px;font-size:13.5px;color:var(--grey)}#kv-page /* ---- 16. review summary ---- */
+.rsum{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;padding-bottom:24px;border-bottom:1px solid var(--line)}#kv-page .rsum .big{font-family:Newsreader,ui-serif,Georgia,serif;font-size:46px;font-weight:400;letter-spacing:-.02em;line-height:1}#kv-page .rsum .st{color:var(--green);font-size:17px;letter-spacing:2px}#kv-page .rsum .cnt{font-size:12px;color:var(--grey);margin-top:3px}#kv-page .wbtn{border:1.5px solid var(--green);color:var(--green);background:transparent;font:inherit;font-weight:500;font-size:12.5px;padding:11px 22px;border-radius:999px;cursor:pointer}#kv-page .appslot{border:2px dashed var(--line);border-radius:16px;background:var(--card);min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px 26px;gap:10px}#kv-page .applbl{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}#kv-page /* reverse tolerance */
+.rt2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:34px auto 0;max-width:960px}#kv-page .rt-card{border-radius:18px;padding:26px 24px 22px}#kv-page .rt-kava{background:#EDF3E6}#kv-page .rt-alc{background:#F1EDE3}#kv-page .rt-pill{display:inline-block;border-radius:999px;padding:9px 22px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:12.5px;color:#fff}#kv-page .rt-kava .rt-pill{background:var(--green)}#kv-page .rt-alc .rt-pill{background:#8F8A80}#kv-page .rt-copy{margin:15px 0 8px;font-size:14.5px;line-height:1.55}#kv-page .rt-card svg{width:100%;height:auto;display:block}#kv-page .rt-axis{font-size:10.5px;color:var(--grey);text-align:center;letter-spacing:.05em;margin-top:4px}#kv-page .rt-take{display:flex;align-items:center;gap:12px;margin-top:18px;font-size:13.5px;font-weight:500;border-top:1px solid rgba(31,29,23,.09);padding-top:17px}#kv-page .rt-arrow{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex:none}#kv-page .rt-alc .rt-arrow{color:#EBAF66}#kv-page .rt-also{text-align:center;font-size:13.5px;margin:22px auto 0;max-width:620px}@media(min-width:760px){#kv-page .rt-copy{min-height:3.2em}}#kv-page /* founders */
+.fnd{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;max-width:1020px;margin:0 auto}#kv-page .fnd-b p{margin:12px 0;font-size:15px;line-height:1.62}#kv-page .fnd-sig{font-size:34px;color:var(--green);margin-top:16px}#kv-page .fnd-vid .slot,#kv-page .fnd-vid video.slot{aspect-ratio:1/1;border-radius:16px}#kv-page .btbsec .galwrap{border:2.5px solid var(--ink)}#kv-page .lbx{position:fixed;inset:0;background:rgba(22,33,26,.72);display:none;align-items:center;justify-content:center;z-index:70;padding:20px}#kv-page .lbx.on{display:flex}#kv-page .lbx img{max-width:min(92vw,560px);max-height:86vh;border-radius:14px;display:block}#kv-page .lbx .x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:15px;cursor:pointer;color:var(--ink)}#kv-page .foot{background:#16211A;color:#F8F3E8;padding:44px 0 26px}#kv-page .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:760px}#kv-page .fh{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#9DBB8E;margin-bottom:10px}#kv-page .fcol a{display:block;color:#F8F3E8;text-decoration:none;font-size:13.5px;line-height:2.1}#kv-page .fcol a:hover{text-decoration:underline}#kv-page .fsoc{display:flex;flex-wrap:wrap;gap:16px;margin-top:30px;padding-top:18px;border-top:1px solid rgba(248,243,232,.18)}#kv-page .fsoc a{color:rgba(248,243,232,.75);font-size:11px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none}#kv-page .fcopy{margin-top:18px;font-size:11.5px;color:rgba(248,243,232,.5)}@media(max-width:760px){#kv-page .fgrid{grid-template-columns:1fr 1fr}#kv-page .opt .tag{top:-20px}#kv-page .seenon{padding:22px 0 0}#kv-page .howto-sec{padding-top:6px;padding-bottom:9px}#kv-page .giftband{padding-top:20px}#kv-page .perksec{padding-bottom:10px}#kv-page .staysec{padding-bottom:9px}#kv-page .ritualsec{padding-top:9px}#kv-page .btbsec{padding-bottom:9px}#kv-page .ugcsec{padding-top:8px}#kv-page .rtsec{padding-top:20px;padding-bottom:12px}#kv-page .faqsec{padding-top:12px;padding-bottom:8px}#kv-page .quotecard{margin-top:5px}#kv-page .acc{margin-top:8px}#kv-page .giftband{padding-bottom:12px}#kv-page .perksec{padding-top:20px;padding-bottom:10px}#kv-page section.green{padding-bottom:12px}#kv-page .staysec{padding-top:12px;padding-bottom:9px}#kv-page .ritualsec{padding-top:9px;padding-bottom:10px}#kv-page .realtalksec{padding-top:20px;padding-bottom:12px}#kv-page .uxsec{padding-top:20px}#kv-page .ugcsec{padding-top:16px;padding-bottom:8px}#kv-page #recipes{padding-top:16px;padding-bottom:10px}#kv-page .fndsec{padding-bottom:58px}#kv-page .revsec{padding-top:10px}
+}@media(max-width:760px){#kv-page .ctrh{font-size:34px}#kv-page .seerec{display:block;margin-top:6px;white-space:nowrap}#kv-page .btbsec{padding-top:0}
+}#kv-page .fnd-meta{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:10px;font-weight:500}@media(max-width:759px){#kv-page .rt2{grid-template-columns:1fr}#kv-page .fnd{grid-template-columns:1fr;gap:26px}}#kv-page .appsub{font-size:13.5px;color:var(--grey);max-width:46ch;line-height:1.55}#kv-page .media{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:22px}#kv-page .media .slot{aspect-ratio:1;border-radius:10px}#kv-page .flag{background:#FBF5F1;border:1px solid #E0C8BC;color:#7A4030;padding:18px 20px;font-size:13.5px;margin-top:30px;border-radius:12px;line-height:1.55}#kv-page .flag b{display:block;margin-bottom:6px}#kv-page .flag ul{margin:8px 0 0 18px}#kv-page .flag li{margin-bottom:5px}@media(max-width:1000px){#kv-page .hero{grid-template-columns:minmax(0,1fr);gap:26px}#kv-page .gal{position:static}#kv-page .split,#kv-page .uxt{grid-template-columns:minmax(0,1fr);gap:30px}#kv-page .press{grid-template-columns:1fr;gap:26px}#kv-page .pq p{min-height:0}#kv-page .rcards{grid-template-columns:1fr}#kv-page .vids{grid-template-columns:repeat(3,1fr)}#kv-page .media{grid-template-columns:repeat(4,1fr)}#kv-page .faq2{grid-template-columns:1fr}#kv-page section{padding:52px 0}
+}@media(max-width:620px){#kv-page .vids{grid-template-columns:1fr 1fr}#kv-page .nav .in{grid-template-columns:1fr auto 1fr}#kv-page .rsum{grid-template-columns:1fr;gap:14px;text-align:center}#kv-page .ctable th:first-child,#kv-page .ctable td:first-child{width:34%;font-size:11.5px}#kv-page .ctable thead th{font-size:9.5px;letter-spacing:0}#kv-page .ctable th,#kv-page .ctable td{padding:11px 3px;font-size:11.5px}#kv-page .ctable .wm{font-size:13px}#kv-page .uxlogo{width:34px;height:34px}
+}
+
+/* v2 */
+#kv-page .mauna{color:var(--green)}
+#kv-page .fnd-sig.mauna{color:var(--green)}
+#kv-page section.green .mauna,#kv-page .mq .mauna{color:inherit}
+#kv-page .opt.sel .mauna,#kv-page .opt.sel .optbens .mauna{color:inherit}
+@media(max-width:1000px){#kv-page .hero .galwrap{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}}
+</style>
+<style id="kvl-css">
+/* ---------- FOUNDATION, aliased verbatim from the PDP style block ---------
+   Same declarations, same order, only the id is different. The @font-face
+   rules are NOT repeated: they are document-level in the PDP style block that
+   ships immediately above this one in both outputs, so Chivo, Newsreader and
+   Mauna Loa are already loaded and resolve here by family name.
+   ------------------------------------------------------------------------ */
+#kvl-page,#kvl-page :where(*:not(svg):not(svg *)),#kvl-page :where(*:not(svg):not(svg *))::before,#kvl-page :where(*:not(svg):not(svg *))::after{all:revert}
+#kvl-page{--green:#367542;--green2:#73AE57;--mint:#8AC79A;--cream:#F8F3E8;--bone:#FFFFFF;--ink:#1F1D17;--deep:#14261A;--lav:#F8F3E8;--line:#E6DFCE;--grey:#6A6659;--clay:#8A4B3B;--card:#FFFFFF;--grad:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);}
+#kvl-page *{margin:0;padding:0;box-sizing:border-box}
+#kvl-page{-webkit-text-size-adjust:100%;overflow-x:clip}
+#kvl-page{font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:0}
+#kvl-page img{max-width:100%;display:block}
+#kvl-page h1,#kvl-page h2{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;letter-spacing:-.012em;line-height:1.06}
+#kvl-page b,#kvl-page strong{font-weight:600}
+#kvl-page .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+#kvl-page section.green{background:var(--green);color:#fff}
+#kvl-page section.green h1,#kvl-page section.green h2,#kvl-page section.green h3{color:#fff}
+#kvl-page section.green p,#kvl-page section.green .lead{color:rgba(255,255,255,.82)}
+#kvl-page section.green .eyebrow{color:var(--mint)}
+#kvl-page .eyebrow{font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:7px}
+#kvl-page .lead{color:var(--grey);font-size:16.5px;max-width:54ch;margin-bottom:0}
+#kvl-page .pill-cta{display:block;width:100%;max-width:420px;margin:0 auto;background:var(--grad);color:#fff;border:0;font:inherit;font-weight:500;font-size:15px;padding:18px 26px;border-radius:999px;cursor:pointer;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 6px 18px -8px rgba(54,117,66,.7);transition:transform .12s,box-shadow .16s}
+#kvl-page .pill-cta:hover{transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(54,117,66,.8)}
+#kvl-page .guar{text-align:center;font-size:12.5px;color:var(--grey);margin-top:12px}
+#kvl-page .guar b{color:var(--ink)}
+@media(max-width:620px){
+  #kvl-page .wrap{padding:0 18px}
+  #kvl-page .pill-cta{font-size:15px;padding:16px 20px}
+}
+
+/* ---------- MOBILE BREATHING ROOM ----------------------------------------
+   Bryce's standing rule: 32 to 40px TOTAL from glyph to viewport edge on
+   mobile, per side, for every text block. Gutters are stacked on SEPARATE
+   elements, never on the same element, because they do not stack when two
+   classes share one element.
+     <=620px : .wrap 18px  +  text container 16px  =  34px TOTAL per side
+     621 to 879px : .wrap 24px  +  text container 16px  =  40px TOTAL per side
+     >=880px : .wrap 24px, text container 0 (2 column grid, lines under 62ch)
+   Images sit inside .wrap only, so they are viewport minus 36px and never
+   100vw (#kvl-page is plain 100% wide, so a 100vw bleed inside it would
+   overhang the viewport by the scrollbar width).
+   Nothing here uses "padding: X 0" on a text container.
+   ------------------------------------------------------------------------ */
+
+/* The PDP style block makes #kv-page a 100vw full-bleed block. 100vw includes
+   the desktop scrollbar, so it overhangs the viewport by the scrollbar width
+   and eats ~7px off every .wrap gutter. The verbatim PDP hero wrapper keeps
+   that behaviour; THIS wrapper never inherits it (it is #kvl-page, and the
+   100vw rule names #kv-page), so it runs at plain 100% and its gutters measure
+   exactly what the CSS says. Declared, not just left to the default, because
+   the wrapper sits in a Shopify section whose own layout is unknown. */
+#kvl-page{display:block;width:100%;text-align:left}
+
+/* announcement strip ---------------------------------------------------- */
+#kvl-page .kvl-ann{background:var(--cream);border-bottom:1px solid var(--line);padding:10px 0}
+#kvl-page .kvl-ann .kvl-annin{text-align:center;padding:0 16px}
+#kvl-page .kvl-ann .eyebrow{margin:0;line-height:1.5}
+
+/* hero ------------------------------------------------------------------ */
+#kvl-page .kvl-hero{padding:30px 0 10px}
+#kvl-page .kvl-herogrid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;max-width:1140px;margin:0 auto;align-items:center}
+#kvl-page .kvl-h1{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;letter-spacing:-.012em;line-height:1.06;font-size:clamp(33px,8.7vw,40px);text-wrap:balance;margin:0 0 14px}
+#kvl-page .kvl-br{display:none}
+#kvl-page .kvl-deck{font-size:17.5px;line-height:1.55;color:var(--grey);max-width:36ch;margin:0 0 16px}
+#kvl-page .kvl-proofline{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12.5px;line-height:1.5;color:var(--grey);margin:0 0 18px}
+#kvl-page .kvl-proofline .kvl-s{color:var(--green);letter-spacing:1.5px;font-size:14px}
+#kvl-page .kvl-hmedia{margin:4px 0 0}
+
+/* shared media ---------------------------------------------------------- */
+#kvl-page .kvl-media,#kvl-page .kvl-hmedia{margin:0}
+#kvl-page .kvl-img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:16px;background:#EDE4D1;display:block}
+#kvl-page .kvl-gap{aspect-ratio:1/1;border:2px dashed #C9C2B0;border-radius:16px;background:#F4EFE3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:9px}
+#kvl-page .kvl-gaplbl{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:500}
+#kvl-page .kvl-gap p{font-size:12.5px;line-height:1.5;color:var(--grey);max-width:32ch}
+
+/* reasons --------------------------------------------------------------- */
+#kvl-page .kvl-rsn{padding:34px 0}
+#kvl-page .kvl-rsn--tint{background:var(--cream)}
+#kvl-page .kvl-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;max-width:1140px;margin:0 auto;align-items:center}
+#kvl-page .kvl-n{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.02em;color:var(--green);margin:0 0 8px}
+#kvl-page .kvl-h{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:clamp(26px,7.1vw,34px);line-height:1.1;letter-spacing:-.012em;text-wrap:balance;margin:0 0 12px}
+#kvl-page .kvl-p{font-size:17px;line-height:1.62;color:var(--ink);max-width:62ch;margin:0}
+#kvl-page .kvl-trust{display:flex;gap:10px;align-items:flex-start;background:#EDF3E6;border-radius:12px;padding:14px 16px;margin:16px 0 0;max-width:62ch}
+#kvl-page .kvl-tick{color:var(--green);font-size:13px;line-height:1.6;flex:none}
+#kvl-page .kvl-trust p{font-size:13.5px;line-height:1.6;color:var(--ink);margin:0}
+
+/* mid CTA band ---------------------------------------------------------- */
+#kvl-page .kvl-mid{padding:42px 0}
+#kvl-page .kvl-ctr{max-width:720px;margin:0 auto;text-align:center}
+#kvl-page .kvl-midh{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:clamp(28px,7.2vw,40px);line-height:1.08;letter-spacing:-.012em;text-wrap:balance;margin:0 0 12px}
+#kvl-page .kvl-midsub{font-size:16px;line-height:1.6;max-width:46ch;margin:0 auto 22px}
+#kvl-page section.green .kvl-cta--inv{background:#fff;color:var(--green);box-shadow:0 6px 18px -8px rgba(0,0,0,.4)}
+#kvl-page section.green .kvl-cta--inv:hover{box-shadow:0 10px 24px -8px rgba(0,0,0,.5)}
+
+/* proof strip ----------------------------------------------------------- */
+#kvl-page .kvl-proof{padding:40px 0;background:var(--cream)}
+#kvl-page .kvl-proofin{max-width:1140px;margin:0 auto}
+#kvl-page .kvl-proofh{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:clamp(26px,6.6vw,38px);line-height:1.08;letter-spacing:-.012em;text-align:center;text-wrap:balance;margin:0 0 22px}
+#kvl-page .kvl-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+#kvl-page .kvl-card{background:var(--bone);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0}
+#kvl-page .kvl-stars{color:var(--green);letter-spacing:1.5px;font-size:14px;line-height:1;margin:0 0 10px}
+#kvl-page .kvl-q{font-size:15.5px;line-height:1.6;color:var(--ink);margin:0}
+#kvl-page .kvl-attr{font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin:12px 0 0}
+
+/* closing --------------------------------------------------------------- */
+#kvl-page .kvl-final{padding:44px 0 34px}
+#kvl-page .kvl-finalh{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:clamp(30px,7.6vw,44px);line-height:1.06;letter-spacing:-.012em;text-wrap:balance;margin:0 0 12px}
+#kvl-page .kvl-finalsub{font-size:16.5px;line-height:1.6;color:var(--grey);max-width:50ch;margin:0 auto 22px}
+#kvl-page .kvl-trustline{margin-top:14px;line-height:1.65}
+
+/* ---------- 621px to 879px: single column, 40px total to the edge -------- */
+@media(max-width:879px){
+  #kvl-page .kvl-htext,#kvl-page .kvl-body,#kvl-page .kvl-ctr,#kvl-page .kvl-proofin{padding:0 16px}
+  #kvl-page .kvl-hmedia,#kvl-page .kvl-media{margin-left:0;margin-right:0}
+}
+
+/* ---------- >=880px: 2 column rows, photo side alternates ---------------- */
+@media(min-width:880px){
+  #kvl-page .kvl-hero{padding:44px 0 16px}
+  #kvl-page .kvl-herogrid{grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:48px}
+  #kvl-page .kvl-h1{font-size:clamp(44px,4.5vw,58px);margin-bottom:16px}
+  #kvl-page .kvl-deck{font-size:18.5px;max-width:40ch}
+  #kvl-page .kvl-htext .pill-cta{margin-left:0}
+  #kvl-page .kvl-rsn{padding:58px 0}
+  #kvl-page .kvl-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px}
+  #kvl-page .kvl-grid--rev .kvl-media{order:2}
+  #kvl-page .kvl-n{font-size:36px}
+  #kvl-page .kvl-h{font-size:clamp(32px,3.2vw,42px)}
+  #kvl-page .kvl-p{font-size:18px}
+  #kvl-page .kvl-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  #kvl-page .kvl-mid{padding:56px 0}
+  #kvl-page .kvl-proof{padding:58px 0}
+  #kvl-page .kvl-final{padding:60px 0 40px}
+}
+
+/* ---------- 880 to 1023px: the 2 column grid starts here but the viewport is
+   still narrow, and .wrap alone leaves 24px. 8px more on the text containers
+   holds the band at 32px total, the same floor the mobile rule enforces. ---- */
+@media(min-width:880px) and (max-width:1023px){
+  #kvl-page .kvl-htext,#kvl-page .kvl-body,#kvl-page .kvl-ctr,#kvl-page .kvl-proofin{padding:0 8px}
+}
+
+/* ---------- the H1 line break only exists where the line is long enough -- */
+@media(min-width:760px){#kvl-page .kvl-br{display:initial}}
+</style>
+<div id="kvl-page" class="kvl">
+  <section class="kvl-ann">
+    <div class="wrap"><div class="kvl-annin"><div class="eyebrow">From the Kavahana bars in Santa Monica and Hollywood</div></div></div>
+  </section>
+
+  <section class="kvl-hero">
+    <div class="wrap">
+      <div class="kvl-herogrid">
+        <div class="kvl-htext">
+          <h1 class="kvl-h1">5 Reasons to Unwind<br class="kvl-br"> Without the Hangxiety</h1>
+          <p class="lead kvl-deck">Kava Nectar is the juice of kava root, dried into a powder. Go out, feel good, wake up fine.</p>
+          <p class="kvl-proofline"><span class="kvl-s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>Rated 4.8 out of 5 &middot; 500,000+ cups served</span></p>
+          <button type="button" class="pill-cta kvl-cta">Get my Starter Kit &#8594;</button>
+        </div>
+        <figure class="kvl-hmedia">
+        <!-- slot:kvl-slot-1 subject:"SOCIAL / SOBER" file:kava-friends-couch.jpg -->
+        <img class="kvl-img" data-slot="kvl-slot-1" data-subject="SOCIAL / SOBER" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-friends-couch.jpg" width="945" height="946" fetchpriority="high" decoding="async" alt="2 friends on a couch at night, each holding a Kavahana cup.">
+      </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="kvl-rsn">
+    <div class="wrap">
+      <div class="kvl-grid">
+      <figure class="kvl-media">
+        <!-- slot:kvl-slot-2 subject:"SOCIAL" file:kava-friends.jpg -->
+        <img class="kvl-img" data-slot="kvl-slot-2" data-subject="SOCIAL" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-friends.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="2 friends side by side under party light with coconut cups of kava and the bamboo whisk.">
+      </figure>
+        <div class="kvl-body">
+          <div class="kvl-n">01</div>
+          <h2 class="kvl-h">The feeling, minus the morning after.</h2>
+          <p class="kvl-p">Alcohol takes the edge off, then charges you for it the next morning. With Kava Nectar, many people feel relaxed and sociable 10 to 20 minutes in. It lasts 1 to 2 hours. Present, not out of it. Clear head the next morning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kvl-rsn kvl-rsn--tint">
+    <div class="wrap">
+      <div class="kvl-grid kvl-grid--rev">
+      <figure class="kvl-media">
+        <!-- slot:kvl-slot-3 subject:"ROOT" file:kava-cup-hands.jpg -->
+        <img class="kvl-img" data-slot="kvl-slot-3" data-subject="ROOT" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-cup-hands.jpg" width="532" height="946" loading="lazy" decoding="async" alt="2 hands cradling a coconut shell cup of kava, seen from above.">
+      </figure>
+        <div class="kvl-body">
+          <div class="kvl-n">02</div>
+          <h2 class="kvl-h">One ingredient. Nothing added, nothing taken out.</h2>
+          <p class="kvl-p">Noble kava root, cold-pressed and dried. The root grows 5 to 7 years in the volcanic soil of Vanuatu. It has been the drink of the South Pacific and Hawaii for over 3,000 years. The kava plant is in the peppercorn family, which is why the first sip tingles on your tongue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="green kvl-mid">
+    <div class="wrap">
+      <div class="kvl-ctr">
+        <h2 class="kvl-midh">Come sit at the bar. From your couch.</h2>
+        <p class="kvl-midsub">Kava Nectar ships to all 50 states and Canada. 30 day guarantee, love it or your money back.</p>
+        <button type="button" class="pill-cta kvl-cta kvl-cta--inv">Get my Starter Kit &#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="kvl-rsn">
+    <div class="wrap">
+      <div class="kvl-grid">
+      <figure class="kvl-media">
+        <div class="kvl-gap" data-slot="kvl-slot-4" data-subject="TOLERANCE" data-gap="TOLERANCE">
+          <span class="kvl-gaplbl">Photo slot kvl-slot-4</span>
+          <p>Subject: reverse tolerance. Add a 1080x1080 file to the IMAGES map in build-listicle.js and rerun the build.</p>
+        </div>
+      </figure>
+        <div class="kvl-body">
+          <div class="kvl-n">03</div>
+          <h2 class="kvl-h">Most drinks ask for more. Kava is known for the opposite.</h2>
+          <p class="kvl-p">It&rsquo;s called reverse tolerance. Many people find they need less over time, not more. That&rsquo;s why the Starter Kit is a monthly subscription, and why it&rsquo;s worth starting now rather than later. Natural kava root is non-addictive and non-intoxicating.</p>
+          <div class="kvl-trust"><span class="kvl-tick">&#10003;</span><p>Kava Nectar is made from kava root and nothing else. No kratom, no caffeine, no alcohol. Every batch is tested.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kvl-rsn kvl-rsn--tint">
+    <div class="wrap">
+      <div class="kvl-grid kvl-grid--rev">
+      <figure class="kvl-media">
+        <!-- slot:kvl-slot-5 subject:"BAR" file:kava-drinks.jpg -->
+        <img class="kvl-img" data-slot="kvl-slot-5" data-subject="BAR" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-drinks.jpg" width="709" height="946" loading="lazy" decoding="async" alt="A woman inside a Kavahana bar holding out 2 branded cups of kava.">
+      </figure>
+        <div class="kvl-body">
+          <div class="kvl-n">04</div>
+          <h2 class="kvl-h">It&rsquo;s what they pour at the bar in Santa Monica.</h2>
+          <p class="kvl-p">In February 2024, Hana and Neil opened LA&rsquo;s first kava nectar bar in Santa Monica, then a second in Hollywood. Their Santa Monica neighbors voted it Most Loved New Business. Over 500,000 cups later, Kava Nectar is the same kava they pour behind the counter. CBS, NBC News and the LA Times have covered the bar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kvl-rsn">
+    <div class="wrap">
+      <div class="kvl-grid">
+      <figure class="kvl-media">
+        <!-- slot:kvl-slot-6 subject:"RITUAL" file:kava-whisk.jpg -->
+        <img class="kvl-img" data-slot="kvl-slot-6" data-subject="RITUAL" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-whisk.jpg" width="620" height="620" loading="lazy" decoding="async" alt="The bamboo whisk from the kit lying on sand in late light.">
+      </figure>
+        <div class="kvl-body">
+          <div class="kvl-n">05</div>
+          <h2 class="kvl-h">15 seconds with a whisk. That&rsquo;s the entire preparation.</h2>
+          <p class="kvl-p">Scoop it into any cold non-alcoholic drink, whisk for 15 seconds, and pour it over ice. No brewing, no straining, no bar tab. It tastes earthy. Cold coconut water is what people like to make it with. Many people enjoy 2 to 3 servings their first few times. The kit comes with 2 coconut shell cups, so make the second cup for someone else.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kvl-proof">
+    <div class="wrap">
+      <div class="kvl-proofin">
+        <h2 class="kvl-proofh">From the people who drink it.</h2>
+        <div class="kvl-cards">
+        <figure class="kvl-card">
+          <div class="kvl-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="kvl-q">&ldquo;I could finally feel something, in a good way.&rdquo;</blockquote>
+          <figcaption class="kvl-attr">Sammy, New York</figcaption>
+        </figure>
+        <figure class="kvl-card">
+          <div class="kvl-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="kvl-q">&ldquo;It gives me that perfect upbeat, relaxed mood that makes socializing feel easy and fun without feeling out of it.&rdquo;</blockquote>
+          <figcaption class="kvl-attr">Priya S. &middot; Verified review</figcaption>
+        </figure>
+        <figure class="kvl-card">
+          <div class="kvl-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="kvl-q">&ldquo;I feel light and airy and happy and like I just want to go hang out and talk to someone and dance, and I don&rsquo;t feel sick.&rdquo;</blockquote>
+          <figcaption class="kvl-attr">Jordan M. &middot; Verified review</figcaption>
+        </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kvl-final">
+    <div class="wrap">
+      <div class="kvl-ctr">
+        <h2 class="kvl-finalh">Pick a night this week.</h2>
+        <p class="kvl-finalsub">The Starter Kit comes with everything you need to make it properly the first time. 22 servings from $59.99, up to 39% off. You also get 2 coconut shell cups, a bamboo whisk and a digital recipe guide, free. It renews monthly with a fresh bag. Skip or cancel anytime.</p>
+        <button type="button" class="pill-cta kvl-cta">Get my Starter Kit &#8594;</button>
+        <p class="guar kvl-trustline">&#10003; 30 day guarantee &middot; Love it or your money back &middot; Free shipping<br>5 stick packs come free too. First box with the 45-serving kit, first renewal with either size.</p>
+      </div>
+    </div>
+  </section>
+</div><!-- /kvl -->
+<!-- KVL: END LISTICLE -->
+<style>#kv-page .hero{padding-top:26px;padding-bottom:56px}@media(max-width:760px){#kv-page .hero{padding-bottom:40px}}</style>
+<div id="kvl-buybox">
+<div id="kv-page">
+<!-- 3. HERO -->
+<div class="wrap">
+<div class="hero">
+  <div class="gal">
+    <div class="galwrap">
+      <button class="gnav gprev" type="button" aria-label="Previous image">&#8249;</button>
+        <button class="gnav gnext" type="button" aria-label="Next image">&#8250;</button>
+        <div class="slides" id="slides">
+        <div class="slide"><img class="heroimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45c.jpg" width="1080" height="1080" fetchpriority="high" decoding="async" alt="The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs"></div>
+        <div class="slide"><img class="galimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s2b.jpg" width="1080" height="1080" alt="Kava Nectar benefits: the tingle, relaxed and social, one ingredient, zero sugar"></div>
+        <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s3b.jpg" width="1080" height="1080" alt="Nobody drinks it straight and that is fine: earthy like a stronger matcha, best with cold coconut water"></div>
+        <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s4.jpg" width="1080" height="1080" alt="Over 500,000 cups served at the Kavahana bars"></div>
+        <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s5.jpg" width="1080" height="1080" alt="Rated 4.8 by the people who drink it daily, 96 percent would recommend"></div>
+        <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg" width="1080" height="1080" alt="Supplement facts: 1 teaspoon of dried noble kava root juice per serving, tasting notes and where most people start"></div>
+      </div>
+    </div>
+    <div class="dots2" id="dots2"></div>
+  </div>
+
+  <div>
+    <div class="buy">
+      <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>500,000+ cups enjoyed</span></div>
+      <h1><span class="mauna">KAVA NECTAR</span> STARTER KIT</h1>
+      <div class="eyebrow eyebrow-sub">Your daily kava ritual</div>
+      <div class="getline" id="bbGet"><span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social, from one ingredient, cold-pressed noble kava root. Scoop, mix into any cold drink and enjoy.</div>
+
+      <div class="optlabel">Size</div>
+      <div class="opt sel" data-o="4oz">
+        <span class="tag">Best deal &ndash; 34% savings</span>
+        <span class="rad"></span>
+        <span class="nm">45 servings
+          <small>Only $2.44 per serving</small>
+        </span>
+        <span class="pr">$109.99<s>$166.46</s></span>
+        <span class="optbens"><span>Starter kit free: 2 coconut shell cups, whisk, digital recipe guide</span><span>5 stick packs free, and again on your first renewal</span><span>45 fresh servings monthly. Skip or cancel anytime</span></span>
+      </div>
+      <div class="opt" data-o="2oz">
+        <span class="rad"></span>
+        <span class="nm">22 servings
+          <small>Only $2.73 per serving</small>
+        </span>
+        <span class="pr">$59.99<s>$98.96</s></span>
+        <span class="optbens"><span>Starter kit free: 2 coconut shell cups, whisk, digital recipe guide</span><span>5 stick packs free on your first renewal</span><span>A fresh 22-serving bag monthly. Skip or cancel anytime</span></span>
+      </div>
+
+            <div class="subline" id="bbSub" style="margin:0 0 12px">45 servings &middot; delivered monthly</div>
+      <button class="pill-cta">Get my Starter Kit &#8594;</button>
+      <div class="guarline">Love it or your money back</div>
+
+      <div class="icons3">
+        <div><div class="i">&#9684;</div>Refill reminder</div>
+        <div><div class="i">&#10005;</div>Cancel any time</div>
+        <div><div class="i">&#8635;</div>Renews at <b id="bbRen">$109.99</b>/mo</div>
+      </div>
+
+      <div class="quotecard">
+        <img class="av" src="https://bryce-wq2222.github.io/kavahana-pdp/img/avatar-brittney-full.jpg" width="76" height="76" alt="" loading="lazy">
+        <div>
+          <p>"Great alternative to taking the edge off without the after effects of alcohol! I can feel a sense of calm and uplift within minutes and it is fun to make drinks with!"</p>
+          <div class="w">Brittney D. &middot; Verified</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc">
+      <details open><summary>What is Kava Nectar?</summary><p>Kava Nectar is the cold-pressed juice of noble kava root, dried into a pure powder. Nothing extracted, nothing added. All of the unwind, none of the hangover.</p></details>
+      <details><summary>Ingredients &amp; benefits</summary><p>Alcohol and gardening &#127811; take the edge off but charge you the hangover, the fog, the wrecked sleep. Kava Nectar gives you the unwind without the next-day regret.</p><ul><li><b>Kavalactones (the tingle)</b> &#8594; relaxed body</li><li><b>Noble kava root</b> &#8594; social ease, still sharp</li><li><b>One pure ingredient</b> &#8594; clear head, no fog</li><li><b>Zero alcohol, zero sugar</b> &#8594; no crash tomorrow</li></ul><p><b>Relaxed + Social + Clear + Hangover-free = one cup.</b></p><p style="font-size:11px;color:var(--grey)">Herbal supplement. These statements have not been evaluated by the FDA.</p></details>
+      <details><summary>Science &amp; quality</summary><ul><li>Noble kava cultivars only</li><li>Grown 5 to 7 years in Vanuatu&#8217;s volcanic soil before harvest</li><li>Whole root, no stems or leaves</li><li>Every batch tested for purity and potency</li></ul></details>
+      <details><summary>Ready in 15 seconds</summary><ol><li><b>SCOOP:</b> 2 to 3 teaspoons of Kava Nectar</li><li><b>MIX:</b> into 12 to 16 oz of any non-alcoholic liquid. Whisk, shake, or blend.</li><li><b>ENJOY:</b> best over ice. Sip and let the calm set in.</li></ol></details>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function(){
+  var SIZES={
+    '4oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45c.jpg', halt:'The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs', s:'45 servings \u00b7 delivered monthly', r:'$109.99',
+           get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social, from one ingredient, cold-pressed noble kava root. Scoop, mix into any cold drink and enjoy.'},
+    '2oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22c.jpg', halt:'The 22 serving Starter Kit: one bag, two coconut shell cups and whisk', s:'22 servings \u00b7 delivered monthly', r:'$59.99',
+           get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social, from one ingredient, cold-pressed noble kava root. Scoop, mix into any cold drink and enjoy.'}
+  };
+  ['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45c.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22c.jpg'].forEach(function(u){var p=new Image();p.src=u;});
+  var topKey='4oz', btbKey='4oz';
+  function swapImgs(scope, s){
+    scope.forEach(function(hi){ if(hi.getAttribute('src')!==s.hero){hi.src=s.hero;hi.alt=s.halt;} });
+  }
+  function setSize(key, fromTop){
+    var s=SIZES[key]; if(!s) return;
+    if(fromTop){
+      topKey=key; btbKey=key;
+      document.querySelectorAll('.buy [data-o]').forEach(function(x){x.classList.toggle('sel', x.dataset.o===key)});
+      var $=function(i){return document.getElementById(i)};
+      $('bbSub').textContent=s.s;
+      $('bbRen').textContent=s.r;
+      $('bbGet').innerHTML=s.get;
+      swapImgs(document.querySelectorAll('#slides .heroimg'), s);
+      document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
+      swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);
+      var sl=document.getElementById('slides');
+      if(sl)sl.scrollTo({left:0,behavior:'smooth'});
+    } else {
+      btbKey=key;
+      document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
+      swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);
+    }
+  }
+  function stabilize(){
+    var gl=document.querySelector('.getline');
+    if(gl){
+      var orig=gl.innerHTML, h=0;
+      gl.style.minHeight='';
+      ['4oz','2oz'].forEach(function(k){ gl.innerHTML=SIZES[k].get; h=Math.max(h, gl.offsetHeight); });
+      gl.innerHTML=orig;
+      if(h>0&&h<160){ gl.style.minHeight=h+'px'; }
+    }
+    var oA=document.querySelector('.buy .opt[data-o="4oz"]'), oB=document.querySelector('.buy .opt[data-o="2oz"]');
+    if(oA&&oB){
+      var selA=oA.classList.contains('sel');
+      oA.classList.add('sel'); oB.classList.remove('sel'); var hA=oA.offsetHeight;
+      oB.classList.add('sel'); oA.classList.remove('sel'); var hB=oB.offsetHeight;
+      if(selA){ oA.classList.add('sel'); oB.classList.remove('sel'); } else { oB.classList.add('sel'); oA.classList.remove('sel'); }
+      document.querySelector('.buy').style.setProperty('--selmin', Math.max(hA,hB)+'px');
+    }
+  }
+  var VARIANTS={'4oz':'54144064749886','2oz':'54144064651582'};
+  document.querySelectorAll('.hero .pill-cta').forEach(function(b){
+    b.addEventListener('click',function(){ var k=b.closest('.btbsec')?btbKey:topKey; var GIFTS={cup:'54220256477502',whisk:'54220256510270',stix:'54143764922686'}; var f=document.createElement('form');f.method='post';f.action='https://shop.kavahana.com/cart/add'; var items=[[GIFTS.cup,1,'','1'],[GIFTS.cup,1,'','2'],[GIFTS.whisk,1,'']]; if(k==='4oz')items.push([GIFTS.stix,1,'']); items.push([VARIANTS[k],1,'19079102782']); items.forEach(function(it,i){ [['id',it[0]],['quantity',it[1]],['selling_plan',it[2]]].forEach(function(p){ if(p[1]==='')return; var inp=document.createElement('input');inp.type='hidden';inp.name='items['+i+']['+p[0]+']';inp.value=p[1];f.appendChild(inp); }); if(it[3]){ var pu=document.createElement('input');pu.type='hidden';pu.name='items['+i+'][properties][_u]';pu.value=it[3];f.appendChild(pu); } }); var rt=document.createElement('input');rt.type='hidden';rt.name='return_to';rt.value='/checkout';f.appendChild(rt); document.body.appendChild(f);fetch('/cart.js').then(function(r){return r.json()}).then(function(c){var up={};(c.items||[]).forEach(function(i){var s=i.sku||'';if(s.indexOf('KH-GIFT-')===0||s.indexOf('KH-STARTER-KIT')===0){up[i.key]=0}});if(Object.keys(up).length){return fetch('/cart/update.js',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({updates:up})})}}).catch(function(){}).then(function(){f.submit()}); });
+  });
+  stabilize();
+  window.addEventListener('load',stabilize);
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(stabilize);}
+  var _rst; window.addEventListener('resize',function(){ clearTimeout(_rst); _rst=setTimeout(stabilize,180); });
+  document.querySelectorAll('.opt').forEach(function(o){
+    o.addEventListener('click',function(){
+      if(o.dataset.o2){ setSize(o.dataset.o2, false); return; }
+      if(o.dataset.o) setSize(o.dataset.o, true);
+    });
+  });
+  var slides=document.getElementById('slides'), dots=document.getElementById('dots2');
+  if(slides&&dots){
+    var n=slides.children.length;
+    for(var i=0;i<n;i++){
+      (function(i){
+        var b=document.createElement('button');
+        b.type='button'; b.setAttribute('aria-label','Go to image '+(i+1));
+        if(i===0) b.className='on';
+        b.addEventListener('click',function(){ slides.scrollTo({left:slides.clientWidth*i,behavior:'smooth'}); });
+        dots.appendChild(b);
+      })(i);
+    }
+    var tick;
+    slides.addEventListener('scroll',function(){
+      clearTimeout(tick);
+      tick=setTimeout(function(){
+        var idx=Math.round(slides.scrollLeft/slides.clientWidth); if(idx>=n) idx=0;
+        [].forEach.call(dots.children,function(d,j){ d.className = j===idx ? 'on' : ''; });
+      },60);
+    });
+  }
+  document.querySelectorAll('.carou').forEach(function(c){
+    var key=c.dataset.carou;
+    var track=c.querySelector('.ctrack');
+    var dots=document.querySelector('[data-dots="'+key+'"]');
+    var slides=track.children;
+    function step(){ return slides[0] ? slides[0].getBoundingClientRect().width : track.clientWidth; }
+    function per(){ return Math.max(1, Math.round(track.clientWidth/step())); }
+    var perSlide=c.classList.contains('vid-carou');
+    function pages(){ return perSlide ? slides.length : Math.max(1, slides.length - per() + 1); }
+    if(dots){
+      for(var i=0;i<pages();i++){
+        (function(i){
+          var b=document.createElement('button'); b.type='button';
+          b.setAttribute('aria-label','Go to slide '+(i+1));
+          if(i===0) b.className='on';
+          b.addEventListener('click',function(){ track.scrollTo({left:step()*i,behavior:'smooth'}); });
+          dots.appendChild(b);
+        })(i);
+      }
+    }
+    function sync(){
+      if(!dots) return;
+      var idx=Math.round(track.scrollLeft/step());
+      [].forEach.call(dots.children,function(d,j){ d.className = j===idx ? 'on' : ''; });
+    }
+    var t; track.addEventListener('scroll',function(){ clearTimeout(t); t=setTimeout(sync,60); });
+    c.querySelector('.prev').addEventListener('click',function(){ track.scrollBy({left:-step(),behavior:'smooth'}); });
+    c.querySelector('.next').addEventListener('click',function(){ track.scrollBy({left:step(),behavior:'smooth'}); });
+  });
+})();
+</script>
+<script>
+(function(){
+  [].forEach.call(document.querySelectorAll('.ctrack'), function(tr){
+    var down=false, sx=0, sf=0, moved=0;
+    tr.addEventListener('pointerdown', function(e){
+      if(e.pointerType!=='mouse') return;
+      down=true; moved=0; sx=e.clientX; sf=tr.scrollLeft;
+      tr.classList.add('dragging');
+      try{ tr.setPointerCapture(e.pointerId); }catch(_){}
+    });
+    tr.addEventListener('pointermove', function(e){
+      if(!down) return;
+      var dx=e.clientX-sx;
+      if(Math.abs(dx)>moved) moved=Math.abs(dx);
+      tr.scrollLeft=sf-dx;
+    });
+    function up(){
+      if(!down) return;
+      down=false;
+      tr.classList.remove('dragging');
+      var w=tr.firstElementChild ? tr.firstElementChild.getBoundingClientRect().width : tr.clientWidth;
+      if(w>0) tr.scrollTo({left:Math.round(tr.scrollLeft/w)*w, behavior:'smooth'});
+    }
+    tr.addEventListener('pointerup', up);
+    tr.addEventListener('pointercancel', up);
+    tr.addEventListener('click', function(e){ if(moved>8){ e.preventDefault(); e.stopPropagation(); moved=0; } }, true);
+    tr.addEventListener('dragstart', function(e){ e.preventDefault(); });
+  });
+})();
+</script>
+<script>
+(function(){
+  var sl=document.getElementById('slides');
+  if(!sl) return;
+  var prev=document.querySelector('.gprev'), next=document.querySelector('.gnext');
+  var clone=sl.children[0].cloneNode(true); clone.setAttribute('aria-hidden','true'); sl.appendChild(clone);
+  var realN=sl.children.length-1;
+  function silentJump(px){ var b=sl.style.scrollBehavior; sl.style.scrollBehavior='auto'; sl.scrollLeft=px; void sl.offsetWidth; sl.style.scrollBehavior=b; }
+  function snapClone(){ if(Math.round(sl.scrollLeft/sl.clientWidth)>=realN){ silentJump(0); } }
+  var _ct; sl.addEventListener('scroll',function(){ clearTimeout(_ct); _ct=setTimeout(snapClone,90); });
+  function page(d){
+    var w=sl.clientWidth, i=Math.round(sl.scrollLeft/w)+d;
+    if(i<0){ silentJump(realN*w); i=realN-1; }
+    if(i>realN) i=1;
+    sl.scrollTo({left:i*w, behavior:'smooth'});
+  }
+  if(prev) prev.addEventListener('click', function(){ page(-1); });
+  if(next) next.addEventListener('click', function(){ page(1); });
+  var down=false, sx=0, sf=0, moved=0;
+  sl.addEventListener('pointerdown', function(e){
+    if(e.pointerType!=='mouse') return;
+    down=true; moved=0; sx=e.clientX; sf=sl.scrollLeft;
+    sl.classList.add('dragging');
+    try{ sl.setPointerCapture(e.pointerId); }catch(_){}
+  });
+  sl.addEventListener('pointermove', function(e){
+    if(!down) return;
+    var dx=e.clientX-sx;
+    if(Math.abs(dx)>moved) moved=Math.abs(dx);
+    sl.scrollLeft=sf-dx;
+  });
+  function up(e){
+    if(!down) return;
+    down=false;
+    sl.classList.remove('dragging');
+    sl.scrollTo({left:Math.round(sl.scrollLeft/sl.clientWidth)*sl.clientWidth, behavior:'smooth'});
+  }
+  sl.addEventListener('pointerup', up);
+  sl.addEventListener('pointercancel', up);
+  sl.addEventListener('click', function(e){ if(moved>8){ e.preventDefault(); e.stopPropagation(); moved=0; } }, true);
+  sl.addEventListener('dragstart', function(e){ e.preventDefault(); });
+
+})();
+</script>
+<script>
+(function(){
+  if(window.__kvVidLoader) return; window.__kvVidLoader=1;
+  function load(v){ if(v.dataset.poster){ v.poster=v.dataset.poster; delete v.dataset.poster; } var s=v.querySelector('source[data-src]'); if(s){ s.src=s.dataset.src; s.removeAttribute('data-src'); v.load(); } }
+  function pending(){ var all=[].slice.call(document.querySelectorAll('.vid-live video, .fnd-vid video')); return all.filter(function(v){ return v.dataset.poster || v.querySelector('source[data-src]'); }); }
+  var io=('IntersectionObserver' in window) ? new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){
+      if(e.target.tagName==='VIDEO'){ load(e.target); }
+      else { [].forEach.call(e.target.querySelectorAll('video'), load); }
+      io.unobserve(e.target);
+    }});
+  },{rootMargin:'900px 0px'}) : null;
+  function scan(){
+    var vids=pending(); if(!vids.length) return;
+    if(!io){ vids.forEach(load); return; }
+    [].forEach.call(document.querySelectorAll('.vid-carou, .fnd-vid'), function(g){ io.observe(g); });
+    vids.forEach(function(v){ io.observe(v); });
+  }
+  scan();
+  document.addEventListener('DOMContentLoaded', scan);
+  window.addEventListener('load', scan);
+  setTimeout(scan, 1500); setTimeout(scan, 4000);
+  var once=function(){ scan(); window.removeEventListener('scroll', once); window.removeEventListener('touchstart', once); };
+  window.addEventListener('scroll', once, {passive:true}); window.addEventListener('touchstart', once, {passive:true});
+})();
+</script>
+<script>
+(function(){
+  var g=document.querySelector('.howto-gif video');
+  if(g&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(es,io){es.forEach(function(e){if(e.isIntersecting){g.play().catch(function(){});}else{g.pause();}});},{rootMargin:'200px 0px'}).observe(g);
+  }else if(g){g.setAttribute('autoplay','');g.play().catch(function(){});}
+})();
+</script>
+<script>
+(function(){
+  var wraps = [].slice.call(document.querySelectorAll('.vid-live'));
+  wraps.forEach(function(w){
+    var v = w.querySelector('video'), b = w.querySelector('.play');
+    function start(){
+      var s=v.querySelector('source[data-src]'); if(s){ s.src=s.dataset.src; s.removeAttribute('data-src'); v.load(); }
+      wraps.forEach(function(o){ if(o!==w){ var ov=o.querySelector('video'); ov.pause(); o.classList.remove('playing'); } });
+      v.muted=false; v.volume=1;
+      v.play().then(function(){ w.classList.add('playing'); }).catch(function(){
+        v.muted=true;
+        v.play().then(function(){ w.classList.add('playing'); }).catch(function(){});
+      });
+    }
+    b.addEventListener('click', start);
+    v.addEventListener('click', function(){
+      if(v.paused){ start(); } else { v.pause(); w.classList.remove('playing'); }
+    });
+    v.addEventListener('pause', function(){ w.classList.remove('playing'); });
+  });
+})();
+</script>
+<script>
+(function(){
+  [].forEach.call(document.querySelectorAll('h1'),function(el){ if(!el.closest('#kv-page,#kvl-page')) el.style.display='none'; });
+  var p=document.getElementById('kv-page'); p=p&&p.parentElement;
+  while(p&&p!==document.body){
+    p.style.paddingTop='0'; p.style.paddingBottom='0';
+    p.style.marginTop='0'; p.style.marginBottom='0';
+    p.style.maxWidth='none'; p.style.background='transparent';
+    p.style.display='block'; p.style.columns='auto';
+    var ov=getComputedStyle(p);
+    if(ov.overflow!=='visible'||ov.overflowX!=='visible'||ov.overflowY!=='visible'){ p.style.overflow='visible'; }
+    p=p.parentElement;
+  }
+  /* body overflow:hidden kills position:sticky; the root scroller is exempt,
+     so move the horizontal guard up to <html> and free the body */
+  var bs=getComputedStyle(document.body);
+  if(bs.overflow!=='visible'||bs.overflowX!=='visible'||bs.overflowY!=='visible'){
+    document.body.style.overflow='visible';
+    document.documentElement.style.overflowX='hidden';
+  }
+})();
+</script>
+<script>(function(){document.querySelectorAll(".acc").forEach(function(acc){var dets=[].slice.call(acc.querySelectorAll("details"));dets.forEach(function(d){var sum=d.querySelector("summary");var body=document.createElement("div");body.className="acc-body";var inner=document.createElement("div");inner.className="acc-inner";while(sum.nextSibling){inner.appendChild(sum.nextSibling)}body.appendChild(inner);d.appendChild(body);if(d.open){d.classList.add("is-open");body.style.height="auto"}else{body.style.height="0px"}sum.addEventListener("click",function(e){e.preventDefault();if(d.classList.contains("is-open")){close(d)}else{dets.forEach(function(o){if(o!==d&&o.classList.contains("is-open"))close(o)});openD(d)}})});function openD(d){var b=d.querySelector(".acc-body");d.setAttribute("open","");d.classList.add("is-open");b.style.height="0px";void b.offsetHeight;b.style.height=b.firstChild.scrollHeight+"px";b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"){b.style.height=d.classList.contains("is-open")?"auto":"0px";b.removeEventListener("transitionend",te)}})}function close(d){var b=d.querySelector(".acc-body");b.style.height=b.firstChild.scrollHeight+"px";void b.offsetHeight;b.style.height="0px";d.classList.remove("is-open");b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"&&!d.classList.contains("is-open")){d.removeAttribute("open");b.removeEventListener("transitionend",te)}})}})})();</script>
+<style id="kvl-sticky-css">
+#kvl-sticky{position:fixed;left:0;right:0;bottom:0;z-index:2147481900;background:#16211A;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom));transform:translateY(115%);opacity:0;pointer-events:none;will-change:transform;transition:transform .38s cubic-bezier(.22,.9,.32,1),opacity .32s ease}
+#kvl-sticky.kvl-on{transform:translateY(0);opacity:1;pointer-events:auto}
+#kvl-sticky .kvl-ks-t{margin:0;color:#F8F3E8;font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;font-size:12px;font-weight:600;line-height:1.35;letter-spacing:0}
+#kvl-sticky button{margin:0;background:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);color:#fff;border:0;border-radius:999px;padding:13px 20px;font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;cursor:pointer;min-height:46px}
+@media(min-width:880px){#kvl-sticky{justify-content:center;gap:26px;padding:12px 24px}#kvl-sticky .kvl-ks-t{font-size:13px}}
+@media(prefers-reduced-motion:reduce){#kvl-sticky{transition:none}}
+</style>
+<div id="kvl-sticky" aria-hidden="true">
+  <p class="kvl-ks-t">From $59.99 &middot; Up to 39% off<br>30 day guarantee &middot; Free shipping</p>
+  <button id="kvl-sticky-btn" type="button" class="kvl-cta">Get my Starter Kit &#8594;</button>
+</div>
+<script>
+(function(){
+  function buyEl(){
+    var w=document.querySelectorAll('[id="kv-page"]');
+    var last=w.length?w[w.length-1]:null;
+    var b=last?last.querySelector(".buy"):null;
+    return b||document.getElementById("kvl-buybox");
+  }
+  function goBuy(e){
+    if(e&&e.preventDefault)e.preventDefault();
+    var t=buyEl(); if(!t) return;
+    var before=window.pageYOffset||document.documentElement.scrollTop||0;
+    try{ t.scrollIntoView({behavior:"smooth",block:"start"}); }
+    catch(err){ t.scrollIntoView(true); }
+    /* some in-app webviews and reduced-motion setups ignore smooth
+       scrolling entirely. If nothing moved, jump. */
+    setTimeout(function(){
+      var now=window.pageYOffset||document.documentElement.scrollTop||0;
+      if(Math.abs(now-before)<2){ try{ t.scrollIntoView(true); }catch(e2){} }
+    },420);
+  }
+  function bind(){
+    [].forEach.call(document.querySelectorAll(".kvl-cta"),function(b){
+      if(b.getAttribute("data-kvl-bound"))return;
+      b.setAttribute("data-kvl-bound","1");
+      b.addEventListener("click",goBuy);
+    });
+  }
+  bind();
+  var bar=document.getElementById("kvl-sticky");
+  var heroSec=document.querySelector(".kvl-hero");
+  function sync(){
+    if(!bar)return;
+    var vh=window.innerHeight||document.documentElement.clientHeight||0;
+    var passed=false, boxIn=false, r;
+    if(heroSec){ r=heroSec.getBoundingClientRect(); passed = r.bottom <= 0; }
+    var t=buyEl();
+    if(t){ r=t.getBoundingClientRect(); boxIn = (r.top < vh*0.85) && (r.bottom > 0); }
+    var on = passed && !boxIn;
+    bar.classList.toggle("kvl-on", on);
+    bar.setAttribute("aria-hidden", on?"false":"true");
+  }
+  sync();
+  window.addEventListener("scroll",sync,{passive:true});
+  window.addEventListener("resize",sync);
+  window.addEventListener("orientationchange",sync);
+  window.addEventListener("pageshow",function(e){ bind(); sync(); });
+  setTimeout(function(){ bind(); sync(); },600);
+  setTimeout(function(){ bind(); sync(); },2500);
+})();
+</script>
+<style id="kv-drawer-css">
+#kv-drawer-offer{background:#F8F3E8;border:1px solid #E6DFCE;border-radius:14px;padding:16px 16px 14px;margin:4px 0 16px;text-align:left}
+#kv-drawer-offer .kvo-k{display:block;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:10.5px;font-weight:500;letter-spacing:.2em;color:#367542;text-transform:uppercase;margin-bottom:6px}
+#kv-drawer-offer .kvo-s{display:block;font-family:Newsreader,ui-serif,Georgia,serif;font-weight:600;font-size:27px;line-height:1.08;letter-spacing:-.012em;color:#1F1D17;margin:0 0 7px}
+#kv-drawer-offer .kvo-sub{display:block;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.5;color:#6A6659;margin-bottom:13px}
+#kv-drawer-offer .kvo-cta{display:block;text-align:center;background:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);color:#fff;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:500;font-size:13.5px;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:14px 18px;cursor:pointer;box-shadow:0 6px 18px -8px rgba(54,117,66,.7)}
+#kv-drawer-links{list-style:none;margin:0;padding:0}
+#left-drawer-slot .sidebar-nav ul.mt-5{margin-top:0!important}
+#left-drawer-slot .sidebar-nav div.mt-5.space-y-5{margin-top:30px!important}
+#modals-leftDrawer .drawer-transition-host{will-change:transform}
+@keyframes kvDrawerIn{from{transform:translateX(-102%)}to{transform:translateX(0)}}
+#modals-leftDrawer #left-drawer-slot{animation:kvDrawerIn .34s cubic-bezier(.22,.9,.32,1)}
+#left-drawer-slot form[action*="/search"],#left-drawer-slot input[type="search"]{display:none!important}
+</style>
+<script>
+(function(){
+  if(window.__kvDrawer) return; window.__kvDrawer=1;
+  function transform(root){
+    var nav=root.querySelector('.sidebar-nav');
+    if(!nav) return false;
+    if(nav.querySelector('#kv-drawer-offer')) return true;
+    var ul=nav.querySelector('ul');
+    if(!ul) return false;
+    nav.querySelectorAll('a').forEach(function(a){
+      var h=a.getAttribute('href')||'';
+      if(h.indexOf('/collections')===0||h.indexOf('/search')===0||h.indexOf('wholesale')>-1){var li=a.closest('li');(li||a).remove();}
+    });
+    var linkCls=(ul.querySelector('a')||{}).className||'';
+    var liCls=(ul.querySelector('li')||{}).className||'';
+    var panel=document.createElement('div');
+    panel.id='kv-drawer-offer';
+    panel.innerHTML='<span class="kvo-k">Starter kit</span>'+
+      '<span class="kvo-s">Save up to 39%</span>'+
+      '<span class="kvo-sub">Starter kit free: 2 coconut shell cups, whisk, digital recipe guide, 5 stick packs free, and again on your first renewal</span>'+
+      '<span class="kvo-cta" data-kv-cta>Get my starter kit &rarr;</span>';
+    var anchors=document.createElement('ul');
+    anchors.id='kv-drawer-links';
+    [['Recipes','/pages/recipes'],['Reviews','/pages/customer-reviews'],['About us','/pages/about']].forEach(function(p){
+      var li=document.createElement('li'); li.className=liCls;
+      var a=document.createElement('a'); a.className=linkCls; a.textContent=p[0]; a.href=p[1];
+      li.appendChild(a); anchors.appendChild(li);
+    });
+    ul.parentNode.insertBefore(panel,ul);
+    ul.parentNode.insertBefore(anchors,ul);
+    ['customer_login_link','customer_register_link'].forEach(function(id){
+      var a=nav.querySelector('#'+id);
+      if(a&&linkCls&&a.className.indexOf('font-heading')===-1){a.className=(a.className+' font-heading heading-secondary block').trim();var li=a.closest('li');if(li&&li.className.indexOf('text-lg')===-1)li.className=(li.className+' text-lg').trim();}
+    });
+    return true;
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target&&e.target.closest&&e.target.closest('[data-kv-cta]');
+    if(!b) return;
+    e.preventDefault();
+    window.__kvCtaHits=(window.__kvCtaHits||0)+1;
+    var closed=false;
+    try{if(window.Alpine&&Alpine.store('modals')&&Alpine.store('modals').closeAll){Alpine.store('modals').closeAll();closed=true;}}catch(err){}
+    if(!closed){try{if(window.Alpine&&Alpine.store('modals')&&Alpine.store('modals').close){Alpine.store('modals').close('nav');closed=true;}}catch(err){}}
+    if(!closed){var slot=document.getElementById('left-drawer-slot');if(slot){var x=slot.querySelector('.justify-between button')||slot.querySelector('button');if(x)x.click();}}
+    var t=document.querySelector('#kv-page .buy');
+    if(t) setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'})},300);
+  },true);
+  function sweep(){
+    document.querySelectorAll('template').forEach(function(t){
+      if(t.content&&t.content.querySelector&&t.content.querySelector('.sidebar-nav')&&!t.content.querySelector('#kv-drawer-offer')) transform(t.content);
+    });
+    var slot=document.getElementById('left-drawer-slot');
+    if(slot&&slot.querySelector('.sidebar-nav')&&!slot.querySelector('#kv-drawer-offer')) transform(slot);
+  }
+  sweep();
+  var _swt;new MutationObserver(function(){clearTimeout(_swt);_swt=setTimeout(sweep,200)}).observe(document.documentElement,{subtree:true,childList:true});
+})();
+</script>
