@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Kavahana &#183; 5 Reasons</title>
+<title>6 things about kava I learned behind the bar</title>
 <link rel="preload" as="font" type="font/woff2" href="https://bryce-wq2222.github.io/kavahana-pdp/fonts/newsreader-var.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="https://bryce-wq2222.github.io/kavahana-pdp/fonts/chivo-var.woff2" crossorigin>
 <style>/* Horizontal guard. On the root element overflow-x:clip cannot pair with a
@@ -79,301 +79,329 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 @media(max-width:1000px){#kv-page .hero .galwrap{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}}
 </style>
 <style id="kvl-css">
-/* ---------- FOUNDATION, aliased verbatim from the PDP style block ---------
+/* ---------- FOUNDATION, aliased from the PDP style block ------------------
    Same declarations, same order, only the id is different. The @font-face
-   rules are NOT repeated: they are document-level in the PDP style block that
+   rules are NOT repeated: they are document level in the PDP style block that
    ships immediately above this one in both outputs, so Chivo, Newsreader and
-   Mauna Loa are already loaded and resolve here by family name.
+   Mauna Loa are already loaded and resolve here by family name. (Asserted at
+   build time.)
    ------------------------------------------------------------------------ */
 #kvl-page,#kvl-page :where(*:not(svg):not(svg *)),#kvl-page :where(*:not(svg):not(svg *))::before,#kvl-page :where(*:not(svg):not(svg *))::after{all:revert}
-#kvl-page{--green:#367542;--green2:#73AE57;--mint:#8AC79A;--cream:#F8F3E8;--bone:#FFFFFF;--ink:#1F1D17;--deep:#14261A;--lav:#F8F3E8;--line:#E6DFCE;--grey:#6A6659;--clay:#8A4B3B;--card:#FFFFFF;--grad:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);}
+#kvl-page{--green:#367542;--green2:#73AE57;--mint:#8AC79A;--cream:#F8F3E8;--bone:#FFFFFF;--ink:#1F1D17;--deep:#14261A;--line:#E6DFCE;--grey:#6A6659;--rule:#DED6C3;}
 #kvl-page *{margin:0;padding:0;box-sizing:border-box}
 #kvl-page{-webkit-text-size-adjust:100%;overflow-x:clip}
-#kvl-page{font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;background:#fff;color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:0}
+#kvl-page{font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bone);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:0}
 #kvl-page img{max-width:100%;display:block}
 #kvl-page h1,#kvl-page h2{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;letter-spacing:-.012em;line-height:1.06}
 #kvl-page b,#kvl-page strong{font-weight:600}
-#kvl-page .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
-#kvl-page section.green{background:var(--green);color:#fff}
-#kvl-page section.green h1,#kvl-page section.green h2,#kvl-page section.green h3{color:#fff}
-#kvl-page section.green p,#kvl-page section.green .lead{color:rgba(255,255,255,.82)}
-#kvl-page section.green .eyebrow{color:var(--mint)}
-#kvl-page .eyebrow{font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:7px}
-#kvl-page .lead{color:var(--grey);font-size:16.5px;max-width:54ch;margin-bottom:0}
-#kvl-page .pill-cta{display:block;width:100%;max-width:420px;margin:0 auto;background:var(--grad);color:#fff;border:0;font:inherit;font-weight:500;font-size:15px;padding:18px 26px;border-radius:999px;cursor:pointer;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 6px 18px -8px rgba(54,117,66,.7);transition:transform .12s,box-shadow .16s}
-#kvl-page .pill-cta:hover{transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(54,117,66,.8)}
-#kvl-page .guar{text-align:center;font-size:12.5px;color:var(--grey);margin-top:12px}
-#kvl-page .guar b{color:var(--ink)}
-@media(max-width:620px){
-  #kvl-page .wrap{padding:0 18px}
-  #kvl-page .pill-cta{font-size:15px;padding:16px 20px}
-}
-
-/* ---------- MOBILE BREATHING ROOM ----------------------------------------
-   Bryce's standing rule: 32 to 40px TOTAL from glyph to viewport edge on
-   mobile, per side, for every text block. Gutters are stacked on SEPARATE
-   elements, never on the same element, because they do not stack when two
-   classes share one element.
-     <=620px : .wrap 18px  +  text container 16px  =  34px TOTAL per side
-     621 to 879px : .wrap 24px  +  text container 16px  =  40px TOTAL per side
-     >=880px : .wrap 24px, text container 0 (2 column grid, lines under 62ch)
-   Images sit inside .wrap only, so they are viewport minus 36px and never
-   100vw (#kvl-page is plain 100% wide, so a 100vw bleed inside it would
-   overhang the viewport by the scrollbar width).
-   Nothing here uses "padding: X 0" on a text container.
-   ------------------------------------------------------------------------ */
 
 /* The PDP style block makes #kv-page a 100vw full-bleed block. 100vw includes
-   the desktop scrollbar, so it overhangs the viewport by the scrollbar width
-   and eats ~7px off every .wrap gutter. The verbatim PDP hero wrapper keeps
-   that behaviour; THIS wrapper never inherits it (it is #kvl-page, and the
-   100vw rule names #kv-page), so it runs at plain 100% and its gutters measure
-   exactly what the CSS says. Declared, not just left to the default, because
-   the wrapper sits in a Shopify section whose own layout is unknown. */
+   the desktop scrollbar, so it overhangs the viewport by the scrollbar width.
+   The verbatim PDP hero wrapper keeps that behaviour; THIS wrapper never
+   inherits it (the 100vw rule names #kv-page), so it runs at plain 100% and
+   its gutters measure exactly what the CSS says. Declared, not left to the
+   default, because the wrapper sits in a Shopify section whose own layout is
+   unknown. */
 #kvl-page{display:block;width:100%;text-align:left}
 
-/* announcement strip ---------------------------------------------------- */
-#kvl-page .kvl-ann{background:var(--cream);border-bottom:1px solid var(--line);padding:10px 0}
-#kvl-page .kvl-ann .kvl-annin{text-align:center;padding:0 16px}
-#kvl-page .kvl-ann .eyebrow{margin:0;line-height:1.5}
+/* ---------- THE MEASURE AND THE MOBILE BREATHING ROOM ---------------------
+   Bryce's standing rule: 32 to 40px TOTAL from glyph to viewport edge on
+   mobile, per side. Gutters are stacked on SEPARATE elements, never on the
+   same element, because 2 paddings on 1 element do not stack.
 
-/* hero ------------------------------------------------------------------ */
-#kvl-page .kvl-hero{padding:30px 0 10px}
-#kvl-page .kvl-herogrid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;max-width:1140px;margin:0 auto;align-items:center}
-#kvl-page .kvl-h1{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;letter-spacing:-.012em;line-height:1.06;font-size:clamp(33px,8.7vw,40px);text-wrap:balance;margin:0 0 14px}
+     .kvl-wrap  is the full-width band's inner. It carries the outer gutter.
+     .kvl-col   is the reading measure. It carries the inner gutter.
+
+     <=620px   (360, 375, 390, 430 phones) : 18 + 16 = 34px TOTAL per side
+     621 to ~760px                         : 24 + 16 = 40px TOTAL per side
+     above that the 712px cap on .kvl-col takes over and the gutter grows on
+     its own, so the text measure holds at 712 - 32 = 680px at every width.
+   Measured, not asserted: glyph-to-edge is 34px at 360 / 375 / 390 / 430,
+   40px at 621, and the measure is exactly 680px from 768 up.
+
+   Nothing here uses "padding: X 0" on a text container.
+   ------------------------------------------------------------------------ */
+#kvl-page .kvl-wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+#kvl-page .kvl-col{max-width:712px;margin:0 auto;padding:0 16px}
+
+/* ---------- masthead ----------------------------------------------------- */
+#kvl-page .kvl-masthead{padding:34px 0 0}
+#kvl-page .kvl-kicker{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--green);line-height:1.5;margin:0 0 14px}
+#kvl-page .kvl-h1{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:clamp(34px,8.6vw,42px);line-height:1.08;letter-spacing:-.015em;text-wrap:balance;margin:0 0 16px}
 #kvl-page .kvl-br{display:none}
-#kvl-page .kvl-deck{font-size:17.5px;line-height:1.55;color:var(--grey);max-width:36ch;margin:0 0 16px}
-#kvl-page .kvl-proofline{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12.5px;line-height:1.5;color:var(--grey);margin:0 0 18px}
-#kvl-page .kvl-proofline .kvl-s{color:var(--green);letter-spacing:1.5px;font-size:14px}
-#kvl-page .kvl-hmedia{margin:4px 0 0}
+#kvl-page .kvl-dek{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:19.5px;line-height:1.45;color:var(--grey);max-width:40ch;margin:0 0 24px}
 
-/* shared media ---------------------------------------------------------- */
-#kvl-page .kvl-media,#kvl-page .kvl-hmedia{margin:0}
+/* ---------- byline ------------------------------------------------------- */
+#kvl-page .kvl-byline{display:flex;align-items:center;gap:12px;padding:0 0 18px;border-bottom:1px solid var(--rule)}
+/* the circle is the wrapper; the photo inside it is zoomed and translated so
+   the face lands on the centre. See the AV_ZOOM / AV_FACE note in the build. */
+#kvl-page .kvl-avwrap{position:relative;width:48px;height:48px;flex:none;border-radius:50%;overflow:hidden;background:#EDE4D1;display:block}
+#kvl-page .kvl-avwrap--gap{border:2px dashed #C9C2B0;background:#F4EFE3}
+#kvl-page .kvl-av{position:absolute;left:50%;top:50%;width:230%;height:230%;max-width:none;object-fit:cover;transform:translate(-51%,-35%)}
+#kvl-page .kvl-byname{font-size:14.5px;font-weight:500;line-height:1.4;color:var(--ink);margin:0}
+#kvl-page .kvl-bymeta{font-size:12.5px;font-weight:400;line-height:1.45;color:var(--grey);margin:2px 0 0}
+
+/* ---------- shared media ------------------------------------------------- */
+#kvl-page .kvl-fig{margin:0}
 #kvl-page .kvl-img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:16px;background:#EDE4D1;display:block}
+#kvl-page .kvl-cap{font-size:12.5px;font-style:italic;line-height:1.5;color:var(--grey);margin:10px 0 0}
 #kvl-page .kvl-gap{aspect-ratio:1/1;border:2px dashed #C9C2B0;border-radius:16px;background:#F4EFE3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:9px}
 #kvl-page .kvl-gaplbl{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:500}
 #kvl-page .kvl-gap p{font-size:12.5px;line-height:1.5;color:var(--grey);max-width:32ch}
 
-/* reasons --------------------------------------------------------------- */
-#kvl-page .kvl-rsn{padding:34px 0}
-#kvl-page .kvl-rsn--tint{background:var(--cream)}
-#kvl-page .kvl-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;max-width:1140px;margin:0 auto;align-items:center}
-#kvl-page .kvl-n{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.02em;color:var(--green);margin:0 0 8px}
-#kvl-page .kvl-h{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:clamp(26px,7.1vw,34px);line-height:1.1;letter-spacing:-.012em;text-wrap:balance;margin:0 0 12px}
-#kvl-page .kvl-p{font-size:17px;line-height:1.62;color:var(--ink);max-width:62ch;margin:0}
-#kvl-page .kvl-trust{display:flex;gap:10px;align-items:flex-start;background:#EDF3E6;border-radius:12px;padding:14px 16px;margin:16px 0 0;max-width:62ch}
-#kvl-page .kvl-tick{color:var(--green);font-size:13px;line-height:1.6;flex:none}
-#kvl-page .kvl-trust p{font-size:13.5px;line-height:1.6;color:var(--ink);margin:0}
+/* ---------- lead image --------------------------------------------------- */
+#kvl-page .kvl-leadwrap{padding:24px 0 0}
+#kvl-page .kvl-lead{margin:0 auto;max-width:880px}
+#kvl-page .kvl-lead .kvl-img{aspect-ratio:4/3}
+#kvl-page .kvl-lead .kvl-gap{aspect-ratio:4/3}
+/* the lead runs wider than the text measure, so its caption aligns to the
+   IMAGE's left edge, which is the standing convention in print and online
+   editorial. At <=620px the image is full bleed and the caption goes back onto
+   the body measure instead (34px), because a caption flush to a phone's screen
+   edge reads as a UI label, not as a caption. */
+#kvl-page .kvl-lead .kvl-cap{padding:0}
 
-/* mid CTA band ---------------------------------------------------------- */
-#kvl-page .kvl-mid{padding:42px 0}
-#kvl-page .kvl-ctr{max-width:720px;margin:0 auto;text-align:center}
-#kvl-page .kvl-midh{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:clamp(28px,7.2vw,40px);line-height:1.08;letter-spacing:-.012em;text-wrap:balance;margin:0 0 12px}
-#kvl-page .kvl-midsub{font-size:16px;line-height:1.6;max-width:46ch;margin:0 auto 22px}
-#kvl-page section.green .kvl-cta--inv{background:#fff;color:var(--green);box-shadow:0 6px 18px -8px rgba(0,0,0,.4)}
-#kvl-page section.green .kvl-cta--inv:hover{box-shadow:0 10px 24px -8px rgba(0,0,0,.5)}
+/* ---------- body copy ---------------------------------------------------- */
+#kvl-page .kvl-p{font-size:17px;line-height:1.7;color:var(--ink);margin:0 0 22px}
+#kvl-page .kvl-p:last-child{margin-bottom:0}
+#kvl-page .kvl-p--open{font-size:18.5px;line-height:1.62}
+#kvl-page .kvl-standfirst{padding-top:26px;padding-bottom:8px}
 
-/* proof strip ----------------------------------------------------------- */
-#kvl-page .kvl-proof{padding:40px 0;background:var(--cream)}
-#kvl-page .kvl-proofin{max-width:1140px;margin:0 auto}
-#kvl-page .kvl-proofh{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:clamp(26px,6.6vw,38px);line-height:1.08;letter-spacing:-.012em;text-align:center;text-wrap:balance;margin:0 0 22px}
-#kvl-page .kvl-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
-#kvl-page .kvl-card{background:var(--bone);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0}
-#kvl-page .kvl-stars{color:var(--green);letter-spacing:1.5px;font-size:14px;line-height:1;margin:0 0 10px}
-#kvl-page .kvl-q{font-size:15.5px;line-height:1.6;color:var(--ink);margin:0}
-#kvl-page .kvl-attr{font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin:12px 0 0}
+/* ---------- the 6 numbered items ----------------------------------------
+   The tint band runs the FULL width of the page; the text stays on the
+   measure. That is the .rsn / .rsn--tint rhythm from the Maju model, and it
+   is what makes a long scroll read as chapters instead of 1 wall.
+   ------------------------------------------------------------------------ */
+#kvl-page .kvl-item{padding:34px 0}
+#kvl-page .kvl-item--tint{background:var(--cream)}
+#kvl-page .kvl-n{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:34px;line-height:1;letter-spacing:-.02em;color:var(--green);margin:0 0 6px}
+#kvl-page .kvl-h2{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:clamp(27px,7.1vw,33px);line-height:1.12;letter-spacing:-.015em;text-wrap:balance;margin:0 0 18px}
+#kvl-page .kvl-item .kvl-fig{margin-top:26px}
 
-/* closing --------------------------------------------------------------- */
-#kvl-page .kvl-final{padding:44px 0 34px}
-#kvl-page .kvl-finalh{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-size:clamp(30px,7.6vw,44px);line-height:1.06;letter-spacing:-.012em;text-wrap:balance;margin:0 0 12px}
-#kvl-page .kvl-finalsub{font-size:16.5px;line-height:1.6;color:var(--grey);max-width:50ch;margin:0 auto 22px}
-#kvl-page .kvl-trustline{margin-top:14px;line-height:1.65}
+/* ---------- pull quote ---------------------------------------------------
+   Editorial treatment: large Newsreader italic behind a green rule, small
+   grey attribution. No stars above it, no oversized quote glyph, no card.
+   ------------------------------------------------------------------------ */
+#kvl-page .kvl-pq{padding:6px 0 34px}
+#kvl-page .kvl-pqin{border-left:3px solid var(--green);padding-left:20px}
+#kvl-page .kvl-pqt{font-family:Newsreader,ui-serif,Georgia,serif;font-weight:400;font-style:italic;font-size:24px;line-height:1.34;letter-spacing:-.012em;color:var(--ink);margin:0}
+#kvl-page .kvl-pqa{font-size:12px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);margin:14px 0 0}
 
-/* ---------- 621px to 879px: single column, 40px total to the edge -------- */
-@media(max-width:879px){
-  #kvl-page .kvl-htext,#kvl-page .kvl-body,#kvl-page .kvl-ctr,#kvl-page .kvl-proofin{padding:0 16px}
-  #kvl-page .kvl-hmedia,#kvl-page .kvl-media{margin-left:0;margin-right:0}
+/* ---------- signoff ------------------------------------------------------ */
+#kvl-page .kvl-signoff{padding:34px 0 0}
+#kvl-page .kvl-sig{font-family:'Mauna Loa',ui-serif,'Iowan Old Style',Georgia,serif;font-weight:400;letter-spacing:.03em;color:var(--green);font-size:40px;line-height:1.1;margin:20px 0 0}
+/* the seam. A hairline and then real white space is what stops the buy box
+   reading as the article's conclusion, which is the moment a reader feels
+   tricked. BLOG-CRAFT 1.7. It sits inside .kvl-col so it lands on exactly the
+   same measure as the hairline under the byline, at every width. */
+#kvl-page .kvl-seam{border:0;border-top:1px solid var(--rule);height:0;margin:36px 0 0}
+#kvl-page .kvl-endpad{height:34px}
+
+/* ---------- <=620px: full-bleed lead, 34px total to the edge -------------- */
+@media(max-width:620px){
+  #kvl-page .kvl-wrap{padding:0 18px}
+  #kvl-page .kvl-lead{margin-left:-18px;margin-right:-18px;max-width:none}
+  #kvl-page .kvl-lead .kvl-img{border-radius:0}
+  #kvl-page .kvl-lead .kvl-gap{border-radius:0;border-left:0;border-right:0}
+  #kvl-page .kvl-lead .kvl-cap{padding:0 34px}
 }
 
-/* ---------- >=880px: 2 column rows, photo side alternates ---------------- */
+/* ---------- >=880px: the reading page ------------------------------------ */
 @media(min-width:880px){
-  #kvl-page .kvl-hero{padding:44px 0 16px}
-  #kvl-page .kvl-herogrid{grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:48px}
-  #kvl-page .kvl-h1{font-size:clamp(44px,4.5vw,58px);margin-bottom:16px}
-  #kvl-page .kvl-deck{font-size:18.5px;max-width:40ch}
-  #kvl-page .kvl-htext .pill-cta{margin-left:0}
-  #kvl-page .kvl-rsn{padding:58px 0}
-  #kvl-page .kvl-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px}
-  #kvl-page .kvl-grid--rev .kvl-media{order:2}
-  #kvl-page .kvl-n{font-size:36px}
-  #kvl-page .kvl-h{font-size:clamp(32px,3.2vw,42px)}
-  #kvl-page .kvl-p{font-size:18px}
-  #kvl-page .kvl-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-  #kvl-page .kvl-mid{padding:56px 0}
-  #kvl-page .kvl-proof{padding:58px 0}
-  #kvl-page .kvl-final{padding:60px 0 40px}
+  #kvl-page .kvl-masthead{padding:56px 0 0}
+  #kvl-page .kvl-h1{font-size:clamp(46px,4.6vw,58px);margin-bottom:20px}
+  #kvl-page .kvl-dek{font-size:21px;max-width:44ch;margin-bottom:30px}
+  #kvl-page .kvl-byline{gap:14px;padding-bottom:22px}
+  #kvl-page .kvl-avwrap{width:56px;height:56px}
+  #kvl-page .kvl-byname{font-size:15px}
+  #kvl-page .kvl-bymeta{font-size:13px}
+  #kvl-page .kvl-leadwrap{padding-top:34px}
+  #kvl-page .kvl-standfirst{padding-top:36px;padding-bottom:14px}
+  #kvl-page .kvl-p{font-size:18.5px;line-height:1.72;margin-bottom:24px}
+  #kvl-page .kvl-p--open{font-size:20px;line-height:1.62}
+  #kvl-page .kvl-item{padding:54px 0}
+  #kvl-page .kvl-n{font-size:42px;margin-bottom:8px}
+  #kvl-page .kvl-h2{font-size:clamp(32px,3.2vw,38px);margin-bottom:22px}
+  #kvl-page .kvl-item .kvl-fig{margin-top:30px}
+  #kvl-page .kvl-cap{font-size:13px}
+  #kvl-page .kvl-pq{padding:10px 0 54px}
+  #kvl-page .kvl-pqin{padding-left:26px}
+  #kvl-page .kvl-pqt{font-size:30px}
+  #kvl-page .kvl-signoff{padding-top:54px}
+  #kvl-page .kvl-sig{font-size:46px}
+  #kvl-page .kvl-seam{margin-top:44px}
+  #kvl-page .kvl-endpad{height:44px}
 }
 
-/* ---------- 880 to 1023px: the 2 column grid starts here but the viewport is
-   still narrow, and .wrap alone leaves 24px. 8px more on the text containers
-   holds the band at 32px total, the same floor the mobile rule enforces. ---- */
-@media(min-width:880px) and (max-width:1023px){
-  #kvl-page .kvl-htext,#kvl-page .kvl-body,#kvl-page .kvl-ctr,#kvl-page .kvl-proofin{padding:0 8px}
-}
-
-/* ---------- the H1 line break only exists where the line is long enough -- */
+/* ---------- the H1 hand break only exists where the line is long enough --- */
 @media(min-width:760px){#kvl-page .kvl-br{display:initial}}
 </style>
 <div id="kvl-page" class="kvl">
-  <section class="kvl-ann">
-    <div class="wrap"><div class="kvl-annin"><div class="eyebrow">From the Kavahana bars in Santa Monica and Hollywood</div></div></div>
-  </section>
-
-  <section class="kvl-hero">
-    <div class="wrap">
-      <div class="kvl-herogrid">
-        <div class="kvl-htext">
-          <h1 class="kvl-h1">5 Reasons to Unwind<br class="kvl-br"> Without the Hangxiety</h1>
-          <p class="lead kvl-deck">Kava Nectar is the juice of kava root, dried into a powder. Go out, feel good, wake up fine.</p>
-          <p class="kvl-proofline"><span class="kvl-s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>Rated 4.8 out of 5 &middot; 500,000+ cups served</span></p>
-          <button type="button" class="pill-cta kvl-cta">Get my Starter Kit &#8594;</button>
+<article class="kvl-article">
+  <header class="kvl-masthead">
+    <div class="kvl-wrap">
+      <div class="kvl-col">
+        <p class="kvl-kicker">NOTES FROM THE BAR</p>
+        <h1 class="kvl-h1">6 things about kava I<br class="kvl-br"> learned behind the bar</h1>
+        <p class="kvl-dek">Years of drinking it, years of pouring it for other people, and the 6 things I still end up explaining.</p>
+        <div class="kvl-byline">
+          <span class="kvl-avwrap"><img class="kvl-av" data-slot="kvl-avatar" data-subject="AUTHOR portrait" src="https://bryce-wq2222.github.io/kavahana-pdp/img/hana-avatar.jpg" width="250" height="250" loading="lazy" decoding="async" alt="Hana Wilen at a Kavahana booth, holding a bag of Kava Nectar."></span>
+          <div>
+            <p class="kvl-byname">By Hana Wilen</p>
+            <p class="kvl-bymeta">Co-founder, Kavahana &#183; September 3, 2026 &#183; 4 minute read</p>
+          </div>
         </div>
-        <figure class="kvl-hmedia">
-        <!-- slot:kvl-slot-1 subject:"SOCIAL / SOBER" file:kava-friends-couch.jpg -->
-        <img class="kvl-img" data-slot="kvl-slot-1" data-subject="SOCIAL / SOBER" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-friends-couch.jpg" width="945" height="946" fetchpriority="high" decoding="async" alt="2 friends on a couch at night, each holding a Kavahana cup.">
+      </div>
+    </div>
+  </header>
+
+  <div class="kvl-leadwrap">
+    <div class="kvl-wrap">
+      <figure class="kvl-fig kvl-lead">
+        <img class="kvl-img" data-slot="kvl-lead" data-subject="AUTHOR at the market booth" src="https://bryce-wq2222.github.io/kavahana-pdp/img/hana-market.jpg" width="250" height="250" fetchpriority="high" decoding="async" alt="Hana Wilen at the Kavahana farmers market booth, under a green striped umbrella.">
+        <figcaption class="kvl-cap">The booth. The green umbrella has not changed.</figcaption>
       </figure>
+    </div>
+  </div>
+
+  <div class="kvl-standfirst">
+    <div class="kvl-wrap">
+      <div class="kvl-col">
+        <p class="kvl-p kvl-p--open">The first time someone asked me what kava was, I was standing at a folding table at a farmers market. Whisk in my hand.</p>
+        <p class="kvl-p">I found it years before we opened anything, looking for something to do at night that wasn&rsquo;t a glass of wine. Alcohol does take the edge off. Then it bills you for it at 7am.</p>
+        <p class="kvl-p">Kava didn&rsquo;t do that. What convinced me was a Sunday, about a month in. I&rsquo;d been out the night before, and I was up at 8 making coffee like it was a Tuesday.</p>
+        <p class="kvl-p">So Neil and I hauled that table around LA. Markets, pop-ups, 1 cup at a time for anyone curious enough to try. There are 2 bars now and I&rsquo;m still behind a counter most days.</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="kvl-rsn">
-    <div class="wrap">
-      <div class="kvl-grid">
-      <figure class="kvl-media">
-        <!-- slot:kvl-slot-2 subject:"SOCIAL" file:kava-friends.jpg -->
-        <img class="kvl-img" data-slot="kvl-slot-2" data-subject="SOCIAL" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-friends.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="2 friends side by side under party light with coconut cups of kava and the bamboo whisk.">
-      </figure>
-        <div class="kvl-body">
-          <div class="kvl-n">01</div>
-          <h2 class="kvl-h">The feeling, minus the morning after.</h2>
-          <p class="kvl-p">Alcohol takes the edge off, then charges you for it the next morning. With Kava Nectar, many people feel relaxed and sociable 10 to 20 minutes in. It lasts 1 to 2 hours. Present, not out of it. Clear head the next morning.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="kvl-rsn kvl-rsn--tint">
-    <div class="wrap">
-      <div class="kvl-grid kvl-grid--rev">
-      <figure class="kvl-media">
-        <!-- slot:kvl-slot-3 subject:"ROOT" file:kava-cup-hands.jpg -->
-        <img class="kvl-img" data-slot="kvl-slot-3" data-subject="ROOT" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-cup-hands.jpg" width="532" height="946" loading="lazy" decoding="async" alt="2 hands cradling a coconut shell cup of kava, seen from above.">
-      </figure>
-        <div class="kvl-body">
-          <div class="kvl-n">02</div>
-          <h2 class="kvl-h">One ingredient. Nothing added, nothing taken out.</h2>
-          <p class="kvl-p">Noble kava root, cold-pressed and dried. The root grows 5 to 7 years in the volcanic soil of Vanuatu. It has been the drink of the South Pacific and Hawaii for over 3,000 years. The kava plant is in the peppercorn family, which is why the first sip tingles on your tongue.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="green kvl-mid">
-    <div class="wrap">
-      <div class="kvl-ctr">
-        <h2 class="kvl-midh">Come sit at the bar. From your couch.</h2>
-        <p class="kvl-midsub">Kava Nectar ships to all 50 states and Canada. 30 day guarantee, love it or your money back.</p>
-        <button type="button" class="pill-cta kvl-cta kvl-cta--inv">Get my Starter Kit &#8594;</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="kvl-rsn">
-    <div class="wrap">
-      <div class="kvl-grid">
-      <figure class="kvl-media">
-        <div class="kvl-gap" data-slot="kvl-slot-4" data-subject="TOLERANCE" data-gap="TOLERANCE">
-          <span class="kvl-gaplbl">Photo slot kvl-slot-4</span>
-          <p>Subject: reverse tolerance. Add a 1080x1080 file to the IMAGES map in build-listicle.js and rerun the build.</p>
-        </div>
-      </figure>
-        <div class="kvl-body">
-          <div class="kvl-n">03</div>
-          <h2 class="kvl-h">Most drinks ask for more. Kava is known for the opposite.</h2>
-          <p class="kvl-p">It&rsquo;s called reverse tolerance. Many people find they need less over time, not more. That&rsquo;s why the Starter Kit is a monthly subscription, and why it&rsquo;s worth starting now rather than later. Natural kava root is non-addictive and non-intoxicating.</p>
-          <div class="kvl-trust"><span class="kvl-tick">&#10003;</span><p>Kava Nectar is made from kava root and nothing else. No kratom, no caffeine, no alcohol. Every batch is tested.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="kvl-rsn kvl-rsn--tint">
-    <div class="wrap">
-      <div class="kvl-grid kvl-grid--rev">
-      <figure class="kvl-media">
-        <!-- slot:kvl-slot-5 subject:"BAR" file:kava-drinks.jpg -->
-        <img class="kvl-img" data-slot="kvl-slot-5" data-subject="BAR" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-drinks.jpg" width="709" height="946" loading="lazy" decoding="async" alt="A woman inside a Kavahana bar holding out 2 branded cups of kava.">
-      </figure>
-        <div class="kvl-body">
-          <div class="kvl-n">04</div>
-          <h2 class="kvl-h">It&rsquo;s what they pour at the bar in Santa Monica.</h2>
-          <p class="kvl-p">In February 2024, Hana and Neil opened LA&rsquo;s first kava nectar bar in Santa Monica, then a second in Hollywood. Their Santa Monica neighbors voted it Most Loved New Business. Over 500,000 cups later, Kava Nectar is the same kava they pour behind the counter. CBS, NBC News and the LA Times have covered the bar.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="kvl-rsn">
-    <div class="wrap">
-      <div class="kvl-grid">
-      <figure class="kvl-media">
-        <!-- slot:kvl-slot-6 subject:"RITUAL" file:kava-whisk.jpg -->
-        <img class="kvl-img" data-slot="kvl-slot-6" data-subject="RITUAL" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-whisk.jpg" width="620" height="620" loading="lazy" decoding="async" alt="The bamboo whisk from the kit lying on sand in late light.">
-      </figure>
-        <div class="kvl-body">
-          <div class="kvl-n">05</div>
-          <h2 class="kvl-h">15 seconds with a whisk. That&rsquo;s the entire preparation.</h2>
-          <p class="kvl-p">Scoop it into any cold non-alcoholic drink, whisk for 15 seconds, and pour it over ice. No brewing, no straining, no bar tab. It tastes earthy. Cold coconut water is what people like to make it with. Many people enjoy 2 to 3 servings their first few times. The kit comes with 2 coconut shell cups, so make the second cup for someone else.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="kvl-proof">
-    <div class="wrap">
-      <div class="kvl-proofin">
-        <h2 class="kvl-proofh">From the people who drink it.</h2>
-        <div class="kvl-cards">
-        <figure class="kvl-card">
-          <div class="kvl-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote class="kvl-q">&ldquo;I could finally feel something, in a good way.&rdquo;</blockquote>
-          <figcaption class="kvl-attr">Sammy, New York</figcaption>
+  <section class="kvl-item">
+    <div class="kvl-wrap">
+      <div class="kvl-col">
+        <p class="kvl-n">1</p>
+        <h2 class="kvl-h2">It&rsquo;s a talking drink</h2>
+        <p class="kvl-p">This is the part of the job I&rsquo;ve never gotten over. A guy came in on a first date last winter and ordered for both of them. Then he spent 10 minutes explaining kava to a woman who already knew what it was.</p>
+        <p class="kvl-p">About 20 minutes in, something in his face loosened. Relaxed, smiley, a little surprised.</p>
+        <p class="kvl-p">When it lands it&rsquo;s 10 to 20 minutes in, and it runs an hour or 2 after that. That&rsquo;s usually the moment people look at the cup instead of at me.</p>
+        <p class="kvl-p">He stopped explaining and asked her a question. They were still there an hour later.</p>
+        <figure class="kvl-fig">
+          <img class="kvl-img" data-slot="kvl-slot-1" data-subject="SOCIAL" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-friends.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="2 women side by side under a purple light, holding coconut cups and a bamboo whisk.">
+          <figcaption class="kvl-cap">Whoever&rsquo;s holding the whisk is usually the person who got dragged along.</figcaption>
         </figure>
-        <figure class="kvl-card">
-          <div class="kvl-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote class="kvl-q">&ldquo;It gives me that perfect upbeat, relaxed mood that makes socializing feel easy and fun without feeling out of it.&rdquo;</blockquote>
-          <figcaption class="kvl-attr">Priya S. &middot; Verified review</figcaption>
-        </figure>
-        <figure class="kvl-card">
-          <div class="kvl-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote class="kvl-q">&ldquo;I feel light and airy and happy and like I just want to go hang out and talk to someone and dance, and I don&rsquo;t feel sick.&rdquo;</blockquote>
-          <figcaption class="kvl-attr">Jordan M. &middot; Verified review</figcaption>
-        </figure>
-        </div>
       </div>
     </div>
   </section>
 
-  <section class="kvl-final">
-    <div class="wrap">
-      <div class="kvl-ctr">
-        <h2 class="kvl-finalh">Pick a night this week.</h2>
-        <p class="kvl-finalsub">The Starter Kit comes with everything you need to make it properly the first time. 22 servings from $59.99, up to 39% off. You also get 2 coconut shell cups, a bamboo whisk and a digital recipe guide, free. It renews monthly with a fresh bag. Skip or cancel anytime.</p>
-        <button type="button" class="pill-cta kvl-cta">Get my Starter Kit &#8594;</button>
-        <p class="guar kvl-trustline">&#10003; 30 day guarantee &middot; Love it or your money back &middot; Free shipping<br>5 stick packs come free too. First box with the 45-serving kit, first renewal with either size.</p>
+  <section class="kvl-item kvl-item--tint">
+    <div class="kvl-wrap">
+      <div class="kvl-col">
+        <p class="kvl-n">2</p>
+        <h2 class="kvl-h2">The lip thing</h2>
+        <p class="kvl-p">First timers usually stop mid-sentence and touch their bottom lip. Then they look at me like I did something to them.</p>
+        <p class="kvl-p">I didn&rsquo;t. The kava plant is in the peppercorn family, and that&rsquo;s the whole explanation. Lips and tongue go tingly seconds after the first sip.</p>
+        <p class="kvl-p">Then they touch it again, to check. Then usually a third time.</p>
+        <p class="kvl-p">People ask if there&rsquo;s kratom in it. There isn&rsquo;t. It&rsquo;s the juice of that root, cold-pressed and dried, and that&rsquo;s the whole list.</p>
+        <figure class="kvl-fig">
+          <img class="kvl-img" data-slot="kvl-slot-2" data-subject="TINGLE" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-cup-hands.jpg" width="532" height="946" loading="lazy" decoding="async" alt="Hands cradling a coconut shell cup of milky beige kava on a shell tray.">
+          <figcaption class="kvl-cap">It comes out the color of weak coffee. That&rsquo;s the second thing people ask about, right after the tingle.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
+
+  <section class="kvl-item">
+    <div class="kvl-wrap">
+      <div class="kvl-col">
+        <p class="kvl-n">3</p>
+        <h2 class="kvl-h2">I didn&rsquo;t feel much the first time either</h2>
+        <p class="kvl-p">The thing I hear most from people who&rsquo;ve already tried kava somewhere else is that they felt nothing.</p>
+        <p class="kvl-p">My first cup was on a friend&rsquo;s kitchen floor and I sat there waiting for a light to come on. Nothing came on. I went home mildly annoyed and fairly sure I&rsquo;d been sold a nice story about a plant.</p>
+        <p class="kvl-p">I went back the next week because he kept asking. That time it landed. Kava works backwards from most things, and many people find they need less over time, not more.</p>
+        <p class="kvl-p">So that&rsquo;s what I tell the ones who felt nothing. Many people do 2 to 3 servings their first few times. I tell them to come back once before they decide.</p>
+        <figure class="kvl-fig">
+          <img class="kvl-img" data-slot="kvl-slot-3" data-subject="SOCIAL" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-friends-couch.jpg" width="945" height="946" loading="lazy" decoding="async" alt="2 friends on a white couch at home, sipping from coconut cups.">
+          <figcaption class="kvl-cap">A night in. Most second tries look about like this.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="kvl-item kvl-item--tint">
+    <div class="kvl-wrap">
+      <div class="kvl-col">
+        <p class="kvl-n">4</p>
+        <h2 class="kvl-h2">Nobody drinks it straight</h2>
+        <p class="kvl-p">A woman at the counter once asked for it plain, the way you&rsquo;d order an espresso. I poured her a small cup.</p>
+        <p class="kvl-p">It&rsquo;s earthy and peppery, closer to a strong matcha than to anything sweet. She got half of it down and asked what everyone else does.</p>
+        <p class="kvl-p">Everyone else mixes it. Juice, coconut milk, whatever&rsquo;s cold. Cold coconut water is what I hand people first, and never warm, which brings out the bitterness.</p>
+        <p class="kvl-p">People have enjoyed it in the South Pacific and Hawaii for over 3,000 years. In all that time I&rsquo;ve never heard of anyone making it sweet.</p>
+        <p class="kvl-p">She made a face on the first sip, then ordered a second, mixed. If someone tells you the taste is the best part, they&rsquo;re selling you something.</p>
+        <figure class="kvl-fig">
+          <img class="kvl-img" data-slot="kvl-slot-4" data-subject="RECIPES" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-strawberry.jpg" width="620" height="620" loading="lazy" decoding="async" alt="2 Kavahana cups of mixed drinks on white, with strawberries between them.">
+          <figcaption class="kvl-cap">The drinks people actually order, and the fruit that goes in them.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <aside class="kvl-pq">
+    <div class="kvl-wrap">
+      <div class="kvl-col">
+        <div class="kvl-pqin">
+          <blockquote class="kvl-pqt">&ldquo;I went home mildly annoyed and fairly sure I&rsquo;d been sold a nice story about a plant.&rdquo;</blockquote>
+          <p class="kvl-pqa">Hana Wilen</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <section class="kvl-item">
+    <div class="kvl-wrap">
+      <div class="kvl-col">
+        <p class="kvl-n">5</p>
+        <h2 class="kvl-h2">The root is older than the company</h2>
+        <p class="kvl-p">A guy at the bar asked me what we do to the root. I told him almost nothing, and he looked disappointed.</p>
+        <p class="kvl-p">It&rsquo;s a fair question with a boring answer. The plant does the work.</p>
+        <p class="kvl-p">What I handed him was whole root, no stems and no leaves. It grew 5 to 7 years in volcanic soil in Vanuatu before anybody pulled it.</p>
+        <p class="kvl-p">We&rsquo;re 3 years into this. The root in the cup I handed him started growing before there was a Kavahana.</p>
+        <p class="kvl-p">I didn&rsquo;t tell him that. It would have sounded like a line, and it&rsquo;s the only genuinely impressive thing about us.</p>
+        <figure class="kvl-fig">
+          <img class="kvl-img" data-slot="kvl-slot-5" data-subject="BAR" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-drinks.jpg" width="709" height="946" loading="lazy" decoding="async" alt="Inside the Kavahana bar, a woman holding out 2 branded cups.">
+          <figcaption class="kvl-cap">Inside the bar. Kava is the national drink of Fiji, so none of this was our idea.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="kvl-item kvl-item--tint">
+    <div class="kvl-wrap">
+      <div class="kvl-col">
+        <p class="kvl-n">6</p>
+        <h2 class="kvl-h2">It takes 15 seconds and a whisk</h2>
+        <p class="kvl-p">People always assume there&rsquo;s more to it. They picture a pot, a strainer and an entire evening.</p>
+        <p class="kvl-p">I scoop it into something cold and non-alcoholic, whisk until it foams, and pour it over ice. It&rsquo;s 15 seconds, start to finish.</p>
+        <p class="kvl-p">I watched someone whisk their first cup at the bar and look genuinely annoyed when it was done. He&rsquo;d spent the walk in telling his friend it was going to be a whole production.</p>
+        <p class="kvl-p">He kept whisking another 20 seconds anyway, just in case. It did not get any more done.</p>
+        <figure class="kvl-fig">
+          <img class="kvl-img" data-slot="kvl-slot-6" data-subject="RITUAL" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-whisk.jpg" width="620" height="620" loading="lazy" decoding="async" alt="A bamboo whisk with a Kavahana handle lying on sand in golden light.">
+          <figcaption class="kvl-cap">The whisk lives in a kitchen drawer with the spoons. Mine is on its second summer.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="kvl-signoff">
+    <div class="kvl-wrap">
+      <div class="kvl-col">
+        <p class="kvl-p">If you want to try it, the Starter Kit is what I&rsquo;d hand you across the counter.</p>
+        <p class="kvl-p">I opened a kava bar in Los Angeles because I wanted a place where you could go out, feel good, and wake up fine. Come sit at the bar. From your couch.</p>
+        <div class="kvl-sig">Hana</div>
+        <hr class="kvl-seam">
+      </div>
+    </div>
+  </div>
+  <div class="kvl-endpad"></div>
+</article>
 </div><!-- /kvl -->
 <!-- KVL: END LISTICLE -->
 <style>#kv-page .hero{padding-top:26px;padding-bottom:56px}@media(max-width:760px){#kv-page .hero{padding-bottom:40px}}</style>
@@ -446,7 +474,7 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
     <div class="acc">
       <details open><summary>What is Kava Nectar?</summary><p>Kava Nectar is the cold-pressed juice of noble kava root, dried into a pure powder. Nothing extracted, nothing added. All of the unwind, none of the hangover.</p></details>
       <details><summary>Ingredients &amp; benefits</summary><p>Alcohol and gardening &#127811; take the edge off but charge you the hangover, the fog, the wrecked sleep. Kava Nectar gives you the unwind without the next-day regret.</p><ul><li><b>Kavalactones (the tingle)</b> &#8594; relaxed body</li><li><b>Noble kava root</b> &#8594; social ease, still sharp</li><li><b>One pure ingredient</b> &#8594; clear head, no fog</li><li><b>Zero alcohol, zero sugar</b> &#8594; no crash tomorrow</li></ul><p><b>Relaxed + Social + Clear + Hangover-free = one cup.</b></p><p style="font-size:11px;color:var(--grey)">Herbal supplement. These statements have not been evaluated by the FDA.</p></details>
-      <details><summary>Science &amp; quality</summary><ul><li>Noble kava cultivars only</li><li>Grown 5 to 7 years in Vanuatu&#8217;s volcanic soil before harvest</li><li>Whole root, no stems or leaves</li><li>Every batch tested for purity and potency</li></ul></details>
+      <details><summary>Science &amp; quality</summary><ul><li>Noble kava cultivars only</li><li>Grown 5 to 7 years in Vanuatu&#8217;s volcanic soil before harvest</li><li>Whole root, no stems or leaves</li><li>Every batch is tested</li></ul></details>
       <details><summary>Ready in 15 seconds</summary><ol><li><b>SCOOP:</b> 2 to 3 teaspoons of Kava Nectar</li><li><b>MIX:</b> into 12 to 16 oz of any non-alcoholic liquid. Whisk, shake, or blend.</li><li><b>ENJOY:</b> best over ice. Sip and let the calm set in.</li></ol></details>
     </div>
   </div>
@@ -724,68 +752,5 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 })();
 </script>
 <script>(function(){document.querySelectorAll(".acc").forEach(function(acc){var dets=[].slice.call(acc.querySelectorAll("details"));dets.forEach(function(d){var sum=d.querySelector("summary");var body=document.createElement("div");body.className="acc-body";var inner=document.createElement("div");inner.className="acc-inner";while(sum.nextSibling){inner.appendChild(sum.nextSibling)}body.appendChild(inner);d.appendChild(body);if(d.open){d.classList.add("is-open");body.style.height="auto"}else{body.style.height="0px"}sum.addEventListener("click",function(e){e.preventDefault();if(d.classList.contains("is-open")){close(d)}else{dets.forEach(function(o){if(o!==d&&o.classList.contains("is-open"))close(o)});openD(d)}})});function openD(d){var b=d.querySelector(".acc-body");d.setAttribute("open","");d.classList.add("is-open");b.style.height="0px";void b.offsetHeight;b.style.height=b.firstChild.scrollHeight+"px";b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"){b.style.height=d.classList.contains("is-open")?"auto":"0px";b.removeEventListener("transitionend",te)}})}function close(d){var b=d.querySelector(".acc-body");b.style.height=b.firstChild.scrollHeight+"px";void b.offsetHeight;b.style.height="0px";d.classList.remove("is-open");b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"&&!d.classList.contains("is-open")){d.removeAttribute("open");b.removeEventListener("transitionend",te)}})}})})();</script>
-<style id="kvl-sticky-css">
-#kvl-sticky{position:fixed;left:0;right:0;bottom:0;z-index:2147481900;background:#16211A;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom));transform:translateY(115%);opacity:0;pointer-events:none;will-change:transform;transition:transform .38s cubic-bezier(.22,.9,.32,1),opacity .32s ease}
-#kvl-sticky.kvl-on{transform:translateY(0);opacity:1;pointer-events:auto}
-#kvl-sticky .kvl-ks-t{margin:0;color:#F8F3E8;font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;font-size:12px;font-weight:600;line-height:1.35;letter-spacing:0}
-#kvl-sticky button{margin:0;background:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);color:#fff;border:0;border-radius:999px;padding:13px 20px;font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;cursor:pointer;min-height:46px}
-@media(min-width:880px){#kvl-sticky{justify-content:center;gap:26px;padding:12px 24px}#kvl-sticky .kvl-ks-t{font-size:13px}}
-@media(prefers-reduced-motion:reduce){#kvl-sticky{transition:none}}
-</style>
-<div id="kvl-sticky" aria-hidden="true">
-  <p class="kvl-ks-t">From $59.99 &middot; Up to 39% off<br>30 day guarantee &middot; Free shipping</p>
-  <button id="kvl-sticky-btn" type="button" class="kvl-cta">Get my Starter Kit &#8594;</button>
-</div>
-<script>
-(function(){
-  function buyEl(){
-    var w=document.querySelectorAll('[id="kv-page"]');
-    var last=w.length?w[w.length-1]:null;
-    var b=last?last.querySelector(".buy"):null;
-    return b||document.getElementById("kvl-buybox");
-  }
-  function goBuy(e){
-    if(e&&e.preventDefault)e.preventDefault();
-    var t=buyEl(); if(!t) return;
-    var before=window.pageYOffset||document.documentElement.scrollTop||0;
-    try{ t.scrollIntoView({behavior:"smooth",block:"start"}); }
-    catch(err){ t.scrollIntoView(true); }
-    /* some in-app webviews and reduced-motion setups ignore smooth
-       scrolling entirely. If nothing moved, jump. */
-    setTimeout(function(){
-      var now=window.pageYOffset||document.documentElement.scrollTop||0;
-      if(Math.abs(now-before)<2){ try{ t.scrollIntoView(true); }catch(e2){} }
-    },420);
-  }
-  function bind(){
-    [].forEach.call(document.querySelectorAll(".kvl-cta"),function(b){
-      if(b.getAttribute("data-kvl-bound"))return;
-      b.setAttribute("data-kvl-bound","1");
-      b.addEventListener("click",goBuy);
-    });
-  }
-  bind();
-  var bar=document.getElementById("kvl-sticky");
-  var heroSec=document.querySelector(".kvl-hero");
-  function sync(){
-    if(!bar)return;
-    var vh=window.innerHeight||document.documentElement.clientHeight||0;
-    var passed=false, boxIn=false, r;
-    if(heroSec){ r=heroSec.getBoundingClientRect(); passed = r.bottom <= 0; }
-    var t=buyEl();
-    if(t){ r=t.getBoundingClientRect(); boxIn = (r.top < vh*0.85) && (r.bottom > 0); }
-    var on = passed && !boxIn;
-    bar.classList.toggle("kvl-on", on);
-    bar.setAttribute("aria-hidden", on?"false":"true");
-  }
-  sync();
-  window.addEventListener("scroll",sync,{passive:true});
-  window.addEventListener("resize",sync);
-  window.addEventListener("orientationchange",sync);
-  window.addEventListener("pageshow",function(e){ bind(); sync(); });
-  setTimeout(function(){ bind(); sync(); },600);
-  setTimeout(function(){ bind(); sync(); },2500);
-})();
-</script>
 </body>
 </html>
