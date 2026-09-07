@@ -1003,6 +1003,9 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp
 function known(id){return CAT.kit[id]||CAT.gifts[id]||null}
 function fromShopify(c){return (c.items||[]).map(function(i){var k=known(String(i.variant_id))||{};var price=(i.final_line_price!=null?i.final_line_price:i.line_price)/100/(i.quantity||1);var cmp=k.compare||(i.compare_at_price?i.compare_at_price/100:0);return {key:i.key,id:String(i.variant_id),title:k.title||i.product_title,sub:k.sub||(i.variant_title&&i.variant_title!=='Default Title'?i.variant_title:''),price:price,compare:cmp,qty:i.quantity,sub_plan:!!i.selling_plan_allocation,img:k.img||(i.image||''),gift:price===0}})}
 function render(lines){
+  /* kit first, then gifts (merged per variant), then one-time add-ons */
+  var merged=[];lines.forEach(function(l){var hit=null;if(l.gift){merged.forEach(function(m){if(m.gift&&m.id===l.id)hit=m})}if(hit){hit.qty+=l.qty}else{merged.push(Object.assign({},l))}});
+  lines=merged.sort(function(a,b){var w=function(l){return l.sub_plan?0:(l.gift?1:2)};return w(a)-w(b)});
   var n=0,sub=0,save=0,html='';
   lines.forEach(function(l){n+=l.qty;sub+=l.price*l.qty;if(l.compare>l.price)save+=(l.compare-l.price)*l.qty;
     html+='<div class="kvc-line"><img class="kvc-img" src="'+esc(l.img)+'" alt=""><div class="kvc-info"><p class="kvc-name">'+esc(l.title)+(l.qty>1?' &#215; '+l.qty:'')+'</p>'+(l.sub?'<p class="kvc-meta">'+esc(l.sub)+'</p>':'')+(l.sub_plan?'<p class="kvc-meta">Renews monthly at '+money(l.price)+'. Skip or cancel anytime.</p>':'')+(l.gift?'<span class="kvc-tag">FREE GIFT</span>':'<button type="button" class="kvc-rm" data-rm="'+esc(l.key)+'">Remove</button>')+'</div><div class="kvc-price">'+(l.compare>l.price?'<s class="kvc-cmp">'+money(l.compare*l.qty)+'</s>':'')+'<span class="kvc-now'+(l.gift?' kvc-free':'')+'">'+(l.gift?'FREE':money(l.price*l.qty))+'</span></div></div>';
