@@ -98,7 +98,8 @@
 
 /* ---------- header --------------------------------------------------------- */
 #kvl-page .kvl-head{padding:30px 0 0}
-#kvl-page .kvl-h1{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:800;font-size:clamp(29px,7.9vw,44px);line-height:1.2;letter-spacing:-.03em;color:var(--ink);text-wrap:balance;margin:0 0 20px}
+#kvl-page .kvl-h1{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:800;font-size:clamp(28px,7.6vw,44px);line-height:1.2;letter-spacing:-.03em;color:var(--ink);text-wrap:balance;margin:0 0 20px}
+#kvl-page .kvl-nb{white-space:nowrap}
 #kvl-page .kvl-byline{display:flex;align-items:center;gap:12px;margin:0 0 18px}
 #kvl-page .kvl-avwrap{position:relative;width:50px;height:50px;flex:none;border-radius:50%;overflow:hidden;background:#EDE4D1;display:block}
 #kvl-page .kvl-avwrap--gap{border:2px dashed #C9C2B0;background:#F4EFE3}
@@ -164,6 +165,14 @@
 #kvl-page .kvl-qt{font-size:16px;line-height:1.5;color:var(--ink)}
 #kvl-page .kvl-qw{font-size:12px;font-weight:600;line-height:1.3;color:var(--grey);margin-top:8px}
 
+/* ---------- reviews section, below the buy box ----------------------------- */
+#kvl-page .kvl-reviews{border-top:1px solid var(--line);padding:40px 0 44px}
+#kvl-page .kvl-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);text-align:center;margin:0 0 8px}
+#kvl-page .kvl-reviews .kvl-h2{text-align:center;margin:0 auto 18px;max-width:22ch}
+#kvl-page .kvl-revslot{margin:16px 0 0;border:1.5px dashed #CFC6AE;border-radius:12px;background:var(--cream);padding:18px 20px;text-align:center}
+#kvl-page .kvl-revslot p{font-size:12.5px;line-height:1.45;color:var(--grey);max-width:44ch;margin:0 auto}
+#kvl-page .kvl-reviews .kvl-linkrow{justify-content:center;margin-top:20px}
+
 /* ---------- closing (the model's "reason #11" hand-off): 2 lines, then the
    buy box directly below. No link here, the buy box IS the next thing. */
 #kvl-page .kvl-close{background:var(--cream);border-top:1px solid var(--line);padding:36px 0 30px;text-align:center}
@@ -208,6 +217,129 @@
   #kvl-page .kvl-close .kvl-h2{font-size:30px}
 }
 </style>
+<style id="kvl-css-rev">#kvl-page-reviews,#kvl-page-reviews :where(*:not(svg):not(svg *)),#kvl-page-reviews :where(*:not(svg):not(svg *))::before,#kvl-page-reviews :where(*:not(svg):not(svg *))::after{all:revert}
+#kvl-page-reviews{--green:#367542;--green2:#73AE57;--mint:#8AC79A;--cream:#F8F3E8;--bone:#FFFFFF;--ink:#1F1D17;--deep:#14261A;--line:#E6DFCE;--grey:#6A6659;--rule:#DED6C3;--clay:#8A4B3B;--tint:#EEF5EC;}
+#kvl-page-reviews *{margin:0;padding:0;box-sizing:border-box}
+#kvl-page-reviews{-webkit-text-size-adjust:100%;overflow-x:clip}
+#kvl-page-reviews{font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bone);color:var(--ink);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:0}
+#kvl-page-reviews img,#kvl-page-reviews video{max-width:100%;display:block}
+#kvl-page-reviews b,#kvl-page-reviews strong{font-weight:700}
+#kvl-page-reviews{display:block;width:100%;text-align:left}
+#kvl-page-reviews .kvl-wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+#kvl-page-reviews .kvl-col{max-width:800px;margin:0 auto;padding:0 16px}
+#kvl-page-reviews .kvl-bar{background:var(--cream);border-bottom:1px solid var(--line)}
+#kvl-page-reviews .kvl-barin{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
+#kvl-page-reviews .kvl-bartxt{flex:0 1 auto;min-width:0;text-align:center}
+#kvl-page-reviews .kvl-bar1{font-size:14px;font-weight:800;letter-spacing:.02em;line-height:1.25;color:var(--ink);text-transform:uppercase}
+#kvl-page-reviews .kvl-bar2{font-size:13.5px;font-weight:800;letter-spacing:.01em;line-height:1.25;color:var(--green);text-transform:uppercase;margin-top:3px}
+#kvl-page-reviews .kvl-timer{flex:0 0 auto;display:flex;align-items:flex-start;gap:3px;background:var(--deep);color:#fff;border-radius:10px;padding:8px 10px 7px}
+#kvl-page-reviews .kvl-tg{display:flex;flex-direction:column;align-items:center;min-width:30px}
+#kvl-page-reviews .kvl-tn{font-size:22px;font-weight:800;line-height:1;letter-spacing:.02em;font-variant-numeric:tabular-nums;color:#fff}
+#kvl-page-reviews .kvl-tl{font-size:8.5px;font-weight:700;letter-spacing:.12em;line-height:1;margin-top:4px;color:#fff;opacity:.9}
+#kvl-page-reviews .kvl-tsep{font-size:20px;font-weight:800;line-height:1;color:#fff;opacity:.7;padding-top:1px}
+#kvl-page-reviews .kvl-tg--d[hidden],#kvl-page-reviews .kvl-tsep--d[hidden]{display:none}
+#kvl-page-reviews .kvl-tended{font-size:12px;font-weight:700;line-height:1.2;color:#fff;padding:6px 2px}
+#kvl-page-reviews .kvl-head{padding:30px 0 0}
+#kvl-page-reviews .kvl-h1{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:800;font-size:clamp(28px,7.6vw,44px);line-height:1.2;letter-spacing:-.03em;color:var(--ink);text-wrap:balance;margin:0 0 20px}
+#kvl-page-reviews .kvl-nb{white-space:nowrap}
+#kvl-page-reviews .kvl-byline{display:flex;align-items:center;gap:12px;margin:0 0 18px}
+#kvl-page-reviews .kvl-avwrap{position:relative;width:50px;height:50px;flex:none;border-radius:50%;overflow:hidden;background:#EDE4D1;display:block}
+#kvl-page-reviews .kvl-avwrap--gap{border:2px dashed #C9C2B0;background:#F4EFE3}
+#kvl-page-reviews .kvl-av{position:absolute;left:50%;top:50%;width:250%;height:250%;max-width:none;object-fit:cover;transform:translate(-55%,-34%)}
+#kvl-page-reviews .kvl-byname{font-size:13px;font-weight:400;line-height:1.35;color:var(--ink)}
+#kvl-page-reviews .kvl-byname strong{font-weight:700}
+#kvl-page-reviews .kvl-bymeta{font-size:12px;font-weight:400;line-height:1.35;color:var(--grey);margin-top:2px}
+#kvl-page-reviews .kvl-note{background:var(--cream);border-left:3px solid var(--green);padding:10px 12px 10px 12px;font-size:16.5px;line-height:1.45;color:var(--ink);margin:0 0 18px}
+#kvl-page-reviews .kvl-note strong{font-weight:800}
+#kvl-page-reviews .kvl-cmp{display:grid;grid-template-columns:.95fr 1.3fr 1fr 1fr;position:relative;margin:0 -8px 8px}
+#kvl-page-reviews .kvl-cmpbg{background:var(--tint);border:1.5px solid var(--mint);border-radius:14px;margin:0 3px -8px;z-index:0}
+#kvl-page-reviews .kvl-cell{position:relative;z-index:1;min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px 4px;border-bottom:1px dashed var(--line)}
+#kvl-page-reviews .kvl-cell--c2{margin:0 6px;padding:10px 2px}
+#kvl-page-reviews .kvl-cell--lbl{align-items:flex-start;text-align:left;padding-left:8px;padding-right:2px}
+#kvl-page-reviews .kvl-cell--head{min-height:60px;padding-top:16px}
+#kvl-page-reviews .kvl-cell--head.kvl-cell--c2{padding-top:10px}
+#kvl-page-reviews .kvl-cell--ohead{background:#FBF1EE;border-radius:8px 8px 0 0}
+#kvl-page-reviews .kvl-cell--last{border-bottom:0}
+#kvl-page-reviews .kvl-cmpl{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;line-height:1.25;color:var(--ink)}
+#kvl-page-reviews .kvl-cmpe{font-size:14px;line-height:1;flex:none}
+#kvl-page-reviews .kvl-cmpbh{font-size:16px;font-weight:800;line-height:1.15;color:var(--green);letter-spacing:-.01em}
+#kvl-page-reviews .kvl-cmpoh{font-size:11.5px;font-weight:700;line-height:1.25;color:var(--clay)}
+#kvl-page-reviews .kvl-cmpb{font-size:14.5px;font-weight:800;line-height:1.2;color:var(--ink);white-space:nowrap}
+#kvl-page-reviews .kvl-cmpbs{font-size:10px;font-weight:500;line-height:1.2;color:var(--grey);margin-top:3px}
+#kvl-page-reviews .kvl-cmpo{font-size:12.5px;font-weight:500;line-height:1.3;color:var(--grey)}
+#kvl-page-reviews .kvl-tldr{font-size:15px;line-height:1.5;color:var(--ink);margin:16px 0 0}
+#kvl-page-reviews .kvl-tldr strong{font-weight:800}
+#kvl-page-reviews .kvl-reasons{padding:36px 0 44px}
+#kvl-page-reviews .kvl-reasonsin{display:flex;flex-direction:column;gap:48px}
+#kvl-page-reviews .kvl-row{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:center}
+#kvl-page-reviews .kvl-body{display:flex;flex-direction:column;gap:14px;min-width:0}
+#kvl-page-reviews .kvl-tile{position:relative;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:var(--cream);margin:0 -16px}
+#kvl-page-reviews .kvl-tile img,#kvl-page-reviews .kvl-tile video{width:100%;height:100%;object-fit:cover;display:block}
+#kvl-page-reviews .kvl-tilebar{position:absolute;left:0;right:0;bottom:0;height:52px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;padding:0 16px}
+#kvl-page-reviews .kvl-tilebar p{font-size:19px;font-weight:700;line-height:1.2;letter-spacing:-.01em;color:#fff;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#kvl-page-reviews .kvl-ph{position:absolute;inset:0 0 52px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;padding:28px 32px}
+#kvl-page-reviews .kvl-ph::before{content:"";position:absolute;inset:14px;border:1.5px dashed #CFC6AE;border-radius:8px;pointer-events:none}
+#kvl-page-reviews .kvl-phk{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
+#kvl-page-reviews .kvl-phs{font-size:12px;font-weight:600;line-height:1.3;color:var(--ink)}
+#kvl-page-reviews .kvl-pht{font-size:12.5px;line-height:1.45;color:var(--grey);max-width:30ch}
+#kvl-page-reviews .kvl-txt{display:flex;flex-direction:column;gap:14px}
+#kvl-page-reviews .kvl-h2{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:800;font-size:26px;line-height:1.2;letter-spacing:-.025em;color:var(--ink);text-wrap:balance}
+#kvl-page-reviews .kvl-p{font-size:18px;line-height:1.5;letter-spacing:-.01em;color:var(--ink)}
+#kvl-page-reviews .kvl-p strong{font-weight:700}
+#kvl-page-reviews .kvl-linkrow{display:flex;align-items:center;gap:6px;margin-top:2px}
+#kvl-page-reviews .kvl-arrow{font-size:20px;line-height:1;flex:none}
+#kvl-page-reviews .kvl-link{font-size:18px;font-weight:700;line-height:1.35;color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--green)}
+#kvl-page-reviews .kvl-link:hover{color:var(--green)}
+#kvl-page-reviews .kvl-quotes{display:flex;flex-direction:column;gap:10px}
+#kvl-page-reviews .kvl-q{background:var(--cream);border-radius:12px;padding:14px 16px}
+#kvl-page-reviews .kvl-qs{font-size:12px;letter-spacing:.12em;color:var(--green);line-height:1;margin-bottom:8px}
+#kvl-page-reviews .kvl-qt{font-size:16px;line-height:1.5;color:var(--ink)}
+#kvl-page-reviews .kvl-qw{font-size:12px;font-weight:600;line-height:1.3;color:var(--grey);margin-top:8px}
+#kvl-page-reviews .kvl-reviews{border-top:1px solid var(--line);padding:40px 0 44px}
+#kvl-page-reviews .kvl-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);text-align:center;margin:0 0 8px}
+#kvl-page-reviews .kvl-reviews .kvl-h2{text-align:center;margin:0 auto 18px;max-width:22ch}
+#kvl-page-reviews .kvl-revslot{margin:16px 0 0;border:1.5px dashed #CFC6AE;border-radius:12px;background:var(--cream);padding:18px 20px;text-align:center}
+#kvl-page-reviews .kvl-revslot p{font-size:12.5px;line-height:1.45;color:var(--grey);max-width:44ch;margin:0 auto}
+#kvl-page-reviews .kvl-reviews .kvl-linkrow{justify-content:center;margin-top:20px}
+#kvl-page-reviews .kvl-close{background:var(--cream);border-top:1px solid var(--line);padding:36px 0 30px;text-align:center}
+#kvl-page-reviews .kvl-close .kvl-h2{margin:0 auto 10px;max-width:24ch}
+#kvl-page-reviews .kvl-close .kvl-p{max-width:44ch;margin:0 auto}
+@media(min-width:800px){
+  #kvl-page-reviews .kvl-wrap{padding:0 24px}
+  #kvl-page-reviews .kvl-barin{padding:12px 0;gap:22px}
+  #kvl-page-reviews .kvl-bar1{font-size:17px}
+  #kvl-page-reviews .kvl-bar2{font-size:15px}
+  #kvl-page-reviews .kvl-timer{padding:9px 14px 8px;gap:4px}
+  #kvl-page-reviews .kvl-tg{min-width:38px}
+  #kvl-page-reviews .kvl-tn{font-size:26px}
+  #kvl-page-reviews .kvl-tl{font-size:9.5px}
+  #kvl-page-reviews .kvl-tsep{font-size:24px}
+  #kvl-page-reviews .kvl-head{padding-top:44px}
+  #kvl-page-reviews .kvl-h1{margin-bottom:22px}
+  #kvl-page-reviews .kvl-byline{margin-bottom:20px}
+  #kvl-page-reviews .kvl-note{font-size:18px;padding:12px 16px;margin-bottom:22px}
+  #kvl-page-reviews .kvl-cmp{margin:0 0 8px}
+  #kvl-page-reviews .kvl-cell{min-height:72px;padding:12px 8px}
+  #kvl-page-reviews .kvl-cell--c2{margin:0 12px}
+  #kvl-page-reviews .kvl-cell--lbl{padding-left:12px}
+  #kvl-page-reviews .kvl-cmpl{font-size:14.5px;gap:7px}
+  #kvl-page-reviews .kvl-cmpe{font-size:17px}
+  #kvl-page-reviews .kvl-cmpbh{font-size:19px}
+  #kvl-page-reviews .kvl-cmpoh{font-size:14px}
+  #kvl-page-reviews .kvl-cmpb{font-size:18px}
+  #kvl-page-reviews .kvl-cmpbs{font-size:11.5px}
+  #kvl-page-reviews .kvl-cmpo{font-size:15px}
+  #kvl-page-reviews .kvl-tldr{font-size:16px;margin-top:18px}
+  #kvl-page-reviews .kvl-reasons{padding:44px 0 56px}
+  #kvl-page-reviews .kvl-reasonsin{gap:56px}
+  #kvl-page-reviews .kvl-row{grid-template-columns:309px minmax(0,1fr);gap:16px 48px}
+  #kvl-page-reviews .kvl-tile{margin:0}
+  #kvl-page-reviews .kvl-tilebar p{font-size:18px}
+  #kvl-page-reviews .kvl-h2{font-size:28px}
+  #kvl-page-reviews .kvl-p{font-size:18.4px}
+  #kvl-page-reviews .kvl-close{padding:44px 0 36px}
+  #kvl-page-reviews .kvl-close .kvl-h2{font-size:30px}
+}</style>
 <div id="kvl-page" class="kvl">
 <article class="kvl-article">
   <div class="kvl-bar">
@@ -226,12 +358,12 @@
 
   <header class="kvl-head">
     <div class="kvl-wrap"><div class="kvl-col">
-      <h1 class="kvl-h1">6 Reasons Kava Nectar Is the Non-Alcoholic Drink You Can Actually Feel</h1>
+      <h1 class="kvl-h1">The <span class="kvl-nb">Non-Alcoholic</span> Drink You Can Actually Feel: 6 Reasons People Are Ditching the Nightcap</h1>
       <div class="kvl-byline">
         <span class="kvl-avwrap"><img class="kvl-av" data-slot="kvl-avatar" src="https://bryce-wq2222.github.io/kavahana-pdp/img/hana-avatar.jpg" width="250" height="250" loading="lazy" decoding="async" alt="Hana Wilen at a Kavahana booth, holding a bag of Kava Nectar."></span>
         <div>
-          <p class="kvl-byname">By <strong>Hana Wilen</strong>, Co-founder, Kavahana</p>
-          <p class="kvl-bymeta">Last updated September 7, 2026</p>
+          <p class="kvl-byname">By <strong>Hana Wilen</strong></p>
+          <p class="kvl-bymeta" id="kvl-upd" data-prefix="Last updated ">Last updated September 6, 2026</p>
         </div>
       </div>
       <p class="kvl-note"><strong>Read this</strong> BEFORE your next drink!</p>
@@ -292,7 +424,7 @@
           <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
           <span class="kvl-pht">TINGLE, the first sip: hands around a coconut cup, close on the pour</span>
         </div>
-        <div class="kvl-tilebar"><p>&#9889; You can feel it</p></div>
+        <div class="kvl-tilebar"><p>&#9889; You can feel it... seriously</p></div>
       </div>
       <div class="kvl-body">
         <h2 class="kvl-h2">2. You&rsquo;ll actually feel it, and fast</h2>
@@ -309,13 +441,13 @@
           <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
           <span class="kvl-pht">ROOT, the ingredient: whole kava root, the powder, the bag</span>
         </div>
-        <div class="kvl-tilebar"><p>&#127807; 1 ingredient</p></div>
+        <div class="kvl-tilebar"><p>&#127807; One ingredient</p></div>
       </div>
       <div class="kvl-body">
-        <h2 class="kvl-h2">3. 1 ingredient. 0 sugar. 0 calories. 0 alcohol.</h2>
+        <h2 class="kvl-h2">3. One ingredient. 0 sugar. 0 calories. 0 alcohol.</h2>
         <div class="kvl-txt">
-          <p class="kvl-p">Kava Nectar is the cold-pressed juice of noble kava root, dried into a pure powder. Nothing added, nothing removed. <strong>No caffeine, no alcohol, no kratom, and it&rsquo;s vegan.</strong> Natural kava root is non-addictive and non-intoxicating. Every batch is tested. People in the South Pacific and Hawaii have enjoyed it for over 3,000 years.</p>
-        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Try 1 ingredient tonight</a></p>
+          <p class="kvl-p">Flip the bag over and the ingredient list is 1 line: kava root. Kava Nectar is the cold-pressed juice of noble kava root, dried into a pure powder. Nothing added, nothing removed. <strong>No caffeine, no alcohol, no kratom, and it&rsquo;s vegan.</strong> Natural kava root is non-addictive and non-intoxicating. Every batch is tested. People in the South Pacific and Hawaii have enjoyed it for over 3,000 years.</p>
+        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Just kava root, nothing else. Try it tonight</a></p>
         </div>
       </div>
     </div>
@@ -332,7 +464,7 @@
       <div class="kvl-body">
         <h2 class="kvl-h2">4. The more you drink it, the less you need</h2>
         <div class="kvl-txt">
-          <p class="kvl-p">It&rsquo;s called reverse tolerance, and it&rsquo;s the opposite of how most drinks work. Kava is thought to feel subtle at first and become more noticeable with continued use, so <strong>many people find they need less over time, not more.</strong> Many people enjoy 2 to 3 servings, especially in the beginning. That&rsquo;s why the Starter Kit is a monthly subscription, and why the best night to start is tonight.</p>
+          <p class="kvl-p">It&rsquo;s called reverse tolerance, and it&rsquo;s the opposite of how most alcoholic drinks and gardening work. Kava is thought to feel subtle at first and become more noticeable with continued use, so <strong>many people find they need less over time, not more.</strong> Many people enjoy 2 to 3 servings, especially in the beginning. That&rsquo;s why the Starter Kit is a monthly subscription, and why the best night to start is tonight.</p>
         <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Start now, need less later</a></p>
         </div>
       </div>
@@ -350,7 +482,7 @@
       <div class="kvl-body">
         <h2 class="kvl-h2">5. It&rsquo;s the same kava they pour at the bar in LA</h2>
         <div class="kvl-txt">
-          <p class="kvl-p">In 2024, Hana and Neil opened LA&rsquo;s first kava nectar bar in Santa Monica. There are 2 now, and <strong>over 500,000 cups</strong> have gone across the counter. CBS, NBC News and the LA Times have covered the bar. The Starter Kit is the same kava, plus everything you need to make it at home: 2 coconut shell cups, a bamboo whisk and a digital recipe guide, free. <strong>15 seconds with a whisk and it&rsquo;s ready.</strong></p>
+          <p class="kvl-p">Kava Nectar launched in 2023. In February 2024, Hana and Neil opened LA&rsquo;s first kava nectar bar in Santa Monica. There are 2 now, and <strong>over 500,000 cups</strong> have gone across the counter. CBS, NBC News and the LA Times have covered the bar. The Starter Kit is the same kava, plus everything you need to make it at home: 2 coconut shell cups, a bamboo whisk and a digital recipe guide, free. <strong>15 seconds with a whisk and it&rsquo;s ready.</strong></p>
         <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Bring the bar home</a></p>
         </div>
       </div>
@@ -366,15 +498,10 @@
         <div class="kvl-tilebar"><p>&#11088; Loved by many</p></div>
       </div>
       <div class="kvl-body">
-        <h2 class="kvl-h2">6. Rated 4.8 out of 5. Love it or your money back.</h2>
+        <h2 class="kvl-h2">6. Rated 4.8 out of 5, with 500,000+ cups served</h2>
         <div class="kvl-txt">
-          <p class="kvl-p">The Starter Kit works out to <strong>$2.44 a cup</strong> and comes with a 30 day guarantee: love it or your money back. Here&rsquo;s what people say:</p>
-        <div class="kvl-quotes">
-          <div class="kvl-q"><p class="kvl-qs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="kvl-qt">&ldquo;It&rsquo;s now my go-to for winding down and feeling good without alcohol.&rdquo;</p><p class="kvl-qw">Sammy, New York</p></div>
-          <div class="kvl-q"><p class="kvl-qs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="kvl-qt">&ldquo;It gives me that perfect upbeat, relaxed mood that makes socializing feel easy and fun without feeling out of it.&rdquo;</p><p class="kvl-qw">Priya S., Verified review</p></div>
-          <div class="kvl-q"><p class="kvl-qs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="kvl-qt">&ldquo;I have tried other kava products with no effect but this product I can feel the effects almost instantly.&rdquo;</p><p class="kvl-qw">Marcus T., Verified review</p></div>
-        </div>
-        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Get my Starter Kit</a></p>
+          <p class="kvl-p">People who used to reach for a glass of wine or a cocktail at night are pouring Kava Nectar instead. They say they feel it fast, stay clear-headed and social, and still wake up fine, without the calories or the cost of alcohol. And every kit comes with a 30 day guarantee: <strong>love it or your money back.</strong></p>
+        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-reviews">See the reviews</a></p>
         </div>
       </div>
     </div>
@@ -383,7 +510,7 @@
 
   <section class="kvl-close">
     <div class="kvl-wrap"><div class="kvl-col">
-      <h2 class="kvl-h2">Made it to #7? Then you&rsquo;re serious about better nights.</h2>
+      <h2 class="kvl-h2">Made it to #7? Then you&rsquo;re serious about better nights and mornings.</h2>
       <p class="kvl-p">&#10024; Up to 39% off your first box, with the cups, whisk and recipe guide included, until the timer hits 0.</p>
     </div></div>
   </section>
@@ -465,6 +592,15 @@
     </div>
   </div>
 </div>
+</div>
+<div id="kvl-reviews-widget" data-slot="reviews-widget">
+<!-- 16. REVIEWS, SHOPIFY APP -->
+<section class="revsec" style="padding-bottom:6px"><div class="wrap">
+  <div class="ctr">
+    <div class="eyebrow" style="text-align:center">What people are saying</div>
+    <h2>Reviews</h2>
+  </div>
+</div></section>
 </div>
 </div>
 </div>
@@ -738,10 +874,26 @@
 })();
 </script>
 <script>(function(){document.querySelectorAll(".acc").forEach(function(acc){var dets=[].slice.call(acc.querySelectorAll("details"));dets.forEach(function(d){var sum=d.querySelector("summary");var body=document.createElement("div");body.className="acc-body";var inner=document.createElement("div");inner.className="acc-inner";while(sum.nextSibling){inner.appendChild(sum.nextSibling)}body.appendChild(inner);d.appendChild(body);if(d.open){d.classList.add("is-open");body.style.height="auto"}else{body.style.height="0px"}sum.addEventListener("click",function(e){e.preventDefault();if(d.classList.contains("is-open")){close(d)}else{dets.forEach(function(o){if(o!==d&&o.classList.contains("is-open"))close(o)});openD(d)}})});function openD(d){var b=d.querySelector(".acc-body");d.setAttribute("open","");d.classList.add("is-open");b.style.height="0px";void b.offsetHeight;b.style.height=b.firstChild.scrollHeight+"px";b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"){b.style.height=d.classList.contains("is-open")?"auto":"0px";b.removeEventListener("transitionend",te)}})}function close(d){var b=d.querySelector(".acc-body");b.style.height=b.firstChild.scrollHeight+"px";void b.offsetHeight;b.style.height="0px";d.classList.remove("is-open");b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"&&!d.classList.contains("is-open")){d.removeAttribute("open");b.removeEventListener("transitionend",te)}})}})})();</script>
+<div id="kvl-page-reviews" class="kvl">
+  <section class="kvl-reviews" id="kvl-reviews">
+    <div class="kvl-wrap"><div class="kvl-col">
+      <p class="kvl-eyebrow">What people are saying</p>
+      <h2 class="kvl-h2">Rated 4.8 out of 5 &#183; 500,000+ cups served</h2>
+      <div class="kvl-quotes">
+        <div class="kvl-q"><p class="kvl-qs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="kvl-qt">&ldquo;It&rsquo;s now my go-to for winding down and feeling good without alcohol.&rdquo;</p><p class="kvl-qw">Sammy, New York</p></div>
+        <div class="kvl-q"><p class="kvl-qs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="kvl-qt">&ldquo;It gives me that perfect upbeat, relaxed mood that makes socializing feel easy and fun without feeling out of it.&rdquo;</p><p class="kvl-qw">Priya S., Verified review</p></div>
+        <div class="kvl-q"><p class="kvl-qs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="kvl-qt">&ldquo;I have tried other kava products with no effect but this product I can feel the effects almost instantly.&rdquo;</p><p class="kvl-qw">Marcus T., Verified review</p></div>
+      </div>
+      
+      <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Get my Starter Kit</a></p>
+    </div></div>
+  </section>
+</div>
 <script>(function(){
-var links=document.querySelectorAll('#kvl-page a.kvl-link[href="#kvl-buybox"]');
+var links=document.querySelectorAll('#kvl-page a.kvl-link,#kvl-page-reviews a.kvl-link');
 var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(e){var t=document.getElementById('kvl-buybox');if(!t)return;e.preventDefault();var y=t.getBoundingClientRect().top+window.pageYOffset-8;window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});});}
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(e){var id=this.getAttribute('href').slice(1);var t=document.getElementById(id);if(!t)return;e.preventDefault();var y=t.getBoundingClientRect().top+window.pageYOffset-8;window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});});}
+var u=document.getElementById('kvl-upd');if(u){try{u.textContent=u.getAttribute('data-prefix')+new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'long',day:'numeric',year:'numeric'}).format(new Date(Date.now()-864e5));}catch(err){}}
 var cd=document.getElementById('kvl-cd');
 if(cd){var end=new Date(cd.getAttribute('data-ends')).getTime();function pad(n){return (n<10?'0':'')+n}
 var U={};['d','h','m','s'].forEach(function(u){U[u]=cd.querySelector('[data-u="'+u+'"]')});var dg=cd.querySelector('.kvl-tg--d'),ds=cd.querySelector('.kvl-tsep--d');
