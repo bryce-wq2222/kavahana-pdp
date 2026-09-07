@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>10 Reasons Kava Nectar Is the Non-Alcoholic Drink You Can Actually Feel</title>
+<title>6 Reasons Kava Nectar Is the Non-Alcoholic Drink You Can Actually Feel</title>
 <link rel="preload" as="font" type="font/woff2" href="https://bryce-wq2222.github.io/kavahana-pdp/fonts/chivo-var.woff2" crossorigin>
 <style>/* Horizontal guard: the verbatim PDP hero wrapper is width:100vw and the
    PDP wrapper-unpadder writes an inline overflow:visible onto body, so both
@@ -89,16 +89,22 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 #kvl-page .kvl-wrap{max-width:1140px;margin:0 auto;padding:0 18px}
 #kvl-page .kvl-col{max-width:800px;margin:0 auto;padding:0 16px}
 
-/* ---------- offer bar ------------------------------------------------------ */
+/* ---------- offer bar: sale name + offer, and the countdown box -------------
+   Same shape as the model: centred 2-line text on the left, a dark box on the
+   right with big tabular digits and HRS / MIN / SEC under them. The DAYS
+   group only renders while more than 24h remain. */
 #kvl-page .kvl-bar{background:var(--cream);border-bottom:1px solid var(--line)}
-#kvl-page .kvl-barin{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
-#kvl-page .kvl-bartxt{flex:1 1 0;min-width:0}
-#kvl-page .kvl-bar1{font-size:15px;font-weight:800;letter-spacing:.01em;line-height:1.25;color:var(--green);text-transform:uppercase}
-#kvl-page .kvl-bar2{font-size:13px;font-weight:500;line-height:1.3;color:var(--ink);margin-top:3px}
-#kvl-page .kvl-chip{flex:0 0 auto;max-width:44%;background:var(--deep);color:#fff;border-radius:10px;padding:9px 14px;text-align:center}
-#kvl-page .kvl-chipn{font-size:22px;font-weight:800;line-height:1;letter-spacing:.04em;font-variant-numeric:tabular-nums}
-#kvl-page .kvl-chipl{font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;line-height:1;margin-top:5px;opacity:.85}
-#kvl-page .kvl-chips{font-size:12px;font-weight:600;line-height:1.3}
+#kvl-page .kvl-barin{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
+#kvl-page .kvl-bartxt{flex:0 1 auto;min-width:0;text-align:center}
+#kvl-page .kvl-bar1{font-size:14px;font-weight:800;letter-spacing:.02em;line-height:1.25;color:var(--ink);text-transform:uppercase}
+#kvl-page .kvl-bar2{font-size:13.5px;font-weight:800;letter-spacing:.01em;line-height:1.25;color:var(--green);text-transform:uppercase;margin-top:3px}
+#kvl-page .kvl-timer{flex:0 0 auto;display:flex;align-items:flex-start;gap:3px;background:var(--deep);color:#fff;border-radius:10px;padding:8px 10px 7px}
+#kvl-page .kvl-tg{display:flex;flex-direction:column;align-items:center;min-width:30px}
+#kvl-page .kvl-tn{font-size:22px;font-weight:800;line-height:1;letter-spacing:.02em;font-variant-numeric:tabular-nums;color:#fff}
+#kvl-page .kvl-tl{font-size:8.5px;font-weight:700;letter-spacing:.12em;line-height:1;margin-top:4px;color:#fff;opacity:.9}
+#kvl-page .kvl-tsep{font-size:20px;font-weight:800;line-height:1;color:#fff;opacity:.7;padding-top:1px}
+#kvl-page .kvl-tg--d[hidden],#kvl-page .kvl-tsep--d[hidden]{display:none}
+#kvl-page .kvl-tended{font-size:12px;font-weight:700;line-height:1.2;color:#fff;padding:6px 2px}
 
 /* ---------- header --------------------------------------------------------- */
 #kvl-page .kvl-head{padding:30px 0 0}
@@ -114,24 +120,28 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 #kvl-page .kvl-note strong{font-weight:800}
 
 /* ---------- comparison table ----------------------------------------------
-   4 columns: labels | brand (raised, tinted, bordered) | other | other.
-   The brand column runs 12px taller top and bottom than its neighbours so it
-   reads as the lifted card, exactly like the model. */
-#kvl-page .kvl-cmp{display:grid;grid-template-columns:1fr 1.28fr .96fr .96fr;align-items:start;margin:0 -8px}
-#kvl-page .kvl-cmpc{padding-top:12px}
-#kvl-page .kvl-cmpc--brand{padding-top:0;padding-bottom:6px;background:var(--tint);border:1.5px solid var(--mint);border-radius:12px;margin:0 2px}
-#kvl-page .kvl-cmpr{min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px 4px;border-bottom:1px dashed var(--line)}
-#kvl-page .kvl-cmpc--brand .kvl-cmpr{margin:0 3px;padding:10px 2px}
-#kvl-page .kvl-cmpr--last{border-bottom:0}
-#kvl-page .kvl-cmpr--head{min-height:52px;padding:6px 4px}
-#kvl-page .kvl-cmpc--brand .kvl-cmpr--head{min-height:64px}
-#kvl-page .kvl-cmpc--labels .kvl-cmpr{align-items:flex-start;text-align:left;padding-left:8px;padding-right:4px}
-#kvl-page .kvl-cmpl{font-size:12px;font-weight:600;line-height:1.3;color:var(--ink)}
-#kvl-page .kvl-cmpbh{font-size:15px;font-weight:800;line-height:1.2;color:var(--green);letter-spacing:-.01em}
+   ONE grid, every cell in it, so every row is exactly the same height in all
+   4 columns (the v3.0 build used 4 separate stacks and the rows drifted).
+   Columns: labels | brand | other | other. The brand card is a single element
+   spanning every row of column 2, drawn behind the cells, and it runs 8px
+   past the grid at the bottom so it reads as the raised card in the model.
+   The other 2 header cells sit 12px lower (padding-top) for the same reason. */
+#kvl-page .kvl-cmp{display:grid;grid-template-columns:.95fr 1.3fr 1fr 1fr;position:relative;margin:0 -8px 8px}
+#kvl-page .kvl-cmpbg{background:var(--tint);border:1.5px solid var(--mint);border-radius:14px;margin:0 3px -8px;z-index:0}
+#kvl-page .kvl-cell{position:relative;z-index:1;min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px 4px;border-bottom:1px dashed var(--line)}
+#kvl-page .kvl-cell--c2{margin:0 6px;padding:10px 2px}
+#kvl-page .kvl-cell--lbl{align-items:flex-start;text-align:left;padding-left:8px;padding-right:2px}
+#kvl-page .kvl-cell--head{min-height:60px;padding-top:16px}
+#kvl-page .kvl-cell--head.kvl-cell--c2{padding-top:10px}
+#kvl-page .kvl-cell--ohead{background:#FBF1EE;border-radius:8px 8px 0 0}
+#kvl-page .kvl-cell--last{border-bottom:0}
+#kvl-page .kvl-cmpl{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;line-height:1.25;color:var(--ink)}
+#kvl-page .kvl-cmpe{font-size:14px;line-height:1;flex:none}
+#kvl-page .kvl-cmpbh{font-size:16px;font-weight:800;line-height:1.15;color:var(--green);letter-spacing:-.01em}
 #kvl-page .kvl-cmpoh{font-size:11.5px;font-weight:700;line-height:1.25;color:var(--clay)}
-#kvl-page .kvl-cmpb{font-size:14.5px;font-weight:700;line-height:1.25;color:var(--ink)}
-#kvl-page .kvl-cmpbs{font-size:10px;font-weight:400;line-height:1.2;color:var(--grey);margin-top:3px}
-#kvl-page .kvl-cmpo{font-size:12.5px;font-weight:400;line-height:1.3;color:var(--grey)}
+#kvl-page .kvl-cmpb{font-size:14.5px;font-weight:800;line-height:1.2;color:var(--ink);white-space:nowrap}
+#kvl-page .kvl-cmpbs{font-size:10px;font-weight:500;line-height:1.2;color:var(--grey);margin-top:3px}
+#kvl-page .kvl-cmpo{font-size:12.5px;font-weight:500;line-height:1.3;color:var(--grey)}
 #kvl-page .kvl-tldr{font-size:15px;line-height:1.5;color:var(--ink);margin:16px 0 0}
 #kvl-page .kvl-tldr strong{font-weight:800}
 
@@ -154,8 +164,8 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 #kvl-page .kvl-h2{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:800;font-size:26px;line-height:1.2;letter-spacing:-.025em;color:var(--ink);text-wrap:balance}
 #kvl-page .kvl-p{font-size:18px;line-height:1.5;letter-spacing:-.01em;color:var(--ink)}
 #kvl-page .kvl-p strong{font-weight:700}
-#kvl-page .kvl-linkrow{display:flex;align-items:center;gap:8px;margin-top:2px}
-#kvl-page .kvl-arrow{font-size:20px;font-weight:800;line-height:1;color:var(--green)}
+#kvl-page .kvl-linkrow{display:flex;align-items:center;gap:6px;margin-top:2px}
+#kvl-page .kvl-arrow{font-size:20px;line-height:1;flex:none}
 #kvl-page .kvl-link{font-size:18px;font-weight:700;line-height:1.35;color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--green)}
 #kvl-page .kvl-link:hover{color:var(--green)}
 #kvl-page .kvl-quotes{display:flex;flex-direction:column;gap:10px}
@@ -164,30 +174,38 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 #kvl-page .kvl-qt{font-size:16px;line-height:1.5;color:var(--ink)}
 #kvl-page .kvl-qw{font-size:12px;font-weight:600;line-height:1.3;color:var(--grey);margin-top:8px}
 
-/* ---------- closing (the model's "reason #11" hand-off) -------------------- */
-#kvl-page .kvl-close{background:var(--cream);border-top:1px solid var(--line);padding:44px 0 40px;text-align:center}
-#kvl-page .kvl-close .kvl-h2{margin:0 auto 14px;max-width:22ch}
-#kvl-page .kvl-close .kvl-p{max-width:46ch;margin:0 auto}
-#kvl-page .kvl-close .kvl-linkrow{justify-content:center;margin-top:18px}
+/* ---------- closing (the model's "reason #11" hand-off): 2 lines, then the
+   buy box directly below. No link here, the buy box IS the next thing. */
+#kvl-page .kvl-close{background:var(--cream);border-top:1px solid var(--line);padding:36px 0 30px;text-align:center}
+#kvl-page .kvl-close .kvl-h2{margin:0 auto 10px;max-width:24ch}
+#kvl-page .kvl-close .kvl-p{max-width:44ch;margin:0 auto}
 
 /* ---------- >=800px: the reading page --------------------------------------- */
 @media(min-width:800px){
   #kvl-page .kvl-wrap{padding:0 24px}
-  #kvl-page .kvl-barin{padding:14px 0}
+  #kvl-page .kvl-barin{padding:12px 0;gap:22px}
   #kvl-page .kvl-bar1{font-size:17px}
-  #kvl-page .kvl-bar2{font-size:14px}
+  #kvl-page .kvl-bar2{font-size:15px}
+  #kvl-page .kvl-timer{padding:9px 14px 8px;gap:4px}
+  #kvl-page .kvl-tg{min-width:38px}
+  #kvl-page .kvl-tn{font-size:26px}
+  #kvl-page .kvl-tl{font-size:9.5px}
+  #kvl-page .kvl-tsep{font-size:24px}
   #kvl-page .kvl-head{padding-top:44px}
   #kvl-page .kvl-h1{margin-bottom:22px}
   #kvl-page .kvl-byline{margin-bottom:20px}
   #kvl-page .kvl-note{font-size:18px;padding:12px 16px;margin-bottom:22px}
-  #kvl-page .kvl-cmp{margin:0}
-  #kvl-page .kvl-cmpl{font-size:14px}
-  #kvl-page .kvl-cmpbh{font-size:18px}
-  #kvl-page .kvl-cmpoh{font-size:13.5px}
-  #kvl-page .kvl-cmpb{font-size:17px}
-  #kvl-page .kvl-cmpbs{font-size:11px}
-  #kvl-page .kvl-cmpo{font-size:14.5px}
-  #kvl-page .kvl-cmpr{min-height:72px}
+  #kvl-page .kvl-cmp{margin:0 0 8px}
+  #kvl-page .kvl-cell{min-height:72px;padding:12px 8px}
+  #kvl-page .kvl-cell--c2{margin:0 12px}
+  #kvl-page .kvl-cell--lbl{padding-left:12px}
+  #kvl-page .kvl-cmpl{font-size:14.5px;gap:7px}
+  #kvl-page .kvl-cmpe{font-size:17px}
+  #kvl-page .kvl-cmpbh{font-size:19px}
+  #kvl-page .kvl-cmpoh{font-size:14px}
+  #kvl-page .kvl-cmpb{font-size:18px}
+  #kvl-page .kvl-cmpbs{font-size:11.5px}
+  #kvl-page .kvl-cmpo{font-size:15px}
   #kvl-page .kvl-tldr{font-size:16px;margin-top:18px}
   #kvl-page .kvl-reasons{padding:44px 0 56px}
   #kvl-page .kvl-reasonsin{gap:56px}
@@ -196,7 +214,7 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
   #kvl-page .kvl-tilebar p{font-size:18px}
   #kvl-page .kvl-h2{font-size:28px}
   #kvl-page .kvl-p{font-size:18.4px}
-  #kvl-page .kvl-close{padding:56px 0 48px}
+  #kvl-page .kvl-close{padding:44px 0 36px}
   #kvl-page .kvl-close .kvl-h2{font-size:30px}
 }
 </style>
@@ -206,17 +224,19 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
     <div class="kvl-wrap"><div class="kvl-col">
       <div class="kvl-barin">
         <div class="kvl-bartxt">
-          <p class="kvl-bar1">Up to 39% off + free gifts</p>
-          <p class="kvl-bar2">with your Starter Kit</p>
+          <p class="kvl-bar1">&#127809; FALL SALE &#127809;</p>
+          <p class="kvl-bar2">UP TO 39% OFF + FREE GIFTS</p>
         </div>
-        <div class="kvl-chip"><span class="kvl-chips">30 day guarantee</span></div>
+        <div class="kvl-timer" id="kvl-cd" data-ends="2026-09-13T23:59:59-07:00" data-ended="Sale ended" role="timer" aria-live="off">
+          <div class="kvl-tg kvl-tg--d"><span class="kvl-tn" data-u="d">00</span><span class="kvl-tl">DAYS</span></div><span class="kvl-tsep kvl-tsep--d" aria-hidden="true">:</span><div class="kvl-tg"><span class="kvl-tn" data-u="h">00</span><span class="kvl-tl">HRS</span></div><span class="kvl-tsep" aria-hidden="true">:</span><div class="kvl-tg"><span class="kvl-tn" data-u="m">00</span><span class="kvl-tl">MIN</span></div><span class="kvl-tsep" aria-hidden="true">:</span><div class="kvl-tg"><span class="kvl-tn" data-u="s">00</span><span class="kvl-tl">SEC</span></div>
+        </div>
       </div>
     </div></div>
   </div>
 
   <header class="kvl-head">
     <div class="kvl-wrap"><div class="kvl-col">
-      <h1 class="kvl-h1">10 Reasons Kava Nectar Is the Non-Alcoholic Drink You Can Actually Feel</h1>
+      <h1 class="kvl-h1">6 Reasons Kava Nectar Is the Non-Alcoholic Drink You Can Actually Feel</h1>
       <div class="kvl-byline">
         <span class="kvl-avwrap"><img class="kvl-av" data-slot="kvl-avatar" src="https://bryce-wq2222.github.io/kavahana-pdp/img/hana-avatar.jpg" width="250" height="250" loading="lazy" decoding="async" alt="Hana Wilen at a Kavahana booth, holding a bag of Kava Nectar."></span>
         <div>
@@ -224,42 +244,35 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
           <p class="kvl-bymeta">Last updated September 7, 2026</p>
         </div>
       </div>
-      <p class="kvl-note"><strong>Read this</strong> before your next drink.</p>
+      <p class="kvl-note"><strong>Read this</strong> BEFORE your next drink!</p>
       <div class="kvl-cmp" role="table" aria-label="Kava Nectar compared with A glass of wine and A cocktail">
-          <div class="kvl-cmpc kvl-cmpc--labels">
-            <div class="kvl-cmpr kvl-cmpr--head"></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpl">Calories</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpl">Sugar</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpl">Alcohol</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpl">Next morning</span></div>
-            <div class="kvl-cmpr kvl-cmpr--last"><span class="kvl-cmpl">Per serving</span></div>
-          </div>
-          <div class="kvl-cmpc kvl-cmpc--brand">
-            <div class="kvl-cmpr kvl-cmpr--head"><span class="kvl-cmpbh">Kava Nectar</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpb">0</span><span class="kvl-cmpbs">per serving</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpb">0 g</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpb">None</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpb">Clear head</span></div>
-            <div class="kvl-cmpr kvl-cmpr--last"><span class="kvl-cmpb">from $2.44</span></div>
-          </div>
-          <div class="kvl-cmpc kvl-cmpc--o1">
-            <div class="kvl-cmpr kvl-cmpr--head"><span class="kvl-cmpoh">A glass of wine</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpo">120 to 150</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpo">1 to 4 g</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpo">Yes</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpo">Foggy</span></div>
-            <div class="kvl-cmpr kvl-cmpr--last"><span class="kvl-cmpo">Varies</span></div>
-          </div>
-          <div class="kvl-cmpc kvl-cmpc--o2">
-            <div class="kvl-cmpr kvl-cmpr--head"><span class="kvl-cmpoh">A cocktail</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpo">150 to 300</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpo">10 to 30 g</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpo">Yes</span></div>
-            <div class="kvl-cmpr"><span class="kvl-cmpo">Foggy</span></div>
-            <div class="kvl-cmpr kvl-cmpr--last"><span class="kvl-cmpo">Varies</span></div>
-          </div>
+          <div class="kvl-cmpbg" style="grid-row:1 / span 6;grid-column:2" aria-hidden="true"></div>
+          <div class="kvl-cell kvl-cell--c1 kvl-cell--lbl kvl-cell--head" style="grid-row:1;grid-column:1" role="columnheader"></div>
+          <div class="kvl-cell kvl-cell--c2 kvl-cell--head" style="grid-row:1;grid-column:2" role="columnheader"><span class="kvl-cmpbh">Kava Nectar</span></div>
+          <div class="kvl-cell kvl-cell--c3 kvl-cell--head kvl-cell--ohead" style="grid-row:1;grid-column:3" role="columnheader"><span class="kvl-cmpoh">A glass of wine</span></div>
+          <div class="kvl-cell kvl-cell--c4 kvl-cell--head kvl-cell--ohead" style="grid-row:1;grid-column:4" role="columnheader"><span class="kvl-cmpoh">A cocktail</span></div>
+          <div class="kvl-cell kvl-cell--c1 kvl-cell--lbl" style="grid-row:2;grid-column:1" role="cell"><span class="kvl-cmpl"><span class="kvl-cmpe" aria-hidden="true">&#128293;</span>Calories</span></div>
+          <div class="kvl-cell kvl-cell--c2" style="grid-row:2;grid-column:2" role="cell"><span class="kvl-cmpb">0</span><span class="kvl-cmpbs">per serving</span></div>
+          <div class="kvl-cell kvl-cell--c3" style="grid-row:2;grid-column:3" role="cell"><span class="kvl-cmpo">120 to 150</span></div>
+          <div class="kvl-cell kvl-cell--c4" style="grid-row:2;grid-column:4" role="cell"><span class="kvl-cmpo">150 to 300</span></div>
+          <div class="kvl-cell kvl-cell--c1 kvl-cell--lbl" style="grid-row:3;grid-column:1" role="cell"><span class="kvl-cmpl"><span class="kvl-cmpe" aria-hidden="true">&#127852;</span>Sugar</span></div>
+          <div class="kvl-cell kvl-cell--c2" style="grid-row:3;grid-column:2" role="cell"><span class="kvl-cmpb">0 g</span></div>
+          <div class="kvl-cell kvl-cell--c3" style="grid-row:3;grid-column:3" role="cell"><span class="kvl-cmpo">1 to 4 g</span></div>
+          <div class="kvl-cell kvl-cell--c4" style="grid-row:3;grid-column:4" role="cell"><span class="kvl-cmpo">10 to 30 g</span></div>
+          <div class="kvl-cell kvl-cell--c1 kvl-cell--lbl" style="grid-row:4;grid-column:1" role="cell"><span class="kvl-cmpl"><span class="kvl-cmpe" aria-hidden="true">&#127863;</span>Alcohol</span></div>
+          <div class="kvl-cell kvl-cell--c2" style="grid-row:4;grid-column:2" role="cell"><span class="kvl-cmpb">None</span></div>
+          <div class="kvl-cell kvl-cell--c3" style="grid-row:4;grid-column:3" role="cell"><span class="kvl-cmpo">Yes</span></div>
+          <div class="kvl-cell kvl-cell--c4" style="grid-row:4;grid-column:4" role="cell"><span class="kvl-cmpo">Yes</span></div>
+          <div class="kvl-cell kvl-cell--c1 kvl-cell--lbl" style="grid-row:5;grid-column:1" role="cell"><span class="kvl-cmpl"><span class="kvl-cmpe" aria-hidden="true">&#127749;</span>Next morning</span></div>
+          <div class="kvl-cell kvl-cell--c2" style="grid-row:5;grid-column:2" role="cell"><span class="kvl-cmpb">Clear head</span></div>
+          <div class="kvl-cell kvl-cell--c3" style="grid-row:5;grid-column:3" role="cell"><span class="kvl-cmpo">Foggy</span></div>
+          <div class="kvl-cell kvl-cell--c4" style="grid-row:5;grid-column:4" role="cell"><span class="kvl-cmpo">Foggy</span></div>
+          <div class="kvl-cell kvl-cell--c1 kvl-cell--lbl kvl-cell--last" style="grid-row:6;grid-column:1" role="cell"><span class="kvl-cmpl"><span class="kvl-cmpe" aria-hidden="true">&#128176;</span>Per serving</span></div>
+          <div class="kvl-cell kvl-cell--c2 kvl-cell--last" style="grid-row:6;grid-column:2" role="cell"><span class="kvl-cmpb">from $2.44</span></div>
+          <div class="kvl-cell kvl-cell--c3 kvl-cell--last" style="grid-row:6;grid-column:3" role="cell"><span class="kvl-cmpo">Varies</span></div>
+          <div class="kvl-cell kvl-cell--c4 kvl-cell--last" style="grid-row:6;grid-column:4" role="cell"><span class="kvl-cmpo">Varies</span></div>
         </div>
-      <p class="kvl-tldr"><strong>TLDR:</strong> go out, feel good, wake up fine. The 10 reasons are below.</p>
+      <p class="kvl-tldr"><strong>TLDR:</strong> go out, feel good, wake up fine. Here are the 6 reasons &#128071;</p>
     </div></div>
   </header>
 
@@ -272,12 +285,12 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
           <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
           <span class="kvl-pht">SOCIAL, the night out: 2 friends with Kavahana cups, then the clear morning</span>
         </div>
-        <div class="kvl-tilebar"><p>The morning after</p></div>
+        <div class="kvl-tilebar"><p>&#127749; Better mornings</p></div>
       </div>
       <div class="kvl-body">
-        <h2 class="kvl-h2">1. The feeling, minus the morning after</h2>
+        <h2 class="kvl-h2">1. All the feeling, none of the hangxiety</h2>
         <div class="kvl-txt">
-          <p class="kvl-p">Alcohol takes the edge off, then charges you for it the next morning: the fog, the headache, the hangxiety. Kava Nectar gives you the unwind without the next-day regret. <strong>Go out, feel good, wake up fine.</strong></p>
+          <p class="kvl-p">You know the deal. A couple of drinks take the edge off, then the next morning sends the bill: the fog, the headache, the 3am wake-up, the hangxiety. Kava Nectar gives you the unwind without the next-day regret. <strong>Go out, feel good, wake up fine.</strong></p>
         </div>
       </div>
     </div>
@@ -289,12 +302,12 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
           <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
           <span class="kvl-pht">TINGLE, the first sip: hands around a coconut cup, close on the pour</span>
         </div>
-        <div class="kvl-tilebar"><p>You can feel it</p></div>
+        <div class="kvl-tilebar"><p>&#9889; You can feel it</p></div>
       </div>
       <div class="kvl-body">
-        <h2 class="kvl-h2">2. You can actually feel it</h2>
+        <h2 class="kvl-h2">2. You&rsquo;ll actually feel it, and fast</h2>
         <div class="kvl-txt">
-          <p class="kvl-p"><strong>The first sip tingles on your lips.</strong> That is the kavalactones working. Many people feel relaxed and sociable <strong>10 to 20 minutes in, and it lasts 1 to 2 hours.</strong> Present, not out of it.</p>
+          <p class="kvl-p">Kava Nectar is a drink you can actually feel. <strong>The first sip tingles on your lips</strong> (that&rsquo;s the kavalactones working), and 10 to 20 minutes later many people feel relaxed and sociable. <strong>It lasts 1 to 2 hours.</strong> Present, not out of it.</p>
         </div>
       </div>
     </div>
@@ -306,144 +319,72 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
           <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
           <span class="kvl-pht">ROOT, the ingredient: whole kava root, the powder, the bag</span>
         </div>
-        <div class="kvl-tilebar"><p>1 ingredient</p></div>
+        <div class="kvl-tilebar"><p>&#127807; 1 ingredient</p></div>
       </div>
       <div class="kvl-body">
-        <h2 class="kvl-h2">3. 1 ingredient. Nothing added, nothing removed.</h2>
+        <h2 class="kvl-h2">3. 1 ingredient. 0 sugar. 0 calories. 0 alcohol.</h2>
         <div class="kvl-txt">
-          <p class="kvl-p">Kava Nectar is the cold-pressed juice of noble kava root, dried into a pure powder. <strong>No caffeine, no alcohol, 0 sugar, 0 calories.</strong> The root grows 5 to 7 years in the volcanic soil of Vanuatu, and the kava plant is a member of the peppercorn family. People in the South Pacific and Hawaii have enjoyed it for over 3,000 years.</p>
-        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#8594;</span><a class="kvl-link" href="#kvl-buybox">Try it tonight</a></p>
+          <p class="kvl-p">Kava Nectar is the cold-pressed juice of noble kava root, dried into a pure powder. Nothing added, nothing removed. <strong>No caffeine, no alcohol, no kratom, and it&rsquo;s vegan.</strong> Natural kava root is non-addictive and non-intoxicating. Every batch is tested. People in the South Pacific and Hawaii have enjoyed it for over 3,000 years.</p>
+        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Try 1 ingredient tonight</a></p>
         </div>
       </div>
     </div>
 
     <div class="kvl-row" id="kvl-r4">
-      <div class="kvl-tile" data-slot="kvl-slot-4" data-subject="TRUST">
+      <div class="kvl-tile" data-slot="kvl-slot-4" data-subject="RITUAL OVER TIME">
         <div class="kvl-ph" data-gap="kvl-slot-4">
           <span class="kvl-phk">Asset 4</span>
           <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
-          <span class="kvl-pht">TRUST, the product: the bag and a finished drink on a clean surface</span>
+          <span class="kvl-pht">RITUAL OVER TIME, the routine: the same cup on the same counter, week after week</span>
         </div>
-        <div class="kvl-tilebar"><p>Safe to say yes</p></div>
+        <div class="kvl-tilebar"><p>&#128201; Reverse tolerance</p></div>
       </div>
       <div class="kvl-body">
-        <h2 class="kvl-h2">4. Safe to say yes to</h2>
+        <h2 class="kvl-h2">4. The more you drink it, the less you need</h2>
         <div class="kvl-txt">
-          <p class="kvl-p"><strong>Natural kava root is non-addictive and non-intoxicating.</strong> Kava Nectar is made from kava root and nothing else. No kratom, no caffeine, no alcohol, and it is vegan. Every batch is tested.</p>
-        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#8594;</span><a class="kvl-link" href="#kvl-buybox">See the Starter Kit</a></p>
+          <p class="kvl-p">It&rsquo;s called reverse tolerance, and it&rsquo;s the opposite of how most drinks work. Kava is thought to feel subtle at first and become more noticeable with continued use, so <strong>many people find they need less over time, not more.</strong> Many people enjoy 2 to 3 servings, especially in the beginning. That&rsquo;s why the Starter Kit is a monthly subscription, and why the best night to start is tonight.</p>
+        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Start now, need less later</a></p>
         </div>
       </div>
     </div>
 
     <div class="kvl-row" id="kvl-r5">
-      <div class="kvl-tile" data-slot="kvl-slot-5" data-subject="RITUAL OVER TIME">
+      <div class="kvl-tile" data-slot="kvl-slot-5" data-subject="BAR">
         <div class="kvl-ph" data-gap="kvl-slot-5">
           <span class="kvl-phk">Asset 5</span>
           <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
-          <span class="kvl-pht">RITUAL OVER TIME, the routine: the same cup on the same counter, week after week</span>
+          <span class="kvl-pht">BAR, inside the Santa Monica bar: the counter, the cups, the line</span>
         </div>
-        <div class="kvl-tilebar"><p>Reverse tolerance</p></div>
+        <div class="kvl-tilebar"><p>&#127865; From the bar in LA</p></div>
       </div>
       <div class="kvl-body">
-        <h2 class="kvl-h2">5. Most drinks ask for more. Kava is known for the opposite.</h2>
+        <h2 class="kvl-h2">5. It&rsquo;s the same kava they pour at the bar in LA</h2>
         <div class="kvl-txt">
-          <p class="kvl-p">It&rsquo;s called reverse tolerance. Kava is thought to feel subtle at first and become more noticeable with continued use, so <strong>many people find they need less over time, not more.</strong> Many people enjoy 2 to 3 servings, especially in the beginning. That&rsquo;s why the Starter Kit is a monthly subscription, and why it&rsquo;s worth starting now rather than later.</p>
-        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#8594;</span><a class="kvl-link" href="#kvl-buybox">Start now, need less later</a></p>
+          <p class="kvl-p">In 2024, Hana and Neil opened LA&rsquo;s first kava nectar bar in Santa Monica. There are 2 now, and <strong>over 500,000 cups</strong> have gone across the counter. CBS, NBC News and the LA Times have covered the bar. The Starter Kit is the same kava, plus everything you need to make it at home: 2 coconut shell cups, a bamboo whisk and a digital recipe guide, free. <strong>15 seconds with a whisk and it&rsquo;s ready.</strong></p>
+        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Bring the bar home</a></p>
         </div>
       </div>
     </div>
 
     <div class="kvl-row" id="kvl-r6">
-      <div class="kvl-tile" data-slot="kvl-slot-6" data-subject="BAR">
+      <div class="kvl-tile" data-slot="kvl-slot-6" data-subject="REVIEWS">
         <div class="kvl-ph" data-gap="kvl-slot-6">
           <span class="kvl-phk">Asset 6</span>
           <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
-          <span class="kvl-pht">BAR, inside the Santa Monica bar: the counter, the cups, the line</span>
-        </div>
-        <div class="kvl-tilebar"><p>From the bar in LA</p></div>
-      </div>
-      <div class="kvl-body">
-        <h2 class="kvl-h2">6. It&rsquo;s what they pour at the bar in Santa Monica</h2>
-        <div class="kvl-txt">
-          <p class="kvl-p">In 2024, Hana and Neil opened LA&rsquo;s first kava nectar bar in Santa Monica. There are 2 now. <strong>Over 500,000 cups later</strong>, Kava Nectar is the same kava they pour behind the counter. CBS, NBC News and the LA Times have covered the bar.</p>
-        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#8594;</span><a class="kvl-link" href="#kvl-buybox">Bring the bar home</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="kvl-row" id="kvl-r7">
-      <div class="kvl-tile" data-slot="kvl-slot-7" data-subject="HOW TO">
-        <div class="kvl-ph" data-gap="kvl-slot-7">
-          <span class="kvl-phk">Asset 7</span>
-          <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
-          <span class="kvl-pht">HOW TO, the 15 seconds: scoop, whisk, pour over ice (video works best here)</span>
-        </div>
-        <div class="kvl-tilebar"><p>15 seconds</p></div>
-      </div>
-      <div class="kvl-body">
-        <h2 class="kvl-h2">7. Ready in 15 seconds with a whisk</h2>
-        <div class="kvl-txt">
-          <p class="kvl-p">Scoop it into any cold non-alcoholic drink, whisk for 15 seconds and pour it over ice. <strong>No brewing, no straining, no bar tab.</strong> It tastes earthy, and cold coconut water is what people like to mix it with. The Starter Kit comes with 2 coconut shell cups, a bamboo whisk and a digital recipe guide, free, so make the second cup for someone else.</p>
-        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#8594;</span><a class="kvl-link" href="#kvl-buybox">Get the cups and the whisk</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="kvl-row" id="kvl-r8">
-      <div class="kvl-tile" data-slot="kvl-slot-8" data-subject="VALUE">
-        <div class="kvl-ph" data-gap="kvl-slot-8">
-          <span class="kvl-phk">Asset 8</span>
-          <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
-          <span class="kvl-pht">VALUE, the kit laid out: bags, cups, whisk, sticks, guide</span>
-        </div>
-        <div class="kvl-tilebar"><p>Per cup</p></div>
-      </div>
-      <div class="kvl-body">
-        <h2 class="kvl-h2">8. Per cup, it costs less than the bottle</h2>
-        <div class="kvl-txt">
-          <p class="kvl-p">Sticker price is the first question, so here is the math. <strong>The 45-serving Starter Kit works out to $2.44 a cup</strong>, and the 22-serving kit to $2.73. A fresh bag ships monthly, and you can skip or cancel anytime. Up to 39% off your first box.</p>
-        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#8594;</span><a class="kvl-link" href="#kvl-buybox">Get up to 39% off</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="kvl-row" id="kvl-r9">
-      <div class="kvl-tile" data-slot="kvl-slot-9" data-subject="PROOF OF EASE">
-        <div class="kvl-ph" data-gap="kvl-slot-9">
-          <span class="kvl-phk">Asset 9</span>
-          <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
-          <span class="kvl-pht">PROOF OF EASE, the unboxing: the kit arriving, the first cup at home</span>
-        </div>
-        <div class="kvl-tilebar"><p>30 day guarantee</p></div>
-      </div>
-      <div class="kvl-body">
-        <h2 class="kvl-h2">9. Love it or your money back</h2>
-        <div class="kvl-txt">
-          <p class="kvl-p">The Starter Kit comes with a 30 day guarantee. <strong>Love it or your money back.</strong> Many people enjoy 2 to 3 servings before they have an opinion, so give it the first week.</p>
-        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#8594;</span><a class="kvl-link" href="#kvl-buybox">Try it for 30 days</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="kvl-row" id="kvl-r10">
-      <div class="kvl-tile" data-slot="kvl-slot-10" data-subject="REVIEWS">
-        <div class="kvl-ph" data-gap="kvl-slot-10">
-          <span class="kvl-phk">Asset 10</span>
-          <span class="kvl-phs">1080 x 1080 &#183; photo or video</span>
           <span class="kvl-pht">REVIEWS, real people: a UGC frame, a customer with the cup, or a review card</span>
         </div>
-        <div class="kvl-tilebar"><p>Loved by many</p></div>
+        <div class="kvl-tilebar"><p>&#11088; Loved by many</p></div>
       </div>
       <div class="kvl-body">
-        <h2 class="kvl-h2">10. Rated 4.8 out of 5</h2>
+        <h2 class="kvl-h2">6. Rated 4.8 out of 5. Love it or your money back.</h2>
         <div class="kvl-txt">
-          <p class="kvl-p">From the people who drink it.</p>
+          <p class="kvl-p">The Starter Kit works out to <strong>$2.44 a cup</strong> and comes with a 30 day guarantee: love it or your money back. Here&rsquo;s what people say:</p>
         <div class="kvl-quotes">
           <div class="kvl-q"><p class="kvl-qs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="kvl-qt">&ldquo;It&rsquo;s now my go-to for winding down and feeling good without alcohol.&rdquo;</p><p class="kvl-qw">Sammy, New York</p></div>
           <div class="kvl-q"><p class="kvl-qs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="kvl-qt">&ldquo;It gives me that perfect upbeat, relaxed mood that makes socializing feel easy and fun without feeling out of it.&rdquo;</p><p class="kvl-qw">Priya S., Verified review</p></div>
           <div class="kvl-q"><p class="kvl-qs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="kvl-qt">&ldquo;I have tried other kava products with no effect but this product I can feel the effects almost instantly.&rdquo;</p><p class="kvl-qw">Marcus T., Verified review</p></div>
         </div>
-        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#8594;</span><a class="kvl-link" href="#kvl-buybox">Get my Starter Kit</a></p>
+        <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Get my Starter Kit</a></p>
         </div>
       </div>
     </div>
@@ -452,9 +393,8 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 
   <section class="kvl-close">
     <div class="kvl-wrap"><div class="kvl-col">
-      <h2 class="kvl-h2">Made it to #11? Then you&rsquo;re ready to try it.</h2>
-      <p class="kvl-p">Here is the Starter Kit, up to 39% off, with the 2 coconut shell cups, the bamboo whisk and the recipe guide in the box. Pick a night this week.</p>
-      <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#8594;</span><a class="kvl-link" href="#kvl-buybox">Get my Starter Kit</a></p>
+      <h2 class="kvl-h2">Made it to #7? Then you&rsquo;re serious about better nights.</h2>
+      <p class="kvl-p">&#10024; Up to 39% off your first box, with the cups, whisk and recipe guide included, until the timer hits 0.</p>
     </div></div>
   </section>
 </article>
@@ -814,8 +754,11 @@ var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce
 for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(e){var t=document.getElementById('kvl-buybox');if(!t)return;e.preventDefault();var y=t.getBoundingClientRect().top+window.pageYOffset-8;window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});});}
 var cd=document.getElementById('kvl-cd');
 if(cd){var end=new Date(cd.getAttribute('data-ends')).getTime();function pad(n){return (n<10?'0':'')+n}
-function tick(){var d=end-Date.now();if(isNaN(end)||d<=0){var s=document.createElement('span');s.className='kvl-chips';s.textContent=cd.getAttribute('data-static');cd.parentNode.innerHTML='';cd.parentNode.appendChild(s);return;}
-var h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4),sec=Math.floor(d%6e4/1e3);cd.textContent=pad(h)+':'+pad(m)+':'+pad(sec);setTimeout(tick,1000);}tick();}
+var U={};['d','h','m','s'].forEach(function(u){U[u]=cd.querySelector('[data-u="'+u+'"]')});var dg=cd.querySelector('.kvl-tg--d'),ds=cd.querySelector('.kvl-tsep--d');
+function tick(){var r=end-Date.now();if(isNaN(end)||r<=0){var s=document.createElement('span');s.className='kvl-tended';s.textContent=cd.getAttribute('data-ended');cd.innerHTML='';cd.appendChild(s);return;}
+var d=Math.floor(r/864e5),h=Math.floor(r%864e5/36e5),m=Math.floor(r%36e5/6e4),sec=Math.floor(r%6e4/1e3);
+if(d>0){dg.hidden=false;ds.hidden=false;U.d.textContent=pad(d);}else{dg.hidden=true;ds.hidden=true;}
+U.h.textContent=pad(h);U.m.textContent=pad(m);U.s.textContent=pad(sec);setTimeout(tick,1000-(Date.now()%1000));}tick();}
 })();</script>
 </body>
 </html>
