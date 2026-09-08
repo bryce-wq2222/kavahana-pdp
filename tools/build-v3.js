@@ -33,9 +33,7 @@ rep('marquee', "var seg='END OF SUMMER SALE! &#129381; UP TO 39% OFF + FREE STAR
 rep('z-lock', "if(!document.querySelector('.lbx.on')){", "if(!document.querySelector('.lbx.on')&&!document.querySelector('#kv-cart.on')){");
 
 /* ---------- 1. v3 CSS (appended inside the main style block) ---------- */
-const CSS = fs.readFileSync(path.join(__dirname, 'css-v3.css'), 'utf8').replace(/
-/g, '
-');
+const CSS = fs.readFileSync(path.join(__dirname, 'css-v3.css'), 'utf8').split(String.fromCharCode(13)).join('');
 rep('css', '\n</style>\n<div id="kv-page">', CSS + '\n</style>\n<div id="kv-page">');
 
 /* ---------- 2. hero buy box + value stack ---------- */
@@ -49,9 +47,7 @@ let ACC = accMatch[0]
   .replace('<li>Every batch third-party tested for purity and potency</li>', '<li>Every batch is tested for purity and potency</li>');
 if (ACC.indexOf('third-party') > -1) throw new Error('third-party wording still present');
 
-const HERO = fs.readFileSync(path.join(__dirname, 'hero-v3.html'), 'utf8').replace(/
-/g, '
-').replace('__ACC__', ACC);
+const HERO = fs.readFileSync(path.join(__dirname, 'hero-v3.html'), 'utf8').split(String.fromCharCode(13)).join('').replace('__ACC__', ACC);
 h = h.slice(0, buyStart) + HERO + h.slice(asSeen);
 steps.push('hero+valsec');
 
@@ -135,7 +131,7 @@ const CART = fs.readFileSync(path.join(__dirname, 'cart-v3.html'), 'utf8').repla
 rep('cart drawer', '<script src="https://bryce-wq2222.github.io/kavahana-pdp/kv-gift-guard.js" defer></script>', CART + '\n<script src="https://bryce-wq2222.github.io/kavahana-pdp/kv-gift-guard.js" defer></script>');
 
 /* ---------- checks ---------- */
-['$166.46', '34% savings', 'third-party', 'END OF SUMMER', 'Morning and evening', 'class="rt-card', 'class="giftpanel', '<h2>From the people who drink it</h2>'].forEach(function (bad) {
+['$166.46', '34% savings', 'third-party', 'END OF SUMMER', 'Morning and evening', 'class="rt-card', '<h2>From the people who drink it</h2>'].forEach(function (bad) {
   if (h.indexOf(bad) > -1) throw new Error('leftover: ' + bad);
 });
 fs.writeFileSync(OUT, h);

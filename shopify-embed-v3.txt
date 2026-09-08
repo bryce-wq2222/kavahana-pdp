@@ -48,31 +48,34 @@
 }@media(max-width:620px){#kv-page .vids{grid-template-columns:1fr 1fr}#kv-page .nav .in{grid-template-columns:1fr auto 1fr}#kv-page .rsum{grid-template-columns:1fr;gap:14px;text-align:center}#kv-page .ctable th:first-child,#kv-page .ctable td:first-child{width:34%;font-size:11.5px}#kv-page .ctable thead th{font-size:9.5px;letter-spacing:0}#kv-page .ctable th,#kv-page .ctable td{padding:11px 3px;font-size:11.5px}#kv-page .ctable .wm{font-size:13px}#kv-page .uxlogo{width:34px;height:34px}
 }
 /* ---- v3 ---- */
-#kv-page .buy .stars-row{margin-bottom:4px}#kv-page .buy .stars-row b{color:var(--ink)}
-#kv-page .buy h1{margin-bottom:4px;line-height:1.05}
-#kv-page .getline{font-size:15px;margin-bottom:10px;color:var(--ink)}
-#kv-page .buy .opt{padding:10px 13px;margin-bottom:5px;grid-template-columns:18px 1fr auto;gap:10px}
-#kv-page .buy .opt:first-of-type{margin-top:13px}
+#kv-page .buy .stars-row{margin-bottom:12px;font-size:12.5px;gap:7px}#kv-page .buy .stars-row b{color:var(--ink)}
+#kv-page .buy h1{margin-bottom:10px;line-height:1.05}
+#kv-page .getline{font-size:15px;margin-bottom:4px;color:var(--ink);line-height:1.45}
+#kv-page .buy .opt{padding:13px 16px;margin-bottom:9px;grid-template-columns:18px 1fr auto;gap:11px}
+#kv-page .buy .opt:first-of-type{margin-top:28px}
 #kv-page .opt .nm{font-size:16.5px}#kv-page .opt .nm small{font-size:12px;margin-top:3px;letter-spacing:0}
 #kv-page .opt .pr{font-size:22px}#kv-page .opt .pr s{font-size:12.5px;margin-top:2px}
 #kv-page .opt .pr .fb{display:block;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:3px}#kv-page .opt.sel .pr .fb{color:#EAF3E5}
-#kv-page .opt .tag{top:-12px;font-size:10.5px;padding:4px 11px}
-#kv-page .subline{margin:9px 0 0!important;font-size:12.5px}
+#kv-page .opt .tag{top:-13px;font-size:10.5px;padding:4px 11px}
+#kv-page .buy .pill-cta{margin-top:18px}
+#kv-page .subline{margin:12px 0 0!important;font-size:12.5px}
 #kv-page .subline .code{display:inline-block;background:#E9F1E3;color:var(--green);font-weight:600;border-radius:5px;padding:1px 7px;letter-spacing:.06em}
-#kv-page .icons3{margin-top:12px;padding-top:12px}
-#kv-page .buy .guarline{margin-top:10px}
-/* value stack */
-#kv-page .valsec{padding:6px 0 26px}#kv-page .valbox{background:var(--cream);border-radius:16px;padding:20px 18px 16px;max-width:560px;margin:0 auto}
-#kv-page .valbox h2{font-size:24px;margin-bottom:12px;text-align:center}
-#kv-page .vrow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
-#kv-page .vrow:last-of-type{border-bottom:0}#kv-page .vrow .vn{flex:1;line-height:1.3}#kv-page .vrow .vv{white-space:nowrap;text-align:right}
-#kv-page .vrow .vv s{color:var(--grey);font-weight:400;margin-right:7px;font-size:12.5px}#kv-page .vrow .vv b{color:var(--green);font-weight:600;letter-spacing:.06em;font-size:12px}
-#kv-page .vrow.vfirst .vv{font-weight:600}
-#kv-page .vlist{display:none}#kv-page .vlist.sel{display:block}
-#kv-page .vtot{margin-top:12px;padding-top:12px;border-top:1.5px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:14px}
-#kv-page .vtot .vp{font-family:Newsreader,ui-serif,Georgia,serif;font-size:30px;line-height:1;color:var(--green)}#kv-page .vtot .vp s{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--grey);margin-right:6px}
-#kv-page .vsave{text-align:center;font-size:12.5px;color:var(--grey);margin-top:8px}#kv-page .vsave b{color:var(--green)}
-#kv-page .valsec .acc{max-width:560px;margin:18px auto 0}
+#kv-page .buy .guarline{margin-top:12px}
+#kv-page .icons3{margin-top:18px;padding-top:16px}
+#kv-page .acc{margin-top:22px}
+/* first-box gift grid */
+#kv-page .valsec{padding-top:26px}
+#kv-page .gifts5{grid-template-columns:repeat(5,minmax(0,1fr))}
+#kv-page .gn em{display:block;font-style:normal;font-size:10.5px;color:var(--grey);text-transform:none;letter-spacing:0;margin-top:3px;font-weight:400}
+#kv-page .valsec.vs-2oz [data-vs45]{display:none}
+#kv-page .valsec.vs-2oz .gifts5{grid-template-columns:repeat(3,minmax(0,1fr));max-width:720px;margin-left:auto;margin-right:auto}
+#kv-page .valtotal{display:flex;justify-content:space-between;align-items:baseline;gap:12px;max-width:520px;margin:24px auto 0;padding-top:16px;border-top:1.5px solid var(--ink);font-size:14px;font-weight:500;text-align:left}
+#kv-page .valtotal .vt-p{font-family:Newsreader,ui-serif,Georgia,serif;font-size:34px;line-height:1;color:var(--green);white-space:nowrap}
+#kv-page .valtotal .vt-p s{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:15px;color:var(--grey);margin-right:8px;font-weight:400}
+#kv-page .valtotal .vt-p b{font-weight:400}
+#kv-page .valsec .moregifts{margin-top:12px;font-weight:400;color:var(--grey);font-size:13.5px;line-height:1.5}#kv-page .valsec .moregifts b{color:var(--green);font-weight:600}
+@media(max-width:1000px){#kv-page .gifts5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){#kv-page .gifts5,#kv-page .valsec.vs-2oz .gifts5{grid-template-columns:repeat(2,minmax(0,1fr))}#kv-page .gifts5 .gt:last-child{grid-column:1/-1}#kv-page .gifts5 .gt:last-child .shot{aspect-ratio:2/1}#kv-page .gifts5 .gt:last-child .shot img{object-position:50% 45%}#kv-page .valtotal{margin-top:18px}}
 /* proof carousel */
 #kv-page .proofsec{padding:28px 0 22px}
 #kv-page .pf{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);height:100%;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(22,33,26,.05),0 12px 30px -22px rgba(22,33,26,.3)}
@@ -92,7 +95,7 @@
 #kv-page .proofline{text-align:center;font-size:13px;color:var(--grey);margin-top:16px}
 /* text review strip */
 #kv-page .txtrev{padding-top:16px;padding-bottom:12px}
-@media(max-width:620px){#kv-page .buy h1{font-size:22px}#kv-page .getline{font-size:13.5px;margin-bottom:6px}#kv-page .dots2{margin-top:4px}#kv-page .buy{padding-top:2px}#kv-page .buy .guarline{margin-top:8px}#kv-page .valbox{padding:18px 16px 14px;border-radius:0;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}#kv-page .valsec{padding-top:0}#kv-page .valsec .acc{padding:0 18px}#kv-page .txtrev h2{font-size:24px}}
+@media(max-width:620px){#kv-page .buy h1{font-size:22px;margin-bottom:8px}#kv-page .buy .stars-row{margin-bottom:8px;font-size:12px;gap:6px}#kv-page .getline{font-size:13.5px;margin-bottom:2px}#kv-page .dots2{margin-top:6px}#kv-page .buy{padding-top:2px}#kv-page .buy .opt{padding:11px 13px;margin-bottom:7px}#kv-page .buy .opt:first-of-type{margin-top:22px}#kv-page .buy .pill-cta{margin-top:14px}#kv-page .subline{margin-top:10px!important}#kv-page .buy .guarline{margin-top:10px}#kv-page .icons3{margin-top:14px;padding-top:14px}#kv-page .acc{margin-top:16px}#kv-page .valsec{padding-top:8px}#kv-page .txtrev h2{font-size:24px}}
 
 </style>
 <div id="kv-page">
@@ -122,7 +125,7 @@
 
   <div>
     <div class="buy">
-      <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>1,133 verified reviews</span></div>
+      <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>1,133 reviews</span><span>|</span><span>500,000+ cups served</span></div>
       <h1><span class="mauna">KAVA NECTAR</span> STARTER KIT</h1>
       <div class="getline" id="bbGet"><span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.</div>
 
@@ -152,40 +155,51 @@
         <div><div class="i">&#8635;</div>Renews at <b id="bbRen">$109.99</b>/mo</div>
       </div>
     </div>
-  </div>
-</div>
-</div>
 
-<!-- 3a. VALUE STACK -->
-<section class="valsec"><div class="wrap">
-  <div class="valbox">
-    <h2>What&#8217;s in your first box</h2>
-    <div class="vlist sel" data-vs="4oz">
-      <div class="vrow vfirst"><span class="vn">45 servings of Kava Nectar</span><span class="vv">$109.99</span></div>
-      <div class="vrow"><span class="vn">2 handmade coconut shell cups</span><span class="vv"><s>$23.98</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">Bamboo whisk</span><span class="vv"><s>$14.99</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">5 Balance stick packs</span><span class="vv"><s>$17.50</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">5 more stick packs on your first renewal</span><span class="vv"><s>$17.50</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">Digital Kava Ritual Guide</span><span class="vv"><s>$19.00</s><b>FREE</b></span></div>
-      <div class="vtot"><span>Your first box</span><span class="vp"><s>$202.96</s>$79.99</span></div>
-      <div class="vsave">Code <b>FIRSTBOX30</b> applied at checkout &middot; you save <b>$122.97</b> &middot; then $109.99 a month, skip or cancel anytime</div>
-    </div>
-    <div class="vlist" data-vs="2oz">
-      <div class="vrow vfirst"><span class="vn">22 servings of Kava Nectar</span><span class="vv">$59.99</span></div>
-      <div class="vrow"><span class="vn">2 handmade coconut shell cups</span><span class="vv"><s>$23.98</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">Bamboo whisk</span><span class="vv"><s>$14.99</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">Digital Kava Ritual Guide</span><span class="vv"><s>$19.00</s><b>FREE</b></span></div>
-      <div class="vtot"><span>Your first box</span><span class="vp"><s>$117.96</s>$59.99</span></div>
-      <div class="vsave">You save <b>$57.97</b> &middot; $59.99 a month, skip or cancel anytime</div>
-    </div>
-  </div>
-  <div class="acc">
-      <details><summary>What is Kava Nectar?</summary><p>Kava Nectar is the cold-pressed juice of noble kava root, dried into a pure powder. Nothing extracted, nothing added. All of the unwind, none of the hangover.</p></details>
+    <div class="acc">
+      <details open><summary>What is Kava Nectar?</summary><p>Kava Nectar is the cold-pressed juice of noble kava root, dried into a pure powder. Nothing extracted, nothing added. All of the unwind, none of the hangover.</p></details>
       <details><summary>Ingredients &amp; benefits</summary><p>Alcohol and gardening &#127811; take the edge off but charge you the hangover, the fog, the wrecked sleep. Kava Nectar gives you the unwind without the next-day regret.</p><ul><li><b>Kavalactones (the tingle)</b> &#8594; relaxed body</li><li><b>Noble kava root</b> &#8594; social ease, still sharp</li><li><b>One pure ingredient</b> &#8594; clear head, no fog</li><li><b>Zero alcohol, zero sugar</b> &#8594; no crash tomorrow</li></ul><p><b>Relaxed + Social + Clear + Hangover-free = one cup.</b></p><p style="font-size:11px;color:var(--grey)">Herbal supplement. These statements have not been evaluated by the FDA.</p></details>
       <details><summary>Science &amp; quality</summary><ul><li>Noble kava cultivars only</li><li>Grown 5 to 7 years in Vanuatu&#8217;s volcanic soil before harvest</li><li>Whole root, no stems or leaves</li><li>Every batch is tested for purity and potency</li></ul></details>
       <details><summary>Ready in 15 seconds</summary><ol><li><b>SCOOP:</b> 2 to 3 teaspoons of Kava Nectar</li><li><b>MIX:</b> into 12 to 16 oz of any non-alcoholic liquid. Whisk, shake, or blend.</li><li><b>ENJOY:</b> best over ice. Sip and let the calm set in.</li></ol></details>
     </div>
+  </div>
+</div>
+</div>
+
+<!-- 3a. FIRST BOX -->
+<section class="giftband lav valsec" id="kv-valsec"><div class="wrap">
+  <div class="giftpanel ctr">
+    <span class="valchip" data-vs-chip>$202.96 value</span>
+    <div class="eyebrow" style="text-align:center">Included with your first box</div>
+    <h2 class="gifth2">What&#8217;s inside<br>your first box</h2>
+    <p class="lead" style="margin-top:10px">The cups, the whisk, the sticks, the guide.<br>All free with the Starter Kit.</p>
+    <div class="gifts gifts5">
+      <div class="gt">
+        <div class="gh"><span class="gn">2 coconut shell cups</span><span class="gf">Free<s>$23.98</s></span></div>
+        <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/coconut-cups.jpg" width="945" height="945" alt="Two Kavahana coconut shell cups on the beach"></div>
+      </div>
+      <div class="gt">
+        <div class="gh"><span class="gn">Bamboo whisk</span><span class="gf">Free<s>$14.99</s></span></div>
+        <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-whisk.jpg" width="620" height="620" alt="The Kavahana bamboo whisk mixing Kava Nectar in a coconut bowl"></div>
+      </div>
+      <div class="gt" data-vs45>
+        <div class="gh"><span class="gn">5 stick packs<em>In your first box</em></span><span class="gf">Free<s>$17.50</s></span></div>
+        <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-sticks-balance.jpg" width="1080" height="1080" alt="Five Kava Nectar Balance Edition stick packs standing in the sand"></div>
+      </div>
+      <div class="gt" data-vs45>
+        <div class="gh"><span class="gn">5 more stick packs<em>On your first renewal</em></span><span class="gf">Free<s>$17.50</s></span></div>
+        <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-sticks-balance.jpg" width="1080" height="1080" alt="Five more Kava Nectar stick packs, sent with your first renewal"></div>
+      </div>
+      <div class="gt">
+        <div class="gh"><span class="gn">Digital recipe guide<em>In your welcome email</em></span><span class="gf">Free<s>$19.00</s></span></div>
+        <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/guide-blue.jpg" width="760" height="760" alt="Blue spirulina Kava Nectar in the coconut bowl and cup"></div>
+      </div>
+    </div>
+    <div class="valtotal"><span>Your first box today</span><span class="vt-p"><s data-vs-value>$202.96</s><b data-vs-first>$79.99</b></span></div>
+    <div class="moregifts" data-vs-save>Code <b>FIRSTBOX30</b> applied at checkout &middot; you save <b>$122.97</b> &middot; then $109.99 a month, skip or cancel anytime</div>
+  </div>
 </div></section>
+<script>(function(){var sec=document.getElementById('kv-valsec');if(!sec)return;var V={'4oz':{chip:'$202.96 value',value:'$202.96',first:'$79.99',save:'Code <b>FIRSTBOX30</b> applied at checkout &middot; you save <b>$122.97</b> &middot; then $109.99 a month, skip or cancel anytime'},'2oz':{chip:'$117.96 value',value:'$117.96',first:'$59.99',save:'You save <b>$57.97</b> &middot; $59.99 a month, skip or cancel anytime'}};window.kvVal=function(k){var v=V[k]||V['4oz'];sec.classList.toggle('vs-2oz',k==='2oz');sec.querySelector('[data-vs-chip]').textContent=v.chip;sec.querySelector('[data-vs-value]').textContent=v.value;sec.querySelector('[data-vs-first]').textContent=v.first;sec.querySelector('[data-vs-save]').innerHTML=v.save};})();</script>
 
 <!-- 3b. AS SEEN ON -->
 <section class="seenon"><div class="wrap">
@@ -505,7 +519,7 @@
       topKey=key; btbKey=key;
       document.querySelectorAll('.buy [data-o]').forEach(function(x){x.classList.toggle('sel', x.dataset.o===key)});
       var $=function(i){return document.getElementById(i)};
-      $('bbSub').innerHTML=s.s;document.querySelectorAll('[data-vs]').forEach(function(x){x.classList.toggle('sel',x.dataset.vs===key)});
+      $('bbSub').innerHTML=s.s;if(window.kvVal)kvVal(key);
       $('bbRen').textContent=s.r;
       $('bbGet').innerHTML=s.get;
       swapImgs(document.querySelectorAll('#slides .heroimg'), s);
@@ -783,6 +797,14 @@
 #kv-cart .kc-free{color:#367542}
 #kv-cart .kc-tag{display:inline-block;background:#367542;color:#fff;font-size:10px;font-weight:800;letter-spacing:.06em;border-radius:4px;padding:2px 6px;margin-top:4px}
 #kv-cart .kc-tag.soft{background:#E9F1E3;color:#367542}
+#kv-cart .kc-kitline{align-items:flex-start}
+#kv-cart .kc-kitline .kc-img{width:72px;height:72px}
+#kv-cart .kc-pr{display:flex;align-items:center;gap:8px;margin:6px 0 4px;flex-wrap:wrap}
+#kv-cart .kc-pr .kc-now{display:inline;font-size:18px;font-weight:800}
+#kv-cart .kc-pr .kc-cmp{display:inline;font-size:13px}
+#kv-cart .kc-off{background:#E9F1E3;color:#367542;font-size:11px;font-weight:800;letter-spacing:.04em;border-radius:4px;padding:3px 7px}
+#kv-cart .kc-codeline{color:#367542;font-weight:700}
+#kv-cart .kc-also{margin-top:14px}
 #kv-cart .kc-code{display:flex;align-items:center;gap:9px;background:#E9F1E3;color:#1F1D17;border-radius:10px;padding:10px 12px;font-size:13px;margin-top:12px;font-weight:600}
 #kv-cart .kc-code .ck{width:20px;height:20px;border-radius:50%;background:#367542;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;flex:none}
 #kv-cart .kc-code b{font-weight:800;letter-spacing:.05em}
@@ -826,9 +848,9 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   var GH='https://bryce-wq2222.github.io/kavahana-pdp/img/';
   var CODE='FIRSTBOX30';
   var KITS={
-    '4oz':{id:'54144064749886',sub:'45 servings, delivered monthly',price:109.99,first:79.99,value:202.96,save:'SAVE 61%',discount:30,
+    '4oz':{id:'54144064749886',sub:'45 servings, delivered monthly',price:109.99,first:79.99,value:202.96,title:'45 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, 10 stick packs, recipe guide',giftsValue:92.97,save:'61% OFF',discount:30,
       extra:[['5 more stick packs','Free on your first renewal',17.50,GH+'kava-sticks-balance.jpg'],['Digital Kava Ritual Guide','Recipes and how to enjoy it, in your welcome email',19,GH+'guide-blue.jpg']]},
-    '2oz':{id:'54144064651582',sub:'22 servings, delivered monthly',price:59.99,first:59.99,value:117.96,save:'SAVE 49%',discount:0,
+    '2oz':{id:'54144064651582',sub:'22 servings, delivered monthly',price:59.99,first:59.99,value:117.96,title:'22 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, recipe guide',giftsValue:57.97,save:'49% OFF',discount:0,
       extra:[['Digital Kava Ritual Guide','Recipes and how to enjoy it, in your welcome email',19,GH+'guide-blue.jpg']]}
   };
   var GIFTS={'54220256477502':{title:'Coconut shell cup',compare:11.99},'54220256510270':{title:'Bamboo whisk',compare:14.99},'54143764922686':{title:'5 stick packs',compare:17.50}};
@@ -859,13 +881,8 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   }
   function render(){
     var K=KITS[key],st=lines,html='',n=0,addTotal=0;
-    if(st.kit){n+=st.kit.qty;
-      html+='<div class="kc-line"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">Kava Nectar Starter Kit</p><p class="kc-meta">'+K.sub+'</p><p class="kc-meta">Renews at '+money(K.price)+'/mo. Skip or cancel anytime.</p><span class="kc-tag">'+K.save+'</span></div><div class="kc-price"><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-now">'+money(K.first)+'</span></div></div>';
-      st.gifts.forEach(function(g){var info=GIFTS[g.vid]||{title:'Starter Kit gift',compare:0};n+=g.qty;
-        html+='<div class="kc-line"><img class="kc-img" src="'+esc(g.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(info.title)+(g.qty>1?' &#215; '+g.qty:'')+'</p><p class="kc-meta">Starter Kit gift</p><span class="kc-tag soft">FREE GIFT</span></div><div class="kc-price">'+(info.compare?'<s class="kc-cmp">'+money(info.compare*g.qty)+'</s>':'')+'<span class="kc-now kc-free">FREE</span></div></div>';
-      });
-      K.extra.forEach(function(x){html+='<div class="kc-line"><img class="kc-img" src="'+x[3]+'" alt=""><div class="kc-info"><p class="kc-name">'+x[0]+'</p><p class="kc-meta">'+x[1]+'</p><span class="kc-tag soft">FREE GIFT</span></div><div class="kc-price"><s class="kc-cmp">'+money(x[2])+'</s><span class="kc-now kc-free">FREE</span></div></div>'});
-      if(K.discount)html+='<div class="kc-code"><span class="ck">&#10003;</span><span>Code <b>'+CODE+'</b> applied: $'+K.discount+' off your first box</span></div>';
+    if(st.kit){n+=st.kit.qty;st.gifts.forEach(function(g){n+=g.qty});
+      html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'. <strong>'+money(K.giftsValue)+' of gifts, free.</strong></p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div><p class="kc-meta">Renews every 30 days at '+money(K.price)+'. Skip or cancel anytime.</p>'+(K.discount?'<p class="kc-meta kc-codeline">&#10003; Code '+CODE+' applied, $'+K.discount+' off your first box</p>':'')+'</div></div>';
     }
     st.adds.forEach(function(a){n+=a.qty;addTotal+=a.price*a.qty;
       html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<button type="button" class="kc-rm" data-rm="'+esc(a.key)+'">Remove</button></div><div class="kc-price"><span class="kc-now">'+money(a.price*a.qty)+'</span></div></div>';
@@ -873,7 +890,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     if(pending)html+='<div class="kc-skel"><span class="kc-img"></span><p>Adding your Starter Kit&hellip;</p></div>';
     linesEl.innerHTML=html||'<p class="kc-meta" style="text-align:center;padding:30px 10px">Your cart is empty.</p>';
     titleEl.textContent='Your cart'+(n?' ('+n+')':'');
-    banner.innerHTML=st.kit?'&#10003; Free shipping unlocked &#183; '+money(K.value-K.price+(K.discount||0))+' in gifts and savings':'&#10003; Free shipping on the Starter Kit';
+    banner.innerHTML=st.kit?'Congrats, you&#8217;ve unlocked <u>free shipping</u>!':'&#10003; Free shipping on the Starter Kit';
     var inCart={};st.adds.forEach(function(a){inCart[a.vid]=1});
     addEl.innerHTML=ADDONS.map(function(a){var o=a.opts[sel[a.key]];var pills=a.opts.length>1?'<div class="kc-fl">'+a.opts.map(function(x,i){return '<button type="button" data-pill="'+a.key+':'+i+'"'+(i===sel[a.key]?' class="is-on"':'')+'>'+x[0]+'</button>'}).join('')+'</div>':'';
       return '<div class="kc-add"><img class="kc-img" src="'+o[3]+'" alt="" loading="lazy"><div class="kc-info"><p class="kc-name">'+a.title+'</p><p class="kc-meta">'+a.sub+' &#183; <strong>'+money(o[2])+'</strong></p>'+pills+'</div><button type="button" class="kc-btn'+(inCart[o[1]]?' is-added':'')+'" data-add="'+a.key+'"'+(inCart[o[1]]?' disabled':'')+'>'+(inCart[o[1]]?'ADDED':'ADD')+'</button></div>'}).join('');
