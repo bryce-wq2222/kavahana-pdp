@@ -626,7 +626,7 @@
       </div>
 
       <button class="pill-cta">Get my Starter Kit &#8594;</button>
-      <div class="subline" id="bbSub">Code <span class="code">FIRSTBOX30</span> applied &middot; then $109.99/mo</div>
+      <div class="subline" id="bbSub">Code <span class="code">DRINKKAVA</span> applied &middot; then $109.99/mo</div>
       <div class="guarline">Feel it or your money back</div>
 
       <div class="icons3">
@@ -668,7 +668,7 @@
 <script>
 (function(){
   var SIZES={
-    '4oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45d.jpg', halt:'Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs', s:'Code <span class="code">FIRSTBOX30</span> applied \u00b7 then $109.99/mo', r:'$109.99',
+    '4oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45d.jpg', halt:'Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs', s:'Code <span class="code">DRINKKAVA</span> applied \u00b7 then $109.99/mo', r:'$109.99',
            get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'},
     '2oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22d.jpg', halt:'Fall Reset Sale: 49% off + $57 in free gifts. The 22 serving Starter Kit: one bag, two coconut shell cups and whisk', s:'$59.99 a month \u00b7 skip or cancel anytime', r:'$59.99',
            get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'}
@@ -1028,7 +1028,7 @@
 #kv-cart .kc-co:disabled{opacity:.6}
 #kv-cart .kc-guar{font-size:12.5px;font-weight:700;color:#367542;text-align:center;margin-top:8px}
 #kv-cart .kc-trust{font-size:11.5px;color:#6A6659;text-align:center;margin-top:6px;line-height:1.4}
-#kv-cart .kc-err{background:#FBF5F1;color:#7A4030;border-radius:10px;padding:10px 12px;font-size:12.5px;margin-top:10px}
+#kv-cart .kc-err{background:#FBF5F1;color:#7A4030;border-radius:10px;padding:10px 12px;font-size:12.5px;margin-top:10px}.kc-retry{margin-left:8px;padding:6px 12px;border:1px solid #1b4d2e;border-radius:6px;background:#fff;color:#1b4d2e;font:inherit;font-weight:700;cursor:pointer}
 html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
 </style>
 <div id="kv-cart" aria-hidden="true">
@@ -1045,7 +1045,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   if(window.__kvCart)return;window.__kvCart=3;
   var CDN='https://cdn.shopify.com/s/files/1/0803/6597/7918/files/';
   var GH='https://bryce-wq2222.github.io/kavahana-pdp/img/';
-  var CODE='FIRSTBOX30';
+  var CODE='DRINKKAVA';
   var KITS={
     '4oz':{id:'54144064749886',sub:'45 servings, delivered monthly',price:109.99,first:79.99,value:202.96,title:'45 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, 10 stick packs, recipe guide',giftsValue:92.97,save:'61% OFF',discount:30,
       extra:[['5 more stick packs','Free on your first renewal',17.50,GH+'kava-sticks-balance.jpg'],['Digital Kava Ritual Guide','Recipes and how to enjoy it, in your welcome email',19,GH+'guide-blue.jpg']]},
@@ -1066,7 +1066,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   var key='4oz',lines=[],pending=false,busy=false;
   function money(n){return '$'+(Math.round(n*100)/100).toFixed(2)}
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-  function post(u,b){return fetch(u,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(b)}).then(function(r){return r.json().then(function(j){if(!r.ok||(j&&j.status&&j.status>=400))throw new Error((j&&(j.description||j.message))||('cart '+r.status));return j})})}
+  function post(u,b){return fetch(u,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(b)}).then(function(r){return r.text().then(function(t){var j=null;try{j=JSON.parse(t)}catch(e){}if(r.status===429||!j){var er=new Error('cart busy '+r.status);er.busy=true;throw er}if(!r.ok||(j.status&&j.status>=400))throw new Error(j.description||j.message||('cart '+r.status));return j})})}
   function getCart(){return fetch('/cart.js',{credentials:'same-origin',cache:'no-store'}).then(function(r){return r.json()})}
   function addonInfo(vid){var o=null;ADDONS.forEach(function(a){a.opts.forEach(function(x){if(x[1]===vid)o={title:a.title+(a.opts.length>1?' ('+x[0]+')':''),sub:a.sub,price:x[2],img:x[3]}})});return o}
   function fromShopify(c){
@@ -1129,11 +1129,12 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
       if(Object.keys(up).length)return post('/cart/update.js',{updates:up}).catch(function(){});
     }).catch(function(){}).then(function(){return post('/cart/add.js',{items:items}).catch(function(){return post('/cart/add.js',{items:items})})})
       .then(function(){pending=false;building=false;return refreshNow()})
-      .catch(function(e){pending=false;building=false;try{linesEl.innerHTML='<div class="kc-err">Taking you straight to checkout&hellip;</div>'}catch(_){}fallbackSubmit(items)})});
+      .catch(function(e){pending=false;building=false;if(e&&e.busy){try{linesEl.innerHTML='<div class="kc-err">The cart is busy right now. <button type="button" class="kc-retry" data-kc-retry>Try again</button></div>'}catch(_){}return}try{linesEl.innerHTML='<div class="kc-err">Taking you straight to checkout&hellip;</div>'}catch(_){}fallbackSubmit(items)})});
   }
   root.addEventListener('click',function(e){
     var t=e.target;
     if(t.closest('[data-kc-close]')){close();return}
+    if(t.closest('[data-kc-retry]')){build(key);return}
     var p=t.closest('[data-pill]');if(p){var a=p.getAttribute('data-pill').split(':');sel[a[0]]=+a[1];render();return}
     var ad=t.closest('[data-add]');if(ad&&!ad.disabled){var A=ADDONS.filter(function(x){return x.key===ad.getAttribute('data-add')})[0];var o=A.opts[sel[A.key]];ad.disabled=true;ad.textContent='ADDED';ad.classList.add('is-added');
       var snap=lines.adds.slice();lines.adds.push({key:'tmp'+Date.now(),vid:o[1],title:A.title+(A.opts.length>1?' ('+o[0]+')':''),sub:A.sub,price:o[2],qty:1,img:o[3]});render();

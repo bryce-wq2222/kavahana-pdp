@@ -7,8 +7,8 @@
 #kv-page .buy .opt[data-o="4oz"]{margin-top:28px}
 #kv-page .opt .nm{font-size:16.5px}#kv-page .opt .nm small{font-size:12px;margin-top:3px;letter-spacing:0}
 #kv-page .opt .pr{font-size:22px}#kv-page .opt .pr s{font-size:12.5px;margin-top:2px}
-#kv-page .opt .pr .fb{display:block;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:3px}#kv-page .opt.sel .pr .fb{color:#EAF3E5}
-#kv-page .opt .tag{top:-13px;font-size:10.5px;padding:4px 11px}
+#kv-page .opt .pr .fb{display:block;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:3px}#kv-page .opt.sel .pr .fb{color:#EAF3E5}
+#kv-page .opt .tag{top:-13px;font-size:11.5px;padding:4px 11px}
 #kv-page .buy .pill-cta{margin-top:18px}
 #kv-page .subline{margin:12px 0 0!important;font-size:12.5px}
 #kv-page .subline .code{display:inline-block;background:#E9F1E3;color:var(--green);font-weight:600;border-radius:5px;padding:1px 7px;letter-spacing:.06em}
@@ -18,18 +18,18 @@
 /* ---- what's inside your free starter kit (Everyday Dose pattern) ---- */
 #kv-page .kitsec{padding:34px 0 30px}
 #kv-page .kitpanel{background:var(--cream);border-radius:20px;padding:36px 28px 30px;text-align:center}
-#kv-page .kit-eyebrow{display:inline-block;color:var(--green);font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+#kv-page .kit-eyebrow{display:inline-block;color:var(--green);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
 #kv-page .kith2{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);letter-spacing:-.01em;line-height:1.08;text-transform:uppercase;color:var(--ink);margin:0}
 #kv-page .kit-sub{font-size:14.5px;color:var(--grey);max-width:56ch;margin:10px auto 0;line-height:1.5}
 #kv-page .kitrow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px;max-width:900px;margin-left:auto;margin-right:auto}
 #kv-page .kitcard{background:#fff;border-radius:12px;padding:12px 12px 0;text-align:left;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(22,33,26,.05)}
 #kv-page .kc-h{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;min-height:34px;margin-bottom:8px}
-#kv-page .kc-n{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.25;color:var(--ink)}#kv-page .kc-n em{display:block;font-style:normal;font-weight:500;color:var(--grey);text-transform:none;letter-spacing:0;font-size:10.5px;margin-top:2px}
+#kv-page .kc-n{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.25;color:var(--ink)}#kv-page .kc-n em{display:block;font-style:normal;font-weight:500;color:var(--grey);text-transform:none;letter-spacing:0;font-size:10.5px;margin-top:2px}
 #kv-page .kc-v{text-align:right;font-size:12px;font-weight:800;color:var(--green);white-space:nowrap;line-height:1.2}
-#kv-page .kc-v s{display:block;font-size:11px;color:var(--grey);font-weight:400;margin-top:1px}
+#kv-page .kc-v s{display:block;font-size:12px;color:var(--grey);font-weight:400;margin-top:1px}
 #kv-page .kc-i{margin:auto -12px 0;aspect-ratio:1;background:#F8F3E8;border-radius:0 0 12px 12px;overflow:hidden}
 #kv-page .kc-i img{width:100%;height:100%;object-fit:cover;display:block}
-#kv-page .kit-link{display:inline-block;margin-top:22px;color:var(--green);font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+#kv-page .kit-link{display:inline-block;margin-top:14px;padding:8px 0;color:var(--green);font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px}
 #kv-page .kitsec.vs-2oz [data-vs45]{display:none}
 #kv-page .kitsec.vs-2oz .kitrow{grid-template-columns:repeat(3,minmax(0,1fr));max-width:640px;margin-left:auto;margin-right:auto}
 @media(max-width:1000px){#kv-page .kitrow{grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px}}
@@ -48,7 +48,7 @@
 #kv-page .pf .pf-b{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
 #kv-page .pf .pf-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
 #kv-page .pf .st{color:var(--green);letter-spacing:2px;font-size:14px}
-#kv-page .pf .pf-v{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:#E9F1E3;border-radius:999px;padding:4px 9px;white-space:nowrap}
+#kv-page .pf .pf-v{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:#E9F1E3;border-radius:999px;padding:4px 9px;white-space:nowrap}
 #kv-page .pf p{font-size:14.5px;line-height:1.5;color:var(--ink);flex:1}
 #kv-page .pf .pf-who{font-size:12px;color:var(--grey);font-weight:500}#kv-page .pf .pf-who b{color:var(--ink);font-weight:600}
 #kv-page .pf-carou .cslide{padding:0 5px}
@@ -61,3 +61,5 @@
 /* tap feedback while a review video buffers */
 #kv-page .vid-live.loading .play{color:transparent;background:transparent;border:3px solid rgba(255,253,248,.35);border-top-color:#fff;box-shadow:none;animation:kvspin .8s linear infinite}
 @keyframes kvspin{to{transform:rotate(360deg)}}
+/* 9/8 mobile pass (Bryce: everything for mobile): the marquee strip leaves the phone (its offer is on the hero and the tiles), tighter buy-box rhythm so the CTA lands inside a 375x812 first screen; caps labels raised to 11.5-12px */
+@media(max-width:759px){#kv-topmq{display:none!important}#kv-page .buy .stars-row{margin-bottom:6px}#kv-page .buy h1{margin-bottom:6px}#kv-page .buy .opt[data-o="4oz"]{margin-top:14px}#kv-page .buy .pill-cta{margin-top:10px}}
