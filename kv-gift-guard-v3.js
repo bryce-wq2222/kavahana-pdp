@@ -29,7 +29,7 @@
   var cache = null, cacheAt = 0;
   function remember(r) {
     try {
-      if (r && r.status === 200 && /json/.test(r.headers.get('content-type') || '')) {
+      if (r && r.status === 200 && /json|javascript/.test(r.headers.get('content-type') || '')) {
         r.clone().text().then(function (t) { cache = t; cacheAt = Date.now(); });
       }
     } catch (e) {}
@@ -51,7 +51,7 @@
   function sweep() {
     if (busy || Date.now() < backoffUntil) return; busy = true;
     fetch('/cart.js', { credentials: 'same-origin' }).then(remember).then(function (r) {
-      if (r.status === 429 || !/json/.test(r.headers.get('content-type') || '')) { backoffUntil = Date.now() + BACKOFF; throw new Error('cart ' + r.status); }
+      if (r.status === 429 || !/json|javascript/.test(r.headers.get('content-type') || '')) { backoffUntil = Date.now() + BACKOFF; throw new Error('cart ' + r.status); }
       return r.json();
     }).then(function (c) {
       var items = (c && c.items) || [];
