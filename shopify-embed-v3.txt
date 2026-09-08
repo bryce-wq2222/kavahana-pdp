@@ -159,7 +159,7 @@
       </div>
 
       <button class="pill-cta">Get my Starter Kit &#8594;</button>
-      <div class="subline" id="bbSub">Code <span class="code">FIRSTBOX30</span> applied &middot; then $109.99/mo</div>
+      <div class="subline" id="bbSub">Code <span class="code">DRINKKAVA</span> applied &middot; then $109.99/mo</div>
       <div class="guarline">Love it or your money back</div>
 
       <div class="icons3">
@@ -510,7 +510,7 @@
 <script>
 (function(){
   var SIZES={
-    '4oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45d.jpg', halt:'Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs', s:'Code <span class="code">FIRSTBOX30</span> applied \u00b7 then $109.99/mo', r:'$109.99',
+    '4oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45d.jpg', halt:'Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs', s:'Code <span class="code">DRINKKAVA</span> applied \u00b7 then $109.99/mo', r:'$109.99',
            get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'},
     '2oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22d.jpg', halt:'Fall Reset Sale: 49% off + $57 in free gifts. The 22 serving Starter Kit: one bag, two coconut shell cups and whisk', s:'$59.99 a month \u00b7 skip or cancel anytime', r:'$59.99',
            get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'}
@@ -867,7 +867,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   if(window.__kvCart)return;window.__kvCart=3;
   var CDN='https://cdn.shopify.com/s/files/1/0803/6597/7918/files/';
   var GH='https://bryce-wq2222.github.io/kavahana-pdp/img/';
-  var CODE='FIRSTBOX30';
+  var CODE='DRINKKAVA';
   var KITS={
     '4oz':{id:'54144064749886',sub:'45 servings, delivered monthly',price:109.99,first:79.99,value:202.96,title:'45 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, 10 stick packs, recipe guide',giftsValue:92.97,save:'61% OFF',discount:30,
       extra:[['5 more stick packs','Free on your first renewal',17.50,GH+'kava-sticks-balance.jpg'],['Digital Kava Ritual Guide','Recipes and how to enjoy it, in your welcome email',19,GH+'guide-blue.jpg']]},
