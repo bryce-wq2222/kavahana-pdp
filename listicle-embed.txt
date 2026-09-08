@@ -113,6 +113,9 @@
 #kv-page .txtrev{padding-top:16px;padding-bottom:12px}
 @media(max-width:620px){#kv-page .buy h1{font-size:22px;margin-bottom:8px}#kv-page .buy .stars-row{margin-bottom:8px;font-size:12px;gap:6px}#kv-page .getline{font-size:13.5px;margin-bottom:2px}#kv-page .dots2{margin-top:6px}#kv-page .buy{padding-top:2px}#kv-page .buy .opt{padding:11px 13px;margin-bottom:7px}#kv-page .buy .opt[data-o="4oz"]{margin-top:22px}#kv-page .buy .pill-cta{margin-top:14px}#kv-page .subline{margin-top:10px!important}#kv-page .buy .guarline{margin-top:10px}#kv-page .icons3{margin-top:14px;padding-top:14px}#kv-page .acc{margin-top:16px}#kv-page .txtrev h2{font-size:24px}}
 
+#kv-page .vid-live.loading .play{color:transparent;background:transparent;border:3px solid rgba(255,253,248,.35);border-top-color:#fff;box-shadow:none;animation:kvspin .8s linear infinite}
+@keyframes kvspin{to{transform:rotate(360deg)}}
+
 </style>
 <style id="kvl-css">
 /* ---------- FOUNDATION, aliased from the PDP style block ----------------- */
@@ -786,12 +789,12 @@
       if(e.pointerType!=='mouse') return;
       down=true; moved=0; sx=e.clientX; sf=tr.scrollLeft;
       tr.classList.add('dragging');
-      try{ tr.setPointerCapture(e.pointerId); }catch(_){}
     });
     tr.addEventListener('pointermove', function(e){
       if(!down) return;
       var dx=e.clientX-sx;
       if(Math.abs(dx)>moved) moved=Math.abs(dx);
+      if(moved>8&&!(tr.hasPointerCapture&&tr.hasPointerCapture(e.pointerId))){ try{ tr.setPointerCapture(e.pointerId); }catch(_){} }
       tr.scrollLeft=sf-dx;
     });
     function up(){
@@ -831,12 +834,12 @@
     if(e.pointerType!=='mouse') return;
     down=true; moved=0; sx=e.clientX; sf=sl.scrollLeft;
     sl.classList.add('dragging');
-    try{ sl.setPointerCapture(e.pointerId); }catch(_){}
   });
   sl.addEventListener('pointermove', function(e){
     if(!down) return;
     var dx=e.clientX-sx;
     if(Math.abs(dx)>moved) moved=Math.abs(dx);
+    if(moved>8&&!(sl.hasPointerCapture&&sl.hasPointerCapture(e.pointerId))){ try{ sl.setPointerCapture(e.pointerId); }catch(_){} }
     sl.scrollLeft=sf-dx;
   });
   function up(e){
@@ -900,7 +903,10 @@
         v.play().then(function(){ w.classList.add('playing'); }).catch(function(){});
       });
     }
-    b.addEventListener('click', start);
+    b.addEventListener('click', function(){ w.classList.add('loading'); start(); });
+    v.addEventListener('playing', function(){ w.classList.remove('loading'); });
+    v.addEventListener('error', function(){ w.classList.remove('loading'); });
+    v.addEventListener('stalled', function(){ setTimeout(function(){ if(v.paused) w.classList.remove('loading'); }, 8000); });
     v.addEventListener('click', function(){
       if(v.paused){ start(); } else { v.pause(); w.classList.remove('playing'); }
     });
@@ -1089,8 +1095,9 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     addEl.innerHTML=ADDONS.map(function(a){var o=a.opts[sel[a.key]];var pills=a.opts.length>1?'<div class="kc-fl">'+a.opts.map(function(x,i){return '<button type="button" data-pill="'+a.key+':'+i+'"'+(i===sel[a.key]?' class="is-on"':'')+'>'+x[0]+'</button>'}).join('')+'</div>':'';
       return '<div class="kc-add"><img class="kc-img" src="'+o[3]+'" alt="" loading="lazy"><div class="kc-info"><p class="kc-name">'+a.title+'</p><p class="kc-meta">'+a.sub+' &#183; <strong>'+money(o[2])+'</strong></p>'+pills+'</div><button type="button" class="kc-btn'+(inCart[o[1]]?' is-added':'')+'" data-add="'+a.key+'"'+(inCart[o[1]]?' disabled':'')+'>'+(inCart[o[1]]?'ADDED':'ADD')+'</button></div>'}).join('');
     var subtotal=(st.kit?K.price:0)+addTotal,total=(st.kit?K.first:0)+addTotal,saved=st.kit?(K.value-K.first):0;
-    var addonsTotal=st.adds.reduce(function(s,x){return s+x.price*x.qty},0);var sub=(st.kit?K.price:0)+addonsTotal,disc=st.kit?K.discount:0,tot=sub-disc,saving=st.kit?(K.value-K.first):0;
-    foot.innerHTML=(st.kit?'<div class="kc-rows"><div class="kc-row"><span>Subtotal</span><span>'+money(sub)+'</span></div>'+(disc?'<div class="kc-row"><span>Discount</span><span>&#8722;'+money(disc)+'</span></div>':'')+'<div class="kc-row"><span>Shipping</span><span class="kc-grn">Free</span></div><div class="kc-row kc-tot"><span>Total</span><span><span class="kc-savechip">Saving '+money(saving)+'!</span>'+money(tot)+'</span></div></div>':'')+
+    /* Bryce 9/8: Subtotal = the full printed value, Discount = everything you save (value minus first box, with the %), Total = first box + add-ons. Same math as the kit line and the Saving chip. */
+    var addonsTotal=st.adds.reduce(function(s,x){return s+x.price*x.qty},0);var saving=st.kit?(K.value-K.first):0,sub=(st.kit?K.value:0)+addonsTotal,disc=saving,tot=sub-disc,pctOff=st.kit?Math.round((1-K.first/K.value)*100):0;
+    foot.innerHTML=(st.kit?'<div class="kc-rows"><div class="kc-row"><span>Subtotal</span><span>'+money(sub)+'</span></div>'+(disc?'<div class="kc-row"><span>Discount ('+pctOff+'% off)</span><span>&#8722;'+money(disc)+'</span></div>':'')+'<div class="kc-row"><span>Shipping</span><span class="kc-grn">Free</span></div><div class="kc-row kc-tot"><span>Total</span><span><span class="kc-savechip">Saving '+money(saving)+'!</span>'+money(tot)+'</span></div></div>':'')+
       '<button type="button" class="kc-co" id="kc-go"'+(!st.kit||pending?' disabled':'')+'>Secure checkout &#8594;</button>'+
       '<p class="kc-trust"><span>&#9733; 4.8 &#183; 1,133 reviews</span><span>&#10003; 30-day guarantee</span><span>&#8635; Cancel anytime</span></p>';
   }
@@ -1099,8 +1106,9 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   function cupRule(c){var cup=(c.items||[]).filter(function(i){return String(i.variant_id)===FREE_CUP});var sub=(c.items||[]).reduce(function(s,i){return String(i.variant_id)===FREE_CUP?s:s+i.final_line_price},0)/100;if(cup.length&&sub<FREE_CUP_MIN){return post('/cart/change.js',{id:cup[0].key,quantity:0}).then(getCart).catch(function(){return c})}if(!cup.length&&sub>=FREE_CUP_MIN){return post('/cart/add.js',{items:[{id:parseInt(FREE_CUP,10),quantity:1}]}).then(getCart).catch(function(){return c})}return Promise.resolve(c)}
   function refresh(){return getCart().then(cupRule).then(function(c){lines=fromShopify(c);render()})}
   window.addEventListener('pageshow',function(e){if(e.persisted)refresh()});
-  function open(){root.classList.add('on');root.setAttribute('aria-hidden','false');document.documentElement.classList.add('kv-cart-lock')}
-  function close(){root.classList.remove('on');root.setAttribute('aria-hidden','true');document.documentElement.classList.remove('kv-cart-lock')}
+  function sync(){try{window.dispatchEvent(new Event('scroll'))}catch(e){}}
+  function open(){root.classList.add('on');root.setAttribute('aria-hidden','false');document.documentElement.classList.add('kv-cart-lock');sync()}
+  function close(){root.classList.remove('on');root.setAttribute('aria-hidden','true');document.documentElement.classList.remove('kv-cart-lock');setTimeout(sync,50)}
   function fallbackSubmit(items){var f=document.createElement('form');f.method='post';f.action='/cart/add';items.forEach(function(it,i){[['id',it.id],['quantity',it.quantity],['selling_plan',it.selling_plan||'']].forEach(function(p){if(p[1]==='')return;var inp=document.createElement('input');inp.type='hidden';inp.name='items['+i+']['+p[0]+']';inp.value=p[1];f.appendChild(inp)});if(it.properties&&it.properties._u){var pu=document.createElement('input');pu.type='hidden';pu.name='items['+i+'][properties][_u]';pu.value=it.properties._u;f.appendChild(pu)}});var rt=document.createElement('input');rt.type='hidden';rt.name='return_to';rt.value=KITS[key].discount?'/discount/'+CODE+'?redirect=/checkout':'/checkout';f.appendChild(rt);document.body.appendChild(f);f.submit()}
   function build(k){
     key=KITS[k]?k:'4oz';var K=KITS[key];
