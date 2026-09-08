@@ -54,6 +54,7 @@
       if (r.status === 429 || !/json|javascript/.test(r.headers.get('content-type') || '')) { backoffUntil = Date.now() + BACKOFF; throw new Error('cart ' + r.status); }
       return r.json();
     }).then(function (c) {
+      try { if (c && typeof c.item_count === 'number' && window.Alpine && Alpine.store('cart_count')) Alpine.store('cart_count').count = c.item_count; } catch (e) {}
       var items = (c && c.items) || [];
       var kitTotal = 0, kit45 = 0;
       items.forEach(function (i) {

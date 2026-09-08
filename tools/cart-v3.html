@@ -156,7 +156,9 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   function close(){root.classList.remove('on');root.setAttribute('aria-hidden','true');document.documentElement.classList.remove('kv-cart-lock');setTimeout(sync,50)}
   function fallbackSubmit(items){var f=document.createElement('form');f.method='post';f.action='/cart/add';items.forEach(function(it,i){[['id',it.id],['quantity',it.quantity],['selling_plan',it.selling_plan||'']].forEach(function(p){if(p[1]==='')return;var inp=document.createElement('input');inp.type='hidden';inp.name='items['+i+']['+p[0]+']';inp.value=p[1];f.appendChild(inp)});if(it.properties&&it.properties._u){var pu=document.createElement('input');pu.type='hidden';pu.name='items['+i+'][properties][_u]';pu.value=it.properties._u;f.appendChild(pu)}});var rt=document.createElement('input');rt.type='hidden';rt.name='return_to';rt.value=KITS[key].discount?'/discount/'+CODE+'?redirect=/checkout':'/checkout';f.appendChild(rt);document.body.appendChild(f);f.submit()}
   /* one promise chain for EVERY cart mutation (build, add-on, remove, cup rule), so nothing interleaves; inside a serial() callback always use refreshNow, never refresh (which would queue behind itself) */
-  var q=Promise.resolve();function serial(fn){var p=q.then(fn,fn);q=p.catch(function(){});return p}
+  var q=Promise.resolve(),recT=null;function serial(fn,quiet){var p=q.then(fn,fn);q=p.catch(function(){});if(!quiet)p.then(scheduleReconcile,scheduleReconcile);return p}
+  /* 9/8: after a burst of taps (add, remove, add, remove...) one last read of /cart.js re-renders lines, ADD states and the header badge from the truth */
+  function scheduleReconcile(){clearTimeout(recT);recT=setTimeout(function(){serial(refreshNow,true)},900)}
   var building=false;
   function build(k){
     if(building){open();return}
