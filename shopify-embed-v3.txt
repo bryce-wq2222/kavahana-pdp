@@ -113,6 +113,12 @@
 @media(max-width:759px){#kv-topmq{display:none!important}#kv-page .buy .stars-row{margin-bottom:6px}#kv-page .buy h1{margin-bottom:6px}#kv-page .buy .opt[data-o="4oz"]{margin-top:14px}#kv-page .buy .pill-cta{margin-top:10px}}
 @media(max-width:759px){#kv-page .eyebrow{font-size:11.5px}#kv-page .kc-n em{font-size:11.5px}#kv-page .vcap{font-size:11.5px}#kv-page .opt .pr s{font-size:12px}}
 @media(max-width:759px){#kv-page .rec .tag{font-size:11px}#kv-page .bcap{font-size:11.5px}#kv-page .pm{font-size:12px}#kv-page table th{font-size:11px}#kv-page .optlabel{font-size:11.5px}#kv-page .fnd-meta span{font-size:11.5px}#kv-page .wv{font-size:12px}#kv-page .icons3 b{font-size:12px}#kv-page .finep b{font-size:12px}#kv-page .opt .pr .fb{font-size:11.5px}}
+/* 9/8 Bryce: the free gifts must be inside the price cards, succinctly, so the 45 obviously gives you a lot */
+#kv-page .opt .gifts{grid-column:1/-1;display:block;font-size:12.5px;line-height:1.35;color:var(--ink);margin-top:-2px;padding-top:9px;border-top:1px solid rgba(0,0,0,.08);letter-spacing:0}
+#kv-page .opt .gifts b{font-weight:800;color:var(--green)}
+#kv-page .opt.sel .gifts{color:#EAF3E5;border-top-color:rgba(255,255,255,.22)}
+#kv-page .opt.sel .gifts b{color:#fff}
+@media(max-width:759px){#kv-page .opt .gifts{font-size:12px;padding-top:8px}}
 
 </style>
 <div id="kv-page">
@@ -153,6 +159,7 @@
           <small>$1.78 per serving &middot; first box price</small>
         </span>
         <span class="pr">$79.99<s>$202.96</s></span>
+        <span class="gifts"><b>$92.97 in free gifts:</b> 2 coconut shell cups, bamboo whisk, 10 stick packs, recipe guide</span>
       </div>
       <div class="opt" data-o="2oz">
         <span class="rad"></span>
@@ -160,6 +167,7 @@
           <small>$2.73 per serving &middot; save 49%</small>
         </span>
         <span class="pr">$59.99<s>$117.96</s></span>
+        <span class="gifts"><b>$57.97 in free gifts:</b> 2 coconut shell cups, bamboo whisk, recipe guide</span>
       </div>
 
       <button class="pill-cta">Get my Starter Kit &#8594;</button>
