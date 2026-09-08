@@ -1,0 +1,6 @@
+{
+  "ctrackFrom": "      tr.classList.add('dragging');\n      try{ tr.setPointerCapture(e.pointerId); }catch(_){}\n    });\n    tr.addEventListener('pointermove', function(e){\n      if(!down) return;\n      var dx=e.clientX-sx;\n      if(Math.abs(dx)>moved) moved=Math.abs(dx);",
+  "ctrackTo": "      tr.classList.add('dragging');\n    });\n    tr.addEventListener('pointermove', function(e){\n      if(!down) return;\n      var dx=e.clientX-sx;\n      if(Math.abs(dx)>moved) moved=Math.abs(dx);\n      if(moved>8&&!(tr.hasPointerCapture&&tr.hasPointerCapture(e.pointerId))){ try{ tr.setPointerCapture(e.pointerId); }catch(_){} }",
+  "slidesFrom": "    sl.classList.add('dragging');\n    try{ sl.setPointerCapture(e.pointerId); }catch(_){}\n  });\n  sl.addEventListener('pointermove', function(e){\n    if(!down) return;\n    var dx=e.clientX-sx;\n    if(Math.abs(dx)>moved) moved=Math.abs(dx);",
+  "slidesTo": "    sl.classList.add('dragging');\n  });\n  sl.addEventListener('pointermove', function(e){\n    if(!down) return;\n    var dx=e.clientX-sx;\n    if(Math.abs(dx)>moved) moved=Math.abs(dx);\n    if(moved>8&&!(sl.hasPointerCapture&&sl.hasPointerCapture(e.pointerId))){ try{ sl.setPointerCapture(e.pointerId); }catch(_){} }"
+}

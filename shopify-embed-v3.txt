@@ -628,12 +628,12 @@
       if(e.pointerType!=='mouse') return;
       down=true; moved=0; sx=e.clientX; sf=tr.scrollLeft;
       tr.classList.add('dragging');
-      try{ tr.setPointerCapture(e.pointerId); }catch(_){}
     });
     tr.addEventListener('pointermove', function(e){
       if(!down) return;
       var dx=e.clientX-sx;
       if(Math.abs(dx)>moved) moved=Math.abs(dx);
+      if(moved>8&&!(tr.hasPointerCapture&&tr.hasPointerCapture(e.pointerId))){ try{ tr.setPointerCapture(e.pointerId); }catch(_){} }
       tr.scrollLeft=sf-dx;
     });
     function up(){
@@ -673,12 +673,12 @@
     if(e.pointerType!=='mouse') return;
     down=true; moved=0; sx=e.clientX; sf=sl.scrollLeft;
     sl.classList.add('dragging');
-    try{ sl.setPointerCapture(e.pointerId); }catch(_){}
   });
   sl.addEventListener('pointermove', function(e){
     if(!down) return;
     var dx=e.clientX-sx;
     if(Math.abs(dx)>moved) moved=Math.abs(dx);
+    if(moved>8&&!(sl.hasPointerCapture&&sl.hasPointerCapture(e.pointerId))){ try{ sl.setPointerCapture(e.pointerId); }catch(_){} }
     sl.scrollLeft=sf-dx;
   });
   function up(e){

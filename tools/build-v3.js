@@ -130,6 +130,11 @@ rep('drawer sub', "'<span class=\"kvo-sub\">Starter kit free: 2 coconut shell cu
 const CART = fs.readFileSync(path.join(__dirname, 'cart-v3.html'), 'utf8').replace(/\r\n/g, '\n');
 rep('cart drawer', '<script src="https://bryce-wq2222.github.io/kavahana-pdp/kv-gift-guard.js" defer></script>', CART + '\n<script src="https://bryce-wq2222.github.io/kavahana-pdp/kv-gift-guard.js" defer></script>');
 
+/* ---------- 12. desktop clicks inside carousels: capture the pointer only once it actually drags ---------- */
+const CAP = JSON.parse(fs.readFileSync(path.join(__dirname, 'capture-patch.json'), 'utf8'));
+rep('ctrack capture', CAP.ctrackFrom, CAP.ctrackTo);
+rep('slides capture', CAP.slidesFrom, CAP.slidesTo);
+
 /* ---------- checks ---------- */
 ['$166.46', '34% savings', 'third-party', 'END OF SUMMER', 'Morning and evening', 'class="rt-card', '<h2>From the people who drink it</h2>'].forEach(function (bad) {
   if (h.indexOf(bad) > -1) throw new Error('leftover: ' + bad);
