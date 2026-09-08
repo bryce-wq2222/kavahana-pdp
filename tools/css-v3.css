@@ -1,0 +1,50 @@
+
+/* ---- v3 ---- */
+#kv-page .buy .stars-row{margin-bottom:12px;font-size:12.5px;gap:7px}#kv-page .buy .stars-row b{color:var(--ink)}
+#kv-page .buy h1{margin-bottom:10px;line-height:1.05}
+#kv-page .getline{font-size:15px;margin-bottom:4px;color:var(--ink);line-height:1.45}
+#kv-page .buy .opt{padding:13px 16px;margin-bottom:9px;grid-template-columns:18px 1fr auto;gap:11px}
+#kv-page .buy .opt:first-of-type{margin-top:28px}
+#kv-page .opt .nm{font-size:16.5px}#kv-page .opt .nm small{font-size:12px;margin-top:3px;letter-spacing:0}
+#kv-page .opt .pr{font-size:22px}#kv-page .opt .pr s{font-size:12.5px;margin-top:2px}
+#kv-page .opt .pr .fb{display:block;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:3px}#kv-page .opt.sel .pr .fb{color:#EAF3E5}
+#kv-page .opt .tag{top:-13px;font-size:10.5px;padding:4px 11px}
+#kv-page .buy .pill-cta{margin-top:18px}
+#kv-page .subline{margin:12px 0 0!important;font-size:12.5px}
+#kv-page .subline .code{display:inline-block;background:#E9F1E3;color:var(--green);font-weight:600;border-radius:5px;padding:1px 7px;letter-spacing:.06em}
+#kv-page .buy .guarline{margin-top:12px}
+#kv-page .icons3{margin-top:18px;padding-top:16px}
+#kv-page .acc{margin-top:22px}
+/* first-box gift grid */
+#kv-page .valsec{padding-top:26px}
+#kv-page .gifts5{grid-template-columns:repeat(5,minmax(0,1fr))}
+#kv-page .gn em{display:block;font-style:normal;font-size:10.5px;color:var(--grey);text-transform:none;letter-spacing:0;margin-top:3px;font-weight:400}
+#kv-page .valsec.vs-2oz [data-vs45]{display:none}
+#kv-page .valsec.vs-2oz .gifts5{grid-template-columns:repeat(3,minmax(0,1fr));max-width:720px;margin-left:auto;margin-right:auto}
+#kv-page .valtotal{display:flex;justify-content:space-between;align-items:baseline;gap:12px;max-width:520px;margin:24px auto 0;padding-top:16px;border-top:1.5px solid var(--ink);font-size:14px;font-weight:500;text-align:left}
+#kv-page .valtotal .vt-p{font-family:Newsreader,ui-serif,Georgia,serif;font-size:34px;line-height:1;color:var(--green);white-space:nowrap}
+#kv-page .valtotal .vt-p s{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:15px;color:var(--grey);margin-right:8px;font-weight:400}
+#kv-page .valtotal .vt-p b{font-weight:400}
+#kv-page .valsec .moregifts{margin-top:12px;font-weight:400;color:var(--grey);font-size:13.5px;line-height:1.5}#kv-page .valsec .moregifts b{color:var(--green);font-weight:600}
+@media(max-width:1000px){#kv-page .gifts5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){#kv-page .gifts5,#kv-page .valsec.vs-2oz .gifts5{grid-template-columns:repeat(2,minmax(0,1fr))}#kv-page .gifts5 .gt:last-child{grid-column:1/-1}#kv-page .gifts5 .gt:last-child .shot{aspect-ratio:2/1}#kv-page .gifts5 .gt:last-child .shot img{object-position:50% 45%}#kv-page .valtotal{margin-top:18px}}
+/* proof carousel */
+#kv-page .proofsec{padding:28px 0 22px}
+#kv-page .pf{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);height:100%;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(22,33,26,.05),0 12px 30px -22px rgba(22,33,26,.3)}
+#kv-page .pf .pf-media{position:relative;background:#EDE4D1}
+#kv-page .pf .vid-live video.slot{aspect-ratio:4/5;border-radius:0;width:100%;height:auto;object-fit:cover;display:block}
+#kv-page .pf .vid-live.pos-top video.slot{object-position:50% 18%}
+#kv-page .pf .vid-live .play{width:50px;height:50px;font-size:16px}
+#kv-page .pf .pf-b{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+#kv-page .pf .pf-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+#kv-page .pf .st{color:var(--green);letter-spacing:2px;font-size:14px}
+#kv-page .pf .pf-v{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:#E9F1E3;border-radius:999px;padding:4px 9px;white-space:nowrap}
+#kv-page .pf p{font-size:14.5px;line-height:1.5;color:var(--ink);flex:1}
+#kv-page .pf .pf-who{font-size:12px;color:var(--grey);font-weight:500}#kv-page .pf .pf-who b{color:var(--ink);font-weight:600}
+#kv-page .pf-carou .cslide{padding:0 5px}
+@media(max-width:759px){#kv-page .pf-carou .cslide{flex-basis:86%;scroll-snap-align:start}#kv-page .pf-carou .cnav{display:none}#kv-page .pf-carou{margin-top:16px}}
+@media(min-width:760px){#kv-page .pf-carou .cslide{flex-basis:33.3333%}}
+#kv-page .proofline{text-align:center;font-size:13px;color:var(--grey);margin-top:16px}
+/* text review strip */
+#kv-page .txtrev{padding-top:16px;padding-bottom:12px}
+@media(max-width:620px){#kv-page .buy h1{font-size:22px;margin-bottom:8px}#kv-page .buy .stars-row{margin-bottom:8px;font-size:12px;gap:6px}#kv-page .getline{font-size:13.5px;margin-bottom:2px}#kv-page .dots2{margin-top:6px}#kv-page .buy{padding-top:2px}#kv-page .buy .opt{padding:11px 13px;margin-bottom:7px}#kv-page .buy .opt:first-of-type{margin-top:22px}#kv-page .buy .pill-cta{margin-top:14px}#kv-page .subline{margin-top:10px!important}#kv-page .buy .guarline{margin-top:10px}#kv-page .icons3{margin-top:14px;padding-top:14px}#kv-page .acc{margin-top:16px}#kv-page .valsec{padding-top:8px}#kv-page .txtrev h2{font-size:24px}}

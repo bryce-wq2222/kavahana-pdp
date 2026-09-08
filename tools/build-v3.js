@@ -33,54 +33,9 @@ rep('marquee', "var seg='END OF SUMMER SALE! &#129381; UP TO 39% OFF + FREE STAR
 rep('z-lock', "if(!document.querySelector('.lbx.on')){", "if(!document.querySelector('.lbx.on')&&!document.querySelector('#kv-cart.on')){");
 
 /* ---------- 1. v3 CSS (appended inside the main style block) ---------- */
-const CSS = `
-/* ---- v3 ---- */
-#kv-page .buy .stars-row{margin-bottom:4px}#kv-page .buy .stars-row b{color:var(--ink)}
-#kv-page .buy h1{margin-bottom:4px;line-height:1.05}
-#kv-page .getline{font-size:15px;margin-bottom:10px;color:var(--ink)}
-#kv-page .buy .opt{padding:10px 13px;margin-bottom:5px;grid-template-columns:18px 1fr auto;gap:10px}
-#kv-page .buy .opt:first-of-type{margin-top:13px}
-#kv-page .opt .nm{font-size:16.5px}#kv-page .opt .nm small{font-size:12px;margin-top:3px;letter-spacing:0}
-#kv-page .opt .pr{font-size:22px}#kv-page .opt .pr s{font-size:12.5px;margin-top:2px}
-#kv-page .opt .pr .fb{display:block;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:3px}#kv-page .opt.sel .pr .fb{color:#EAF3E5}
-#kv-page .opt .tag{top:-12px;font-size:10.5px;padding:4px 11px}
-#kv-page .subline{margin:9px 0 0!important;font-size:12.5px}
-#kv-page .subline .code{display:inline-block;background:#E9F1E3;color:var(--green);font-weight:600;border-radius:5px;padding:1px 7px;letter-spacing:.06em}
-#kv-page .icons3{margin-top:12px;padding-top:12px}
-#kv-page .buy .guarline{margin-top:10px}
-/* value stack */
-#kv-page .valsec{padding:6px 0 26px}#kv-page .valbox{background:var(--cream);border-radius:16px;padding:20px 18px 16px;max-width:560px;margin:0 auto}
-#kv-page .valbox h2{font-size:24px;margin-bottom:12px;text-align:center}
-#kv-page .vrow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
-#kv-page .vrow:last-of-type{border-bottom:0}#kv-page .vrow .vn{flex:1;line-height:1.3}#kv-page .vrow .vv{white-space:nowrap;text-align:right}
-#kv-page .vrow .vv s{color:var(--grey);font-weight:400;margin-right:7px;font-size:12.5px}#kv-page .vrow .vv b{color:var(--green);font-weight:600;letter-spacing:.06em;font-size:12px}
-#kv-page .vrow.vfirst .vv{font-weight:600}
-#kv-page .vlist{display:none}#kv-page .vlist.sel{display:block}
-#kv-page .vtot{margin-top:12px;padding-top:12px;border-top:1.5px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:14px}
-#kv-page .vtot .vp{font-family:Newsreader,ui-serif,Georgia,serif;font-size:30px;line-height:1;color:var(--green)}#kv-page .vtot .vp s{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:14px;color:var(--grey);margin-right:6px}
-#kv-page .vsave{text-align:center;font-size:12.5px;color:var(--grey);margin-top:8px}#kv-page .vsave b{color:var(--green)}
-#kv-page .valsec .acc{max-width:560px;margin:18px auto 0}
-/* proof carousel */
-#kv-page .proofsec{padding:28px 0 22px}
-#kv-page .pf{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);height:100%;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(22,33,26,.05),0 12px 30px -22px rgba(22,33,26,.3)}
-#kv-page .pf .pf-media{position:relative;background:#EDE4D1}
-#kv-page .pf .vid-live video.slot{aspect-ratio:4/5;border-radius:0;width:100%;height:auto;object-fit:cover;display:block}
-#kv-page .pf .vid-live.pos-top video.slot{object-position:50% 18%}
-#kv-page .pf .vid-live .play{width:50px;height:50px;font-size:16px}
-#kv-page .pf .pf-b{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
-#kv-page .pf .pf-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
-#kv-page .pf .st{color:var(--green);letter-spacing:2px;font-size:14px}
-#kv-page .pf .pf-v{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:#E9F1E3;border-radius:999px;padding:4px 9px;white-space:nowrap}
-#kv-page .pf p{font-size:14.5px;line-height:1.5;color:var(--ink);flex:1}
-#kv-page .pf .pf-who{font-size:12px;color:var(--grey);font-weight:500}#kv-page .pf .pf-who b{color:var(--ink);font-weight:600}
-#kv-page .pf-carou .cslide{padding:0 5px}
-@media(max-width:759px){#kv-page .pf-carou .cslide{flex-basis:86%;scroll-snap-align:start}#kv-page .pf-carou .cnav{display:none}#kv-page .pf-carou{margin-top:16px}}
-@media(min-width:760px){#kv-page .pf-carou .cslide{flex-basis:33.3333%}}
-#kv-page .proofline{text-align:center;font-size:13px;color:var(--grey);margin-top:16px}
-/* text review strip */
-#kv-page .txtrev{padding-top:16px;padding-bottom:12px}
-@media(max-width:620px){#kv-page .buy h1{font-size:22px}#kv-page .getline{font-size:13.5px;margin-bottom:6px}#kv-page .dots2{margin-top:4px}#kv-page .buy{padding-top:2px}#kv-page .buy .guarline{margin-top:8px}#kv-page .valbox{padding:18px 16px 14px;border-radius:0;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}#kv-page .valsec{padding-top:0}#kv-page .valsec .acc{padding:0 18px}#kv-page .txtrev h2{font-size:24px}}
-`;
+const CSS = fs.readFileSync(path.join(__dirname, 'css-v3.css'), 'utf8').replace(/
+/g, '
+');
 rep('css', '\n</style>\n<div id="kv-page">', CSS + '\n</style>\n<div id="kv-page">');
 
 /* ---------- 2. hero buy box + value stack ---------- */
@@ -91,72 +46,12 @@ const heroOld = h.slice(buyStart, asSeen);
 const accMatch = heroOld.match(/<div class="acc">[\s\S]*?<\/details>\n    <\/div>/);
 if (!accMatch) throw new Error('accordion block not found');
 let ACC = accMatch[0]
-  .replace('<li>Every batch third-party tested for purity and potency</li>', '<li>Every batch is tested for purity and potency</li>')
-  .replace('<details open><summary>What is Kava Nectar?</summary>', '<details><summary>What is Kava Nectar?</summary>');
+  .replace('<li>Every batch third-party tested for purity and potency</li>', '<li>Every batch is tested for purity and potency</li>');
 if (ACC.indexOf('third-party') > -1) throw new Error('third-party wording still present');
 
-const HERO = `<div class="buy">
-      <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>1,133 verified reviews</span></div>
-      <h1><span class="mauna">KAVA NECTAR</span> STARTER KIT</h1>
-      <div class="getline" id="bbGet"><span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.</div>
-
-      <div class="opt sel" data-o="4oz">
-        <span class="tag">Best deal &ndash; save 61%</span>
-        <span class="rad"></span>
-        <span class="nm">45 servings
-          <small>$1.78 per serving &middot; first box price</small>
-        </span>
-        <span class="pr">$79.99<s>$202.96</s></span>
-      </div>
-      <div class="opt" data-o="2oz">
-        <span class="rad"></span>
-        <span class="nm">22 servings
-          <small>$2.73 per serving &middot; save 49%</small>
-        </span>
-        <span class="pr">$59.99<s>$117.96</s></span>
-      </div>
-
-      <button class="pill-cta">Get my Starter Kit &#8594;</button>
-      <div class="subline" id="bbSub">Code <span class="code">FIRSTBOX30</span> applied &middot; then $109.99/mo</div>
-      <div class="guarline">Love it or your money back</div>
-
-      <div class="icons3">
-        <div><div class="i">&#9684;</div>Refill reminder</div>
-        <div><div class="i">&#10005;</div>Cancel any time</div>
-        <div><div class="i">&#8635;</div>Renews at <b id="bbRen">$109.99</b>/mo</div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- 3a. VALUE STACK -->
-<section class="valsec"><div class="wrap">
-  <div class="valbox">
-    <h2>What&#8217;s in your first box</h2>
-    <div class="vlist sel" data-vs="4oz">
-      <div class="vrow vfirst"><span class="vn">45 servings of Kava Nectar</span><span class="vv">$109.99</span></div>
-      <div class="vrow"><span class="vn">2 handmade coconut shell cups</span><span class="vv"><s>$23.98</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">Bamboo whisk</span><span class="vv"><s>$14.99</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">5 Balance stick packs</span><span class="vv"><s>$17.50</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">5 more stick packs on your first renewal</span><span class="vv"><s>$17.50</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">Digital Kava Ritual Guide</span><span class="vv"><s>$19.00</s><b>FREE</b></span></div>
-      <div class="vtot"><span>Your first box</span><span class="vp"><s>$202.96</s>$79.99</span></div>
-      <div class="vsave">Code <b>FIRSTBOX30</b> applied at checkout &middot; you save <b>$122.97</b> &middot; then $109.99 a month, skip or cancel anytime</div>
-    </div>
-    <div class="vlist" data-vs="2oz">
-      <div class="vrow vfirst"><span class="vn">22 servings of Kava Nectar</span><span class="vv">$59.99</span></div>
-      <div class="vrow"><span class="vn">2 handmade coconut shell cups</span><span class="vv"><s>$23.98</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">Bamboo whisk</span><span class="vv"><s>$14.99</s><b>FREE</b></span></div>
-      <div class="vrow"><span class="vn">Digital Kava Ritual Guide</span><span class="vv"><s>$19.00</s><b>FREE</b></span></div>
-      <div class="vtot"><span>Your first box</span><span class="vp"><s>$117.96</s>$59.99</span></div>
-      <div class="vsave">You save <b>$57.97</b> &middot; $59.99 a month, skip or cancel anytime</div>
-    </div>
-  </div>
-  ${ACC}
-</div></section>
-
-`;
+const HERO = fs.readFileSync(path.join(__dirname, 'hero-v3.html'), 'utf8').replace(/
+/g, '
+').replace('__ACC__', ACC);
 h = h.slice(0, buyStart) + HERO + h.slice(asSeen);
 steps.push('hero+valsec');
 
@@ -216,7 +111,7 @@ rep('faq rt', 'Kava is thought to have a kind of reverse tolerance, where the be
 rep('sizes 45', "s:'45 servings \\u00b7 delivered monthly', r:'$109.99',", "s:'Code <span class=\"code\">FIRSTBOX30</span> applied \\u00b7 then $109.99/mo', r:'$109.99',");
 rep('sizes 22', "s:'22 servings \\u00b7 delivered monthly', r:'$59.99',", "s:'$59.99 a month \\u00b7 skip or cancel anytime', r:'$59.99',");
 rep('sizes get', "get:'<span class=\"mauna\">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social, from one ingredient, cold-pressed noble kava root. Scoop, mix into any cold drink and enjoy.'", "get:'<span class=\"mauna\">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'", { all: true });
-rep('bbSub html', "$('bbSub').textContent=s.s;", "$('bbSub').innerHTML=s.s;document.querySelectorAll('[data-vs]').forEach(function(x){x.classList.toggle('sel',x.dataset.vs===key)});");
+rep('bbSub html', "$('bbSub').textContent=s.s;", "$('bbSub').innerHTML=s.s;if(window.kvVal)kvVal(key);");
 const ctaOld = h.slice(h.indexOf("  document.querySelectorAll('.hero .pill-cta').forEach(function(b){"), h.indexOf("  stabilize();\n  window.addEventListener('load',stabilize);"));
 if (!ctaOld || ctaOld.indexOf('19079102782') < 0) throw new Error('cta handler not found');
 h = h.replace(ctaOld, "  window.__kvKey=function(b){return (b&&b.closest&&b.closest('.btbsec'))?btbKey:topKey};\n  document.querySelectorAll('.pill-cta').forEach(function(b){ if(b.id==='readlabel')return; b.addEventListener('click',function(e){ e.preventDefault(); if(window.__kvOpenCart) window.__kvOpenCart(window.__kvKey(b)); }); });\n");

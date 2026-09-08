@@ -23,6 +23,14 @@
 #kv-cart .kc-free{color:#367542}
 #kv-cart .kc-tag{display:inline-block;background:#367542;color:#fff;font-size:10px;font-weight:800;letter-spacing:.06em;border-radius:4px;padding:2px 6px;margin-top:4px}
 #kv-cart .kc-tag.soft{background:#E9F1E3;color:#367542}
+#kv-cart .kc-kitline{align-items:flex-start}
+#kv-cart .kc-kitline .kc-img{width:72px;height:72px}
+#kv-cart .kc-pr{display:flex;align-items:center;gap:8px;margin:6px 0 4px;flex-wrap:wrap}
+#kv-cart .kc-pr .kc-now{display:inline;font-size:18px;font-weight:800}
+#kv-cart .kc-pr .kc-cmp{display:inline;font-size:13px}
+#kv-cart .kc-off{background:#E9F1E3;color:#367542;font-size:11px;font-weight:800;letter-spacing:.04em;border-radius:4px;padding:3px 7px}
+#kv-cart .kc-codeline{color:#367542;font-weight:700}
+#kv-cart .kc-also{margin-top:14px}
 #kv-cart .kc-code{display:flex;align-items:center;gap:9px;background:#E9F1E3;color:#1F1D17;border-radius:10px;padding:10px 12px;font-size:13px;margin-top:12px;font-weight:600}
 #kv-cart .kc-code .ck{width:20px;height:20px;border-radius:50%;background:#367542;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;flex:none}
 #kv-cart .kc-code b{font-weight:800;letter-spacing:.05em}
@@ -66,9 +74,9 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   var GH='https://bryce-wq2222.github.io/kavahana-pdp/img/';
   var CODE='FIRSTBOX30';
   var KITS={
-    '4oz':{id:'54144064749886',sub:'45 servings, delivered monthly',price:109.99,first:79.99,value:202.96,save:'SAVE 61%',discount:30,
+    '4oz':{id:'54144064749886',sub:'45 servings, delivered monthly',price:109.99,first:79.99,value:202.96,title:'45 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, 10 stick packs, recipe guide',giftsValue:92.97,save:'61% OFF',discount:30,
       extra:[['5 more stick packs','Free on your first renewal',17.50,GH+'kava-sticks-balance.jpg'],['Digital Kava Ritual Guide','Recipes and how to enjoy it, in your welcome email',19,GH+'guide-blue.jpg']]},
-    '2oz':{id:'54144064651582',sub:'22 servings, delivered monthly',price:59.99,first:59.99,value:117.96,save:'SAVE 49%',discount:0,
+    '2oz':{id:'54144064651582',sub:'22 servings, delivered monthly',price:59.99,first:59.99,value:117.96,title:'22 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, recipe guide',giftsValue:57.97,save:'49% OFF',discount:0,
       extra:[['Digital Kava Ritual Guide','Recipes and how to enjoy it, in your welcome email',19,GH+'guide-blue.jpg']]}
   };
   var GIFTS={'54220256477502':{title:'Coconut shell cup',compare:11.99},'54220256510270':{title:'Bamboo whisk',compare:14.99},'54143764922686':{title:'5 stick packs',compare:17.50}};
@@ -99,13 +107,8 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   }
   function render(){
     var K=KITS[key],st=lines,html='',n=0,addTotal=0;
-    if(st.kit){n+=st.kit.qty;
-      html+='<div class="kc-line"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">Kava Nectar Starter Kit</p><p class="kc-meta">'+K.sub+'</p><p class="kc-meta">Renews at '+money(K.price)+'/mo. Skip or cancel anytime.</p><span class="kc-tag">'+K.save+'</span></div><div class="kc-price"><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-now">'+money(K.first)+'</span></div></div>';
-      st.gifts.forEach(function(g){var info=GIFTS[g.vid]||{title:'Starter Kit gift',compare:0};n+=g.qty;
-        html+='<div class="kc-line"><img class="kc-img" src="'+esc(g.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(info.title)+(g.qty>1?' &#215; '+g.qty:'')+'</p><p class="kc-meta">Starter Kit gift</p><span class="kc-tag soft">FREE GIFT</span></div><div class="kc-price">'+(info.compare?'<s class="kc-cmp">'+money(info.compare*g.qty)+'</s>':'')+'<span class="kc-now kc-free">FREE</span></div></div>';
-      });
-      K.extra.forEach(function(x){html+='<div class="kc-line"><img class="kc-img" src="'+x[3]+'" alt=""><div class="kc-info"><p class="kc-name">'+x[0]+'</p><p class="kc-meta">'+x[1]+'</p><span class="kc-tag soft">FREE GIFT</span></div><div class="kc-price"><s class="kc-cmp">'+money(x[2])+'</s><span class="kc-now kc-free">FREE</span></div></div>'});
-      if(K.discount)html+='<div class="kc-code"><span class="ck">&#10003;</span><span>Code <b>'+CODE+'</b> applied: $'+K.discount+' off your first box</span></div>';
+    if(st.kit){n+=st.kit.qty;st.gifts.forEach(function(g){n+=g.qty});
+      html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'. <strong>'+money(K.giftsValue)+' of gifts, free.</strong></p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div><p class="kc-meta">Renews every 30 days at '+money(K.price)+'. Skip or cancel anytime.</p>'+(K.discount?'<p class="kc-meta kc-codeline">&#10003; Code '+CODE+' applied, $'+K.discount+' off your first box</p>':'')+'</div></div>';
     }
     st.adds.forEach(function(a){n+=a.qty;addTotal+=a.price*a.qty;
       html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<button type="button" class="kc-rm" data-rm="'+esc(a.key)+'">Remove</button></div><div class="kc-price"><span class="kc-now">'+money(a.price*a.qty)+'</span></div></div>';
@@ -113,7 +116,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     if(pending)html+='<div class="kc-skel"><span class="kc-img"></span><p>Adding your Starter Kit&hellip;</p></div>';
     linesEl.innerHTML=html||'<p class="kc-meta" style="text-align:center;padding:30px 10px">Your cart is empty.</p>';
     titleEl.textContent='Your cart'+(n?' ('+n+')':'');
-    banner.innerHTML=st.kit?'&#10003; Free shipping unlocked &#183; '+money(K.value-K.price+(K.discount||0))+' in gifts and savings':'&#10003; Free shipping on the Starter Kit';
+    banner.innerHTML=st.kit?'Congrats, you&#8217;ve unlocked <u>free shipping</u>!':'&#10003; Free shipping on the Starter Kit';
     var inCart={};st.adds.forEach(function(a){inCart[a.vid]=1});
     addEl.innerHTML=ADDONS.map(function(a){var o=a.opts[sel[a.key]];var pills=a.opts.length>1?'<div class="kc-fl">'+a.opts.map(function(x,i){return '<button type="button" data-pill="'+a.key+':'+i+'"'+(i===sel[a.key]?' class="is-on"':'')+'>'+x[0]+'</button>'}).join('')+'</div>':'';
       return '<div class="kc-add"><img class="kc-img" src="'+o[3]+'" alt="" loading="lazy"><div class="kc-info"><p class="kc-name">'+a.title+'</p><p class="kc-meta">'+a.sub+' &#183; <strong>'+money(o[2])+'</strong></p>'+pills+'</div><button type="button" class="kc-btn'+(inCart[o[1]]?' is-added':'')+'" data-add="'+a.key+'"'+(inCart[o[1]]?' disabled':'')+'>'+(inCart[o[1]]?'ADDED':'ADD')+'</button></div>'}).join('');
