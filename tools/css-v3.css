@@ -4,7 +4,7 @@
 #kv-page .buy h1{margin-bottom:10px;line-height:1.05}
 #kv-page .getline{font-size:15px;margin-bottom:4px;color:var(--ink);line-height:1.45}
 #kv-page .buy .opt{padding:13px 16px;margin-bottom:9px;grid-template-columns:18px 1fr auto;gap:11px}
-#kv-page .buy .opt:first-of-type{margin-top:28px}
+#kv-page .buy .opt[data-o="4oz"]{margin-top:28px}
 #kv-page .opt .nm{font-size:16.5px}#kv-page .opt .nm small{font-size:12px;margin-top:3px;letter-spacing:0}
 #kv-page .opt .pr{font-size:22px}#kv-page .opt .pr s{font-size:12.5px;margin-top:2px}
 #kv-page .opt .pr .fb{display:block;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:3px}#kv-page .opt.sel .pr .fb{color:#EAF3E5}
@@ -47,4 +47,4 @@
 #kv-page .proofline{text-align:center;font-size:13px;color:var(--grey);margin-top:16px}
 /* text review strip */
 #kv-page .txtrev{padding-top:16px;padding-bottom:12px}
-@media(max-width:620px){#kv-page .buy h1{font-size:22px;margin-bottom:8px}#kv-page .buy .stars-row{margin-bottom:8px;font-size:12px;gap:6px}#kv-page .getline{font-size:13.5px;margin-bottom:2px}#kv-page .dots2{margin-top:6px}#kv-page .buy{padding-top:2px}#kv-page .buy .opt{padding:11px 13px;margin-bottom:7px}#kv-page .buy .opt:first-of-type{margin-top:22px}#kv-page .buy .pill-cta{margin-top:14px}#kv-page .subline{margin-top:10px!important}#kv-page .buy .guarline{margin-top:10px}#kv-page .icons3{margin-top:14px;padding-top:14px}#kv-page .acc{margin-top:16px}#kv-page .valsec{padding-top:8px}#kv-page .txtrev h2{font-size:24px}}
+@media(max-width:620px){#kv-page .buy h1{font-size:22px;margin-bottom:8px}#kv-page .buy .stars-row{margin-bottom:8px;font-size:12px;gap:6px}#kv-page .getline{font-size:13.5px;margin-bottom:2px}#kv-page .dots2{margin-top:6px}#kv-page .buy{padding-top:2px}#kv-page .buy .opt{padding:11px 13px;margin-bottom:7px}#kv-page .buy .opt[data-o="4oz"]{margin-top:22px}#kv-page .buy .pill-cta{margin-top:14px}#kv-page .subline{margin-top:10px!important}#kv-page .buy .guarline{margin-top:10px}#kv-page .icons3{margin-top:14px;padding-top:14px}#kv-page .acc{margin-top:16px}#kv-page .valsec{padding-top:8px}#kv-page .txtrev h2{font-size:24px}}
