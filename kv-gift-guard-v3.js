@@ -9,9 +9,15 @@
        on pageshow (back/forward cache) and when the tab becomes visible again.
      - a slow 30 s heartbeat that is skipped while document.hidden.
      - a sweep never runs while a previous one is in flight, and a 429 / non-JSON answer backs the
-       heartbeat off for 5 minutes instead of hammering. */
+       heartbeat off for 5 minutes instead of hammering.
+     - theme.liquid still loads kv-gift-guard.js (v4, 2 s poll) on every page, so v5 takes over even when
+       v4 registered first: bare fetch('/cart.js') polls (a string URL and no options object, which is how
+       v4 reads) are answered from a cached copy of the last cart response while it is younger than 20 s;
+       the cache is dropped on any cart mutation so v4 and the theme still see a fresh cart right after
+       add/change/update/clear. cart-v3 and this file always pass an options object, so they never hit
+       the cache. */
 (function () {
-  if (window.__kvGiftGuard) return;
+  if (window.__kvGiftGuard >= 5) return;
   window.__kvGiftGuard = 5;
   try {
     var st = document.createElement('style');
@@ -19,7 +25,16 @@
     (document.head || document.documentElement).appendChild(st);
   } catch (e) {}
   var busy = false, removedSomething = false, backoffUntil = 0;
-  var HEARTBEAT = 30000, BACKOFF = 300000;
+  var HEARTBEAT = 30000, BACKOFF = 300000, CACHE_MS = 20000;
+  var cache = null, cacheAt = 0;
+  function remember(r) {
+    try {
+      if (r && r.status === 200 && /json/.test(r.headers.get('content-type') || '')) {
+        r.clone().text().then(function (t) { cache = t; cacheAt = Date.now(); });
+      }
+    } catch (e) {}
+    return r;
+  }
   function refreshUI() {
     if (!removedSomething) return;
     removedSomething = false;
@@ -35,7 +50,7 @@
   }
   function sweep() {
     if (busy || Date.now() < backoffUntil) return; busy = true;
-    fetch('/cart.js', { credentials: 'same-origin' }).then(function (r) {
+    fetch('/cart.js', { credentials: 'same-origin' }).then(remember).then(function (r) {
       if (r.status === 429 || !/json/.test(r.headers.get('content-type') || '')) { backoffUntil = Date.now() + BACKOFF; throw new Error('cart ' + r.status); }
       return r.json();
     }).then(function (c) {
@@ -72,11 +87,17 @@
   }
   try {
     var of = window.fetch;
-    window.fetch = function (u) {
+    window.fetch = function (u, o) {
+      var url = (typeof u === 'string') ? u : ((u && u.url) || '');
+      var bare = (typeof u === 'string') && (o === undefined) && /^(https?:\/\/[^/]+)?\/cart\.js(\?|$)/.test(url);
+      if (bare && cache && Date.now() - cacheAt < CACHE_MS) {
+        return Promise.resolve(new Response(cache, { status: 200, headers: { 'Content-Type': 'application/json' } }));
+      }
       var p = of.apply(this, arguments);
       try {
-        var url = (typeof u === 'string') ? u : ((u && u.url) || '');
+        if (bare) p.then(remember);
         if (/\/cart\/(change|update|add|clear)/.test(url) && !/kv_guard/.test(url)) {
+          cache = null; cacheAt = 0;
           p.then(function () { setTimeout(sweep, 150); });
         }
       } catch (e) {}
