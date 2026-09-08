@@ -142,12 +142,15 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   /* the theme's cart page adds the Free KavaCup (variant 48005720113470) at a $129 subtotal and removes it below, but only when ITS cart section re-renders; this drawer bypasses that section, so it mirrors the rule */
   var FREE_CUP='48005720113470',FREE_CUP_MIN=129;
   function cupRule(c){var cup=(c.items||[]).filter(function(i){return String(i.variant_id)===FREE_CUP});var sub=(c.items||[]).reduce(function(s,i){return String(i.variant_id)===FREE_CUP?s:s+i.final_line_price},0)/100;if(cup.length&&sub<FREE_CUP_MIN){return post('/cart/change.js',{id:cup[0].key,quantity:0}).then(getCart).catch(function(){return c})}if(!cup.length&&sub>=FREE_CUP_MIN){return post('/cart/add.js',{items:[{id:parseInt(FREE_CUP,10),quantity:1}]}).then(getCart).catch(function(){return c})}return Promise.resolve(c)}
-  function refresh(){return getCart().then(cupRule).then(function(c){lines=fromShopify(c);render()})}
+  function refreshNow(){return getCart().then(cupRule).then(function(c){lines=fromShopify(c);render()})}
+  function refresh(){return serial(refreshNow)}
   window.addEventListener('pageshow',function(e){if(e.persisted)refresh()});
   function sync(){try{window.dispatchEvent(new Event('scroll'))}catch(e){}}
   function open(){root.classList.add('on');root.setAttribute('aria-hidden','false');document.documentElement.classList.add('kv-cart-lock');sync()}
   function close(){root.classList.remove('on');root.setAttribute('aria-hidden','true');document.documentElement.classList.remove('kv-cart-lock');setTimeout(sync,50)}
   function fallbackSubmit(items){var f=document.createElement('form');f.method='post';f.action='/cart/add';items.forEach(function(it,i){[['id',it.id],['quantity',it.quantity],['selling_plan',it.selling_plan||'']].forEach(function(p){if(p[1]==='')return;var inp=document.createElement('input');inp.type='hidden';inp.name='items['+i+']['+p[0]+']';inp.value=p[1];f.appendChild(inp)});if(it.properties&&it.properties._u){var pu=document.createElement('input');pu.type='hidden';pu.name='items['+i+'][properties][_u]';pu.value=it.properties._u;f.appendChild(pu)}});var rt=document.createElement('input');rt.type='hidden';rt.name='return_to';rt.value=KITS[key].discount?'/discount/'+CODE+'?redirect=/checkout':'/checkout';f.appendChild(rt);document.body.appendChild(f);f.submit()}
+  /* one promise chain for EVERY cart mutation (build, add-on, remove, cup rule), so nothing interleaves; inside a serial() callback always use refreshNow, never refresh (which would queue behind itself) */
+  var q=Promise.resolve();function serial(fn){var p=q.then(fn,fn);q=p.catch(function(){});return p}
   var building=false;
   function build(k){
     if(building){open();return}
@@ -157,11 +160,11 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     var items=[{id:GIFT_IDS.cup,quantity:1,properties:{_u:'1'}},{id:GIFT_IDS.cup,quantity:1,properties:{_u:'2'}},{id:GIFT_IDS.whisk,quantity:1}];
     if(key==='4oz')items.push({id:GIFT_IDS.stix,quantity:1});
     items.push({id:K.id,quantity:1,selling_plan:'19079102782'});
-    getCart().then(function(c){var up={};(c.items||[]).forEach(function(i){var s=i.sku||'';if(s.indexOf('KH-GIFT-')===0||s.indexOf('KH-STARTER-KIT')===0)up[i.key]=0});
+    serial(function(){return getCart().then(function(c){var up={};(c.items||[]).forEach(function(i){var s=i.sku||'';if(s.indexOf('KH-GIFT-')===0||s.indexOf('KH-STARTER-KIT')===0)up[i.key]=0});
       if(Object.keys(up).length)return post('/cart/update.js',{updates:up}).catch(function(){});
     }).catch(function(){}).then(function(){return post('/cart/add.js',{items:items})})
-      .then(function(){pending=false;building=false;return refresh()})
-      .catch(function(e){pending=false;building=false;try{linesEl.innerHTML='<div class="kc-err">Taking you straight to checkout&hellip;</div>'}catch(_){}fallbackSubmit(items)});
+      .then(function(){pending=false;building=false;return refreshNow()})
+      .catch(function(e){pending=false;building=false;try{linesEl.innerHTML='<div class="kc-err">Taking you straight to checkout&hellip;</div>'}catch(_){}fallbackSubmit(items)})});
   }
   root.addEventListener('click',function(e){
     var t=e.target;
@@ -169,9 +172,9 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     var p=t.closest('[data-pill]');if(p){var a=p.getAttribute('data-pill').split(':');sel[a[0]]=+a[1];render();return}
     var ad=t.closest('[data-add]');if(ad&&!ad.disabled){var A=ADDONS.filter(function(x){return x.key===ad.getAttribute('data-add')})[0];var o=A.opts[sel[A.key]];ad.disabled=true;ad.textContent='ADDED';ad.classList.add('is-added');
       var snap=lines.adds.slice();lines.adds.push({key:'tmp'+Date.now(),vid:o[1],title:A.title+(A.opts.length>1?' ('+o[0]+')':''),sub:A.sub,price:o[2],qty:1,img:o[3]});render();
-      post('/cart/add.js',{items:[{id:o[1],quantity:1}]}).then(refresh).catch(function(){lines.adds=snap;render()});return}
+      serial(function(){return post('/cart/add.js',{items:[{id:o[1],quantity:1}]}).then(refreshNow).catch(function(){lines.adds=snap;render()})});return}
     var rm=t.closest('[data-rm]');if(rm){var k=rm.getAttribute('data-rm');var snap2=lines.adds.slice();lines.adds=lines.adds.filter(function(x){return x.key!==k});render();
-      post('/cart/change.js',{id:k,quantity:0}).then(refresh).catch(function(){lines.adds=snap2;render()});return}
+      serial(function(){return post('/cart/change.js',{id:k,quantity:0}).then(refreshNow).catch(function(){lines.adds=snap2;render()})});return}
     var up=t.closest('[data-upgrade]');if(up){var o4=document.querySelector('#kv-page .buy .opt[data-o="4oz"]');if(o4)o4.click();build('4oz');return}
     var st=t.closest('[data-kc-start]');if(st){build(window.__kvKey?window.__kvKey(null):'4oz');return}
     var go=t.closest('#kc-go');if(go&&!go.disabled){go.disabled=true;location.href=KITS[key].discount?'/discount/'+CODE+'?redirect=/checkout':'/checkout';return}
