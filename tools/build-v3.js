@@ -4,7 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
-const SRC = path.join(ROOT, 'shopify-embed.txt');
+const SRC = path.join(ROOT, 'shopify-embed-v1-source.txt'); /* 9/8 cutover: the old live embed, frozen; shopify-embed.txt is now a copy of the v3 output */
 const OUT = path.join(ROOT, 'shopify-embed-v3.txt');
 const GH = 'https://bryce-wq2222.github.io/kavahana-pdp';
 let h = fs.readFileSync(SRC, 'utf8').replace(/\r\n/g, '\n');
@@ -28,7 +28,7 @@ function cut(label, startMarker, endMarker) {
 
 /* ---------- 0. marquee (chrome, line 1) ---------- */
 rep('marquee', "var seg='END OF SUMMER SALE! &#129381; UP TO 39% OFF + FREE STARTER KIT&nbsp;&nbsp;&bull;&nbsp;&nbsp;';",
-  "var seg='$79.99 FIRST BOX &#129381; SAVE 61% + FREE STARTER KIT&nbsp;&nbsp;&bull;&nbsp;&nbsp;';");
+  "var seg='FALL RESET SALE &#127810; 61% OFF + $92 IN FREE GIFTS&nbsp;&nbsp;&bull;&nbsp;&nbsp;';");
 /* body-scroll lock must survive the chrome's z() reset while the cart is open */
 rep('z-lock', "if(!document.querySelector('.lbx.on')){", "if(!document.querySelector('.lbx.on')&&!document.querySelector('#kv-cart.on')){");
 
@@ -151,6 +151,12 @@ rep('video loading state', VID.clickFrom, VID.clickTo);
 ['$166.46', '34% savings', 'third-party', 'END OF SUMMER', 'Morning and evening', 'class="rt-card', '<h2>From the people who drink it</h2>'].forEach(function (bad) {
   if (h.indexOf(bad) > -1) throw new Error('leftover: ' + bad);
 });
+/* ---------- 12c. supplement-facts slide per size (Bryce 9/8 night): 45 = s6-45e (4 oz pouch), 22 = s6 (2 oz) ---------- */
+rep('label slide 45', 'src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg"', 'src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg"');
+rep('label size map 45', "'4oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg',", "'4oz':{label:'https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg', hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg',");
+rep('label size map 22', "'2oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg',", "'2oz':{label:'https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg', hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg',");
+rep('label swap', "swapImgs(document.querySelectorAll('#slides .heroimg'), s);", "swapImgs(document.querySelectorAll('#slides .heroimg'), s); var lab=document.querySelector('#slides img[src*=\"/img/s6\"]'); if(lab&&s.label&&lab.getAttribute('src')!==s.label){lab.src=s.label;}");
+rep('label preload', "['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg'].forEach", "['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg'].forEach");
 /* 9/8 Bryce: guarantee reads "Feel it", everywhere the live embed says "Love it" */
 { const n = h.split('Love it or your money back').length - 1; if (n < 1) throw new Error('expected a Love-it guarline left in the live embed, found ' + n); h = h.split('Love it or your money back').join('Feel it or your money back'); }
 /* 9/8 Bryce: "As seen on" moves to right above "What's inside your free starter kit" */
