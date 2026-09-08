@@ -129,6 +129,14 @@
 /* 9/8 Bryce: kit panel white (As seen on logos sit on the cream page right above it, so the white panel starts the section); cards get a hairline so they still read as cards on white */
 #kv-page .kitpanel{background:#fff}
 #kv-page .kitcard{border:1px solid rgba(0,0,0,.07)}
+/* 9/8 Bryce phone check: pill clear of the price and of the intro; no white strip before the reviews section; review videos 1:1 with per-video crop; bottom buy box tiles = top tiles */
+#kv-page .opt .tag{top:-15px}
+#kv-page .buy .opt[data-o="4oz"],#kv-page .buy .opt[data-o2="4oz"]{padding-top:20px}
+@media(max-width:759px){#kv-page .buy .opt[data-o="4oz"],#kv-page .buy .opt[data-o2="4oz"]{margin-top:26px}#kv-page .kitsec{padding-bottom:0}}
+#kv-page .pf .vid-live video.slot{aspect-ratio:1/1}
+#kv-page .pf .vid-live.pos-top video.slot{object-position:50% 34%}
+#kv-page .pf-carou .cslide:nth-child(2) .vid-live video.slot{object-position:50% 45%}
+#kv-page .pf-carou .cslide:nth-child(3) .vid-live video.slot{object-position:50% 57%}
 
 </style>
 <div id="kv-page">
@@ -434,16 +442,22 @@
         <div class="eyebrow eyebrow-sub">Your daily kava ritual</div>
         <div class="optlabel">Size</div>
         <div class="opt sel" data-o2="4oz">
-          <span class="tag">Best deal &ndash; save 61%</span>
-          <span class="rad"></span>
-          <span class="nm">45 servings<small>Starter kit + 10 stick packs free &middot; then $109.99/mo</small></span>
-          <span class="pr">$79.99<s>$202.96</s><span class="fb">First box</span></span>
-        </div>
+        <span class="tag">Best deal &ndash; save 61%</span>
+        <span class="rad"></span>
+        <span class="nm">45 servings
+          <small>$1.78 per serving &middot; first box price</small>
+        </span>
+        <span class="pr">$79.99<s>$202.96</s></span>
+        <span class="gifts"><b>+$90 of free gifts:</b> 2 cups, whisk, 5 stick packs, guide</span>
+      </div>
         <div class="opt" data-o2="2oz">
-          <span class="rad"></span>
-          <span class="nm">22 servings<small>Starter kit free &middot; $59.99/mo</small></span>
-          <span class="pr">$59.99<s>$117.96</s><span class="fb">Save 49%</span></span>
-        </div>
+        <span class="rad"></span>
+        <span class="nm">22 servings
+          <small>$2.73 per serving &middot; save 49%</small>
+        </span>
+        <span class="pr">$59.99<s>$117.96</s></span>
+        <span class="gifts"><b>+$55 of free gifts:</b> 2 cups, whisk, recipe guide</span>
+      </div>
         <button class="pill-cta" style="margin-top:18px">Get my Starter Kit &#8594;</button>
         <div class="guarline">Feel it or your money back</div>
       </div>
@@ -915,6 +929,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   var sel={sticks:0,relax:0,balance:0};
   var root=document.getElementById('kv-cart');if(!root)return;
   try{document.body.appendChild(root)}catch(e){}
+  try{ADDONS.forEach(function(a){a.opts.forEach(function(x){var pi=new Image();pi.src=x[3]})})}catch(e){}
   var linesEl=document.getElementById('kc-lines'),addEl=document.getElementById('kc-addons'),foot=document.getElementById('kc-foot'),titleEl=document.getElementById('kc-title'),banner=document.getElementById('kc-banner');
   var key='4oz',lines=[],pending=false,busy=false;
   function money(n){return '$'+(Math.round(n*100)/100).toFixed(2)}
@@ -988,7 +1003,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     var t=e.target;
     if(t.closest('[data-kc-close]')){close();return}
     if(t.closest('[data-kc-retry]')){build(key);return}
-    var p=t.closest('[data-pill]');if(p){var a=p.getAttribute('data-pill').split(':');sel[a[0]]=+a[1];render();return}
+    var p=t.closest('[data-pill]');if(p){var a=p.getAttribute('data-pill').split(':');sel[a[0]]=+a[1];var card=p.closest('.kc-add'),PA=ADDONS.filter(function(x){return x.key===a[0]})[0];if(card&&PA){var po=PA.opts[sel[a[0]]];var im=card.querySelector('.kc-img');if(im&&im.getAttribute('src')!==po[3])im.src=po[3];card.querySelectorAll('[data-pill]').forEach(function(x){x.classList.toggle('is-on',x===p)});var pm=card.querySelector('.kc-meta strong');if(pm)pm.textContent=money(po[2]);var have=(lines.adds||[]).some(function(x){return String(x.vid)===String(po[1])});var pb=card.querySelector('[data-add]');if(pb){pb.disabled=have;pb.textContent=have?'ADDED':'ADD';pb.classList.toggle('is-added',have)}}else render();return}
     var ad=t.closest('[data-add]');if(ad&&!ad.disabled){var A=ADDONS.filter(function(x){return x.key===ad.getAttribute('data-add')})[0];var o=A.opts[sel[A.key]];ad.disabled=true;ad.textContent='ADDED';ad.classList.add('is-added');
       var snap=lines.adds.slice();lines.adds.push({key:'tmp'+Date.now(),vid:o[1],title:A.title+(A.opts.length>1?' ('+o[0]+')':''),sub:A.sub,price:o[2],qty:1,img:o[3]});render();
       var tmpKey=lines.adds[lines.adds.length-1].key;
