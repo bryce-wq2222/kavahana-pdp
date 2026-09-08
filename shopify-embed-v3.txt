@@ -166,7 +166,7 @@
           <small>$1.78 per serving &middot; first box price</small>
         </span>
         <span class="pr">$79.99<s>$202.96</s></span>
-        <span class="gifts"><b>$92.97 free:</b> 2 cups, whisk, 10 stick packs, recipe guide</span>
+        <span class="gifts"><b>+$90 of free gifts:</b> 2 cups, whisk, 5 stick packs, guide</span>
       </div>
       <div class="opt" data-o="2oz">
         <span class="rad"></span>
@@ -174,7 +174,7 @@
           <small>$2.73 per serving &middot; save 49%</small>
         </span>
         <span class="pr">$59.99<s>$117.96</s></span>
-        <span class="gifts"><b>$57.97 free:</b> 2 cups, whisk, guide +5 sticks on renewal 1</span>
+        <span class="gifts"><b>+$55 of free gifts:</b> 2 cups, whisk, recipe guide</span>
       </div>
 
       <button class="pill-cta">Get my Starter Kit &#8594;</button>
@@ -207,6 +207,17 @@
 </div>
 
 <!-- 3a. FIRST BOX (Everyday Dose "What's inside your free starter kit") -->
+<section class="seenon"><div class="wrap">
+  <div class="eyebrow" style="text-align:center">As seen on</div>
+</div>
+<div class="pmq"><div class="ptrack" id="ptrack" aria-hidden="true">
+<div class="plogo"><img alt="Forbes" src="https://bryce-wq2222.github.io/kavahana-pdp/press/kavahana-press-logos-forbes-g.png" width="132" height="132" loading="eager" decoding="async"></div>
+<div class="plogo"><img alt="Uncover LA" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/uncoverla.png"></div><div class="plogo"><img alt="Santa Monica" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/santamonica.png"></div><div class="plogo"><img alt="NBC News" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/nbcnews.png"></div><div class="plogo"><img alt="Los Angeles Times" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/latimes.png"></div><div class="plogo"><img alt="LAist" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/laist.png"></div><div class="plogo"><img alt="Eater" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/eater.png"></div><div class="plogo"><img alt="PureWow" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/purewow_1.png"></div><div class="plogo"><img alt="CBS" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/cbs.png"></div><div class="plogo"><img alt="Dry Run" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/dryrun.png"></div><div class="plogo"><img alt="Dry Atlas" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/dry-atlas.png"></div><div class="plogo"><img alt="Rare Beauty Impact Fund" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/rarebeauty.png"></div>
+<span data-dup style="display:none"></span>
+<div class="plogo"><img alt="Forbes" src="https://bryce-wq2222.github.io/kavahana-pdp/press/kavahana-press-logos-forbes-g.png" width="132" height="132" loading="eager" decoding="async"></div>
+<div class="plogo"><img alt="Uncover LA" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/uncoverla.png"></div><div class="plogo"><img alt="Santa Monica" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/santamonica.png"></div><div class="plogo"><img alt="NBC News" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/nbcnews.png"></div><div class="plogo"><img alt="Los Angeles Times" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/latimes.png"></div><div class="plogo"><img alt="LAist" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/laist.png"></div><div class="plogo"><img alt="Eater" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/eater.png"></div><div class="plogo"><img alt="PureWow" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/purewow_1.png"></div><div class="plogo"><img alt="CBS" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/cbs.png"></div><div class="plogo"><img alt="Dry Run" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/dryrun.png"></div><div class="plogo"><img alt="Dry Atlas" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/dry-atlas.png"></div><div class="plogo"><img alt="Rare Beauty Impact Fund" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/rarebeauty.png"></div>
+</div></div>
+</section>
 <section class="kitsec valsec" id="kv-valsec"><div class="wrap">
   <div class="kitpanel">
     <div class="kit-eyebrow" data-vs-chip>Over $90 in free gifts</div>
@@ -236,17 +247,7 @@
 <script>(function(){var sec=document.getElementById('kv-valsec');if(!sec)return;var V={'4oz':'Over $90 in free gifts','2oz':'Over $55 in free gifts'};window.kvVal=function(k){sec.classList.toggle('vs-2oz',k==='2oz');sec.querySelector('[data-vs-chip]').textContent=V[k]||V['4oz']};var l=sec.querySelector('.kit-link');l.addEventListener('click',function(e){var p=document.querySelector('.perksec');if(p){e.preventDefault();p.scrollIntoView({behavior:'smooth',block:'start'})}});})();</script>
 
 <!-- 3b. AS SEEN ON -->
-<section class="seenon"><div class="wrap">
-  <div class="eyebrow" style="text-align:center">As seen on</div>
-</div>
-<div class="pmq"><div class="ptrack" id="ptrack" aria-hidden="true">
-<div class="plogo"><img alt="Forbes" src="https://bryce-wq2222.github.io/kavahana-pdp/press/kavahana-press-logos-forbes-g.png" width="132" height="132" loading="eager" decoding="async"></div>
-<div class="plogo"><img alt="Uncover LA" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/uncoverla.png"></div><div class="plogo"><img alt="Santa Monica" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/santamonica.png"></div><div class="plogo"><img alt="NBC News" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/nbcnews.png"></div><div class="plogo"><img alt="Los Angeles Times" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/latimes.png"></div><div class="plogo"><img alt="LAist" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/laist.png"></div><div class="plogo"><img alt="Eater" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/eater.png"></div><div class="plogo"><img alt="PureWow" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/purewow_1.png"></div><div class="plogo"><img alt="CBS" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/cbs.png"></div><div class="plogo"><img alt="Dry Run" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/dryrun.png"></div><div class="plogo"><img alt="Dry Atlas" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/dry-atlas.png"></div><div class="plogo"><img alt="Rare Beauty Impact Fund" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/rarebeauty.png"></div>
-<span data-dup style="display:none"></span>
-<div class="plogo"><img alt="Forbes" src="https://bryce-wq2222.github.io/kavahana-pdp/press/kavahana-press-logos-forbes-g.png" width="132" height="132" loading="eager" decoding="async"></div>
-<div class="plogo"><img alt="Uncover LA" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/uncoverla.png"></div><div class="plogo"><img alt="Santa Monica" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/santamonica.png"></div><div class="plogo"><img alt="NBC News" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/nbcnews.png"></div><div class="plogo"><img alt="Los Angeles Times" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/latimes.png"></div><div class="plogo"><img alt="LAist" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/laist.png"></div><div class="plogo"><img alt="Eater" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/eater.png"></div><div class="plogo"><img alt="PureWow" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/purewow_1.png"></div><div class="plogo"><img alt="CBS" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/cbs.png"></div><div class="plogo"><img alt="Dry Run" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/dryrun.png"></div><div class="plogo"><img alt="Dry Atlas" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/dry-atlas.png"></div><div class="plogo"><img alt="Rare Beauty Impact Fund" width="132" height="132" src="https://bryce-wq2222.github.io/kavahana-pdp/press/rarebeauty.png"></div>
-</div></div>
-</section>
+
 
 <!-- 3c. PROOF -->
 <section class="proofsec lav"><div class="wrap">
@@ -896,7 +897,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   var GH='https://bryce-wq2222.github.io/kavahana-pdp/img/';
   var CODE='DRINKKAVA';
   var KITS={
-    '4oz':{id:'54144064749886',sub:'45 servings, delivered monthly',price:109.99,first:79.99,value:202.96,title:'45 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, 10 stick packs, recipe guide',giftsValue:92.97,save:'61% OFF',discount:30,
+    '4oz':{id:'54144064749886',sub:'45 servings, delivered monthly',price:109.99,first:79.99,value:202.96,title:'45 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, 5 stick packs, recipe guide',giftsValue:92.97,save:'61% OFF',discount:30,
       extra:[['5 more stick packs','Free on your first renewal',17.50,GH+'kava-sticks-balance.jpg'],['Digital Kava Ritual Guide','Recipes and how to enjoy it, in your welcome email',19,GH+'guide-blue.jpg']]},
     '2oz':{id:'54144064651582',sub:'22 servings, delivered monthly',price:59.99,first:59.99,value:117.96,title:'22 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, recipe guide, 5 stick packs on renewal 1',giftsValue:57.97,save:'49% OFF',discount:0,
       extra:[['Digital Kava Ritual Guide','Recipes and how to enjoy it, in your welcome email',19,GH+'guide-blue.jpg']]}
