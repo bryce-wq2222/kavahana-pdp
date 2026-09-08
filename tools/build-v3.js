@@ -136,11 +136,11 @@ rep('ctrack capture', CAP.ctrackFrom, CAP.ctrackTo);
 rep('slides capture', CAP.slidesFrom, CAP.slidesTo);
 
 /* ---------- 12b. slide 1 = Fall Reset Sale heroes (Bryce 9/8), v3 + listicle only; live keeps s1-45c/s1-22c ---------- */
-rep("slide1 45 file", "/img/s1-45c.jpg", "/img/s1-45d.jpg", { all: true });
-rep("slide1 22 file", "/img/s1-22c.jpg", "/img/s1-22d.jpg", { all: true });
+rep("slide1 45 file", "/img/s1-45c.jpg", "/img/s1-45e.jpg", { all: true });
+rep("slide1 22 file", "/img/s1-22c.jpg", "/img/s1-22e.jpg", { all: true });
 rep("slide1 45 alt", "The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs", "Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs", { all: true });
 rep("slide1 22 alt", "The 22 serving Starter Kit: one bag, two coconut shell cups and whisk", "Fall Reset Sale: 49% off + $57 in free gifts. The 22 serving Starter Kit: one bag, two coconut shell cups and whisk", { all: true });
-[["s1-45d.jpg", 4], ["s1-22d.jpg", 2]].forEach(function (pair) { var n = h.split(pair[0]).length - 1; if (n !== pair[1]) throw new Error("expected " + pair[1] + " refs to " + pair[0] + ", found " + n); });
+[["s1-45e.jpg", 4], ["s1-22e.jpg", 2]].forEach(function (pair) { var n = h.split(pair[0]).length - 1; if (n !== pair[1]) throw new Error("expected " + pair[1] + " refs to " + pair[0] + ", found " + n); });
 if (h.indexOf("s1-45c.jpg") > -1 || h.indexOf("s1-22c.jpg") > -1) throw new Error("old slide-1 file still referenced");
 
 /* ---------- 13. review videos: spinner from tap until playback starts ---------- */
