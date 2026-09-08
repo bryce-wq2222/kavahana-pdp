@@ -634,7 +634,7 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s3b.jpg" width="1080" height="1080" alt="Nobody drinks it straight and that is fine: earthy like a stronger matcha, best with cold coconut water"></div>
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s4.jpg" width="1080" height="1080" alt="Over 500,000 cups served at the Kavahana bars"></div>
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s5.jpg" width="1080" height="1080" alt="Rated 4.8 by the people who drink it daily, 96 percent would recommend"></div>
-        <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg" width="1080" height="1080" alt="Supplement facts: 1 teaspoon of dried noble kava root juice per serving, tasting notes and where most people start"></div>
+        <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg" width="1080" height="1080" alt="Supplement facts: 1 teaspoon of dried noble kava root juice per serving, tasting notes and where most people start"></div>
       </div>
     </div>
     <div class="dots2" id="dots2"></div>
@@ -726,12 +726,12 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 <script>
 (function(){
   var SIZES={
-    '4oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg', halt:'Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs', s:'Code <span class="code">DRINKKAVA</span> applied \u00b7 then $109.99/mo', r:'$109.99',
+    '4oz':{label:'https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg', hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg', halt:'Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs', s:'Code <span class="code">DRINKKAVA</span> applied \u00b7 then $109.99/mo', r:'$109.99',
            get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'},
-    '2oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg', halt:'Fall Reset Sale: 49% off + $57 in free gifts. The 22 serving Starter Kit: one bag, two coconut shell cups and whisk', s:'$59.99 a month \u00b7 skip or cancel anytime', r:'$59.99',
+    '2oz':{label:'https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg', hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg', halt:'Fall Reset Sale: 49% off + $57 in free gifts. The 22 serving Starter Kit: one bag, two coconut shell cups and whisk', s:'$59.99 a month \u00b7 skip or cancel anytime', r:'$59.99',
            get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'}
   };
-  ['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg'].forEach(function(u){var p=new Image();p.src=u;});
+  ['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg'].forEach(function(u){var p=new Image();p.src=u;});
   var topKey='4oz', btbKey='4oz';
   function swapImgs(scope, s){
     scope.forEach(function(hi){ if(hi.getAttribute('src')!==s.hero){hi.src=s.hero;hi.alt=s.halt;} });
@@ -745,7 +745,7 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
       $('bbSub').innerHTML=s.s;if(window.kvVal)kvVal(key);
       $('bbRen').textContent=s.r;
       $('bbGet').innerHTML=s.get;
-      swapImgs(document.querySelectorAll('#slides .heroimg'), s);
+      swapImgs(document.querySelectorAll('#slides .heroimg'), s); document.querySelectorAll('img[src*="/img/s6"]').forEach(function(lab){ if(s.label&&lab.getAttribute('src')!==s.label){lab.src=s.label;} });
       document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
       swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);
       var sl=document.getElementById('slides');

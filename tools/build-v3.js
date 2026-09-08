@@ -152,10 +152,10 @@ rep('video loading state', VID.clickFrom, VID.clickTo);
   if (h.indexOf(bad) > -1) throw new Error('leftover: ' + bad);
 });
 /* ---------- 12c. supplement-facts slide per size (Bryce 9/8 night): 45 = s6-45e (4 oz pouch), 22 = s6 (2 oz) ---------- */
-rep('label slide 45', 'src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg"', 'src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg"');
+rep('label slide 45', 'src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg"', 'src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg"', { all: true });
 rep('label size map 45', "'4oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg',", "'4oz':{label:'https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg', hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg',");
 rep('label size map 22', "'2oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg',", "'2oz':{label:'https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg', hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg',");
-rep('label swap', "swapImgs(document.querySelectorAll('#slides .heroimg'), s);", "swapImgs(document.querySelectorAll('#slides .heroimg'), s); var lab=document.querySelector('#slides img[src*=\"/img/s6\"]'); if(lab&&s.label&&lab.getAttribute('src')!==s.label){lab.src=s.label;}");
+rep('label swap', "swapImgs(document.querySelectorAll('#slides .heroimg'), s);", "swapImgs(document.querySelectorAll('#slides .heroimg'), s); document.querySelectorAll('img[src*=\"/img/s6\"]').forEach(function(lab){ if(s.label&&lab.getAttribute('src')!==s.label){lab.src=s.label;} });");
 rep('label preload', "['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg'].forEach", "['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg'].forEach");
 /* 9/8 Bryce: guarantee reads "Feel it", everywhere the live embed says "Love it" */
 { const n = h.split('Love it or your money back').length - 1; if (n < 1) throw new Error('expected a Love-it guarline left in the live embed, found ' + n); h = h.split('Love it or your money back').join('Feel it or your money back'); }
