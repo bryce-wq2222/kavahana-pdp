@@ -162,6 +162,8 @@ rep('label preload', "['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.j
 rep('kv-perks anchor', '<section class="perksec"', '<section class="perksec" id="kv-perks"');
 /* 9/9: picking a size in the BOTTOM buy box must drive the whole page too (sticky bar + top tiles used to keep the old size -> sticky built the 45 after the visitor chose 22 at the bottom) */
 rep('bottom size syncs all', "} else {\n      btbKey=key;\n      document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});\n      swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);\n    }\n", "} else { setSize(key, true); return; }\n");
+/* 9/9: the sticky bar copy follows the selected size (it said $79.99 / 61% with the 22 selected) */
+rep('sticky size sync', "{lab.src=s.label;}", "{lab.src=s.label;} var ks=document.querySelector('#kv-sticky .ks-t'); if(ks){ks.innerHTML=(key==='2oz')?'$59.99 a month<br>Save 49% + free starter kit':'$79.99 first box<br>Save 61% + free starter kit';}");
 /* 9/8 Bryce: guarantee reads "Feel it", everywhere the live embed says "Love it" */
 { const n = h.split('Love it or your money back').length - 1; if (n < 1) throw new Error('expected a Love-it guarline left in the live embed, found ' + n); h = h.split('Love it or your money back').join('Feel it or your money back'); }
 /* 9/8 Bryce: "As seen on" moves to right above "What's inside your free starter kit" */

@@ -578,7 +578,7 @@
       $('bbSub').innerHTML=s.s;if(window.kvVal)kvVal(key);
       $('bbRen').textContent=s.r;
       $('bbGet').innerHTML=s.get;
-      swapImgs(document.querySelectorAll('#slides .heroimg'), s); document.querySelectorAll('img[src*="/img/s6"]').forEach(function(lab){ if(s.label&&lab.getAttribute('src')!==s.label){lab.src=s.label;} });
+      swapImgs(document.querySelectorAll('#slides .heroimg'), s); document.querySelectorAll('img[src*="/img/s6"]').forEach(function(lab){ if(s.label&&lab.getAttribute('src')!==s.label){lab.src=s.label;} var ks=document.querySelector('#kv-sticky .ks-t'); if(ks){ks.innerHTML=(key==='2oz')?'$59.99 a month<br>Save 49% + free starter kit':'$79.99 first box<br>Save 61% + free starter kit';} });
       document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
       swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);
       var sl=document.getElementById('slides');
