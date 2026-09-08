@@ -76,5 +76,5 @@
 #kv-page .opt.sel .rad::after{background:#fff!important}
 #kv-page .opt .gifts{white-space:nowrap;overflow:hidden;font-size:12.5px;letter-spacing:-.01em}
 #kv-page .opt .gifts b{font-weight:800}
-@media(max-width:759px){#kv-page .opt .gifts{font-size:clamp(10.5px,3.2vw,12px);padding-top:8px}}
+@media(max-width:759px){#kv-page .opt .gifts{font-size:clamp(10.5px,3.1vw,12px);padding-top:8px}}
 #kv-page .buy .quotecard{margin-top:16px}

@@ -151,5 +151,7 @@ rep('video loading state', VID.clickFrom, VID.clickTo);
 ['$166.46', '34% savings', 'third-party', 'END OF SUMMER', 'Morning and evening', 'class="rt-card', '<h2>From the people who drink it</h2>'].forEach(function (bad) {
   if (h.indexOf(bad) > -1) throw new Error('leftover: ' + bad);
 });
+/* 9/8 Bryce: guarantee reads "Feel it", everywhere the live embed says "Love it" */
+{ const n = h.split('Love it or your money back').length - 1; if (n < 1) throw new Error('expected a Love-it guarline left in the live embed, found ' + n); h = h.split('Love it or your money back').join('Feel it or your money back'); }
 fs.writeFileSync(OUT, h);
 console.log('wrote', OUT, h.length, 'bytes;', steps.length, 'steps:', steps.join(', '));

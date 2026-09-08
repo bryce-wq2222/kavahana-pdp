@@ -124,7 +124,7 @@
 #kv-page .opt.sel .rad::after{background:#fff!important}
 #kv-page .opt .gifts{white-space:nowrap;overflow:hidden;font-size:12.5px;letter-spacing:-.01em}
 #kv-page .opt .gifts b{font-weight:800}
-@media(max-width:759px){#kv-page .opt .gifts{font-size:clamp(10.5px,3.2vw,12px);padding-top:8px}}
+@media(max-width:759px){#kv-page .opt .gifts{font-size:clamp(10.5px,3.1vw,12px);padding-top:8px}}
 #kv-page .buy .quotecard{margin-top:16px}
 
 </style>
@@ -174,7 +174,7 @@
           <small>$2.73 per serving &middot; save 49%</small>
         </span>
         <span class="pr">$59.99<s>$117.96</s></span>
-        <span class="gifts"><b>$57.97 free:</b> 2 cups, whisk, guide + 5 sticks on renewal 1</span>
+        <span class="gifts"><b>$57.97 free:</b> 2 cups, whisk, guide +5 sticks on renewal 1</span>
       </div>
 
       <button class="pill-cta">Get my Starter Kit &#8594;</button>
@@ -441,7 +441,7 @@
           <span class="pr">$59.99<s>$117.96</s><span class="fb">Save 49%</span></span>
         </div>
         <button class="pill-cta" style="margin-top:18px">Get my Starter Kit &#8594;</button>
-        <div class="guarline">Love it or your money back</div>
+        <div class="guarline">Feel it or your money back</div>
       </div>
     </div>
   </div>
