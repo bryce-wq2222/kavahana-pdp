@@ -56,10 +56,14 @@
 #kv-cart .kc-fl button{background:#F8F3E8;border:1px solid #E6DFCE;border-radius:999px;font-size:11px;font-weight:700;padding:3px 9px;cursor:pointer;font-family:inherit;color:#1F1D17}
 #kv-cart .kc-fl button.is-on{background:#367542;border-color:#367542;color:#fff}
 #kv-cart .kc-foot{border-top:1px solid #E6DFCE;padding:12px 18px calc(14px + env(safe-area-inset-bottom));background:#fff;flex:none}
-#kv-cart .kc-row{display:flex;justify-content:space-between;font-size:13px;color:#6A6659;padding:2px 0}
+#kv-cart .kc-rows{padding:2px 0 8px;border-bottom:1px solid #EFEAE0;margin-bottom:10px}
+#kv-cart .kc-row{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:#6A6659;padding:2px 0;line-height:1.3}
+#kv-cart .kc-row .kc-grn{color:#367542;font-weight:700}
+#kv-cart .kc-row.kc-tot{font-size:15px;font-weight:800;color:#1F1D17;padding-top:5px}
+#kv-cart .kc-savechip{display:inline-block;background:#E9F1E3;color:#367542;font-size:11px;font-weight:800;border-radius:6px;padding:4px 8px;margin-right:9px;vertical-align:middle}
 #kv-cart .kc-row.kc-total{font-size:17px;font-weight:800;color:#1F1D17;padding-top:6px}
 #kv-cart .kc-row.kc-save{color:#367542;font-weight:700}
-#kv-cart .kc-co{display:block;width:100%;margin-top:10px;background:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);color:#fff;border:0;border-radius:999px;padding:16px 18px;font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;font-family:inherit;box-shadow:0 6px 18px -8px rgba(54,117,66,.7)}
+#kv-cart .kc-co{display:block;width:100%;margin-top:0;background:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);color:#fff;border:0;border-radius:999px;padding:16px 18px;font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;font-family:inherit;box-shadow:0 6px 18px -8px rgba(54,117,66,.7)}
 #kv-cart .kc-co:disabled{opacity:.6}
 #kv-cart .kc-guar{font-size:12.5px;font-weight:700;color:#367542;text-align:center;margin-top:8px}
 #kv-cart .kc-trust{font-size:11.5px;color:#6A6659;text-align:center;margin-top:6px;line-height:1.4}
@@ -130,7 +134,9 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     addEl.innerHTML=ADDONS.map(function(a){var o=a.opts[sel[a.key]];var pills=a.opts.length>1?'<div class="kc-fl">'+a.opts.map(function(x,i){return '<button type="button" data-pill="'+a.key+':'+i+'"'+(i===sel[a.key]?' class="is-on"':'')+'>'+x[0]+'</button>'}).join('')+'</div>':'';
       return '<div class="kc-add"><img class="kc-img" src="'+o[3]+'" alt="" loading="lazy"><div class="kc-info"><p class="kc-name">'+a.title+'</p><p class="kc-meta">'+a.sub+' &#183; <strong>'+money(o[2])+'</strong></p>'+pills+'</div><button type="button" class="kc-btn'+(inCart[o[1]]?' is-added':'')+'" data-add="'+a.key+'"'+(inCart[o[1]]?' disabled':'')+'>'+(inCart[o[1]]?'ADDED':'ADD')+'</button></div>'}).join('');
     var subtotal=(st.kit?K.price:0)+addTotal,total=(st.kit?K.first:0)+addTotal,saved=st.kit?(K.value-K.first):0;
-    foot.innerHTML='<button type="button" class="kc-co" id="kc-go"'+(!st.kit||pending?' disabled':'')+'>Secure checkout &#8594;</button>'+
+    var addonsTotal=st.adds.reduce(function(s,x){return s+x.price*x.qty},0);var sub=(st.kit?K.price:0)+addonsTotal,disc=st.kit?K.discount:0,tot=sub-disc,saving=st.kit?(K.value-K.first):0;
+    foot.innerHTML=(st.kit?'<div class="kc-rows"><div class="kc-row"><span>Subtotal</span><span>'+money(sub)+'</span></div>'+(disc?'<div class="kc-row"><span>Discount</span><span>&#8722;'+money(disc)+'</span></div>':'')+'<div class="kc-row"><span>Shipping</span><span class="kc-grn">Free</span></div><div class="kc-row kc-tot"><span>Total</span><span><span class="kc-savechip">Saving '+money(saving)+'!</span>'+money(tot)+'</span></div></div>':'')+
+      '<button type="button" class="kc-co" id="kc-go"'+(!st.kit||pending?' disabled':'')+'>Secure checkout &#8594;</button>'+
       '<p class="kc-trust"><span>&#9733; 4.8 &#183; 1,133 reviews</span><span>&#10003; 30-day guarantee</span><span>&#8635; Cancel anytime</span></p>';
   }
   function refresh(){return getCart().then(function(c){lines=fromShopify(c);render()})}
