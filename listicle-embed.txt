@@ -1070,13 +1070,15 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   function getCart(){return fetch('/cart.js',{credentials:'same-origin',cache:'no-store'}).then(function(r){return r.json()})}
   function addonInfo(vid){var o=null;ADDONS.forEach(function(a){a.opts.forEach(function(x){if(x[1]===vid)o={title:a.title+(a.opts.length>1?' ('+x[0]+')':''),sub:a.sub,price:x[2],img:x[3]}})});return o}
   function fromShopify(c){
-    var kit=null,gifts={},adds=[];
+    var kit=null,gifts={},adds=[],bonus=null;
     (c.items||[]).forEach(function(i){var vid=String(i.variant_id),sku=i.sku||'';
       if(sku.indexOf('KH-STARTER-KIT')===0){kit={key:i.key,vid:vid,img:i.image||'',qty:i.quantity};return}
+      /* the theme's $129 Free KavaCup: a bonus line, never a removable add-on (removing it is futile, the threshold rule puts it back) */
+      if(vid==='48005720113470'||sku==='KH-FREE-CUP'){bonus={key:i.key,vid:vid,img:i.image||'',qty:i.quantity};return}
       if(sku.indexOf('KH-GIFT-')===0||GIFTS[vid]){var g=gifts[vid]||(gifts[vid]={vid:vid,qty:0,img:i.image||''});g.qty+=i.quantity;return}
       var a=addonInfo(vid);adds.push({key:i.key,vid:vid,title:a?a.title:i.product_title,sub:a?a.sub:(i.variant_title&&i.variant_title!=='Default Title'?i.variant_title:''),price:(i.final_line_price!=null?i.final_line_price:i.line_price)/100/(i.quantity||1),qty:i.quantity,img:i.image||(a&&a.img)||''});
     });
-    return {kit:kit,gifts:Object.keys(gifts).map(function(k){return gifts[k]}),adds:adds};
+    return {kit:kit,gifts:Object.keys(gifts).map(function(k){return gifts[k]}),adds:adds,bonus:bonus};
   }
   function render(){
     var K=KITS[key],st=lines,html='',n=0,addTotal=0;
@@ -1084,6 +1086,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
       html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'</p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div></div></div>';
       if(key==='2oz')html+='<div class="kc-upg"><div class="kc-upg-t"><b>Upgrade to 45 servings</b><span>Get 5 free stick packs now and 5 more on renewal 1, save 61% instead of 49%, and pay $1.78 per serving.</span></div><button type="button" class="kc-upg-b" data-upgrade>Upgrade for $20 more</button></div>';
     }
+    if(st.bonus){n+=st.bonus.qty;html+='<div class="kc-line"><img class="kc-img" src="'+esc(st.bonus.img)+'" alt=""><div class="kc-info"><p class="kc-name">Free KavaCup unlocked</p><p class="kc-meta">Handmade coconut shell cup, on us for orders over $129</p><span class="kc-tag">FREE GIFT</span></div><div class="kc-price"><s class="kc-cmp">'+money(11.99)+'</s><span class="kc-now kc-free">FREE</span></div></div>'}
     st.adds.forEach(function(a){n+=a.qty;addTotal+=a.price*a.qty;
       html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<span class="kc-now kc-inline">'+money(a.price*a.qty)+'</span></div><button type="button" class="kc-trash" data-rm="'+esc(a.key)+'" aria-label="Remove"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div>';
     });
@@ -1124,7 +1127,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     items.push({id:K.id,quantity:1,selling_plan:'19079102782'});
     serial(function(){return getCart().then(function(c){var up={};(c.items||[]).forEach(function(i){var s=i.sku||'';if(s.indexOf('KH-GIFT-')===0||s.indexOf('KH-STARTER-KIT')===0)up[i.key]=0});
       if(Object.keys(up).length)return post('/cart/update.js',{updates:up}).catch(function(){});
-    }).catch(function(){}).then(function(){return post('/cart/add.js',{items:items})})
+    }).catch(function(){}).then(function(){return post('/cart/add.js',{items:items}).catch(function(){return post('/cart/add.js',{items:items})})})
       .then(function(){pending=false;building=false;return refreshNow()})
       .catch(function(e){pending=false;building=false;try{linesEl.innerHTML='<div class="kc-err">Taking you straight to checkout&hellip;</div>'}catch(_){}fallbackSubmit(items)})});
   }
