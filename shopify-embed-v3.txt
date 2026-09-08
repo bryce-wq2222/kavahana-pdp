@@ -939,7 +939,8 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   function money(n){return '$'+(Math.round(n*100)/100).toFixed(2)}
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function post(u,b){return fetch(u,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(b)}).then(function(r){return r.text().then(function(t){var j=null;try{j=JSON.parse(t)}catch(e){}if(r.status===429||!j){var er=new Error('cart busy '+r.status);er.busy=true;throw er}if(!r.ok||(j.status&&j.status>=400))throw new Error(j.description||j.message||('cart '+r.status));return j})})}
-  function getCart(){return fetch('/cart.js',{credentials:'same-origin',cache:'no-store'}).then(function(r){return r.json()})}
+  function syncBadge(c){try{if(c&&typeof c.item_count==='number'&&window.Alpine&&Alpine.store('cart_count'))Alpine.store('cart_count').count=c.item_count}catch(e){}return c}
+  function getCart(){return fetch('/cart.js',{credentials:'same-origin',cache:'no-store'}).then(function(r){return r.json()}).then(syncBadge)}
   function addonInfo(vid){var o=null;ADDONS.forEach(function(a){a.opts.forEach(function(x){if(x[1]===vid)o={title:a.title+(a.opts.length>1?' ('+x[0]+')':''),sub:a.sub,price:x[2],img:x[3]}})});return o}
   function fromShopify(c){
     var kit=null,gifts={},adds=[],bonus=null;
@@ -958,6 +959,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
       html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'</p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div></div><button type="button" class="kc-trash" data-rm-kit aria-label="Remove"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div>';
       if(key==='2oz')html+='<div class="kc-upg"><div class="kc-upg-t"><b>Upgrade to 45 servings</b><span>Get 5 free stick packs now and 5 more on renewal 1, save 61% instead of 49%, and pay $1.78 per serving.</span></div><button type="button" class="kc-upg-b" data-upgrade>Upgrade for $20 more</button></div>';
     }
+    if(st.bonus&&((st.kit?K.price:0)+st.adds.reduce(function(s,x){return s+x.price*x.qty},0))<129)st.bonus=null;
     if(st.bonus){n+=st.bonus.qty;html+='<div class="kc-line"><img class="kc-img" src="'+esc(st.bonus.img)+'" alt=""><div class="kc-info"><p class="kc-name">Free KavaCup unlocked</p><p class="kc-meta">Handmade coconut shell cup, on us for orders over $129</p><span class="kc-tag">FREE GIFT</span></div><div class="kc-price"><s class="kc-cmp">'+money(11.99)+'</s><span class="kc-now kc-free">FREE</span></div></div>'}
     st.adds.forEach(function(a){n+=a.qty;addTotal+=a.price*a.qty;
       html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<span class="kc-now kc-inline">'+money(a.price*a.qty)+'</span></div><button type="button" class="kc-trash" data-rm="'+esc(a.key)+'" aria-label="Remove"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div>';
@@ -1022,7 +1024,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('on'))close()});
   var KEY_BY_VID={'54144064749886':'4oz','54144064651582':'2oz'};
-  function openExisting(){if(building){open();return}pending=false;lines={kit:null,gifts:[],adds:[]};render();open();getCart().then(function(cc){var L=fromShopify(cc);if(L.kit&&KEY_BY_VID[L.kit.vid])key=KEY_BY_VID[L.kit.vid];lines=L;render()}).catch(function(){})}
+  function openExisting(){if(building){open();return}pending=false;lines={kit:null,gifts:[],adds:[]};render();open();getCart().then(cupRule).then(function(cc){var L=fromShopify(cc);if(L.kit&&KEY_BY_VID[L.kit.vid])key=KEY_BY_VID[L.kit.vid];lines=L;render()}).catch(function(){})}
   document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('#CartButton, a[href="/cart"], a[href^="/cart?"]');if(!b)return;e.preventDefault();e.stopImmediatePropagation();openExisting()},true);
   window.__kvOpenCart=build;window.__kvOpenExisting=openExisting;
   window.__kvCartState=function(){return {key:key,kit:!!(lines&&lines.kit),gifts:lines&&lines.gifts?lines.gifts.length:0,adds:lines&&lines.adds?lines.adds.length:0,open:root.classList.contains('on'),pending:pending}};
@@ -1034,7 +1036,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
 <style id="kv-drawer-css">
 #kv-drawer-offer{background:#F8F3E8;border:1px solid #E6DFCE;border-radius:14px;padding:16px 16px 14px;margin:4px 0 16px;text-align:left}
 #kv-drawer-offer .kvo-k{display:block;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:10.5px;font-weight:500;letter-spacing:.2em;color:#367542;text-transform:uppercase;margin-bottom:6px}
-#kv-drawer-offer .kvo-s{display:block;font-family:Newsreader,ui-serif,Georgia,serif;font-weight:600;font-size:27px;line-height:1.08;letter-spacing:-.012em;color:#1F1D17;margin:0 0 7px}
+#kv-drawer-offer .kvo-s{display:block;font-family:Newsreader,ui-serif,Georgia,serif;font-weight:600;font-size:26px;line-height:1.1;letter-spacing:-.012em;color:#1F1D17;margin:0 0 7px}.kvo-s s{color:#9A958A;font-weight:400;font-size:.66em;margin-right:5px;text-decoration-thickness:2px;white-space:nowrap}
 #kv-drawer-offer .kvo-sub{display:block;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.5;color:#6A6659;margin-bottom:13px}
 #kv-drawer-offer .kvo-cta{display:block;text-align:center;background:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);color:#fff;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:500;font-size:13.5px;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:14px 18px;cursor:pointer;box-shadow:0 6px 18px -8px rgba(54,117,66,.7)}
 #kv-drawer-links{list-style:none;margin:0;padding:0}
@@ -1063,7 +1065,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     var panel=document.createElement('div');
     panel.id='kv-drawer-offer';
     panel.innerHTML='<span class="kvo-k">Starter kit</span>'+
-      '<span class="kvo-s">$79.99 first box</span>'+
+      '<span class="kvo-s"><s>$202.96</s> $79.99 first box</span>'+
       '<span class="kvo-sub">Save 61%: 2 coconut shell cups, whisk, 5 stick packs and the digital guide free, then $109.99 a month</span>'+
       '<span class="kvo-cta" data-kv-cta>Get my starter kit &rarr;</span>';
     var anchors=document.createElement('ul');

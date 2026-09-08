@@ -122,7 +122,8 @@ rep('sticky btn', 'document.getElementById("kv-sticky-btn").addEventListener("cl
   'document.getElementById("kv-sticky-btn").addEventListener("click",function(){if(window.__kvOpenCart)window.__kvOpenCart(window.__kvKey?window.__kvKey(null):"4oz")});');
 
 /* ---------- 10. theme drawer offer panel ---------- */
-rep('drawer offer', "'<span class=\"kvo-s\">Save up to 39%</span>'", "'<span class=\"kvo-s\">$79.99 first box</span>'");
+rep('drawer offer', "'<span class=\"kvo-s\">Save up to 39%</span>'", "'<span class=\"kvo-s\"><s>$202.96</s> $79.99 first box</span>'");
+rep('offer strike css', '.kvo-s{display:block;font-family:Newsreader,ui-serif,Georgia,serif;font-weight:600;font-size:27px;line-height:1.08;letter-spacing:-.012em;color:#1F1D17;margin:0 0 7px}', '.kvo-s{display:block;font-family:Newsreader,ui-serif,Georgia,serif;font-weight:600;font-size:26px;line-height:1.1;letter-spacing:-.012em;color:#1F1D17;margin:0 0 7px}.kvo-s s{color:#9A958A;font-weight:400;font-size:.66em;margin-right:5px;text-decoration-thickness:2px;white-space:nowrap}');
 rep('drawer sub', "'<span class=\"kvo-sub\">Starter kit free: 2 coconut shell cups, whisk, digital recipe guide, 5 stick packs free, and again on your first renewal</span>'",
   "'<span class=\"kvo-sub\">Save 61%: 2 coconut shell cups, whisk, 5 stick packs and the digital guide free, then $109.99 a month</span>'");
 

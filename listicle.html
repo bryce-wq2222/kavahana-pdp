@@ -1130,7 +1130,8 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   function money(n){return '$'+(Math.round(n*100)/100).toFixed(2)}
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function post(u,b){return fetch(u,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(b)}).then(function(r){return r.text().then(function(t){var j=null;try{j=JSON.parse(t)}catch(e){}if(r.status===429||!j){var er=new Error('cart busy '+r.status);er.busy=true;throw er}if(!r.ok||(j.status&&j.status>=400))throw new Error(j.description||j.message||('cart '+r.status));return j})})}
-  function getCart(){return fetch('/cart.js',{credentials:'same-origin',cache:'no-store'}).then(function(r){return r.json()})}
+  function syncBadge(c){try{if(c&&typeof c.item_count==='number'&&window.Alpine&&Alpine.store('cart_count'))Alpine.store('cart_count').count=c.item_count}catch(e){}return c}
+  function getCart(){return fetch('/cart.js',{credentials:'same-origin',cache:'no-store'}).then(function(r){return r.json()}).then(syncBadge)}
   function addonInfo(vid){var o=null;ADDONS.forEach(function(a){a.opts.forEach(function(x){if(x[1]===vid)o={title:a.title+(a.opts.length>1?' ('+x[0]+')':''),sub:a.sub,price:x[2],img:x[3]}})});return o}
   function fromShopify(c){
     var kit=null,gifts={},adds=[],bonus=null;
@@ -1149,6 +1150,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
       html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'</p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div></div><button type="button" class="kc-trash" data-rm-kit aria-label="Remove"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div>';
       if(key==='2oz')html+='<div class="kc-upg"><div class="kc-upg-t"><b>Upgrade to 45 servings</b><span>Get 5 free stick packs now and 5 more on renewal 1, save 61% instead of 49%, and pay $1.78 per serving.</span></div><button type="button" class="kc-upg-b" data-upgrade>Upgrade for $20 more</button></div>';
     }
+    if(st.bonus&&((st.kit?K.price:0)+st.adds.reduce(function(s,x){return s+x.price*x.qty},0))<129)st.bonus=null;
     if(st.bonus){n+=st.bonus.qty;html+='<div class="kc-line"><img class="kc-img" src="'+esc(st.bonus.img)+'" alt=""><div class="kc-info"><p class="kc-name">Free KavaCup unlocked</p><p class="kc-meta">Handmade coconut shell cup, on us for orders over $129</p><span class="kc-tag">FREE GIFT</span></div><div class="kc-price"><s class="kc-cmp">'+money(11.99)+'</s><span class="kc-now kc-free">FREE</span></div></div>'}
     st.adds.forEach(function(a){n+=a.qty;addTotal+=a.price*a.qty;
       html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<span class="kc-now kc-inline">'+money(a.price*a.qty)+'</span></div><button type="button" class="kc-trash" data-rm="'+esc(a.key)+'" aria-label="Remove"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div>';
@@ -1213,7 +1215,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('on'))close()});
   var KEY_BY_VID={'54144064749886':'4oz','54144064651582':'2oz'};
-  function openExisting(){if(building){open();return}pending=false;lines={kit:null,gifts:[],adds:[]};render();open();getCart().then(function(cc){var L=fromShopify(cc);if(L.kit&&KEY_BY_VID[L.kit.vid])key=KEY_BY_VID[L.kit.vid];lines=L;render()}).catch(function(){})}
+  function openExisting(){if(building){open();return}pending=false;lines={kit:null,gifts:[],adds:[]};render();open();getCart().then(cupRule).then(function(cc){var L=fromShopify(cc);if(L.kit&&KEY_BY_VID[L.kit.vid])key=KEY_BY_VID[L.kit.vid];lines=L;render()}).catch(function(){})}
   document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('#CartButton, a[href="/cart"], a[href^="/cart?"]');if(!b)return;e.preventDefault();e.stopImmediatePropagation();openExisting()},true);
   window.__kvOpenCart=build;window.__kvOpenExisting=openExisting;
   window.__kvCartState=function(){return {key:key,kit:!!(lines&&lines.kit),gifts:lines&&lines.gifts?lines.gifts.length:0,adds:lines&&lines.adds?lines.adds.length:0,open:root.classList.contains('on'),pending:pending}};
