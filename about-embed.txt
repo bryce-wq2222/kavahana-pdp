@@ -290,11 +290,7 @@
       swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);
       var sl=document.getElementById('slides');
       if(sl)sl.scrollTo({left:0,behavior:'smooth'});
-    } else {
-      btbKey=key;
-      document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
-      swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);
-    }
+    } else { setSize(key, true); return; }
   }
   function stabilize(){
     var gl=document.querySelector('.getline');
@@ -726,7 +722,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
       serial(function(){var p=k.indexOf('tmp')===0?getCart().then(function(c){var it=(c.items||[]).filter(function(i){return gone&&String(i.variant_id)===String(gone.vid)})[0];return it?post('/cart/change.js',{id:it.key,quantity:0}):null}):post('/cart/change.js',{id:k,quantity:0});return p.then(refreshNow).catch(function(){lines.adds=snap2;render()})});return}
     var up=t.closest('[data-upgrade]');if(up){var o4=document.querySelector('#kv-page .buy .opt[data-o="4oz"]');if(o4)o4.click();build('4oz');return}
     var st=t.closest('[data-kc-start]');if(st){build(window.__kvKey?window.__kvKey(null):'4oz');return}
-    var go=t.closest('#kc-go');if(go&&!go.disabled){go.disabled=true;location.href=KITS[key].discount?'/discount/'+CODE+'?redirect=/checkout':'/checkout';return}
+    var go=t.closest('#kc-go');if(go&&!go.disabled){go.disabled=true;var kitNow=lines&&lines.kit&&String(lines.kit.vid)===String(KITS['4oz'].id);location.href=kitNow?'/discount/'+CODE+'?redirect=/checkout':'/checkout';return}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('on'))close()});
   var KEY_BY_VID={'54144064749886':'4oz','54144064651582':'2oz'};
