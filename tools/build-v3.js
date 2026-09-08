@@ -55,8 +55,8 @@ steps.push('hero+valsec');
 const PROOF = `<!-- 3c. PROOF -->
 <section class="proofsec lav"><div class="wrap">
   <div class="ctr">
-    <div class="eyebrow" style="text-align:center">Verified reviews</div>
-    <h2 class="btbh2">Rated 4.8 by 1,133 customers</h2>
+    <h2 class="kith2">What 1,133 customers say</h2>
+    <div class="pf-sub"><span>Excellent</span><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="g">4.8 out of 5 &middot; verified buyers</span></div>
   </div>
   <div class="carou pf-carou" data-carou="proof">
     <button class="cnav prev" aria-label="Previous">&#8249;</button>

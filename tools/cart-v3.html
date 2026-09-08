@@ -9,7 +9,11 @@
 #kv-cart .kc-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 12px;border-bottom:1px solid #E6DFCE;flex:none}
 #kv-cart .kc-title{font-size:18px;font-weight:800;letter-spacing:-.01em}
 #kv-cart .kc-x{background:none;border:0;font-size:22px;line-height:1;cursor:pointer;color:#1F1D17;padding:6px;font-family:inherit}
-#kv-cart .kc-banner{background:#8AC79A;color:#14261A;font-size:13px;font-weight:800;text-align:center;padding:9px 16px;letter-spacing:.01em;flex:none}
+#kv-cart .kc-banner{background:#16211A;color:#fff;font-size:12.5px;font-weight:500;text-align:center;padding:11px 16px;letter-spacing:.04em;text-transform:uppercase;flex:none}#kv-cart .kc-banner b{font-weight:800}
+#kv-cart .kc-cnt{font-weight:500;color:#6A6659;font-size:15px}
+#kv-cart .kc-inline{display:inline;margin-top:6px}
+#kv-cart .kc-trash{background:none;border:1px solid #E6DFCE;border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;color:#6A6659;cursor:pointer;flex:none;padding:0}
+#kv-cart .kc-trust{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-weight:600;color:#1F1D17}
 #kv-cart .kc-body{flex:1 1 auto;overflow-y:auto;overscroll-behavior:contain;padding:14px 18px 20px;-webkit-overflow-scrolling:touch}
 #kv-cart .kc-line{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed #E6DFCE}
 #kv-cart .kc-img{width:64px;height:64px;flex:none;border-radius:10px;background:#F8F3E8;object-fit:cover;display:block}
@@ -108,27 +112,21 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   function render(){
     var K=KITS[key],st=lines,html='',n=0,addTotal=0;
     if(st.kit){n+=st.kit.qty;st.gifts.forEach(function(g){n+=g.qty});
-      html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'. <strong>'+money(K.giftsValue)+' of gifts, free.</strong></p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div><p class="kc-meta">Renews every 30 days at '+money(K.price)+'. Skip or cancel anytime.</p>'+(K.discount?'<p class="kc-meta kc-codeline">&#10003; Code '+CODE+' applied, $'+K.discount+' off your first box</p>':'')+'</div></div>';
+      html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'</p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div></div></div>';
     }
     st.adds.forEach(function(a){n+=a.qty;addTotal+=a.price*a.qty;
-      html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<button type="button" class="kc-rm" data-rm="'+esc(a.key)+'">Remove</button></div><div class="kc-price"><span class="kc-now">'+money(a.price*a.qty)+'</span></div></div>';
+      html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<span class="kc-now kc-inline">'+money(a.price*a.qty)+'</span></div><button type="button" class="kc-trash" data-rm="'+esc(a.key)+'" aria-label="Remove"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div>';
     });
     if(pending)html+='<div class="kc-skel"><span class="kc-img"></span><p>Adding your Starter Kit&hellip;</p></div>';
     linesEl.innerHTML=html||'<p class="kc-meta" style="text-align:center;padding:30px 10px">Your cart is empty.</p>';
-    titleEl.textContent='Your cart'+(n?' ('+n+')':'');
-    banner.innerHTML=st.kit?'Congrats, you&#8217;ve unlocked <u>free shipping</u>!':'&#10003; Free shipping on the Starter Kit';
+    titleEl.innerHTML='Your Cart'+(n?' <span class="kc-cnt">('+n+' item'+(n===1?'':'s')+')</span>':'');
+    banner.innerHTML='CONGRATS YOU&#8217;VE UNLOCKED <b>FREE SHIPPING!</b>';
     var inCart={};st.adds.forEach(function(a){inCart[a.vid]=1});
     addEl.innerHTML=ADDONS.map(function(a){var o=a.opts[sel[a.key]];var pills=a.opts.length>1?'<div class="kc-fl">'+a.opts.map(function(x,i){return '<button type="button" data-pill="'+a.key+':'+i+'"'+(i===sel[a.key]?' class="is-on"':'')+'>'+x[0]+'</button>'}).join('')+'</div>':'';
       return '<div class="kc-add"><img class="kc-img" src="'+o[3]+'" alt="" loading="lazy"><div class="kc-info"><p class="kc-name">'+a.title+'</p><p class="kc-meta">'+a.sub+' &#183; <strong>'+money(o[2])+'</strong></p>'+pills+'</div><button type="button" class="kc-btn'+(inCart[o[1]]?' is-added':'')+'" data-add="'+a.key+'"'+(inCart[o[1]]?' disabled':'')+'>'+(inCart[o[1]]?'ADDED':'ADD')+'</button></div>'}).join('');
     var subtotal=(st.kit?K.price:0)+addTotal,total=(st.kit?K.first:0)+addTotal,saved=st.kit?(K.value-K.first):0;
-    foot.innerHTML='<div class="kc-row"><span>Subtotal</span><span>'+money(subtotal)+'</span></div>'+
-      (st.kit&&K.discount?'<div class="kc-row kc-save"><span>Code '+CODE+', first box</span><span>&#8722;'+money(K.discount)+'</span></div>':'')+
-      '<div class="kc-row"><span>Shipping</span><span>Free</span></div>'+
-      '<div class="kc-row kc-total"><span>Total today</span><span>'+money(total)+'</span></div>'+
-      (st.kit?'<div class="kc-row kc-save"><span>You save today</span><span>'+money(saved)+'</span></div>':'')+
-      '<button type="button" class="kc-co" id="kc-go"'+(!st.kit||pending?' disabled':'')+'>Secure checkout &#8594;</button>'+
-      '<p class="kc-guar">Love it or your money back</p>'+
-      '<p class="kc-trust">4.8 &#183; 1,133 verified reviews &#183; Cancel anytime</p>';
+    foot.innerHTML='<button type="button" class="kc-co" id="kc-go"'+(!st.kit||pending?' disabled':'')+'>Secure checkout &#8594;</button>'+
+      '<p class="kc-trust"><span>&#9733; 4.8 &#183; 1,133 reviews</span><span>&#10003; 30-day guarantee</span><span>&#8635; Cancel anytime</span></p>';
   }
   function refresh(){return getCart().then(function(c){lines=fromShopify(c);render()})}
   function open(){root.classList.add('on');root.setAttribute('aria-hidden','false');document.documentElement.classList.add('kv-cart-lock')}

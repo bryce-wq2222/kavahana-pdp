@@ -63,21 +63,31 @@
 #kv-page .buy .guarline{margin-top:12px}
 #kv-page .icons3{margin-top:18px;padding-top:16px}
 #kv-page .acc{margin-top:22px}
-/* first-box gift grid */
-#kv-page .valsec{padding-top:26px}
-#kv-page .gifts5{grid-template-columns:repeat(5,minmax(0,1fr))}
-#kv-page .gn em{display:block;font-style:normal;font-size:10.5px;color:var(--grey);text-transform:none;letter-spacing:0;margin-top:3px;font-weight:400}
-#kv-page .valsec.vs-2oz [data-vs45]{display:none}
-#kv-page .valsec.vs-2oz .gifts5{grid-template-columns:repeat(3,minmax(0,1fr));max-width:720px;margin-left:auto;margin-right:auto}
-#kv-page .valtotal{display:flex;justify-content:space-between;align-items:baseline;gap:12px;max-width:520px;margin:24px auto 0;padding-top:16px;border-top:1.5px solid var(--ink);font-size:14px;font-weight:500;text-align:left}
-#kv-page .valtotal .vt-p{font-family:Newsreader,ui-serif,Georgia,serif;font-size:34px;line-height:1;color:var(--green);white-space:nowrap}
-#kv-page .valtotal .vt-p s{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-size:15px;color:var(--grey);margin-right:8px;font-weight:400}
-#kv-page .valtotal .vt-p b{font-weight:400}
-#kv-page .valsec .moregifts{margin-top:12px;font-weight:400;color:var(--grey);font-size:13.5px;line-height:1.5}#kv-page .valsec .moregifts b{color:var(--green);font-weight:600}
-@media(max-width:1000px){#kv-page .gifts5{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:760px){#kv-page .gifts5,#kv-page .valsec.vs-2oz .gifts5{grid-template-columns:repeat(2,minmax(0,1fr))}#kv-page .gifts5 .gt:last-child{grid-column:1/-1}#kv-page .gifts5 .gt:last-child .shot{aspect-ratio:2/1}#kv-page .gifts5 .gt:last-child .shot img{object-position:50% 45%}#kv-page .valtotal{margin-top:18px}}
-/* proof carousel */
-#kv-page .proofsec{padding:28px 0 22px}
+/* ---- what's inside your free starter kit (Everyday Dose pattern) ---- */
+#kv-page .kitsec{padding:34px 0 30px}
+#kv-page .kitpanel{background:var(--cream);border-radius:20px;padding:36px 28px 30px;text-align:center}
+#kv-page .kit-eyebrow{display:inline-block;color:var(--green);font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+#kv-page .kith2{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);letter-spacing:-.01em;line-height:1.08;text-transform:uppercase;color:var(--ink);margin:0}
+#kv-page .kit-sub{font-size:14.5px;color:var(--grey);max-width:56ch;margin:10px auto 0;line-height:1.5}
+#kv-page .kitrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:26px}
+#kv-page .kitcard{background:#fff;border-radius:12px;padding:12px 12px 0;text-align:left;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(22,33,26,.05)}
+#kv-page .kc-h{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;min-height:34px;margin-bottom:8px}
+#kv-page .kc-n{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.25;color:var(--ink)}
+#kv-page .kc-v{text-align:right;font-size:12px;font-weight:800;color:var(--green);white-space:nowrap;line-height:1.2}
+#kv-page .kc-v s{display:block;font-size:11px;color:var(--grey);font-weight:400;margin-top:1px}
+#kv-page .kc-i{margin:auto -12px 0;aspect-ratio:1;background:#F8F3E8;border-radius:0 0 12px 12px;overflow:hidden}
+#kv-page .kc-i img{width:100%;height:100%;object-fit:cover;display:block}
+#kv-page .kit-link{display:inline-block;margin-top:22px;color:var(--green);font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+#kv-page .kitsec.vs-2oz [data-vs45]{display:none}
+#kv-page .kitsec.vs-2oz .kitrow{grid-template-columns:repeat(3,minmax(0,1fr));max-width:640px;margin-left:auto;margin-right:auto}
+@media(max-width:1000px){#kv-page .kitrow{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){#kv-page .kitsec{padding:22px 0 18px}#kv-page .kitpanel{padding:28px 0 24px;border-radius:0;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}#kv-page .kit-sub{padding:0 24px}#kv-page .kitrow,#kv-page .kitsec.vs-2oz .kitrow{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 18px;margin-top:20px;scrollbar-width:none;max-width:none}#kv-page .kitrow::-webkit-scrollbar{display:none}#kv-page .kitcard{flex:0 0 46%;scroll-snap-align:start}}
+/* ---- proof carousel, Everyday Dose review header ---- */
+#kv-page .proofsec{padding:30px 0 22px}
+#kv-page .proofsec .kith2{font-size:clamp(24px,3vw,32px)}
+#kv-page .pf-sub{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px;font-size:13.5px;color:var(--ink);font-weight:600}
+#kv-page .pf-sub .s{color:var(--green);letter-spacing:2px;font-size:15px}
+#kv-page .pf-sub span.g{color:var(--grey);font-weight:500}
 #kv-page .pf{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);height:100%;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(22,33,26,.05),0 12px 30px -22px rgba(22,33,26,.3)}
 #kv-page .pf .pf-media{position:relative;background:#EDE4D1}
 #kv-page .pf .vid-live video.slot{aspect-ratio:4/5;border-radius:0;width:100%;height:auto;object-fit:cover;display:block}
@@ -95,7 +105,7 @@
 #kv-page .proofline{text-align:center;font-size:13px;color:var(--grey);margin-top:16px}
 /* text review strip */
 #kv-page .txtrev{padding-top:16px;padding-bottom:12px}
-@media(max-width:620px){#kv-page .buy h1{font-size:22px;margin-bottom:8px}#kv-page .buy .stars-row{margin-bottom:8px;font-size:12px;gap:6px}#kv-page .getline{font-size:13.5px;margin-bottom:2px}#kv-page .dots2{margin-top:6px}#kv-page .buy{padding-top:2px}#kv-page .buy .opt{padding:11px 13px;margin-bottom:7px}#kv-page .buy .opt[data-o="4oz"]{margin-top:22px}#kv-page .buy .pill-cta{margin-top:14px}#kv-page .subline{margin-top:10px!important}#kv-page .buy .guarline{margin-top:10px}#kv-page .icons3{margin-top:14px;padding-top:14px}#kv-page .acc{margin-top:16px}#kv-page .valsec{padding-top:8px}#kv-page .txtrev h2{font-size:24px}}
+@media(max-width:620px){#kv-page .buy h1{font-size:22px;margin-bottom:8px}#kv-page .buy .stars-row{margin-bottom:8px;font-size:12px;gap:6px}#kv-page .getline{font-size:13.5px;margin-bottom:2px}#kv-page .dots2{margin-top:6px}#kv-page .buy{padding-top:2px}#kv-page .buy .opt{padding:11px 13px;margin-bottom:7px}#kv-page .buy .opt[data-o="4oz"]{margin-top:22px}#kv-page .buy .pill-cta{margin-top:14px}#kv-page .subline{margin-top:10px!important}#kv-page .buy .guarline{margin-top:10px}#kv-page .icons3{margin-top:14px;padding-top:14px}#kv-page .acc{margin-top:16px}#kv-page .txtrev h2{font-size:24px}}
 
 </style>
 <div id="kv-page">
@@ -166,40 +176,38 @@
 </div>
 </div>
 
-<!-- 3a. FIRST BOX -->
-<section class="giftband lav valsec" id="kv-valsec"><div class="wrap">
-  <div class="giftpanel ctr">
-    <span class="valchip" data-vs-chip>$202.96 value</span>
-    <div class="eyebrow" style="text-align:center">Included with your first box</div>
-    <h2 class="gifth2">What&#8217;s inside<br>your first box</h2>
-    <p class="lead" style="margin-top:10px">The cups, the whisk, the sticks, the guide.<br>All free with the Starter Kit.</p>
-    <div class="gifts gifts5">
-      <div class="gt">
-        <div class="gh"><span class="gn">2 coconut shell cups</span><span class="gf">Free<s>$23.98</s></span></div>
-        <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/coconut-cups.jpg" width="945" height="945" alt="Two Kavahana coconut shell cups on the beach"></div>
+<!-- 3a. FIRST BOX (Everyday Dose "What's inside your free starter kit") -->
+<section class="kitsec valsec" id="kv-valsec"><div class="wrap">
+  <div class="kitpanel">
+    <div class="kit-eyebrow" data-vs-chip>+$92.97 value</div>
+    <h2 class="kith2">What&#8217;s inside your<br>free starter kit</h2>
+    <p class="kit-sub">Your kit comes packed with everything you need to start the ritual, plus a few extras on us.</p>
+    <div class="kitrow">
+      <div class="kitcard">
+        <div class="kc-h"><span class="kc-n">2 coconut shell cups</span><span class="kc-v">Free<s>$23.98</s></span></div>
+        <div class="kc-i"><img loading="lazy" decoding="async" src="https://cdn.shopify.com/s/files/1/0803/6597/7918/files/kavacup-handcrafted-reusable-coconut-shell-cup-812748.jpg?v=1753767218&amp;width=600" width="600" height="600" alt="Kavahana coconut shell cup"></div>
       </div>
-      <div class="gt">
-        <div class="gh"><span class="gn">Bamboo whisk</span><span class="gf">Free<s>$14.99</s></span></div>
-        <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-whisk.jpg" width="620" height="620" alt="The Kavahana bamboo whisk mixing Kava Nectar in a coconut bowl"></div>
+      <div class="kitcard">
+        <div class="kc-h"><span class="kc-n">Bamboo whisk</span><span class="kc-v">Free<s>$14.99</s></span></div>
+        <div class="kc-i"><img loading="lazy" decoding="async" src="https://cdn.shopify.com/s/files/1/0803/6597/7918/files/bamboo-matcha-kava-nectar-whisk-traditionally-handmade-747934.jpg?v=1713348643&amp;width=600" width="600" height="600" alt="Bamboo Kava Nectar whisk"></div>
       </div>
-      <div class="gt" data-vs45>
-        <div class="gh"><span class="gn">5 stick packs<em>In your first box</em></span><span class="gf">Free<s>$17.50</s></span></div>
-        <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-sticks-balance.jpg" width="1080" height="1080" alt="Five Kava Nectar Balance Edition stick packs standing in the sand"></div>
+      <div class="kitcard" data-vs45>
+        <div class="kc-h"><span class="kc-n">5 stick packs</span><span class="kc-v">Free<s>$17.50</s></span></div>
+        <div class="kc-i"><img loading="lazy" decoding="async" src="https://cdn.shopify.com/s/files/1/0803/6597/7918/files/kava-nectar-stick-packs-hero.png?v=1787702855&amp;width=600" width="600" height="600" alt="Kava Nectar Balance stick packs"></div>
       </div>
-      <div class="gt" data-vs45>
-        <div class="gh"><span class="gn">5 more stick packs<em>On your first renewal</em></span><span class="gf">Free<s>$17.50</s></span></div>
-        <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-sticks-balance.jpg" width="1080" height="1080" alt="Five more Kava Nectar stick packs, sent with your first renewal"></div>
+      <div class="kitcard" data-vs45>
+        <div class="kc-h"><span class="kc-n">5 more on renewal 1</span><span class="kc-v">Free<s>$17.50</s></span></div>
+        <div class="kc-i"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-sticks-balance.jpg" width="1080" height="1080" alt="Five more Kava Nectar stick packs, sent with your first renewal"></div>
       </div>
-      <div class="gt">
-        <div class="gh"><span class="gn">Digital recipe guide<em>In your welcome email</em></span><span class="gf">Free<s>$19.00</s></span></div>
-        <div class="shot"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/guide-blue.jpg" width="760" height="760" alt="Blue spirulina Kava Nectar in the coconut bowl and cup"></div>
+      <div class="kitcard">
+        <div class="kc-h"><span class="kc-n">Digital recipe guide</span><span class="kc-v">Free<s>$19</s></span></div>
+        <div class="kc-i"><img loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/guide-blue.jpg" width="760" height="760" alt="Blue spirulina Kava Nectar in the coconut bowl and cup"></div>
       </div>
     </div>
-    <div class="valtotal"><span>Your first box today</span><span class="vt-p"><s data-vs-value>$202.96</s><b data-vs-first>$79.99</b></span></div>
-    <div class="moregifts" data-vs-save>Code <b>FIRSTBOX30</b> applied at checkout &middot; you save <b>$122.97</b> &middot; then $109.99 a month, skip or cancel anytime</div>
+    <a class="kit-link" href="#kv-perks">See your monthly gifts &#8594;</a>
   </div>
 </div></section>
-<script>(function(){var sec=document.getElementById('kv-valsec');if(!sec)return;var V={'4oz':{chip:'$202.96 value',value:'$202.96',first:'$79.99',save:'Code <b>FIRSTBOX30</b> applied at checkout &middot; you save <b>$122.97</b> &middot; then $109.99 a month, skip or cancel anytime'},'2oz':{chip:'$117.96 value',value:'$117.96',first:'$59.99',save:'You save <b>$57.97</b> &middot; $59.99 a month, skip or cancel anytime'}};window.kvVal=function(k){var v=V[k]||V['4oz'];sec.classList.toggle('vs-2oz',k==='2oz');sec.querySelector('[data-vs-chip]').textContent=v.chip;sec.querySelector('[data-vs-value]').textContent=v.value;sec.querySelector('[data-vs-first]').textContent=v.first;sec.querySelector('[data-vs-save]').innerHTML=v.save};})();</script>
+<script>(function(){var sec=document.getElementById('kv-valsec');if(!sec)return;var V={'4oz':'+$92.97 value','2oz':'+$57.97 value'};window.kvVal=function(k){sec.classList.toggle('vs-2oz',k==='2oz');sec.querySelector('[data-vs-chip]').textContent=V[k]||V['4oz']};var l=sec.querySelector('.kit-link');l.addEventListener('click',function(e){var p=document.querySelector('.perksec');if(p){e.preventDefault();p.scrollIntoView({behavior:'smooth',block:'start'})}});})();</script>
 
 <!-- 3b. AS SEEN ON -->
 <section class="seenon"><div class="wrap">
@@ -217,8 +225,8 @@
 <!-- 3c. PROOF -->
 <section class="proofsec lav"><div class="wrap">
   <div class="ctr">
-    <div class="eyebrow" style="text-align:center">Verified reviews</div>
-    <h2 class="btbh2">Rated 4.8 by 1,133 customers</h2>
+    <h2 class="kith2">What 1,133 customers say</h2>
+    <div class="pf-sub"><span>Excellent</span><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="g">4.8 out of 5 &middot; verified buyers</span></div>
   </div>
   <div class="carou pf-carou" data-carou="proof">
     <button class="cnav prev" aria-label="Previous">&#8249;</button>
@@ -783,7 +791,11 @@
 #kv-cart .kc-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 12px;border-bottom:1px solid #E6DFCE;flex:none}
 #kv-cart .kc-title{font-size:18px;font-weight:800;letter-spacing:-.01em}
 #kv-cart .kc-x{background:none;border:0;font-size:22px;line-height:1;cursor:pointer;color:#1F1D17;padding:6px;font-family:inherit}
-#kv-cart .kc-banner{background:#8AC79A;color:#14261A;font-size:13px;font-weight:800;text-align:center;padding:9px 16px;letter-spacing:.01em;flex:none}
+#kv-cart .kc-banner{background:#16211A;color:#fff;font-size:12.5px;font-weight:500;text-align:center;padding:11px 16px;letter-spacing:.04em;text-transform:uppercase;flex:none}#kv-cart .kc-banner b{font-weight:800}
+#kv-cart .kc-cnt{font-weight:500;color:#6A6659;font-size:15px}
+#kv-cart .kc-inline{display:inline;margin-top:6px}
+#kv-cart .kc-trash{background:none;border:1px solid #E6DFCE;border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;color:#6A6659;cursor:pointer;flex:none;padding:0}
+#kv-cart .kc-trust{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-weight:600;color:#1F1D17}
 #kv-cart .kc-body{flex:1 1 auto;overflow-y:auto;overscroll-behavior:contain;padding:14px 18px 20px;-webkit-overflow-scrolling:touch}
 #kv-cart .kc-line{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed #E6DFCE}
 #kv-cart .kc-img{width:64px;height:64px;flex:none;border-radius:10px;background:#F8F3E8;object-fit:cover;display:block}
@@ -882,27 +894,21 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   function render(){
     var K=KITS[key],st=lines,html='',n=0,addTotal=0;
     if(st.kit){n+=st.kit.qty;st.gifts.forEach(function(g){n+=g.qty});
-      html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'. <strong>'+money(K.giftsValue)+' of gifts, free.</strong></p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div><p class="kc-meta">Renews every 30 days at '+money(K.price)+'. Skip or cancel anytime.</p>'+(K.discount?'<p class="kc-meta kc-codeline">&#10003; Code '+CODE+' applied, $'+K.discount+' off your first box</p>':'')+'</div></div>';
+      html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'</p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div></div></div>';
     }
     st.adds.forEach(function(a){n+=a.qty;addTotal+=a.price*a.qty;
-      html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<button type="button" class="kc-rm" data-rm="'+esc(a.key)+'">Remove</button></div><div class="kc-price"><span class="kc-now">'+money(a.price*a.qty)+'</span></div></div>';
+      html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<span class="kc-now kc-inline">'+money(a.price*a.qty)+'</span></div><button type="button" class="kc-trash" data-rm="'+esc(a.key)+'" aria-label="Remove"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div>';
     });
     if(pending)html+='<div class="kc-skel"><span class="kc-img"></span><p>Adding your Starter Kit&hellip;</p></div>';
     linesEl.innerHTML=html||'<p class="kc-meta" style="text-align:center;padding:30px 10px">Your cart is empty.</p>';
-    titleEl.textContent='Your cart'+(n?' ('+n+')':'');
-    banner.innerHTML=st.kit?'Congrats, you&#8217;ve unlocked <u>free shipping</u>!':'&#10003; Free shipping on the Starter Kit';
+    titleEl.innerHTML='Your Cart'+(n?' <span class="kc-cnt">('+n+' item'+(n===1?'':'s')+')</span>':'');
+    banner.innerHTML='CONGRATS YOU&#8217;VE UNLOCKED <b>FREE SHIPPING!</b>';
     var inCart={};st.adds.forEach(function(a){inCart[a.vid]=1});
     addEl.innerHTML=ADDONS.map(function(a){var o=a.opts[sel[a.key]];var pills=a.opts.length>1?'<div class="kc-fl">'+a.opts.map(function(x,i){return '<button type="button" data-pill="'+a.key+':'+i+'"'+(i===sel[a.key]?' class="is-on"':'')+'>'+x[0]+'</button>'}).join('')+'</div>':'';
       return '<div class="kc-add"><img class="kc-img" src="'+o[3]+'" alt="" loading="lazy"><div class="kc-info"><p class="kc-name">'+a.title+'</p><p class="kc-meta">'+a.sub+' &#183; <strong>'+money(o[2])+'</strong></p>'+pills+'</div><button type="button" class="kc-btn'+(inCart[o[1]]?' is-added':'')+'" data-add="'+a.key+'"'+(inCart[o[1]]?' disabled':'')+'>'+(inCart[o[1]]?'ADDED':'ADD')+'</button></div>'}).join('');
     var subtotal=(st.kit?K.price:0)+addTotal,total=(st.kit?K.first:0)+addTotal,saved=st.kit?(K.value-K.first):0;
-    foot.innerHTML='<div class="kc-row"><span>Subtotal</span><span>'+money(subtotal)+'</span></div>'+
-      (st.kit&&K.discount?'<div class="kc-row kc-save"><span>Code '+CODE+', first box</span><span>&#8722;'+money(K.discount)+'</span></div>':'')+
-      '<div class="kc-row"><span>Shipping</span><span>Free</span></div>'+
-      '<div class="kc-row kc-total"><span>Total today</span><span>'+money(total)+'</span></div>'+
-      (st.kit?'<div class="kc-row kc-save"><span>You save today</span><span>'+money(saved)+'</span></div>':'')+
-      '<button type="button" class="kc-co" id="kc-go"'+(!st.kit||pending?' disabled':'')+'>Secure checkout &#8594;</button>'+
-      '<p class="kc-guar">Love it or your money back</p>'+
-      '<p class="kc-trust">4.8 &#183; 1,133 verified reviews &#183; Cancel anytime</p>';
+    foot.innerHTML='<button type="button" class="kc-co" id="kc-go"'+(!st.kit||pending?' disabled':'')+'>Secure checkout &#8594;</button>'+
+      '<p class="kc-trust"><span>&#9733; 4.8 &#183; 1,133 reviews</span><span>&#10003; 30-day guarantee</span><span>&#8635; Cancel anytime</span></p>';
   }
   function refresh(){return getCart().then(function(c){lines=fromShopify(c);render()})}
   function open(){root.classList.add('on');root.setAttribute('aria-hidden','false');document.documentElement.classList.add('kv-cart-lock')}
