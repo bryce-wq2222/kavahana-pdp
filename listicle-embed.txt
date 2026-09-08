@@ -4,7 +4,7 @@
 #MainContent .shopify-section:has(#kv-slot) > section > .section-content{padding-top:0!important;padding-bottom:0!important}
 #MainContent .shopify-section:has(#kv-slot) [data-island]{margin:0!important}
 </style>
-<style>[id$="__header"]{display:none!important}</style>
+<style>[id$="__header"]{display:none!important}html{overflow-x:clip}</style>
 <style>#kv-page,#kv-page :where(*:not(svg):not(svg *)),#kv-page :where(*:not(svg):not(svg *))::before,#kv-page :where(*:not(svg):not(svg *))::after{all:revert}
 #kv-page .note,#kv-page .tpl{display:none!important}
 #kv-page{display:block;width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;text-align:left}
