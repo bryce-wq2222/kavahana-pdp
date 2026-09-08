@@ -72,5 +72,5 @@
     <a class="kit-link" href="#kv-perks">See your monthly gifts &#8594;</a>
   </div>
 </div></section>
-<script>(function(){var sec=document.getElementById('kv-valsec');if(!sec)return;var V={'4oz':'Over $90 in free gifts','2oz':'Over $55 in free gifts'};window.kvVal=function(k){sec.classList.toggle('vs-2oz',k==='2oz');sec.querySelector('[data-vs-chip]').textContent=V[k]||V['4oz']};var l=sec.querySelector('.kit-link');l.addEventListener('click',function(e){var p=document.querySelector('.perksec');if(p){e.preventDefault();p.scrollIntoView({behavior:'smooth',block:'start'})}});})();</script>
+<script>(function(){var sec=document.getElementById('kv-valsec');if(!sec)return;var V={'4oz':'Over $90 in free gifts','2oz':'Over $55 in free gifts'};window.kvVal=function(k){sec.classList.toggle('vs-2oz',k==='2oz');sec.querySelector('[data-vs-chip]').textContent=V[k]||V['4oz']};var l=sec.querySelector('.kit-link');l.addEventListener('click',function(e){var p=document.querySelector('.perksec');if(p){e.preventDefault();var y0=window.scrollY;p.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){if(Math.abs(window.scrollY-y0)<10)p.scrollIntoView({block:'start'})},700)}});})();</script>
 
