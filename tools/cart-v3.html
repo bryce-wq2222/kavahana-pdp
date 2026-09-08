@@ -100,6 +100,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   var sel={sticks:0,relax:0,balance:0};
   var root=document.getElementById('kv-cart');if(!root)return;
   try{document.body.appendChild(root)}catch(e){}
+  try{ADDONS.forEach(function(a){a.opts.forEach(function(x){var pi=new Image();pi.src=x[3]})})}catch(e){}
   var linesEl=document.getElementById('kc-lines'),addEl=document.getElementById('kc-addons'),foot=document.getElementById('kc-foot'),titleEl=document.getElementById('kc-title'),banner=document.getElementById('kc-banner');
   var key='4oz',lines=[],pending=false,busy=false;
   function money(n){return '$'+(Math.round(n*100)/100).toFixed(2)}
@@ -173,7 +174,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     var t=e.target;
     if(t.closest('[data-kc-close]')){close();return}
     if(t.closest('[data-kc-retry]')){build(key);return}
-    var p=t.closest('[data-pill]');if(p){var a=p.getAttribute('data-pill').split(':');sel[a[0]]=+a[1];render();return}
+    var p=t.closest('[data-pill]');if(p){var a=p.getAttribute('data-pill').split(':');sel[a[0]]=+a[1];var card=p.closest('.kc-add'),PA=ADDONS.filter(function(x){return x.key===a[0]})[0];if(card&&PA){var po=PA.opts[sel[a[0]]];var im=card.querySelector('.kc-img');if(im&&im.getAttribute('src')!==po[3])im.src=po[3];card.querySelectorAll('[data-pill]').forEach(function(x){x.classList.toggle('is-on',x===p)});var pm=card.querySelector('.kc-meta strong');if(pm)pm.textContent=money(po[2]);var have=(lines.adds||[]).some(function(x){return String(x.vid)===String(po[1])});var pb=card.querySelector('[data-add]');if(pb){pb.disabled=have;pb.textContent=have?'ADDED':'ADD';pb.classList.toggle('is-added',have)}}else render();return}
     var ad=t.closest('[data-add]');if(ad&&!ad.disabled){var A=ADDONS.filter(function(x){return x.key===ad.getAttribute('data-add')})[0];var o=A.opts[sel[A.key]];ad.disabled=true;ad.textContent='ADDED';ad.classList.add('is-added');
       var snap=lines.adds.slice();lines.adds.push({key:'tmp'+Date.now(),vid:o[1],title:A.title+(A.opts.length>1?' ('+o[0]+')':''),sub:A.sub,price:o[2],qty:1,img:o[3]});render();
       var tmpKey=lines.adds[lines.adds.length-1].key;

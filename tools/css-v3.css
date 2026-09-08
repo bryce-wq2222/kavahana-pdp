@@ -81,3 +81,11 @@
 /* 9/8 Bryce: kit panel white (As seen on logos sit on the cream page right above it, so the white panel starts the section); cards get a hairline so they still read as cards on white */
 #kv-page .kitpanel{background:#fff}
 #kv-page .kitcard{border:1px solid rgba(0,0,0,.07)}
+/* 9/8 Bryce phone check: pill clear of the price and of the intro; no white strip before the reviews section; review videos 1:1 with per-video crop; bottom buy box tiles = top tiles */
+#kv-page .opt .tag{top:-15px}
+#kv-page .buy .opt[data-o="4oz"],#kv-page .buy .opt[data-o2="4oz"]{padding-top:20px}
+@media(max-width:759px){#kv-page .buy .opt[data-o="4oz"],#kv-page .buy .opt[data-o2="4oz"]{margin-top:26px}#kv-page .kitsec{padding-bottom:0}}
+#kv-page .pf .vid-live video.slot{aspect-ratio:1/1}
+#kv-page .pf .vid-live.pos-top video.slot{object-position:50% 34%}
+#kv-page .pf-carou .cslide:nth-child(2) .vid-live video.slot{object-position:50% 45%}
+#kv-page .pf-carou .cslide:nth-child(3) .vid-live video.slot{object-position:50% 57%}

@@ -155,5 +155,14 @@ rep('video loading state', VID.clickFrom, VID.clickTo);
 { const n = h.split('Love it or your money back').length - 1; if (n < 1) throw new Error('expected a Love-it guarline left in the live embed, found ' + n); h = h.split('Love it or your money back').join('Feel it or your money back'); }
 /* 9/8 Bryce: "As seen on" moves to right above "What's inside your free starter kit" */
 { const so = h.indexOf('<section class="seenon"'); if (so < 0) throw new Error('no .seenon section'); const soEnd = h.indexOf('</section>', so) + 10; const seen = h.slice(so, soEnd); h = h.slice(0, so) + h.slice(soEnd); const vs = h.indexOf('<section class="kitsec valsec" id="kv-valsec">'); if (vs < 0) throw new Error('no #kv-valsec'); h = h.slice(0, vs) + seen + String.fromCharCode(10) + h.slice(vs); }
+/* 9/8 Bryce: the bottom buy box tiles must be the same as the top ones (gift line, per-serving line, pill) */
+{ const hero = fs.readFileSync(path.join(__dirname, 'hero-v3.html'), 'utf8').replace(/
+/g, '
+');
+  const t45 = (hero.match(/<div class="opt sel" data-o="4oz">[sS]*?</div>/) || [])[0]; const t22 = (hero.match(/<div class="opt" data-o="2oz">[sS]*?</div>/) || [])[0];
+  if (!t45 || !t22) throw new Error('hero tiles not found');
+  const b45 = h.match(/<div class="opt sel" data-o2="4oz">[sS]*?</div>/); const b22 = h.match(/<div class="opt" data-o2="2oz">[sS]*?</div>/);
+  if (!b45 || !b22) throw new Error('btb tiles not found');
+  h = h.replace(b45[0], t45.replace('data-o="4oz"', 'data-o2="4oz"')).replace(b22[0], t22.replace('data-o="2oz"', 'data-o2="2oz"')); }
 fs.writeFileSync(OUT, h);
 console.log('wrote', OUT, h.length, 'bytes;', steps.length, 'steps:', steps.join(', '));
