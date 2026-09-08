@@ -94,7 +94,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     key=KITS[k]?k:'4oz';
     el.classList.add('on');el.setAttribute('aria-hidden','false');
     document.documentElement.classList.add('kv-cart-lock');
-    requestAnimationFrame(function(){requestAnimationFrame(function(){el.classList.add('in')})});
+    setTimeout(function(){el.classList.add('in')},20);
     body.innerHTML='<div class="kc-msg">Adding your Starter Kit…</div>';foot.innerHTML='';
     build();
   }

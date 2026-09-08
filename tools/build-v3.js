@@ -35,16 +35,16 @@ rep('z-lock', "if(!document.querySelector('.lbx.on')){", "if(!document.querySele
 /* ---------- 1. v3 CSS (appended inside the main style block) ---------- */
 const CSS = `
 /* ---- v3 ---- */
-#kv-page .buy .stars-row{margin-bottom:9px}#kv-page .buy .stars-row b{color:var(--ink)}
-#kv-page .buy h1{margin-bottom:8px}
-#kv-page .getline{font-size:15px;margin-bottom:12px;color:var(--ink)}
-#kv-page .buy .opt{padding:12px 14px;margin-bottom:8px;grid-template-columns:18px 1fr auto;gap:11px}
-#kv-page .buy .opt:first-of-type{margin-top:18px}
+#kv-page .buy .stars-row{margin-bottom:6px}#kv-page .buy .stars-row b{color:var(--ink)}
+#kv-page .buy h1{margin-bottom:6px;line-height:1.05}
+#kv-page .getline{font-size:15px;margin-bottom:10px;color:var(--ink)}
+#kv-page .buy .opt{padding:10px 13px;margin-bottom:6px;grid-template-columns:18px 1fr auto;gap:10px}
+#kv-page .buy .opt:first-of-type{margin-top:16px}
 #kv-page .opt .nm{font-size:16.5px}#kv-page .opt .nm small{font-size:12px;margin-top:3px;letter-spacing:0}
 #kv-page .opt .pr{font-size:22px}#kv-page .opt .pr s{font-size:12.5px;margin-top:2px}
 #kv-page .opt .pr .fb{display:block;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:3px}#kv-page .opt.sel .pr .fb{color:#EAF3E5}
 #kv-page .opt .tag{top:-13px;font-size:10.5px;padding:4px 11px}
-#kv-page .subline{margin:0 0 10px!important;font-size:12.5px}
+#kv-page .subline{margin:9px 0 0!important;font-size:12.5px}
 #kv-page .subline .code{display:inline-block;background:#E9F1E3;color:var(--green);font-weight:600;border-radius:5px;padding:1px 7px;letter-spacing:.06em}
 #kv-page .icons3{margin-top:12px;padding-top:12px}
 #kv-page .buy .guarline{margin-top:10px}
@@ -79,7 +79,7 @@ const CSS = `
 #kv-page .proofline{text-align:center;font-size:13px;color:var(--grey);margin-top:16px}
 /* text review strip */
 #kv-page .txtrev{padding-top:16px;padding-bottom:12px}
-@media(max-width:620px){#kv-page .buy h1{font-size:27px}#kv-page .getline{font-size:14px;margin-bottom:10px}#kv-page .dots2{margin-top:8px}#kv-page .buy{padding-top:4px}#kv-page .valbox{padding:18px 16px 14px;border-radius:0;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}#kv-page .valsec{padding-top:0}#kv-page .valsec .acc{padding:0 18px}#kv-page .txtrev h2{font-size:24px}}
+@media(max-width:620px){#kv-page .buy h1{font-size:22px}#kv-page .getline{font-size:13.5px;margin-bottom:8px}#kv-page .dots2{margin-top:6px}#kv-page .buy{padding-top:2px}#kv-page .buy .guarline{margin-top:8px}#kv-page .valbox{padding:18px 16px 14px;border-radius:0;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}#kv-page .valsec{padding-top:0}#kv-page .valsec .acc{padding:0 18px}#kv-page .txtrev h2{font-size:24px}}
 `;
 rep('css', '\n</style>\n<div id="kv-page">', CSS + '\n</style>\n<div id="kv-page">');
 
@@ -98,26 +98,26 @@ if (ACC.indexOf('third-party') > -1) throw new Error('third-party wording still 
 const HERO = `<div class="buy">
       <div class="stars-row"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.8</b><span>|</span><span>1,133 verified reviews</span></div>
       <h1><span class="mauna">KAVA NECTAR</span> STARTER KIT</h1>
-      <div class="getline" id="bbGet"><span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social, from one ingredient, cold-pressed noble kava root. Scoop into any cold drink and enjoy.</div>
+      <div class="getline" id="bbGet"><span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.</div>
 
       <div class="opt sel" data-o="4oz">
         <span class="tag">Best deal &ndash; save 61%</span>
         <span class="rad"></span>
         <span class="nm">45 servings
-          <small>$1.78 per serving &middot; then $109.99/mo</small>
+          <small>$1.78 per serving &middot; first box price</small>
         </span>
-        <span class="pr">$79.99<s>$202.96</s><span class="fb">First box</span></span>
+        <span class="pr">$79.99<s>$202.96</s></span>
       </div>
       <div class="opt" data-o="2oz">
         <span class="rad"></span>
         <span class="nm">22 servings
-          <small>$2.73 per serving &middot; $59.99/mo</small>
+          <small>$2.73 per serving &middot; save 49%</small>
         </span>
-        <span class="pr">$59.99<s>$117.96</s><span class="fb">Save 49%</span></span>
+        <span class="pr">$59.99<s>$117.96</s></span>
       </div>
 
-      <div class="subline" id="bbSub">First box $79.99 with code <span class="code">FIRSTBOX30</span> &middot; renews at $109.99/mo</div>
       <button class="pill-cta">Get my Starter Kit &#8594;</button>
+      <div class="subline" id="bbSub">Code <span class="code">FIRSTBOX30</span> applied &middot; then $109.99/mo</div>
       <div class="guarline">Love it or your money back</div>
 
       <div class="icons3">
@@ -215,7 +215,7 @@ rep('faq rt', 'Kava is thought to have a kind of reverse tolerance, where the be
 /* ---------- 8. size script: sublines, value-stack toggle, CTA -> cart ---------- */
 rep('sizes 45', "s:'45 servings \\u00b7 delivered monthly', r:'$109.99',", "s:'First box $79.99 with code <span class=\"code\">FIRSTBOX30</span> \\u00b7 renews at $109.99/mo', r:'$109.99',");
 rep('sizes 22', "s:'22 servings \\u00b7 delivered monthly', r:'$59.99',", "s:'$59.99 a month \\u00b7 skip or cancel anytime', r:'$59.99',");
-rep('sizes get', "get:'<span class=\"mauna\">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social, from one ingredient, cold-pressed noble kava root. Scoop, mix into any cold drink and enjoy.'", "get:'<span class=\"mauna\">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social, from one ingredient, cold-pressed noble kava root. Scoop into any cold drink and enjoy.'", { all: true });
+rep('sizes get', "get:'<span class=\"mauna\">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social, from one ingredient, cold-pressed noble kava root. Scoop, mix into any cold drink and enjoy.'", "get:'<span class=\"mauna\">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'", { all: true });
 rep('bbSub html', "$('bbSub').textContent=s.s;", "$('bbSub').innerHTML=s.s;document.querySelectorAll('[data-vs]').forEach(function(x){x.classList.toggle('sel',x.dataset.vs===key)});");
 const ctaOld = h.slice(h.indexOf("  document.querySelectorAll('.hero .pill-cta').forEach(function(b){"), h.indexOf("  stabilize();\n  window.addEventListener('load',stabilize);"));
 if (!ctaOld || ctaOld.indexOf('19079102782') < 0) throw new Error('cta handler not found');
