@@ -166,7 +166,7 @@
           <small>$1.78 per serving &middot; first box price</small>
         </span>
         <span class="pr">$79.99<s>$202.96</s></span>
-        <span class="gifts"><b>$92.97 free</b> &middot; 2 cups &middot; whisk &middot; 10 stick packs &middot; guide</span>
+        <span class="gifts"><b>$92.97 free:</b> 2 cups, whisk, 10 stick packs, recipe guide</span>
       </div>
       <div class="opt" data-o="2oz">
         <span class="rad"></span>
@@ -174,7 +174,7 @@
           <small>$2.73 per serving &middot; save 49%</small>
         </span>
         <span class="pr">$59.99<s>$117.96</s></span>
-        <span class="gifts"><b>$57.97 free</b> &middot; 2 cups &middot; whisk &middot; guide &middot; 5 sticks on renewal 1</span>
+        <span class="gifts"><b>$57.97 free:</b> 2 cups, whisk, guide + 5 sticks on renewal 1</span>
       </div>
 
       <button class="pill-cta">Get my Starter Kit &#8594;</button>
