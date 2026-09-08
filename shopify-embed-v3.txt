@@ -914,7 +914,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   function refresh(){return getCart().then(function(c){lines=fromShopify(c);render()})}
   function open(){root.classList.add('on');root.setAttribute('aria-hidden','false');document.documentElement.classList.add('kv-cart-lock')}
   function close(){root.classList.remove('on');root.setAttribute('aria-hidden','true');document.documentElement.classList.remove('kv-cart-lock')}
-  function fallbackSubmit(items){var f=document.createElement('form');f.method='post';f.action='/cart/add';items.forEach(function(it,i){[['id',it.id],['quantity',it.quantity],['selling_plan',it.selling_plan||'']].forEach(function(p){if(p[1]==='')return;var inp=document.createElement('input');inp.type='hidden';inp.name='items['+i+']['+p[0]+']';inp.value=p[1];f.appendChild(inp)});if(it.properties&&it.properties._u){var pu=document.createElement('input');pu.type='hidden';pu.name='items['+i+'][properties][_u]';pu.value=it.properties._u;f.appendChild(pu)}});var rt=document.createElement('input');rt.type='hidden';rt.name='return_to';rt.value=KITS[key].discount?'/discount/'+CODE+'?redirect=/checkout':'/checkout';f.appendChild(rt);document.body.appendChild(f);f.submit()}
+  function fallbackSubmit(items){var f=document.createElement('form');f.method='post';f.action='/cart/add';items.forEach(function(it,i){[['id',it.id],['quantity',it.quantity],['selling_plan',it.selling_plan||'']].forEach(function(p){if(p[1]==='')return;var inp=document.createElement('input');inp.type='hidden';inp.name='items['+i+']['+p[0]+']';inp.value=p[1];f.appendChild(inp)});if(it.properties&&it.properties._u){var pu=document.createElement('input');pu.type='hidden';pu.name='items['+i+'][properties][_u]';pu.value=it.properties._u;f.appendChild(pu)}});var rt=document.createElement('input');rt.type='hidden';rt.name='return_to';rt.value=KITS[key].discount?'/checkout?discount='+CODE:'/checkout';f.appendChild(rt);document.body.appendChild(f);f.submit()}
   function build(k){
     key=KITS[k]?k:'4oz';var K=KITS[key];
     lines={kit:null,gifts:[],adds:lines&&lines.adds?lines.adds:[]};pending=true;render();open();
@@ -938,7 +938,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
       post('/cart/change.js',{id:k,quantity:0}).then(refresh).catch(function(){lines.adds=snap2;render()});return}
     var up=t.closest('[data-upgrade]');if(up){var o4=document.querySelector('#kv-page .buy .opt[data-o="4oz"]');if(o4)o4.click();build('4oz');return}
     var st=t.closest('[data-kc-start]');if(st){build(window.__kvKey?window.__kvKey(null):'4oz');return}
-    var go=t.closest('#kc-go');if(go&&!go.disabled){go.disabled=true;location.href=KITS[key].discount?'/discount/'+CODE+'?redirect=/checkout':'/checkout';return}
+    var go=t.closest('#kc-go');if(go&&!go.disabled){go.disabled=true;location.href=KITS[key].discount?'/checkout?discount='+CODE:'/checkout';return}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('on'))close()});
   var KEY_BY_VID={'54144064749886':'4oz','54144064651582':'2oz'};
