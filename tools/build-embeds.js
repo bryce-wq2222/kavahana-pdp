@@ -48,7 +48,7 @@ async function fetchMain(url) {
 
   // all inline scripts from the PDP embed except chrome/drawer/sticky/clarity and the slide cart IIFE (kc-lines), which comes from tools/cart-v3.html
   const allScripts = [...raw.matchAll(/<script(?![^>]*\bsrc=)[^>]*>[\s\S]*?<\/script>/g)].map(m => m[0]);
-  const scripts = allScripts.filter(s => !/clarity|__kvDrawer|kv-sticky|kv-topmq|kc-lines/.test(s))
+  const scripts = allScripts.filter(s => !/clarity|__kvDrawer|getElementById("kv-sticky")|kv-topmq|kc-lines/.test(s))
     .map(s => s.replace("el.closest('#kv-page')", "el.closest('#kv-page,#kvr-blog,#kvr-rt')"));
   console.log('scripts included: ' + scripts.length + '/' + allScripts.length);
 
