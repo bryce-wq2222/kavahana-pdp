@@ -1137,9 +1137,11 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     var p=t.closest('[data-pill]');if(p){var a=p.getAttribute('data-pill').split(':');sel[a[0]]=+a[1];render();return}
     var ad=t.closest('[data-add]');if(ad&&!ad.disabled){var A=ADDONS.filter(function(x){return x.key===ad.getAttribute('data-add')})[0];var o=A.opts[sel[A.key]];ad.disabled=true;ad.textContent='ADDED';ad.classList.add('is-added');
       var snap=lines.adds.slice();lines.adds.push({key:'tmp'+Date.now(),vid:o[1],title:A.title+(A.opts.length>1?' ('+o[0]+')':''),sub:A.sub,price:o[2],qty:1,img:o[3]});render();
-      serial(function(){return post('/cart/add.js',{items:[{id:o[1],quantity:1}]}).then(refreshNow).catch(function(){lines.adds=snap;render()})});return}
-    var rm=t.closest('[data-rm]');if(rm){var k=rm.getAttribute('data-rm');var snap2=lines.adds.slice();lines.adds=lines.adds.filter(function(x){return x.key!==k});render();
-      serial(function(){return post('/cart/change.js',{id:k,quantity:0}).then(refreshNow).catch(function(){lines.adds=snap2;render()})});return}
+      var tmpKey=lines.adds[lines.adds.length-1].key;
+      serial(function(){return post('/cart/add.js',{items:[{id:o[1],quantity:1}]}).then(function(res){var added=res&&res.items&&res.items[0];if(added&&added.key){lines.adds.forEach(function(x){if(x.key===tmpKey)x.key=added.key});render()}return refreshNow()}).catch(function(){lines.adds=snap;render()})});return}
+    var rm=t.closest('[data-rm]');if(rm){var k=rm.getAttribute('data-rm');var gone=lines.adds.filter(function(x){return x.key===k})[0];var snap2=lines.adds.slice();lines.adds=lines.adds.filter(function(x){return x.key!==k});render();
+      /* a Remove tapped before the add settled still carries the temporary key: resolve it by variant against the live cart */
+      serial(function(){var p=k.indexOf('tmp')===0?getCart().then(function(c){var it=(c.items||[]).filter(function(i){return gone&&String(i.variant_id)===String(gone.vid)})[0];return it?post('/cart/change.js',{id:it.key,quantity:0}):null}):post('/cart/change.js',{id:k,quantity:0});return p.then(refreshNow).catch(function(){lines.adds=snap2;render()})});return}
     var up=t.closest('[data-upgrade]');if(up){var o4=document.querySelector('#kv-page .buy .opt[data-o="4oz"]');if(o4)o4.click();build('4oz');return}
     var st=t.closest('[data-kc-start]');if(st){build(window.__kvKey?window.__kvKey(null):'4oz');return}
     var go=t.closest('#kc-go');if(go&&!go.disabled){go.disabled=true;location.href=KITS[key].discount?'/discount/'+CODE+'?redirect=/checkout':'/checkout';return}
