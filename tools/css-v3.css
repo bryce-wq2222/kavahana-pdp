@@ -71,3 +71,10 @@
 #kv-page .opt.sel .gifts{color:#EAF3E5;border-top-color:rgba(255,255,255,.22)}
 #kv-page .opt.sel .gifts b{color:#fff}
 @media(max-width:759px){#kv-page .opt .gifts{font-size:12px;padding-top:8px}}
+/* 9/8 Bryce round: radio ring must stay visible on the selected (green) card; gift line = ONE line; Brittney quote card back under the icons row */
+#kv-page .opt.sel .rad{border-color:#fff!important;background:rgba(255,255,255,.14)}
+#kv-page .opt.sel .rad::after{background:#fff!important}
+#kv-page .opt .gifts{white-space:nowrap;overflow:hidden;font-size:12.5px;letter-spacing:-.01em}
+#kv-page .opt .gifts b{font-weight:800}
+@media(max-width:759px){#kv-page .opt .gifts{font-size:clamp(10.5px,3.2vw,12px);padding-top:8px}}
+#kv-page .buy .quotecard{margin-top:16px}

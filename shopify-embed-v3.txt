@@ -119,6 +119,13 @@
 #kv-page .opt.sel .gifts{color:#EAF3E5;border-top-color:rgba(255,255,255,.22)}
 #kv-page .opt.sel .gifts b{color:#fff}
 @media(max-width:759px){#kv-page .opt .gifts{font-size:12px;padding-top:8px}}
+/* 9/8 Bryce round: radio ring must stay visible on the selected (green) card; gift line = ONE line; Brittney quote card back under the icons row */
+#kv-page .opt.sel .rad{border-color:#fff!important;background:rgba(255,255,255,.14)}
+#kv-page .opt.sel .rad::after{background:#fff!important}
+#kv-page .opt .gifts{white-space:nowrap;overflow:hidden;font-size:12.5px;letter-spacing:-.01em}
+#kv-page .opt .gifts b{font-weight:800}
+@media(max-width:759px){#kv-page .opt .gifts{font-size:clamp(10.5px,3.2vw,12px);padding-top:8px}}
+#kv-page .buy .quotecard{margin-top:16px}
 
 </style>
 <div id="kv-page">
@@ -159,7 +166,7 @@
           <small>$1.78 per serving &middot; first box price</small>
         </span>
         <span class="pr">$79.99<s>$202.96</s></span>
-        <span class="gifts"><b>$92.97 in free gifts:</b> 2 coconut shell cups, bamboo whisk, 10 stick packs, recipe guide</span>
+        <span class="gifts"><b>$92.97 free</b> &middot; 2 cups &middot; whisk &middot; 10 stick packs &middot; guide</span>
       </div>
       <div class="opt" data-o="2oz">
         <span class="rad"></span>
@@ -167,18 +174,26 @@
           <small>$2.73 per serving &middot; save 49%</small>
         </span>
         <span class="pr">$59.99<s>$117.96</s></span>
-        <span class="gifts"><b>$57.97 in free gifts:</b> 2 coconut shell cups, bamboo whisk, recipe guide</span>
+        <span class="gifts"><b>$57.97 free</b> &middot; 2 cups &middot; whisk &middot; guide &middot; 5 sticks on renewal 1</span>
       </div>
 
       <button class="pill-cta">Get my Starter Kit &#8594;</button>
       <div class="subline" id="bbSub">Code <span class="code">DRINKKAVA</span> applied &middot; then $109.99/mo</div>
-      <div class="guarline">Love it or your money back</div>
+      <div class="guarline">Feel it or your money back</div>
 
       <div class="icons3">
         <div><div class="i">&#9684;</div>Refill reminder</div>
         <div><div class="i">&#10005;</div>Cancel any time</div>
         <div><div class="i">&#8635;</div>Renews at <b id="bbRen">$109.99</b>/mo</div>
       </div>
+      <div class="quotecard">
+        <img class="av" src="https://bryce-wq2222.github.io/kavahana-pdp/img/avatar-brittney-full.jpg" width="76" height="76" alt="" loading="lazy">
+        <div>
+          <p>"Great alternative to taking the edge off without the after effects of alcohol! I can feel a sense of calm and uplift within minutes and it is fun to make drinks with!"</p>
+          <div class="w">Brittney D. &middot; Verified</div>
+        </div>
+      </div>
+
     </div>
 
     <div class="acc">
@@ -883,7 +898,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   var KITS={
     '4oz':{id:'54144064749886',sub:'45 servings, delivered monthly',price:109.99,first:79.99,value:202.96,title:'45 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, 10 stick packs, recipe guide',giftsValue:92.97,save:'61% OFF',discount:30,
       extra:[['5 more stick packs','Free on your first renewal',17.50,GH+'kava-sticks-balance.jpg'],['Digital Kava Ritual Guide','Recipes and how to enjoy it, in your welcome email',19,GH+'guide-blue.jpg']]},
-    '2oz':{id:'54144064651582',sub:'22 servings, delivered monthly',price:59.99,first:59.99,value:117.96,title:'22 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, recipe guide',giftsValue:57.97,save:'49% OFF',discount:0,
+    '2oz':{id:'54144064651582',sub:'22 servings, delivered monthly',price:59.99,first:59.99,value:117.96,title:'22 servings of Kava Nectar',giftsText:'2 coconut shell cups, bamboo whisk, recipe guide, 5 stick packs on renewal 1',giftsValue:57.97,save:'49% OFF',discount:0,
       extra:[['Digital Kava Ritual Guide','Recipes and how to enjoy it, in your welcome email',19,GH+'guide-blue.jpg']]}
   };
   var GIFTS={'54220256477502':{title:'Coconut shell cup',compare:11.99},'54220256510270':{title:'Bamboo whisk',compare:14.99},'54143764922686':{title:'5 stick packs',compare:17.50}};
