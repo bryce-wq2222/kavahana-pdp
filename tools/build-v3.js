@@ -128,7 +128,7 @@ rep('drawer sub', "'<span class=\"kvo-sub\">Starter kit free: 2 coconut shell cu
 
 /* ---------- 11. cart drawer (outside #kv-page, own CSS) ---------- */
 const CART = fs.readFileSync(path.join(__dirname, 'cart-v3.html'), 'utf8').replace(/\r\n/g, '\n');
-rep('cart drawer', '<script src="https://bryce-wq2222.github.io/kavahana-pdp/kv-gift-guard.js" defer></script>', CART + '\n<script src="https://bryce-wq2222.github.io/kavahana-pdp/kv-gift-guard.js" defer></script>');
+rep('cart drawer', '<script src="https://bryce-wq2222.github.io/kavahana-pdp/kv-gift-guard.js" defer></script>', CART + '\n<script src="https://bryce-wq2222.github.io/kavahana-pdp/kv-gift-guard-v3.js" defer></script>'); /* v3 guard: event-driven + 30 s heartbeat, no 2 s poll (9/8) */
 
 /* ---------- 12. desktop clicks inside carousels: capture the pointer only once it actually drags ---------- */
 const CAP = JSON.parse(fs.readFileSync(path.join(__dirname, 'capture-patch.json'), 'utf8'));
