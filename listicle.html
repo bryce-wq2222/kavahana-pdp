@@ -80,7 +80,13 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 #kvl-page{font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bone);color:var(--ink);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:0}
 #kvl-page img,#kvl-page video{max-width:100%;display:block}
 #kvl-page b,#kvl-page strong{font-weight:700}
-#kvl-page{display:block;width:100%;text-align:left}
+/* FULL BLEED. Same trick the PDP wrapper uses: the Shopify page section pads
+   its content (47.5px a side at 1280, 23.75px on a phone) and that left white
+   gaps beside every band. 100vw + negative half-viewport margins put the
+   wrapper edge to edge no matter what container the theme wraps it in. On the
+   standalone (body margin 0) this is a no-op. The theme main is
+   overflow-hidden, so the scrollbar-width overhang never scrolls. */
+#kvl-page{display:block;width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;text-align:left}
 
 /* ---------- MEASURE + MOBILE BREATHING ROOM -------------------------------
    Text sits 34px from the phone edge (18 outer + 16 inner, on 2 elements).
@@ -94,11 +100,11 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
    Same shape as the model: centred 2-line text on the left, a dark box on the
    right with big tabular digits and HRS / MIN / SEC under them. The DAYS
    group only renders while more than 24h remain. */
-#kvl-page .kvl-bar{background:var(--cream);border-bottom:1px solid var(--line)}
+#kvl-page .kvl-bar{background:var(--mint);border-bottom:1px solid rgba(20,38,26,.12)}
 #kvl-page .kvl-barin{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
 #kvl-page .kvl-bartxt{flex:0 1 auto;min-width:0;text-align:center}
-#kvl-page .kvl-bar1{font-size:14px;font-weight:800;letter-spacing:.02em;line-height:1.25;color:var(--ink);text-transform:uppercase}
-#kvl-page .kvl-bar2{font-size:13.5px;font-weight:800;letter-spacing:.01em;line-height:1.25;color:var(--green);text-transform:uppercase;margin-top:3px}
+#kvl-page .kvl-bar1{font-size:14px;font-weight:800;letter-spacing:.02em;line-height:1.25;color:var(--deep);text-transform:uppercase}
+#kvl-page .kvl-bar2{font-size:13.5px;font-weight:800;letter-spacing:.01em;line-height:1.25;color:var(--deep);text-transform:uppercase;margin-top:3px}
 #kvl-page .kvl-timer{flex:0 0 auto;display:flex;align-items:flex-start;gap:3px;background:var(--deep);color:#fff;border-radius:10px;padding:8px 10px 7px}
 #kvl-page .kvl-tg{display:flex;flex-direction:column;align-items:center;min-width:30px}
 #kvl-page .kvl-tn{font-size:22px;font-weight:800;line-height:1;letter-spacing:.02em;font-variant-numeric:tabular-nums;color:#fff}
@@ -177,9 +183,9 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 #kvl-page .kvl-qw{font-size:12px;font-weight:600;line-height:1.3;color:var(--grey);margin-top:8px}
 
 /* ---------- reviews section, below the buy box ----------------------------- */
-#kvl-page .kvl-reviews{border-top:1px solid var(--line);padding:40px 0 44px}
+#kvl-page .kvl-reviews{border-top:1px solid var(--line);padding:40px 0 6px}
 #kvl-page .kvl-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);text-align:center;margin:0 0 8px}
-#kvl-page .kvl-reviews .kvl-h2{text-align:center;margin:0 auto 18px;max-width:22ch}
+#kvl-page .kvl-reviews .kvl-h2{text-align:center;margin:0 auto;max-width:22ch}
 #kvl-page .kvl-revslot{margin:16px 0 0;border:1.5px dashed #CFC6AE;border-radius:12px;background:var(--cream);padding:18px 20px;text-align:center}
 #kvl-page .kvl-revslot p{font-size:12.5px;line-height:1.45;color:var(--grey);max-width:44ch;margin:0 auto}
 #kvl-page .kvl-reviews .kvl-linkrow{justify-content:center;margin-top:20px}
@@ -235,14 +241,14 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 #kvl-page-reviews{font-family:Chivo,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bone);color:var(--ink);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:0}
 #kvl-page-reviews img,#kvl-page-reviews video{max-width:100%;display:block}
 #kvl-page-reviews b,#kvl-page-reviews strong{font-weight:700}
-#kvl-page-reviews{display:block;width:100%;text-align:left}
+#kvl-page-reviews{display:block;width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;text-align:left}
 #kvl-page-reviews .kvl-wrap{max-width:1140px;margin:0 auto;padding:0 18px}
 #kvl-page-reviews .kvl-col{max-width:800px;margin:0 auto;padding:0 16px}
-#kvl-page-reviews .kvl-bar{background:var(--cream);border-bottom:1px solid var(--line)}
+#kvl-page-reviews .kvl-bar{background:var(--mint);border-bottom:1px solid rgba(20,38,26,.12)}
 #kvl-page-reviews .kvl-barin{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
 #kvl-page-reviews .kvl-bartxt{flex:0 1 auto;min-width:0;text-align:center}
-#kvl-page-reviews .kvl-bar1{font-size:14px;font-weight:800;letter-spacing:.02em;line-height:1.25;color:var(--ink);text-transform:uppercase}
-#kvl-page-reviews .kvl-bar2{font-size:13.5px;font-weight:800;letter-spacing:.01em;line-height:1.25;color:var(--green);text-transform:uppercase;margin-top:3px}
+#kvl-page-reviews .kvl-bar1{font-size:14px;font-weight:800;letter-spacing:.02em;line-height:1.25;color:var(--deep);text-transform:uppercase}
+#kvl-page-reviews .kvl-bar2{font-size:13.5px;font-weight:800;letter-spacing:.01em;line-height:1.25;color:var(--deep);text-transform:uppercase;margin-top:3px}
 #kvl-page-reviews .kvl-timer{flex:0 0 auto;display:flex;align-items:flex-start;gap:3px;background:var(--deep);color:#fff;border-radius:10px;padding:8px 10px 7px}
 #kvl-page-reviews .kvl-tg{display:flex;flex-direction:column;align-items:center;min-width:30px}
 #kvl-page-reviews .kvl-tn{font-size:22px;font-weight:800;line-height:1;letter-spacing:.02em;font-variant-numeric:tabular-nums;color:#fff}
@@ -306,9 +312,9 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 #kvl-page-reviews .kvl-qs{font-size:12px;letter-spacing:.12em;color:var(--green);line-height:1;margin-bottom:8px}
 #kvl-page-reviews .kvl-qt{font-size:16px;line-height:1.5;color:var(--ink)}
 #kvl-page-reviews .kvl-qw{font-size:12px;font-weight:600;line-height:1.3;color:var(--grey);margin-top:8px}
-#kvl-page-reviews .kvl-reviews{border-top:1px solid var(--line);padding:40px 0 44px}
+#kvl-page-reviews .kvl-reviews{border-top:1px solid var(--line);padding:40px 0 6px}
 #kvl-page-reviews .kvl-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);text-align:center;margin:0 0 8px}
-#kvl-page-reviews .kvl-reviews .kvl-h2{text-align:center;margin:0 auto 18px;max-width:22ch}
+#kvl-page-reviews .kvl-reviews .kvl-h2{text-align:center;margin:0 auto;max-width:22ch}
 #kvl-page-reviews .kvl-revslot{margin:16px 0 0;border:1.5px dashed #CFC6AE;border-radius:12px;background:var(--cream);padding:18px 20px;text-align:center}
 #kvl-page-reviews .kvl-revslot p{font-size:12.5px;line-height:1.45;color:var(--grey);max-width:44ch;margin:0 auto}
 #kvl-page-reviews .kvl-reviews .kvl-linkrow{justify-content:center;margin-top:20px}
@@ -880,10 +886,8 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
   <section class="kvl-reviews" id="kvl-reviews">
     <div class="kvl-wrap"><div class="kvl-col">
       <p class="kvl-eyebrow">What people are saying</p>
-      <h2 class="kvl-h2">Rated 4.8 out of 5 &#183; 500,000+ cups served</h2>
-      <div class="kvl-oke" data-oke-widget data-oke-reviews-product-id="shopify-10300597928254"></div>
-      <div class="kvl-revslot"><p>The Okendo reviews app renders here on the Shopify page.</p></div>
-      <p class="kvl-linkrow"><span class="kvl-arrow" aria-hidden="true">&#128073;</span><a class="kvl-link" href="#kvl-buybox">Get my Starter Kit</a></p>
+      <h2 class="kvl-h2">Rated 4.8 out of 5<br>500,000+ cups served</h2>
+      <div class="kvl-revslot"><p>The Okendo reviews app (the theme&rsquo;s own section) renders here on the Shopify page.</p></div>
     </div></div>
   </section>
 </div>
@@ -982,8 +986,6 @@ var links=document.querySelectorAll('#kvl-page a.kvl-link,#kvl-page-reviews a.kv
 var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(e){var id=this.getAttribute('href').slice(1);var t=document.getElementById(id);if(!t)return;e.preventDefault();var y=t.getBoundingClientRect().top+window.pageYOffset-8;window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});});}
 var u=document.getElementById('kvl-upd');if(u){try{u.textContent=u.getAttribute('data-prefix')+new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'long',day:'numeric',year:'numeric'}).format(new Date(Date.now()-864e5));}catch(err){}}
-/* Okendo: the embed is injected after the page loads, so ask the widget API to init our div once it exists */
-var oke=document.querySelector('#kvl-reviews [data-oke-widget]');if(oke){var tries=0;(function poll(){if(window.okeWidgetApi&&typeof window.okeWidgetApi.initWidget==='function'){try{window.okeWidgetApi.initWidget(oke)}catch(err){}return}if(++tries<40)setTimeout(poll,250)})()}
 var cd=document.getElementById('kvl-cd');
 if(cd){var end=new Date(cd.getAttribute('data-ends')).getTime();function pad(n){return (n<10?'0':'')+n}
 var U={};['d','h','m','s'].forEach(function(u){U[u]=cd.querySelector('[data-u="'+u+'"]')});var dg=cd.querySelector('.kvl-tg--d'),ds=cd.querySelector('.kvl-tsep--d');
