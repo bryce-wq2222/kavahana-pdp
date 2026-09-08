@@ -1059,7 +1059,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     panel.id='kv-drawer-offer';
     panel.innerHTML='<span class="kvo-k">Starter kit</span>'+
       '<span class="kvo-s">$79.99 first box</span>'+
-      '<span class="kvo-sub">Save 61%: 2 coconut shell cups, whisk, 10 stick packs and the digital guide free, then $109.99 a month</span>'+
+      '<span class="kvo-sub">Save 61%: 2 coconut shell cups, whisk, 5 stick packs and the digital guide free, then $109.99 a month</span>'+
       '<span class="kvo-cta" data-kv-cta>Get my starter kit &rarr;</span>';
     var anchors=document.createElement('ul');
     anchors.id='kv-drawer-links';

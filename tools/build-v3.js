@@ -124,7 +124,7 @@ rep('sticky btn', 'document.getElementById("kv-sticky-btn").addEventListener("cl
 /* ---------- 10. theme drawer offer panel ---------- */
 rep('drawer offer', "'<span class=\"kvo-s\">Save up to 39%</span>'", "'<span class=\"kvo-s\">$79.99 first box</span>'");
 rep('drawer sub', "'<span class=\"kvo-sub\">Starter kit free: 2 coconut shell cups, whisk, digital recipe guide, 5 stick packs free, and again on your first renewal</span>'",
-  "'<span class=\"kvo-sub\">Save 61%: 2 coconut shell cups, whisk, 10 stick packs and the digital guide free, then $109.99 a month</span>'");
+  "'<span class=\"kvo-sub\">Save 61%: 2 coconut shell cups, whisk, 5 stick packs and the digital guide free, then $109.99 a month</span>'");
 
 /* ---------- 11. cart drawer (outside #kv-page, own CSS) ---------- */
 const CART = fs.readFileSync(path.join(__dirname, 'cart-v3.html'), 'utf8').replace(/\r\n/g, '\n');
