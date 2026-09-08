@@ -69,10 +69,10 @@
 #kv-page .kit-eyebrow{display:inline-block;color:var(--green);font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
 #kv-page .kith2{font-family:Chivo,ui-sans-serif,system-ui,sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);letter-spacing:-.01em;line-height:1.08;text-transform:uppercase;color:var(--ink);margin:0}
 #kv-page .kit-sub{font-size:14.5px;color:var(--grey);max-width:56ch;margin:10px auto 0;line-height:1.5}
-#kv-page .kitrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:26px}
+#kv-page .kitrow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px;max-width:900px;margin-left:auto;margin-right:auto}
 #kv-page .kitcard{background:#fff;border-radius:12px;padding:12px 12px 0;text-align:left;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(22,33,26,.05)}
 #kv-page .kc-h{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;min-height:34px;margin-bottom:8px}
-#kv-page .kc-n{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.25;color:var(--ink)}
+#kv-page .kc-n{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.25;color:var(--ink)}#kv-page .kc-n em{display:block;font-style:normal;font-weight:500;color:var(--grey);text-transform:none;letter-spacing:0;font-size:10.5px;margin-top:2px}
 #kv-page .kc-v{text-align:right;font-size:12px;font-weight:800;color:var(--green);white-space:nowrap;line-height:1.2}
 #kv-page .kc-v s{display:block;font-size:11px;color:var(--grey);font-weight:400;margin-top:1px}
 #kv-page .kc-i{margin:auto -12px 0;aspect-ratio:1;background:#F8F3E8;border-radius:0 0 12px 12px;overflow:hidden}
@@ -80,7 +80,7 @@
 #kv-page .kit-link{display:inline-block;margin-top:22px;color:var(--green);font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px}
 #kv-page .kitsec.vs-2oz [data-vs45]{display:none}
 #kv-page .kitsec.vs-2oz .kitrow{grid-template-columns:repeat(3,minmax(0,1fr));max-width:640px;margin-left:auto;margin-right:auto}
-@media(max-width:1000px){#kv-page .kitrow{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1000px){#kv-page .kitrow{grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px}}
 @media(max-width:760px){#kv-page .kitsec{padding:22px 0 18px}#kv-page .kitpanel{padding:28px 0 24px;border-radius:0;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}#kv-page .kit-sub{padding:0 24px}#kv-page .kitrow,#kv-page .kitsec.vs-2oz .kitrow{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 18px;margin-top:20px;scrollbar-width:none;max-width:none}#kv-page .kitrow::-webkit-scrollbar{display:none}#kv-page .kitcard{flex:0 0 46%;scroll-snap-align:start}}
 /* ---- proof carousel, Everyday Dose review header ---- */
 #kv-page .proofsec{padding:30px 0 22px}
@@ -101,7 +101,7 @@
 #kv-page .pf .pf-who{font-size:12px;color:var(--grey);font-weight:500}#kv-page .pf .pf-who b{color:var(--ink);font-weight:600}
 #kv-page .pf-carou .cslide{padding:0 5px}
 @media(max-width:759px){#kv-page .pf-carou .cslide{flex-basis:86%;scroll-snap-align:start}#kv-page .pf-carou .cnav{display:none}#kv-page .pf-carou{margin-top:16px}}
-@media(min-width:760px){#kv-page .pf-carou .cslide{flex-basis:33.3333%}}
+@media(min-width:760px){#kv-page .pf-carou .cslide{flex-basis:33.3333%}#kv-page .pf-carou .cnav,#kv-page [data-dots="proof"]{display:none!important}#kv-page .pf-carou .ctrack{overflow:visible}}
 #kv-page .proofline{text-align:center;font-size:13px;color:var(--grey);margin-top:16px}
 /* text review strip */
 #kv-page .txtrev{padding-top:16px;padding-bottom:12px}
@@ -179,7 +179,7 @@
 <!-- 3a. FIRST BOX (Everyday Dose "What's inside your free starter kit") -->
 <section class="kitsec valsec" id="kv-valsec"><div class="wrap">
   <div class="kitpanel">
-    <div class="kit-eyebrow" data-vs-chip>+$92.97 value</div>
+    <div class="kit-eyebrow" data-vs-chip>Over $90 in free gifts</div>
     <h2 class="kith2">What&#8217;s inside your<br>free starter kit</h2>
     <p class="kit-sub">Your kit comes packed with everything you need to start the ritual, plus a few extras on us.</p>
     <div class="kitrow">
@@ -192,12 +192,8 @@
         <div class="kc-i"><img decoding="async" src="https://cdn.shopify.com/s/files/1/0803/6597/7918/files/bamboo-matcha-kava-nectar-whisk-traditionally-handmade-747934.jpg?v=1713348643&amp;width=400" width="600" height="600" alt="Bamboo Kava Nectar whisk"></div>
       </div>
       <div class="kitcard" data-vs45>
-        <div class="kc-h"><span class="kc-n">5 stick packs</span><span class="kc-v">Free<s>$17.50</s></span></div>
+        <div class="kc-h"><span class="kc-n">5 stick packs<em>+ 5 more on renewal 1</em></span><span class="kc-v">Free<s>$35.00</s></span></div>
         <div class="kc-i"><img decoding="async" src="https://cdn.shopify.com/s/files/1/0803/6597/7918/files/kava-nectar-stick-packs-hero.png?v=1787702855&amp;width=400" width="600" height="600" alt="Kava Nectar Balance stick packs"></div>
-      </div>
-      <div class="kitcard" data-vs45>
-        <div class="kc-h"><span class="kc-n">5 more on renewal 1</span><span class="kc-v">Free<s>$17.50</s></span></div>
-        <div class="kc-i"><img decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/kava-sticks-balance.jpg" width="1080" height="1080" alt="Five more Kava Nectar stick packs, sent with your first renewal"></div>
       </div>
       <div class="kitcard">
         <div class="kc-h"><span class="kc-n">Digital recipe guide</span><span class="kc-v">Free<s>$19</s></span></div>
@@ -207,7 +203,7 @@
     <a class="kit-link" href="#kv-perks">See your monthly gifts &#8594;</a>
   </div>
 </div></section>
-<script>(function(){var sec=document.getElementById('kv-valsec');if(!sec)return;var V={'4oz':'+$92.97 value','2oz':'+$57.97 value'};window.kvVal=function(k){sec.classList.toggle('vs-2oz',k==='2oz');sec.querySelector('[data-vs-chip]').textContent=V[k]||V['4oz']};var l=sec.querySelector('.kit-link');l.addEventListener('click',function(e){var p=document.querySelector('.perksec');if(p){e.preventDefault();p.scrollIntoView({behavior:'smooth',block:'start'})}});})();</script>
+<script>(function(){var sec=document.getElementById('kv-valsec');if(!sec)return;var V={'4oz':'Over $90 in free gifts','2oz':'Over $55 in free gifts'};window.kvVal=function(k){sec.classList.toggle('vs-2oz',k==='2oz');sec.querySelector('[data-vs-chip]').textContent=V[k]||V['4oz']};var l=sec.querySelector('.kit-link');l.addEventListener('click',function(e){var p=document.querySelector('.perksec');if(p){e.preventDefault();p.scrollIntoView({behavior:'smooth',block:'start'})}});})();</script>
 
 <!-- 3b. AS SEEN ON -->
 <section class="seenon"><div class="wrap">
@@ -231,9 +227,9 @@
   <div class="carou pf-carou" data-carou="proof">
     <button class="cnav prev" aria-label="Previous">&#8249;</button>
     <div class="ctrack">
-      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media pos-top"><video class="slot v" preload="none" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/charles-w.jpg" playsinline muted loop title="Charles W. making his morning Kava Nectar"><source data-src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/9db85de2-0901-4eea-af62-782494e66220/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;Ever since my wife and I visited Kavahana in Santa Monica, we&rsquo;ve been hooked. We start most mornings with kava, a cup of joe and jazz. Highly recommended.&rdquo;</p><div class="pf-who"><b>Charles W.</b> &middot; Kava Nectar Triple Pack</div></div></div></div>
-      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media"><video class="slot v" preload="none" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/darija-v.jpg" playsinline muted loop title="Darija V. pouring Kava Nectar over ice"><source data-src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/19075973-7508-48ee-829b-1cac94339093/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;The little tingly feeling is so fun. That perfect upbeat, relaxed mood that makes socializing feel easy and fun without feeling out of it.&rdquo;</p><div class="pf-who"><b>Darija V.</b> &middot; Kava Nectar Classic Edition</div></div></div></div>
-      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media"><video class="slot v" preload="none" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/samuel-h.jpg" playsinline muted loop title="Samuel H. mixing Kava Nectar with a frother"><source data-src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/9258ccdf-6881-49c0-b8df-7e5e668597f4/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;Very relaxing, kind of like the buzz of alcohol without any of the mental fuzziness. Tastes quite good when I use my frother with some fruit juice. Will definitely order again.&rdquo;</p><div class="pf-who"><b>Samuel H.</b> &middot; Kava Nectar Relax Edition</div></div></div></div>
+      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media pos-top"><video class="slot v" preload="metadata" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/charles-w.jpg" playsinline muted loop title="Charles W. making his morning Kava Nectar"><source src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/9db85de2-0901-4eea-af62-782494e66220/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;Ever since my wife and I visited Kavahana in Santa Monica, we&rsquo;ve been hooked. We start most mornings with kava, a cup of joe and jazz. Highly recommended.&rdquo;</p><div class="pf-who"><b>Charles W.</b> &middot; Kava Nectar Triple Pack</div></div></div></div>
+      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media"><video class="slot v" preload="metadata" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/darija-v.jpg" playsinline muted loop title="Darija V. pouring Kava Nectar over ice"><source src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/19075973-7508-48ee-829b-1cac94339093/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;The little tingly feeling is so fun. That perfect upbeat, relaxed mood that makes socializing feel easy and fun without feeling out of it.&rdquo;</p><div class="pf-who"><b>Darija V.</b> &middot; Kava Nectar Classic Edition</div></div></div></div>
+      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media"><video class="slot v" preload="metadata" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/samuel-h-day.jpg" playsinline muted loop title="Samuel H. on Classic and Balance for daytime"><source src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/6b46c645-187a-4317-b4c9-cff06f92f95c/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;I like the Classic and Balance for daytime: chill but focused, and it actually gives me some energy. I mix one scoop of each with fruit juice and seltzer.&rdquo;</p><div class="pf-who"><b>Samuel H.</b> &middot; Kava Nectar Combo Pack</div></div></div>
     </div>
     <button class="cnav next" aria-label="Next">&#8250;</button>
   </div>
@@ -817,6 +813,10 @@
 #kv-cart .kc-off{background:#E9F1E3;color:#367542;font-size:11px;font-weight:800;letter-spacing:.04em;border-radius:4px;padding:3px 7px}
 #kv-cart .kc-codeline{color:#367542;font-weight:700}
 #kv-cart .kc-also{margin-top:14px}
+#kv-cart .kc-upg{display:flex;align-items:center;gap:12px;background:#E9F1E3;border-radius:12px;padding:12px 14px;margin:12px 0 2px}
+#kv-cart .kc-upg-t{flex:1 1 auto;min-width:0}#kv-cart .kc-upg-t b{display:block;font-size:13.5px;font-weight:800;color:#1F1D17}#kv-cart .kc-upg-t span{display:block;font-size:12px;color:#367542;line-height:1.35;margin-top:3px}
+#kv-cart .kc-upg-b{flex:none;background:#367542;color:#fff;border:0;border-radius:999px;font:800 11.5px/1 Chivo,ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:11px 14px;cursor:pointer;white-space:nowrap}
+#kv-cart .kc-empty{text-align:center;padding:30px 10px}#kv-cart .kc-empty p{font-size:14px;color:#6A6659;margin-bottom:14px}
 #kv-cart .kc-code{display:flex;align-items:center;gap:9px;background:#E9F1E3;color:#1F1D17;border-radius:10px;padding:10px 12px;font-size:13px;margin-top:12px;font-weight:600}
 #kv-cart .kc-code .ck{width:20px;height:20px;border-radius:50%;background:#367542;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;flex:none}
 #kv-cart .kc-code b{font-weight:800;letter-spacing:.05em}
@@ -895,12 +895,13 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     var K=KITS[key],st=lines,html='',n=0,addTotal=0;
     if(st.kit){n+=st.kit.qty;st.gifts.forEach(function(g){n+=g.qty});
       html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'</p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div></div></div>';
+      if(key==='2oz')html+='<div class="kc-upg"><div class="kc-upg-t"><b>Upgrade to 45 servings</b><span>Get 5 free stick packs now and 5 more on renewal 1, save 61% instead of 49%, and pay $1.78 per serving.</span></div><button type="button" class="kc-upg-b" data-upgrade>Upgrade for $20 more</button></div>';
     }
     st.adds.forEach(function(a){n+=a.qty;addTotal+=a.price*a.qty;
       html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<span class="kc-now kc-inline">'+money(a.price*a.qty)+'</span></div><button type="button" class="kc-trash" data-rm="'+esc(a.key)+'" aria-label="Remove"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div>';
     });
     if(pending)html+='<div class="kc-skel"><span class="kc-img"></span><p>Adding your Starter Kit&hellip;</p></div>';
-    linesEl.innerHTML=html||'<p class="kc-meta" style="text-align:center;padding:30px 10px">Your cart is empty.</p>';
+    linesEl.innerHTML=html||'<div class="kc-empty"><p>Your cart is empty.</p><button type="button" class="kc-btn is-added" data-kc-start>Get my Starter Kit &#8594;</button></div>';
     titleEl.innerHTML='Your Cart'+(n?' <span class="kc-cnt">('+n+' item'+(n===1?'':'s')+')</span>':'');
     banner.innerHTML='CONGRATS YOU&#8217;VE UNLOCKED <b>FREE SHIPPING!</b>';
     var inCart={};st.adds.forEach(function(a){inCart[a.vid]=1});
@@ -935,10 +936,15 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
       post('/cart/add.js',{items:[{id:o[1],quantity:1}]}).then(refresh).catch(function(){lines.adds=snap;render()});return}
     var rm=t.closest('[data-rm]');if(rm){var k=rm.getAttribute('data-rm');var snap2=lines.adds.slice();lines.adds=lines.adds.filter(function(x){return x.key!==k});render();
       post('/cart/change.js',{id:k,quantity:0}).then(refresh).catch(function(){lines.adds=snap2;render()});return}
+    var up=t.closest('[data-upgrade]');if(up){var o4=document.querySelector('#kv-page .buy .opt[data-o="4oz"]');if(o4)o4.click();build('4oz');return}
+    var st=t.closest('[data-kc-start]');if(st){build(window.__kvKey?window.__kvKey(null):'4oz');return}
     var go=t.closest('#kc-go');if(go&&!go.disabled){go.disabled=true;location.href=KITS[key].discount?'/discount/'+CODE+'?redirect=/checkout':'/checkout';return}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('on'))close()});
-  window.__kvOpenCart=build;
+  var KEY_BY_VID={'54144064749886':'4oz','54144064651582':'2oz'};
+  function openExisting(){pending=false;lines={kit:null,gifts:[],adds:[]};render();open();getCart().then(function(cc){var L=fromShopify(cc);if(L.kit&&KEY_BY_VID[L.kit.vid])key=KEY_BY_VID[L.kit.vid];lines=L;render()}).catch(function(){})}
+  document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('#CartButton, a[href="/cart"], a[href^="/cart?"]');if(!b)return;e.preventDefault();e.stopImmediatePropagation();openExisting()},true);
+  window.__kvOpenCart=build;window.__kvOpenExisting=openExisting;
   window.__kvCartState=function(){return {key:key,kit:!!(lines&&lines.kit),gifts:lines&&lines.gifts?lines.gifts.length:0,adds:lines&&lines.adds?lines.adds.length:0,open:root.classList.contains('on'),pending:pending}};
 })();
 </script>

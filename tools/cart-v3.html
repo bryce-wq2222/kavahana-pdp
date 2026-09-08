@@ -35,6 +35,10 @@
 #kv-cart .kc-off{background:#E9F1E3;color:#367542;font-size:11px;font-weight:800;letter-spacing:.04em;border-radius:4px;padding:3px 7px}
 #kv-cart .kc-codeline{color:#367542;font-weight:700}
 #kv-cart .kc-also{margin-top:14px}
+#kv-cart .kc-upg{display:flex;align-items:center;gap:12px;background:#E9F1E3;border-radius:12px;padding:12px 14px;margin:12px 0 2px}
+#kv-cart .kc-upg-t{flex:1 1 auto;min-width:0}#kv-cart .kc-upg-t b{display:block;font-size:13.5px;font-weight:800;color:#1F1D17}#kv-cart .kc-upg-t span{display:block;font-size:12px;color:#367542;line-height:1.35;margin-top:3px}
+#kv-cart .kc-upg-b{flex:none;background:#367542;color:#fff;border:0;border-radius:999px;font:800 11.5px/1 Chivo,ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:11px 14px;cursor:pointer;white-space:nowrap}
+#kv-cart .kc-empty{text-align:center;padding:30px 10px}#kv-cart .kc-empty p{font-size:14px;color:#6A6659;margin-bottom:14px}
 #kv-cart .kc-code{display:flex;align-items:center;gap:9px;background:#E9F1E3;color:#1F1D17;border-radius:10px;padding:10px 12px;font-size:13px;margin-top:12px;font-weight:600}
 #kv-cart .kc-code .ck{width:20px;height:20px;border-radius:50%;background:#367542;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;flex:none}
 #kv-cart .kc-code b{font-weight:800;letter-spacing:.05em}
@@ -113,12 +117,13 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     var K=KITS[key],st=lines,html='',n=0,addTotal=0;
     if(st.kit){n+=st.kit.qty;st.gifts.forEach(function(g){n+=g.qty});
       html+='<div class="kc-line kc-kitline"><img class="kc-img" src="'+esc(st.kit.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+K.title+' + FREE Starter Kit</p><p class="kc-meta">'+K.giftsText+'</p><div class="kc-pr"><span class="kc-now">'+money(K.first)+'</span><s class="kc-cmp">'+money(K.value)+'</s><span class="kc-off">'+K.save+'</span></div></div></div>';
+      if(key==='2oz')html+='<div class="kc-upg"><div class="kc-upg-t"><b>Upgrade to 45 servings</b><span>Get 5 free stick packs now and 5 more on renewal 1, save 61% instead of 49%, and pay $1.78 per serving.</span></div><button type="button" class="kc-upg-b" data-upgrade>Upgrade for $20 more</button></div>';
     }
     st.adds.forEach(function(a){n+=a.qty;addTotal+=a.price*a.qty;
       html+='<div class="kc-line"><img class="kc-img" src="'+esc(a.img)+'" alt=""><div class="kc-info"><p class="kc-name">'+esc(a.title)+(a.qty>1?' &#215; '+a.qty:'')+'</p>'+(a.sub?'<p class="kc-meta">'+esc(a.sub)+'</p>':'')+'<span class="kc-now kc-inline">'+money(a.price*a.qty)+'</span></div><button type="button" class="kc-trash" data-rm="'+esc(a.key)+'" aria-label="Remove"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div>';
     });
     if(pending)html+='<div class="kc-skel"><span class="kc-img"></span><p>Adding your Starter Kit&hellip;</p></div>';
-    linesEl.innerHTML=html||'<p class="kc-meta" style="text-align:center;padding:30px 10px">Your cart is empty.</p>';
+    linesEl.innerHTML=html||'<div class="kc-empty"><p>Your cart is empty.</p><button type="button" class="kc-btn is-added" data-kc-start>Get my Starter Kit &#8594;</button></div>';
     titleEl.innerHTML='Your Cart'+(n?' <span class="kc-cnt">('+n+' item'+(n===1?'':'s')+')</span>':'');
     banner.innerHTML='CONGRATS YOU&#8217;VE UNLOCKED <b>FREE SHIPPING!</b>';
     var inCart={};st.adds.forEach(function(a){inCart[a.vid]=1});
@@ -153,10 +158,15 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
       post('/cart/add.js',{items:[{id:o[1],quantity:1}]}).then(refresh).catch(function(){lines.adds=snap;render()});return}
     var rm=t.closest('[data-rm]');if(rm){var k=rm.getAttribute('data-rm');var snap2=lines.adds.slice();lines.adds=lines.adds.filter(function(x){return x.key!==k});render();
       post('/cart/change.js',{id:k,quantity:0}).then(refresh).catch(function(){lines.adds=snap2;render()});return}
+    var up=t.closest('[data-upgrade]');if(up){var o4=document.querySelector('#kv-page .buy .opt[data-o="4oz"]');if(o4)o4.click();build('4oz');return}
+    var st=t.closest('[data-kc-start]');if(st){build(window.__kvKey?window.__kvKey(null):'4oz');return}
     var go=t.closest('#kc-go');if(go&&!go.disabled){go.disabled=true;location.href=KITS[key].discount?'/discount/'+CODE+'?redirect=/checkout':'/checkout';return}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('on'))close()});
-  window.__kvOpenCart=build;
+  var KEY_BY_VID={'54144064749886':'4oz','54144064651582':'2oz'};
+  function openExisting(){pending=false;lines={kit:null,gifts:[],adds:[]};render();open();getCart().then(function(cc){var L=fromShopify(cc);if(L.kit&&KEY_BY_VID[L.kit.vid])key=KEY_BY_VID[L.kit.vid];lines=L;render()}).catch(function(){})}
+  document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('#CartButton, a[href="/cart"], a[href^="/cart?"]');if(!b)return;e.preventDefault();e.stopImmediatePropagation();openExisting()},true);
+  window.__kvOpenCart=build;window.__kvOpenExisting=openExisting;
   window.__kvCartState=function(){return {key:key,kit:!!(lines&&lines.kit),gifts:lines&&lines.gifts?lines.gifts.length:0,adds:lines&&lines.adds?lines.adds.length:0,open:root.classList.contains('on'),pending:pending}};
 })();
 </script>
