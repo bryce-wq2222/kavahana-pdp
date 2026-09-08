@@ -62,7 +62,8 @@
 </style>
 <style id="kvl-css">
 /* ---------- FOUNDATION, aliased from the PDP style block ----------------- */
-#kvl-page,#kvl-page :where(*:not(svg):not(svg *)),#kvl-page :where(*:not(svg):not(svg *))::before,#kvl-page :where(*:not(svg):not(svg *))::after{all:revert}
+/* the Okendo widget subtree is excluded from the reset or its own styles die */
+#kvl-page,#kvl-page :where(*:not(svg):not(svg *):not([data-oke-widget]):not([data-oke-widget] *)),#kvl-page :where(*:not(svg):not(svg *):not([data-oke-widget]):not([data-oke-widget] *))::before,#kvl-page :where(*:not(svg):not(svg *):not([data-oke-widget]):not([data-oke-widget] *))::after{all:revert}
 #kvl-page{--green:#367542;--green2:#73AE57;--mint:#8AC79A;--cream:#F8F3E8;--bone:#FFFFFF;--ink:#1F1D17;--deep:#14261A;--line:#E6DFCE;--grey:#6A6659;--rule:#DED6C3;--clay:#8A4B3B;--tint:#EEF5EC;}
 #kvl-page *{margin:0;padding:0;box-sizing:border-box}
 #kvl-page{-webkit-text-size-adjust:100%;overflow-x:clip}
@@ -217,7 +218,7 @@
   #kvl-page .kvl-close .kvl-h2{font-size:30px}
 }
 </style>
-<style id="kvl-css-rev">#kvl-page-reviews,#kvl-page-reviews :where(*:not(svg):not(svg *)),#kvl-page-reviews :where(*:not(svg):not(svg *))::before,#kvl-page-reviews :where(*:not(svg):not(svg *))::after{all:revert}
+<style id="kvl-css-rev">#kvl-page-reviews,#kvl-page-reviews :where(*:not(svg):not(svg *):not([data-oke-widget]):not([data-oke-widget] *)),#kvl-page-reviews :where(*:not(svg):not(svg *):not([data-oke-widget]):not([data-oke-widget] *))::before,#kvl-page-reviews :where(*:not(svg):not(svg *):not([data-oke-widget]):not([data-oke-widget] *))::after{all:revert}
 #kvl-page-reviews{--green:#367542;--green2:#73AE57;--mint:#8AC79A;--cream:#F8F3E8;--bone:#FFFFFF;--ink:#1F1D17;--deep:#14261A;--line:#E6DFCE;--grey:#6A6659;--rule:#DED6C3;--clay:#8A4B3B;--tint:#EEF5EC;}
 #kvl-page-reviews *{margin:0;padding:0;box-sizing:border-box}
 #kvl-page-reviews{-webkit-text-size-adjust:100%;overflow-x:clip}
