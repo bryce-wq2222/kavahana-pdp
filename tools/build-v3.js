@@ -153,5 +153,8 @@ rep('video loading state', VID.clickFrom, VID.clickTo);
 });
 /* 9/8 Bryce: guarantee reads "Feel it", everywhere the live embed says "Love it" */
 { const n = h.split('Love it or your money back').length - 1; if (n < 1) throw new Error('expected a Love-it guarline left in the live embed, found ' + n); h = h.split('Love it or your money back').join('Feel it or your money back'); }
+/* 9/8 Bryce: "As seen on" moves to right above "What's inside your free starter kit" */
+{ const so = h.indexOf('<section class="seenon"'); if (so < 0) throw new Error('no .seenon section'); const soEnd = h.indexOf('</section>', so) + '</section>'.length; const seen = h.slice(so, soEnd); h = h.slice(0, so) + h.slice(soEnd); const vs = h.indexOf('<section class="kitsec valsec" id="kv-valsec">'); if (vs < 0) throw new Error('no #kv-valsec'); h = h.slice(0, vs) + seen + '
+' + h.slice(vs); }
 fs.writeFileSync(OUT, h);
 console.log('wrote', OUT, h.length, 'bytes;', steps.length, 'steps:', steps.join(', '));
