@@ -378,7 +378,7 @@
 </div></section>
 
 <!-- 4b. SUBSCRIBER PERKS -->
-<section class="perksec"><div class="wrap">
+<section class="perksec" id="kv-perks"><div class="wrap">
   <div class="ctr">
     <h2 class="btbh2">There is more to look<br>forward to every month</h2>
   </div>

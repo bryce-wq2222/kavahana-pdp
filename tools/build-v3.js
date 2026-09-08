@@ -158,6 +158,8 @@ rep('label size map 45', "'4oz':{hero:'https://bryce-wq2222.github.io/kavahana-p
 rep('label size map 22', "'2oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg',", "'2oz':{label:'https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg', hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg',");
 rep('label swap', "swapImgs(document.querySelectorAll('#slides .heroimg'), s);", "swapImgs(document.querySelectorAll('#slides .heroimg'), s); document.querySelectorAll('img[src*=\"/img/s6\"]').forEach(function(lab){ if(s.label&&lab.getAttribute('src')!==s.label){lab.src=s.label;} });");
 rep('label preload', "['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg'].forEach", "['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg'].forEach");
+/* 9/8 night: the buy box link "See your monthly gifts" points at #kv-perks, which never existed; give the perks section that id */
+rep('kv-perks anchor', '<section class="perksec"', '<section class="perksec" id="kv-perks"');
 /* 9/8 Bryce: guarantee reads "Feel it", everywhere the live embed says "Love it" */
 { const n = h.split('Love it or your money back').length - 1; if (n < 1) throw new Error('expected a Love-it guarline left in the live embed, found ' + n); h = h.split('Love it or your money back').join('Feel it or your money back'); }
 /* 9/8 Bryce: "As seen on" moves to right above "What's inside your free starter kit" */
