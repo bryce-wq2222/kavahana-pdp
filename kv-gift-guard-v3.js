@@ -78,9 +78,11 @@
       }
       /* 9/8: the theme adds the $129 Free KavaCup but only removes it when its own cart section re-renders; enforce the threshold here too (cart price, cup excluded) */
       if (!fix) {
-        var cupLine = null, subNoCup = 0;
-        items.forEach(function (i) { if (i.sku === 'KH-FREE-CUP' || String(i.variant_id) === '48005720113470') cupLine = i; else subNoCup += i.final_line_price; });
-        if (cupLine && subNoCup / 100 < 129) fix = { id: cupLine.key, quantity: 0 };
+        var cups = [], subNoCup = 0;
+        items.forEach(function (i) { if (i.sku === 'KH-FREE-CUP' || String(i.variant_id) === '48005720113470') cups.push(i); else subNoCup += i.final_line_price; });
+        if (cups.length && subNoCup / 100 < 129) fix = { id: cups[0].key, quantity: 0 };
+        else if (cups.length > 1) { var extra = cups.filter(function (i) { return !(i.properties && i.properties._kavahana_gwp); })[0] || cups[1]; fix = { id: extra.key, quantity: 0 }; }
+        else if (cups.length === 1 && cups[0].quantity > 1) fix = { id: cups[0].key, quantity: 1 };
       }
       if (!fix) { busy = false; refreshUI(); return; }
       fetch('/cart/change.js', {
