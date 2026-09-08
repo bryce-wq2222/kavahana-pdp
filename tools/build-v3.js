@@ -213,7 +213,7 @@ rep('faq rt', 'Kava is thought to have a kind of reverse tolerance, where the be
   'Kava is thought to have a kind of reverse tolerance, where the benefits feel subtle at first and become more noticeable with continued use. It works the opposite way to alcohol: the longer you drink it, the less you need. Traditionally, newcomers are welcomed with 2 to 3 servings.');
 
 /* ---------- 8. size script: sublines, value-stack toggle, CTA -> cart ---------- */
-rep('sizes 45', "s:'45 servings \\u00b7 delivered monthly', r:'$109.99',", "s:'First box $79.99 with code <span class=\"code\">FIRSTBOX30</span> \\u00b7 renews at $109.99/mo', r:'$109.99',");
+rep('sizes 45', "s:'45 servings \\u00b7 delivered monthly', r:'$109.99',", "s:'Code <span class=\"code\">FIRSTBOX30</span> applied \\u00b7 then $109.99/mo', r:'$109.99',");
 rep('sizes 22', "s:'22 servings \\u00b7 delivered monthly', r:'$59.99',", "s:'$59.99 a month \\u00b7 skip or cancel anytime', r:'$59.99',");
 rep('sizes get', "get:'<span class=\"mauna\">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social, from one ingredient, cold-pressed noble kava root. Scoop, mix into any cold drink and enjoy.'", "get:'<span class=\"mauna\">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'", { all: true });
 rep('bbSub html', "$('bbSub').textContent=s.s;", "$('bbSub').innerHTML=s.s;document.querySelectorAll('[data-vs]').forEach(function(x){x.classList.toggle('sel',x.dataset.vs===key)});");

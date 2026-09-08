@@ -489,7 +489,7 @@
 <script>
 (function(){
   var SIZES={
-    '4oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45c.jpg', halt:'The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs', s:'First box $79.99 with code <span class="code">FIRSTBOX30</span> \u00b7 renews at $109.99/mo', r:'$109.99',
+    '4oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45c.jpg', halt:'The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs', s:'Code <span class="code">FIRSTBOX30</span> applied \u00b7 then $109.99/mo', r:'$109.99',
            get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'},
     '2oz':{hero:'https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22c.jpg', halt:'The 22 serving Starter Kit: one bag, two coconut shell cups and whisk', s:'$59.99 a month \u00b7 skip or cancel anytime', r:'$59.99',
            get:'<span class="mauna">KAVA NECTAR</span> is a non-alcoholic drink you can actually feel: calm, smiley and social. One ingredient: cold-pressed noble kava root.'}
