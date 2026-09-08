@@ -35,15 +35,15 @@ rep('z-lock', "if(!document.querySelector('.lbx.on')){", "if(!document.querySele
 /* ---------- 1. v3 CSS (appended inside the main style block) ---------- */
 const CSS = `
 /* ---- v3 ---- */
-#kv-page .buy .stars-row{margin-bottom:6px}#kv-page .buy .stars-row b{color:var(--ink)}
-#kv-page .buy h1{margin-bottom:6px;line-height:1.05}
+#kv-page .buy .stars-row{margin-bottom:4px}#kv-page .buy .stars-row b{color:var(--ink)}
+#kv-page .buy h1{margin-bottom:4px;line-height:1.05}
 #kv-page .getline{font-size:15px;margin-bottom:10px;color:var(--ink)}
-#kv-page .buy .opt{padding:10px 13px;margin-bottom:6px;grid-template-columns:18px 1fr auto;gap:10px}
-#kv-page .buy .opt:first-of-type{margin-top:16px}
+#kv-page .buy .opt{padding:10px 13px;margin-bottom:5px;grid-template-columns:18px 1fr auto;gap:10px}
+#kv-page .buy .opt:first-of-type{margin-top:13px}
 #kv-page .opt .nm{font-size:16.5px}#kv-page .opt .nm small{font-size:12px;margin-top:3px;letter-spacing:0}
 #kv-page .opt .pr{font-size:22px}#kv-page .opt .pr s{font-size:12.5px;margin-top:2px}
 #kv-page .opt .pr .fb{display:block;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:3px}#kv-page .opt.sel .pr .fb{color:#EAF3E5}
-#kv-page .opt .tag{top:-13px;font-size:10.5px;padding:4px 11px}
+#kv-page .opt .tag{top:-12px;font-size:10.5px;padding:4px 11px}
 #kv-page .subline{margin:9px 0 0!important;font-size:12.5px}
 #kv-page .subline .code{display:inline-block;background:#E9F1E3;color:var(--green);font-weight:600;border-radius:5px;padding:1px 7px;letter-spacing:.06em}
 #kv-page .icons3{margin-top:12px;padding-top:12px}
@@ -79,7 +79,7 @@ const CSS = `
 #kv-page .proofline{text-align:center;font-size:13px;color:var(--grey);margin-top:16px}
 /* text review strip */
 #kv-page .txtrev{padding-top:16px;padding-bottom:12px}
-@media(max-width:620px){#kv-page .buy h1{font-size:22px}#kv-page .getline{font-size:13.5px;margin-bottom:8px}#kv-page .dots2{margin-top:6px}#kv-page .buy{padding-top:2px}#kv-page .buy .guarline{margin-top:8px}#kv-page .valbox{padding:18px 16px 14px;border-radius:0;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}#kv-page .valsec{padding-top:0}#kv-page .valsec .acc{padding:0 18px}#kv-page .txtrev h2{font-size:24px}}
+@media(max-width:620px){#kv-page .buy h1{font-size:22px}#kv-page .getline{font-size:13.5px;margin-bottom:6px}#kv-page .dots2{margin-top:4px}#kv-page .buy{padding-top:2px}#kv-page .buy .guarline{margin-top:8px}#kv-page .valbox{padding:18px 16px 14px;border-radius:0;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}#kv-page .valsec{padding-top:0}#kv-page .valsec .acc{padding:0 18px}#kv-page .txtrev h2{font-size:24px}}
 `;
 rep('css', '\n</style>\n<div id="kv-page">', CSS + '\n</style>\n<div id="kv-page">');
 
