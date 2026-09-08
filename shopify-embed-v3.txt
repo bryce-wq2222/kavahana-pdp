@@ -106,6 +106,9 @@
 /* text review strip */
 #kv-page .txtrev{padding-top:16px;padding-bottom:12px}
 @media(max-width:620px){#kv-page .buy h1{font-size:22px;margin-bottom:8px}#kv-page .buy .stars-row{margin-bottom:8px;font-size:12px;gap:6px}#kv-page .getline{font-size:13.5px;margin-bottom:2px}#kv-page .dots2{margin-top:6px}#kv-page .buy{padding-top:2px}#kv-page .buy .opt{padding:11px 13px;margin-bottom:7px}#kv-page .buy .opt[data-o="4oz"]{margin-top:22px}#kv-page .buy .pill-cta{margin-top:14px}#kv-page .subline{margin-top:10px!important}#kv-page .buy .guarline{margin-top:10px}#kv-page .icons3{margin-top:14px;padding-top:14px}#kv-page .acc{margin-top:16px}#kv-page .txtrev h2{font-size:24px}}
+/* tap feedback while a review video buffers */
+#kv-page .vid-live.loading .play{color:transparent;background:transparent;border:3px solid rgba(255,253,248,.35);border-top-color:#fff;box-shadow:none;animation:kvspin .8s linear infinite}
+@keyframes kvspin{to{transform:rotate(360deg)}}
 
 </style>
 <div id="kv-page">
@@ -742,7 +745,10 @@
         v.play().then(function(){ w.classList.add('playing'); }).catch(function(){});
       });
     }
-    b.addEventListener('click', start);
+    b.addEventListener('click', function(){ w.classList.add('loading'); start(); });
+    v.addEventListener('playing', function(){ w.classList.remove('loading'); });
+    v.addEventListener('error', function(){ w.classList.remove('loading'); });
+    v.addEventListener('stalled', function(){ setTimeout(function(){ if(v.paused) w.classList.remove('loading'); }, 8000); });
     v.addEventListener('click', function(){
       if(v.paused){ start(); } else { v.pause(); w.classList.remove('playing'); }
     });

@@ -135,6 +135,10 @@ const CAP = JSON.parse(fs.readFileSync(path.join(__dirname, 'capture-patch.json'
 rep('ctrack capture', CAP.ctrackFrom, CAP.ctrackTo);
 rep('slides capture', CAP.slidesFrom, CAP.slidesTo);
 
+/* ---------- 13. review videos: spinner from tap until playback starts ---------- */
+const VID = JSON.parse(fs.readFileSync(path.join(__dirname, 'video-patch.json'), 'utf8'));
+rep('video loading state', VID.clickFrom, VID.clickTo);
+
 /* ---------- checks ---------- */
 ['$166.46', '34% savings', 'third-party', 'END OF SUMMER', 'Morning and evening', 'class="rt-card', '<h2>From the people who drink it</h2>'].forEach(function (bad) {
   if (h.indexOf(bad) > -1) throw new Error('leftover: ' + bad);

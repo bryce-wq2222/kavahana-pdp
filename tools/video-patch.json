@@ -1,0 +1,4 @@
+{
+  "clickFrom": "    b.addEventListener('click', start);",
+  "clickTo": "    b.addEventListener('click', function(){ w.classList.add('loading'); start(); });\n    v.addEventListener('playing', function(){ w.classList.remove('loading'); });\n    v.addEventListener('error', function(){ w.classList.remove('loading'); });\n    v.addEventListener('stalled', function(){ setTimeout(function(){ if(v.paused) w.classList.remove('loading'); }, 8000); });"
+}
