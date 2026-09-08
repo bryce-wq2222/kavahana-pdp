@@ -157,12 +157,12 @@
       <button class="gnav gprev" type="button" aria-label="Previous image">&#8249;</button>
         <button class="gnav gnext" type="button" aria-label="Next image">&#8250;</button>
         <div class="slides" id="slides">
-        <div class="slide"><img class="heroimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg" width="1080" height="1080" fetchpriority="high" decoding="async" alt="Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs"></div>
-        <div class="slide"><img class="galimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s2b.jpg" width="1080" height="1080" alt="Kava Nectar benefits: the tingle, relaxed and social, one ingredient, zero sugar"></div>
+        <div class="slide"><img class="heroimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg" srcset="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e-780.jpg 780w, https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg 1080w" sizes="(max-width: 760px) 100vw, 540px" width="1080" height="1080" fetchpriority="high" decoding="async" alt="Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs"></div>
+        <div class="slide"><img class="galimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s2b.jpg" srcset="https://bryce-wq2222.github.io/kavahana-pdp/img/s2b-780.jpg 780w, https://bryce-wq2222.github.io/kavahana-pdp/img/s2b.jpg 1080w" sizes="(max-width: 760px) 100vw, 540px" width="1080" height="1080" alt="Kava Nectar benefits: the tingle, relaxed and social, one ingredient, zero sugar"></div>
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s3b.jpg" width="1080" height="1080" alt="Nobody drinks it straight and that is fine: earthy like a stronger matcha, best with cold coconut water"></div>
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s4.jpg" width="1080" height="1080" alt="Over 500,000 cups served at the Kavahana bars"></div>
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s5.jpg" width="1080" height="1080" alt="Rated 4.8 by the people who drink it daily, 96 percent would recommend"></div>
-        <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg" width="1080" height="1080" alt="Supplement facts: 1 teaspoon of dried noble kava root juice per serving, tasting notes and where most people start"></div>
+        <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg" srcset="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e-780.jpg 780w, https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg 1080w" sizes="(max-width: 760px) 100vw, 540px" width="1080" height="1080" alt="Supplement facts: 1 teaspoon of dried noble kava root juice per serving, tasting notes and where most people start"></div>
       </div>
     </div>
     <div class="dots2" id="dots2"></div>
@@ -273,9 +273,9 @@
   <div class="carou pf-carou" data-carou="proof">
     <button class="cnav prev" aria-label="Previous">&#8249;</button>
     <div class="ctrack">
-      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media pos-top"><video class="slot v" preload="metadata" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/charles-w.jpg" playsinline muted loop title="Charles W. making his morning Kava Nectar"><source src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/9db85de2-0901-4eea-af62-782494e66220/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;Ever since my wife and I visited Kavahana in Santa Monica, we&rsquo;ve been hooked. We start most mornings with kava, a cup of joe and jazz. Highly recommended.&rdquo;</p><div class="pf-who"><b>Charles W.</b> &middot; Kava Nectar Triple Pack</div></div></div></div>
-      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media"><video class="slot v" preload="metadata" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/darija-v.jpg" playsinline muted loop title="Darija V. pouring Kava Nectar over ice"><source src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/19075973-7508-48ee-829b-1cac94339093/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;The little tingly feeling is so fun. That perfect upbeat, relaxed mood that makes socializing feel easy and fun without feeling out of it.&rdquo;</p><div class="pf-who"><b>Darija V.</b> &middot; Kava Nectar Classic Edition</div></div></div></div>
-      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media"><video class="slot v" preload="metadata" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/samuel-h-day.jpg" playsinline muted loop title="Samuel H. on Classic and Balance for daytime"><source src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/6b46c645-187a-4317-b4c9-cff06f92f95c/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;I like the Classic and Balance for daytime: chill but focused, and it actually gives me some energy. I mix one scoop of each with fruit juice and seltzer.&rdquo;</p><div class="pf-who"><b>Samuel H.</b> &middot; Kava Nectar Combo Pack</div></div></div></div>
+      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media pos-top"><video class="slot v" preload="none" data-warm="metadata" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/charles-w.jpg" playsinline muted loop title="Charles W. making his morning Kava Nectar"><source src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/9db85de2-0901-4eea-af62-782494e66220/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;Ever since my wife and I visited Kavahana in Santa Monica, we&rsquo;ve been hooked. We start most mornings with kava, a cup of joe and jazz. Highly recommended.&rdquo;</p><div class="pf-who"><b>Charles W.</b> &middot; Kava Nectar Triple Pack</div></div></div></div>
+      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media"><video class="slot v" preload="none" data-warm="metadata" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/darija-v.jpg" playsinline muted loop title="Darija V. pouring Kava Nectar over ice"><source src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/19075973-7508-48ee-829b-1cac94339093/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;The little tingly feeling is so fun. That perfect upbeat, relaxed mood that makes socializing feel easy and fun without feeling out of it.&rdquo;</p><div class="pf-who"><b>Darija V.</b> &middot; Kava Nectar Classic Edition</div></div></div></div>
+      <div class="cslide"><div class="pf"><div class="vid vid-live pf-media"><video class="slot v" preload="none" data-warm="metadata" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/rev/samuel-h-day.jpg" playsinline muted loop title="Samuel H. on Classic and Balance for daytime"><source src="https://d4yxl4pe8dqlj.cloudfront.net/b71da776-0bd5-4817-b687-6614fa031896/6b46c645-187a-4317-b4c9-cff06f92f95c/web.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play review video">&#9654;</button></div><div class="pf-b"><div class="pf-top"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pf-v">&#10003; Verified buyer</span></div><p>&ldquo;I like the Classic and Balance for daytime: chill but focused, and it actually gives me some energy. I mix one scoop of each with fruit juice and seltzer.&rdquo;</p><div class="pf-who"><b>Samuel H.</b> &middot; Kava Nectar Combo Pack</div></div></div></div>
     </div>
     <button class="cnav next" aria-label="Next">&#8250;</button>
   </div>
@@ -436,7 +436,7 @@
   <div class="hero" style="padding-top:0">
     <div>
       <div class="galwrap">
-        <img class="heroimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg" width="1080" height="1080" alt="Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs">
+        <img class="heroimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg" srcset="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e-780.jpg 780w, https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg 1080w" sizes="(max-width: 760px) 100vw, 540px" width="1080" height="1080" alt="Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs">
       </div>
     </div>
     <div>
@@ -536,7 +536,7 @@
 
 <div class="lbx" id="lbl-lbx" role="dialog" aria-modal="true" aria-label="Supplement facts">
   <button class="x" type="button" aria-label="Close">&#10005;</button>
-  <img src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg" alt="Kava Nectar supplement facts label" loading="lazy">
+  <img src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg" srcset="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e-780.jpg 780w, https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg 1080w" sizes="(max-width: 760px) 100vw, 540px" alt="Kava Nectar supplement facts label" loading="lazy">
 </div>
 
 <script>
@@ -567,7 +567,7 @@
   ['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg'].forEach(function(u){var p=new Image();p.src=u;});
   var topKey='4oz', btbKey='4oz';
   function swapImgs(scope, s){
-    scope.forEach(function(hi){ if(hi.getAttribute('src')!==s.hero){hi.src=s.hero;hi.alt=s.halt;} });
+    scope.forEach(function(hi){ if(hi.getAttribute('src')!==s.hero){hi.srcset=s.hero.replace('.jpg','-780.jpg')+' 780w, '+s.hero+' 1080w';hi.src=s.hero;hi.alt=s.halt;} });
   }
   function setSize(key, fromTop){
     var s=SIZES[key]; if(!s) return;
@@ -578,7 +578,7 @@
       $('bbSub').innerHTML=s.s;if(window.kvVal)kvVal(key);
       $('bbRen').textContent=s.r;
       $('bbGet').innerHTML=s.get;
-      swapImgs(document.querySelectorAll('#slides .heroimg'), s); document.querySelectorAll('img[src*="/img/s6"]').forEach(function(lab){ if(s.label&&lab.getAttribute('src')!==s.label){lab.src=s.label;} var ks=document.querySelector('#kv-sticky .ks-t'); if(ks){ks.innerHTML=(key==='2oz')?'$59.99 a month<br>Save 49% + free starter kit':'$79.99 first box<br>Save 61% + free starter kit';} });
+      swapImgs(document.querySelectorAll('#slides .heroimg'), s); document.querySelectorAll('img[src*="/img/s6"]').forEach(function(lab){ if(s.label&&lab.getAttribute('src')!==s.label){lab.srcset=s.label.replace('.jpg','-780.jpg')+' 780w, '+s.label+' 1080w';lab.src=s.label;} var ks=document.querySelector('#kv-sticky .ks-t'); if(ks){ks.innerHTML=(key==='2oz')?'$59.99 a month<br>Save 49% + free starter kit':'$79.99 first box<br>Save 61% + free starter kit';} });
       document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
       swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);
       var sl=document.getElementById('slides');
@@ -1104,3 +1104,5 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   var _swt;new MutationObserver(function(){clearTimeout(_swt);_swt=setTimeout(sweep,200)}).observe(document.documentElement,{subtree:true,childList:true});
 })();
 </script>
+
+<script>(function(){function warm(){document.querySelectorAll('video[data-warm]').forEach(function(v){v.preload=v.getAttribute('data-warm')})}if(document.readyState==='complete'){setTimeout(warm,2500)}else{window.addEventListener('load',function(){setTimeout(warm,2500)})}})();</script>

@@ -633,12 +633,12 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
       <button class="gnav gprev" type="button" aria-label="Previous image">&#8249;</button>
         <button class="gnav gnext" type="button" aria-label="Next image">&#8250;</button>
         <div class="slides" id="slides">
-        <div class="slide"><img class="heroimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg" width="1080" height="1080" fetchpriority="high" decoding="async" alt="Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs"></div>
-        <div class="slide"><img class="galimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s2b.jpg" width="1080" height="1080" alt="Kava Nectar benefits: the tingle, relaxed and social, one ingredient, zero sugar"></div>
+        <div class="slide"><img class="heroimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg" srcset="https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e-780.jpg 780w, https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg 1080w" sizes="(max-width: 760px) 100vw, 540px" width="1080" height="1080" fetchpriority="high" decoding="async" alt="Fall Reset Sale: 61% off + $92 in free gifts. The 45 serving Starter Kit: two bags, two coconut shell cups, whisk and 5 stick packs"></div>
+        <div class="slide"><img class="galimg" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s2b.jpg" srcset="https://bryce-wq2222.github.io/kavahana-pdp/img/s2b-780.jpg 780w, https://bryce-wq2222.github.io/kavahana-pdp/img/s2b.jpg 1080w" sizes="(max-width: 760px) 100vw, 540px" width="1080" height="1080" alt="Kava Nectar benefits: the tingle, relaxed and social, one ingredient, zero sugar"></div>
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s3b.jpg" width="1080" height="1080" alt="Nobody drinks it straight and that is fine: earthy like a stronger matcha, best with cold coconut water"></div>
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s4.jpg" width="1080" height="1080" alt="Over 500,000 cups served at the Kavahana bars"></div>
         <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s5.jpg" width="1080" height="1080" alt="Rated 4.8 by the people who drink it daily, 96 percent would recommend"></div>
-        <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg" width="1080" height="1080" alt="Supplement facts: 1 teaspoon of dried noble kava root juice per serving, tasting notes and where most people start"></div>
+        <div class="slide"><img class="galimg" loading="lazy" decoding="async" src="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg" srcset="https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e-780.jpg 780w, https://bryce-wq2222.github.io/kavahana-pdp/img/s6-45e.jpg 1080w" sizes="(max-width: 760px) 100vw, 540px" width="1080" height="1080" alt="Supplement facts: 1 teaspoon of dried noble kava root juice per serving, tasting notes and where most people start"></div>
       </div>
     </div>
     <div class="dots2" id="dots2"></div>
@@ -738,7 +738,7 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
   ['https://bryce-wq2222.github.io/kavahana-pdp/img/s1-45e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s1-22e.jpg','https://bryce-wq2222.github.io/kavahana-pdp/img/s6.jpg'].forEach(function(u){var p=new Image();p.src=u;});
   var topKey='4oz', btbKey='4oz';
   function swapImgs(scope, s){
-    scope.forEach(function(hi){ if(hi.getAttribute('src')!==s.hero){hi.src=s.hero;hi.alt=s.halt;} });
+    scope.forEach(function(hi){ if(hi.getAttribute('src')!==s.hero){hi.srcset=s.hero.replace('.jpg','-780.jpg')+' 780w, '+s.hero+' 1080w';hi.src=s.hero;hi.alt=s.halt;} });
   }
   function setSize(key, fromTop){
     var s=SIZES[key]; if(!s) return;
@@ -749,7 +749,7 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
       $('bbSub').innerHTML=s.s;if(window.kvVal)kvVal(key);
       $('bbRen').textContent=s.r;
       $('bbGet').innerHTML=s.get;
-      swapImgs(document.querySelectorAll('#slides .heroimg'), s); document.querySelectorAll('img[src*="/img/s6"]').forEach(function(lab){ if(s.label&&lab.getAttribute('src')!==s.label){lab.src=s.label;} var ks=document.querySelector('#kv-sticky .ks-t'); if(ks){ks.innerHTML=(key==='2oz')?'$59.99 a month<br>Save 49% + free starter kit':'$79.99 first box<br>Save 61% + free starter kit';} });
+      swapImgs(document.querySelectorAll('#slides .heroimg'), s); document.querySelectorAll('img[src*="/img/s6"]').forEach(function(lab){ if(s.label&&lab.getAttribute('src')!==s.label){lab.srcset=s.label.replace('.jpg','-780.jpg')+' 780w, '+s.label+' 1080w';lab.src=s.label;} var ks=document.querySelector('#kv-sticky .ks-t'); if(ks){ks.innerHTML=(key==='2oz')?'$59.99 a month<br>Save 49% + free starter kit':'$79.99 first box<br>Save 61% + free starter kit';} });
       document.querySelectorAll('[data-o2]').forEach(function(x){x.classList.toggle('sel', x.dataset.o2===key)});
       swapImgs(document.querySelectorAll('.btbsec .heroimg'), s);
       var sl=document.getElementById('slides');
@@ -995,6 +995,7 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
 })();
 </script>
 <script>(function(){document.querySelectorAll(".acc").forEach(function(acc){var dets=[].slice.call(acc.querySelectorAll("details"));dets.forEach(function(d){var sum=d.querySelector("summary");var body=document.createElement("div");body.className="acc-body";var inner=document.createElement("div");inner.className="acc-inner";while(sum.nextSibling){inner.appendChild(sum.nextSibling)}body.appendChild(inner);d.appendChild(body);if(d.open){d.classList.add("is-open");body.style.height="auto"}else{body.style.height="0px"}sum.addEventListener("click",function(e){e.preventDefault();if(d.classList.contains("is-open")){close(d)}else{dets.forEach(function(o){if(o!==d&&o.classList.contains("is-open"))close(o)});openD(d)}})});function openD(d){var b=d.querySelector(".acc-body");d.setAttribute("open","");d.classList.add("is-open");b.style.height="0px";void b.offsetHeight;b.style.height=b.firstChild.scrollHeight+"px";b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"){b.style.height=d.classList.contains("is-open")?"auto":"0px";b.removeEventListener("transitionend",te)}})}function close(d){var b=d.querySelector(".acc-body");b.style.height=b.firstChild.scrollHeight+"px";void b.offsetHeight;b.style.height="0px";d.classList.remove("is-open");b.addEventListener("transitionend",function te(ev){if(ev.propertyName==="height"&&!d.classList.contains("is-open")){d.removeAttribute("open");b.removeEventListener("transitionend",te)}})}})})();</script>
+<script>(function(){function warm(){document.querySelectorAll('video[data-warm]').forEach(function(v){v.preload=v.getAttribute('data-warm')})}if(document.readyState==='complete'){setTimeout(warm,2500)}else{window.addEventListener('load',function(){setTimeout(warm,2500)})}})();</script>
 <div id="kvl-page-reviews" class="kvl">
   <section class="kvl-reviews" id="kvl-reviews">
     <div class="kvl-wrap"><div class="kvl-col">
