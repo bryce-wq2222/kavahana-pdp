@@ -455,7 +455,7 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
           <p class="kvl-bar1">&#127809; FALL SALE &#127809;</p>
           <p class="kvl-bar2">$79.99 FIRST BOX &#183; SAVE UP TO 61% + FREE GIFTS</p>
         </div>
-        <div class="kvl-timer" id="kvl-cd" data-ends="2026-09-13T23:59:59-07:00" data-ended="Sale ended" role="timer" aria-live="off">
+        <div class="kvl-timer" id="kvl-cd" data-ends="2026-09-14T06:59:59Z" data-ended="Sale ended" role="timer" aria-live="off">
           <div class="kvl-tg kvl-tg--d"><span class="kvl-tn" data-u="d">00</span><span class="kvl-tl">DAYS</span></div><span class="kvl-tsep kvl-tsep--d" aria-hidden="true">:</span><div class="kvl-tg"><span class="kvl-tn" data-u="h">00</span><span class="kvl-tl">HRS</span></div><span class="kvl-tsep" aria-hidden="true">:</span><div class="kvl-tg"><span class="kvl-tn" data-u="m">00</span><span class="kvl-tl">MIN</span></div><span class="kvl-tsep" aria-hidden="true">:</span><div class="kvl-tg"><span class="kvl-tn" data-u="s">00</span><span class="kvl-tl">SEC</span></div>
         </div>
       </div>
@@ -1210,9 +1210,17 @@ var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce
 for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(e){var id=this.getAttribute('href').slice(1);var t=document.getElementById(id);if(!t)return;e.preventDefault();var y=t.getBoundingClientRect().top+window.pageYOffset-8;window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});});}
 var u=document.getElementById('kvl-upd');if(u){try{u.textContent=u.getAttribute('data-prefix')+new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'long',day:'numeric',year:'numeric'}).format(new Date(Date.now()-864e5));}catch(err){}}
 var cd=document.getElementById('kvl-cd');
-if(cd){var end=new Date(cd.getAttribute('data-ends')).getTime();function pad(n){return (n<10?'0':'')+n}
+function kvlLaParts(d){var o={};new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',hour12:false,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit'}).formatToParts(d).forEach(function(p){o[p.type]=p.value});return o}
+function kvlLaOffset(d){var o=kvlLaParts(d);var h=o.hour==='24'?0:+o.hour;return Date.UTC(+o.year,+o.month-1,+o.day,h,+o.minute,+o.second)-d.getTime()}
+/* The sale ends every Sunday 23:59:59 Pacific and rolls forward on its own. */
+function kvlNextSunday(now){try{var o=kvlLaParts(now),y=+o.year,m=+o.month,dd=+o.day;var wd=new Date(Date.UTC(y,m-1,dd)).getUTCDay();
+function mk(a){var wall=Date.UTC(y,m-1,dd+a,23,59,59);var f=wall-kvlLaOffset(now);return wall-kvlLaOffset(new Date(f))}
+var t=mk((7-wd)%7);if(t<=now.getTime())t=mk(((7-wd)%7)+7);return t}catch(e){return NaN}}
+if(cd){var end=kvlNextSunday(new Date());if(isNaN(end))end=new Date(cd.getAttribute('data-ends')).getTime();function pad(n){return (n<10?'0':'')+n}
 var U={};['d','h','m','s'].forEach(function(u){U[u]=cd.querySelector('[data-u="'+u+'"]')});var dg=cd.querySelector('.kvl-tg--d'),ds=cd.querySelector('.kvl-tsep--d');
-function tick(){var r=end-Date.now();if(isNaN(end)||r<=0){var s=document.createElement('span');s.className='kvl-tended';s.textContent=cd.getAttribute('data-ended');cd.innerHTML='';cd.appendChild(s);return;}
+function tick(){var r=end-Date.now();
+if(r<=0&&!isNaN(end)){var roll=kvlNextSunday(new Date());if(!isNaN(roll)&&roll>Date.now()){end=roll;r=end-Date.now()}}
+if(isNaN(end)||r<=0){var s=document.createElement('span');s.className='kvl-tended';s.textContent=cd.getAttribute('data-ended');cd.innerHTML='';cd.appendChild(s);return;}
 var d=Math.floor(r/864e5),h=Math.floor(r%864e5/36e5),m=Math.floor(r%36e5/6e4),sec=Math.floor(r%6e4/1e3);
 if(d>0){dg.hidden=false;ds.hidden=false;U.d.textContent=pad(d);}else{dg.hidden=true;ds.hidden=true;}
 U.h.textContent=pad(h);U.m.textContent=pad(m);U.s.textContent=pad(sec);setTimeout(tick,1000-(Date.now()%1000));}tick();}
