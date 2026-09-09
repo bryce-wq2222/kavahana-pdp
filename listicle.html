@@ -469,7 +469,7 @@ html{overflow-x:clip}body{overflow-x:clip!important}html,body{margin:0;padding:0
         <span class="kvl-avwrap"><img class="kvl-av" data-slot="kvl-avatar" src="https://bryce-wq2222.github.io/kavahana-pdp/img/hana-avatar.jpg" width="250" height="250" loading="lazy" decoding="async" alt="Hana Wilen at a Kavahana booth, holding a bag of Kava Nectar."></span>
         <div>
           <p class="kvl-byname">By <strong>Hana Wilen</strong></p>
-          <p class="kvl-bymeta" id="kvl-upd" data-prefix="Last updated ">Last updated September 7, 2026</p>
+          <p class="kvl-bymeta" id="kvl-upd" data-prefix="Last updated ">Last updated September 8, 2026</p>
         </div>
       </div>
       <p class="kvl-note"><strong>Read this</strong> BEFORE your next drink!</p>
@@ -1127,7 +1127,10 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   var key='4oz',lines=[],pending=false,busy=false;
   function money(n){return '$'+(Math.round(n*100)/100).toFixed(2)}
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-  function post(u,b){return fetch(u,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(b)}).then(function(r){return r.text().then(function(t){var j=null;try{j=JSON.parse(t)}catch(e){}if(r.status===429||!j){var er=new Error('cart busy '+r.status);er.busy=true;throw er}if(!r.ok||(j.status&&j.status>=400))throw new Error(j.description||j.message||('cart '+r.status));return j})})}
+  function post(u,b,f){return (f||fetch)(f?location.origin+u:u,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(b)}).then(function(r){return r.text().then(function(t){var j=null;try{j=JSON.parse(t)}catch(e){}if(r.status===429||!j){var er=new Error('cart busy '+r.status);er.busy=true;throw er}if(!r.ok||(j.status&&j.status>=400))throw new Error(j.description||j.message||('cart '+r.status));return j})})}
+  /* 9/9: $0 gift lines go through an UNPATCHED fetch (a hidden same-origin iframe). Shopify's pixel manager wraps window.fetch/XHR of the top window and publishes one AddToCart per line of every /cart/add call, which made Meta count 5 AddToCart per buy click (2 cups, whisk, sticks, kit). Only the kit line goes through the top window now, so Meta sees 1 AddToCart per click with the kit's real value. Falls back to the normal fetch if the iframe cannot be made. */
+  var qf=null;function quietFetch(){if(qf)return qf;try{var f=document.createElement('iframe');f.setAttribute('aria-hidden','true');f.tabIndex=-1;f.style.cssText='position:absolute;width:0;height:0;border:0;visibility:hidden';(document.body||document.documentElement).appendChild(f);qf=f.contentWindow&&f.contentWindow.fetch?f.contentWindow.fetch.bind(f.contentWindow):null}catch(e){qf=null}return qf}
+  function postQuiet(u,b){var f=quietFetch();return f?post(u,b,f):post(u,b)}
   function syncBadge(c){try{if(c&&typeof c.item_count==='number'&&window.Alpine&&Alpine.store('cart_count'))Alpine.store('cart_count').count=c.item_count}catch(e){}return c}
   function getCart(){return fetch('/cart.js',{credentials:'same-origin',cache:'no-store'}).then(function(r){return r.json()}).then(syncBadge)}
   function addonInfo(vid){var o=null;ADDONS.forEach(function(a){a.opts.forEach(function(x){if(x[1]===vid)o={title:a.title+(a.opts.length>1?' ('+x[0]+')':''),sub:a.sub,price:x[2],img:x[3]}})});return o}
@@ -1169,7 +1172,7 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
   }
   /* the theme's cart page adds the Free KavaCup (variant 48005720113470) at a $129 subtotal and removes it below, but only when ITS cart section re-renders; this drawer bypasses that section, so it mirrors the rule */
   var FREE_CUP='48005720113470',FREE_CUP_MIN=129;
-  function cupRule(c){var cup=(c.items||[]).filter(function(i){return String(i.variant_id)===FREE_CUP});var sub=(c.items||[]).reduce(function(s,i){return String(i.variant_id)===FREE_CUP?s:s+i.final_line_price},0)/100;if(cup.length&&sub<FREE_CUP_MIN){return post('/cart/change.js',{id:cup[0].key,quantity:0}).then(getCart).then(cupRule).catch(function(){return c})}if(cup.length>1){var extra=cup.filter(function(i){return !(i.properties&&i.properties._kavahana_gwp)})[0]||cup[1];return post('/cart/change.js',{id:extra.key,quantity:0}).then(getCart).then(cupRule).catch(function(){return c})}if(cup.length===1&&cup[0].quantity>1){return post('/cart/change.js',{id:cup[0].key,quantity:1}).then(getCart).catch(function(){return c})}if(!cup.length&&sub>=FREE_CUP_MIN){return post('/cart/add.js',{items:[{id:parseInt(FREE_CUP,10),quantity:1,properties:{_kavahana_gwp:'true'}}]}).then(getCart).catch(function(){return c})}return Promise.resolve(c)}
+  function cupRule(c){var cup=(c.items||[]).filter(function(i){return String(i.variant_id)===FREE_CUP});var sub=(c.items||[]).reduce(function(s,i){return String(i.variant_id)===FREE_CUP?s:s+i.final_line_price},0)/100;if(cup.length&&sub<FREE_CUP_MIN){return post('/cart/change.js',{id:cup[0].key,quantity:0}).then(getCart).then(cupRule).catch(function(){return c})}if(cup.length>1){var extra=cup.filter(function(i){return !(i.properties&&i.properties._kavahana_gwp)})[0]||cup[1];return post('/cart/change.js',{id:extra.key,quantity:0}).then(getCart).then(cupRule).catch(function(){return c})}if(cup.length===1&&cup[0].quantity>1){return post('/cart/change.js',{id:cup[0].key,quantity:1}).then(getCart).catch(function(){return c})}if(!cup.length&&sub>=FREE_CUP_MIN){return postQuiet('/cart/add.js',{items:[{id:parseInt(FREE_CUP,10),quantity:1,properties:{_kavahana_gwp:'true'}}]}).then(getCart).catch(function(){return c})}return Promise.resolve(c)}
   function refreshNow(){return getCart().then(cupRule).then(function(c){lines=fromShopify(c);render()})}
   function refresh(){return serial(refreshNow)}
   window.addEventListener('pageshow',function(e){if(e.persisted)refresh()});
@@ -1187,14 +1190,17 @@ html.kv-cart-lock,html.kv-cart-lock body{overflow:hidden!important}
     building=true;
     key=KITS[k]?k:'4oz';var K=KITS[key];
     lines={kit:null,gifts:[],adds:lines&&lines.adds?lines.adds:[]};pending=true;render();open();
-    var items=[{id:GIFT_IDS.cup,quantity:1,properties:{_u:'1'}},{id:GIFT_IDS.cup,quantity:1,properties:{_u:'2'}},{id:GIFT_IDS.whisk,quantity:1}];
-    if(key==='4oz')items.push({id:GIFT_IDS.stix,quantity:1});
-    items.push({id:K.id,quantity:1,selling_plan:'19079102782'});
+    var gifts=[{id:GIFT_IDS.cup,quantity:1,properties:{_u:'1'}},{id:GIFT_IDS.cup,quantity:1,properties:{_u:'2'}},{id:GIFT_IDS.whisk,quantity:1}];
+    if(key==='4oz')gifts.push({id:GIFT_IDS.stix,quantity:1});
+    var kitItems=[{id:K.id,quantity:1,selling_plan:'19079102782'}];
+    var items=gifts.concat(kitItems),kitDone=false;
     serial(function(){return getCart().then(function(c){var up={};(c.items||[]).forEach(function(i){var s=i.sku||'';if(s.indexOf('KH-GIFT-')===0||s.indexOf('KH-STARTER-KIT')===0)up[i.key]=0});
       if(Object.keys(up).length)return post('/cart/update.js',{updates:up}).catch(function(){});
-    }).catch(function(){}).then(function(){return post('/cart/add.js',{items:items}).catch(function(){return post('/cart/add.js',{items:items})})})
+    }).catch(function(){}).then(function(){return post('/cart/add.js',{items:kitItems}).catch(function(){return post('/cart/add.js',{items:kitItems})})})
+      .then(function(){kitDone=true;return postQuiet('/cart/add.js',{items:gifts}).catch(function(){return postQuiet('/cart/add.js',{items:gifts})}).catch(function(){return post('/cart/add.js',{items:gifts})})})
+      .then(function(){return post('/cart/update.js',{updates:{}}).catch(function(){})})
       .then(function(){pending=false;building=false;return refreshNow()})
-      .catch(function(e){pending=false;building=false;if(e&&e.busy){try{linesEl.innerHTML='<div class="kc-err">The cart is busy right now. <button type="button" class="kc-retry" data-kc-retry>Try again</button></div>'}catch(_){}return}try{linesEl.innerHTML='<div class="kc-err">Taking you straight to checkout&hellip;</div>'}catch(_){}fallbackSubmit(items)})});
+      .catch(function(e){pending=false;building=false;if(e&&e.busy){try{linesEl.innerHTML='<div class="kc-err">The cart is busy right now. <button type="button" class="kc-retry" data-kc-retry>Try again</button></div>'}catch(_){}return}try{linesEl.innerHTML='<div class="kc-err">Taking you straight to checkout&hellip;</div>'}catch(_){}fallbackSubmit(kitDone?gifts:items)})});
   }
   root.addEventListener('click',function(e){
     var t=e.target;
