@@ -146,8 +146,7 @@
 #kv-page .kitsec{padding-top:8px}
 #kv-page .kitpanel{padding-top:20px}
 @media(max-width:759px){#kv-page .kitsec{padding-top:6px}#kv-page .kitpanel{padding-top:18px}}
-/* 9/9 Bryce: like Everyday Dose, keep a thin white band under the sticky header while scrolling (desktop) so the photo never sits flush against the header */
-@media(min-width:760px){[id$="__header"]{box-shadow:0 16px 0 0 #fff}}
+/* 9/9: the white band under the sticky header lives in the PAGE BODIES (live + v3) because the listicle build forbids the theme-header selector in shared CSS */
 
 </style>
 <style>
