@@ -254,7 +254,7 @@
 #kvl-page .kvl-p strong{font-weight:700}
 #kvl-page .kvl-linkrow{display:flex;align-items:center;gap:6px;margin-top:2px}
 #kvl-page .kvl-arrow{font-size:20px;line-height:1;flex:none}
-#kvl-page .kvl-link{font-size:18px;font-weight:700;line-height:1.35;color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--green)}
+#kvl-page .kvl-link{font-size:18px;font-weight:700;line-height:1.35;color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--green);display:inline-block;padding:11px 0;margin:-11px 0}
 #kvl-page .kvl-link:hover{color:var(--green)}
 #kvl-page .kvl-quotes{display:flex;flex-direction:column;gap:10px}
 #kvl-page .kvl-q{background:var(--cream);border-radius:12px;padding:14px 16px}
@@ -385,7 +385,7 @@
 #kvl-page-reviews .kvl-p strong{font-weight:700}
 #kvl-page-reviews .kvl-linkrow{display:flex;align-items:center;gap:6px;margin-top:2px}
 #kvl-page-reviews .kvl-arrow{font-size:20px;line-height:1;flex:none}
-#kvl-page-reviews .kvl-link{font-size:18px;font-weight:700;line-height:1.35;color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--green)}
+#kvl-page-reviews .kvl-link{font-size:18px;font-weight:700;line-height:1.35;color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--green);display:inline-block;padding:11px 0;margin:-11px 0}
 #kvl-page-reviews .kvl-link:hover{color:var(--green)}
 #kvl-page-reviews .kvl-quotes{display:flex;flex-direction:column;gap:10px}
 #kvl-page-reviews .kvl-q{background:var(--cream);border-radius:12px;padding:14px 16px}
@@ -512,7 +512,7 @@
 
     <div class="kvl-row" id="kvl-r2">
       <div class="kvl-tile" data-slot="kvl-slot-2" data-subject="TINGLE">
-        <video class="kvl-vid" data-src="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-2.mp4" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-2.jpg" autoplay muted loop playsinline preload="none" aria-label="TINGLE, the first sip: hands around a coconut cup, close on the pour"></video>
+        <video class="kvl-vid" data-src="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-2.mp4" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-2.jpg" autoplay muted loop playsinline preload="none" aria-label="TINGLE, the first sip: hands around a coconut cup, close on the pour"></video>
         <div class="kvl-tilebar"><p>&#9889; You can feel it... seriously</p></div>
       </div>
       <div class="kvl-body">
@@ -525,7 +525,7 @@
 
     <div class="kvl-row" id="kvl-r3">
       <div class="kvl-tile" data-slot="kvl-slot-3" data-subject="ROOT">
-        <video class="kvl-vid" data-src="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-3.mp4" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-3.jpg" autoplay muted loop playsinline preload="none" aria-label="ROOT, the ingredient: whole kava root, the powder, the bag"></video>
+        <video class="kvl-vid" data-src="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-3.mp4" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-3.jpg" autoplay muted loop playsinline preload="none" aria-label="ROOT, the ingredient: whole kava root, the powder, the bag"></video>
         <div class="kvl-tilebar"><p>&#127807; One ingredient</p></div>
       </div>
       <div class="kvl-body">
@@ -539,7 +539,7 @@
 
     <div class="kvl-row" id="kvl-r4">
       <div class="kvl-tile" data-slot="kvl-slot-4" data-subject="RITUAL OVER TIME">
-        <video class="kvl-vid" data-src="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-4.mp4" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-4.jpg" autoplay muted loop playsinline preload="none" aria-label="RITUAL OVER TIME, the routine: the same cup on the same counter, week after week"></video>
+        <video class="kvl-vid" data-src="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-4.mp4" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-4.jpg" autoplay muted loop playsinline preload="none" aria-label="RITUAL OVER TIME, the routine: the same cup on the same counter, week after week"></video>
         <div class="kvl-tilebar"><p>&#128201; Reverse tolerance</p></div>
       </div>
       <div class="kvl-body">
@@ -553,7 +553,7 @@
 
     <div class="kvl-row" id="kvl-r5">
       <div class="kvl-tile" data-slot="kvl-slot-5" data-subject="BAR">
-        <video class="kvl-vid" data-src="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-5.mp4" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-5.jpg" autoplay muted loop playsinline preload="none" aria-label="BAR, inside the Santa Monica bar: the counter, the cups, the line"></video>
+        <video class="kvl-vid" data-src="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-5.mp4" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-5.jpg" autoplay muted loop playsinline preload="none" aria-label="BAR, inside the Santa Monica bar: the counter, the cups, the line"></video>
         <div class="kvl-tilebar"><p>&#127865; From the bar in LA</p></div>
       </div>
       <div class="kvl-body">
@@ -567,7 +567,7 @@
 
     <div class="kvl-row" id="kvl-r6">
       <div class="kvl-tile" data-slot="kvl-slot-6" data-subject="REVIEWS">
-        <video class="kvl-vid" data-src="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-6.mp4" poster="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-6.jpg" autoplay muted loop playsinline preload="none" aria-label="REVIEWS, real people: a UGC frame, a customer with the cup, or a review card"></video>
+        <video class="kvl-vid" data-src="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-6.mp4" data-poster="https://bryce-wq2222.github.io/kavahana-pdp/img/kvl-slot-6.jpg" autoplay muted loop playsinline preload="none" aria-label="REVIEWS, real people: a UGC frame, a customer with the cup, or a review card"></video>
         <div class="kvl-tilebar"><p>&#11088; Loved by many</p></div>
       </div>
       <div class="kvl-body">
@@ -980,7 +980,7 @@
 #kvl-sticky .kvs-t{min-width:0}
 #kvl-sticky .kvs-1{font-size:13.5px;font-weight:800;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #kvl-sticky .kvs-2{font-size:11.5px;color:#367542;font-weight:700;line-height:1.2;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#kvl-sticky .kvs-b{flex:none;background:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);color:#fff;border:0;border-radius:999px;padding:12px 16px;font-size:13px;font-weight:800;letter-spacing:.04em;cursor:pointer;font-family:inherit;white-space:nowrap}
+#kvl-sticky .kvs-b{flex:none;background:linear-gradient(96deg,#73AE57,#367542 58%,#2B6136);color:#fff;border:0;border-radius:999px;padding:15px 18px;font-size:13px;font-weight:800;letter-spacing:.04em;cursor:pointer;font-family:inherit;white-space:nowrap}
 @media(min-width:800px){#kvl-sticky{display:none}}
 </style>
 <div id="kvl-sticky" aria-hidden="true">
@@ -1208,7 +1208,7 @@ var d=Math.floor(r/864e5),h=Math.floor(r%864e5/36e5),m=Math.floor(r%36e5/6e4),se
 if(d>0){dg.hidden=false;ds.hidden=false;U.d.textContent=pad(d);}else{dg.hidden=true;ds.hidden=true;}
 U.h.textContent=pad(h);U.m.textContent=pad(m);U.s.textContent=pad(sec);setTimeout(tick,1000-(Date.now()%1000));}tick();}
 var vids=[].slice.call(document.querySelectorAll("#kvl-page video.kvl-vid[data-src]"));
-function loadVid(v){if(!v.getAttribute("data-src"))return;v.src=v.getAttribute("data-src");v.removeAttribute("data-src");v.load();var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});}
+function loadVid(v){if(!v.getAttribute("data-src"))return;var dp=v.getAttribute("data-poster");if(dp){v.poster=dp;v.removeAttribute("data-poster")}v.src=v.getAttribute("data-src");v.removeAttribute("data-src");v.load();var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});}
 if(vids.length){if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){loadVid(en.target);io.unobserve(en.target);}});},{rootMargin:"600px 0px"});vids.forEach(function(v){io.observe(v);});}else{vids.forEach(loadVid);}}
 })();</script>
 <script>(function(){
