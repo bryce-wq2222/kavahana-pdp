@@ -1226,14 +1226,17 @@ if(d>0){dg.hidden=false;ds.hidden=false;U.d.textContent=pad(d);}else{dg.hidden=t
 U.h.textContent=pad(h);U.m.textContent=pad(m);U.s.textContent=pad(sec);setTimeout(tick,1000-(Date.now()%1000));}tick();}
 var vids=[].slice.call(document.querySelectorAll("#kvl-page video.kvl-vid[data-src]"));
 function loadVid(v){if(!v.getAttribute("data-src"))return;var dp=v.getAttribute("data-poster");if(dp){v.poster=dp;v.removeAttribute("data-poster")}v.src=v.getAttribute("data-src");v.removeAttribute("data-src");v.load();var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});}
-if(vids.length){if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){loadVid(en.target);io.unobserve(en.target);}});},{rootMargin:"600px 0px"});vids.forEach(function(v){io.observe(v);});}else{vids.forEach(loadVid);}}
+if(vids.length){if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){loadVid(en.target);io.unobserve(en.target);}});},{rootMargin:"600px 0px"});vids.forEach(function(v){io.observe(v);});
+/* 9/10 scroll audit: a loaded tile kept decoding for ever, so 6 videos ran at once by the bottom of the page and
+   the raster fell behind on a throttled CPU (stale tiles while scrolling). Only tiles within 150px of the viewport play. */
+var pio=new IntersectionObserver(function(es){es.forEach(function(en){var v=en.target;if(!v.src)return;if(en.isIntersecting){if(v.paused){var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});}}else if(!v.paused){v.pause();}});},{rootMargin:"150px 0px"});vids.forEach(function(v){pio.observe(v);});}else{vids.forEach(loadVid);}}
 })();</script>
 <script>(function(){
 var st=document.getElementById('kvl-sticky'),r3=document.getElementById('kvl-r3'),bb=document.getElementById('kvl-buybox');if(!st||!r3||!bb)return;
 try{document.body.appendChild(st)}catch(e){}
 st.querySelector('[data-sticky-cta]').addEventListener('click',function(){var hero=document.querySelector('#kv-page .hero .pill-cta');if(hero){hero.click()}else if(window.__kvOpenCart){window.__kvOpenCart('4oz')}else{bb.scrollIntoView({behavior:'smooth'})}});
 function cartOpen(){var c=document.getElementById('kv-cart');return !!(c&&c.classList.contains('on'))}
-var tick=false;function upd(){tick=false;if(cartOpen()||innerWidth>=800){st.classList.remove('is-on');return}var a=r3.getBoundingClientRect().top<innerHeight*.7;var b=bb.getBoundingClientRect();var over=b.top<innerHeight&&b.bottom>0;st.classList.toggle('is-on',a&&!over);st.setAttribute('aria-hidden',a&&!over?'false':'true')}
+var tick=false;function upd(){tick=false;if(cartOpen()||innerWidth>=800){st.classList.remove('is-on');return}var a=r3.getBoundingClientRect().top<innerHeight*.7;var b=bb.getBoundingClientRect();var over=b.top<innerHeight&&b.bottom>0;var on=a&&!over;if(on!==st.classList.contains('is-on')){st.classList.toggle('is-on',on);st.setAttribute('aria-hidden',on?'false':'true')}}
 addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});addEventListener('resize',upd);
 var c=document.getElementById('kv-cart');if(c&&window.MutationObserver){new MutationObserver(upd).observe(c,{attributes:true,attributeFilter:['class']})}
 upd();
